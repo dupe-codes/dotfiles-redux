@@ -35,6 +35,8 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'folke/neodev.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

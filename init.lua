@@ -2,6 +2,32 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+-- Set up treesitter
+require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    'bash',
+    'c',
+    'cpp',
+    'css',
+    'go',
+    'html',
+    'java',
+    'javascript',
+    'json',
+    'lua',
+    'python',
+    'rust',
+    'toml',
+    'tsx',
+    'typescript',
+    'yaml',
+    'scala',
+  },
+  highlight = {
+    enable = true,
+  }
+}
+
 -- Configure keymappers
 
 vim.g.mapleader = ' '
