@@ -3,6 +3,7 @@ local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
 -- Set up treesitter
+--
 require('nvim-treesitter.configs').setup {
   ensure_installed = {
     'bash',
@@ -28,6 +29,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
   }
 }
+
 
 -- Configure keymappers
 
@@ -72,6 +74,7 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 -- Setup indent blankline
+
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
     show_current_context = true,
@@ -88,7 +91,9 @@ require('lualine').setup {
 }
 
 -- Setup language service configs
+
 local lspconfig = require 'lspconfig'
+
 local on_attach = function(_, bufnr)
   local attach_opts = { silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
@@ -104,6 +109,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'so', require('telescope.builtin').lsp_references, attach_opts)
 end
 
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
@@ -112,6 +118,29 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = true,
   }
 )
+
+function _G.open_floating_diagnostics()
+  local bufnr, winnr = vim.diagnostic.open_float(0, {scope="line"})
+  if winnr then
+    vim.api.nvim_set_current_win(winnr)
+  end
+end
+
+key_mapper('n', '<Leader>e', '<Cmd>lua _G.open_floating_diagnostics()<CR>')
+
+--[[
+key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
+key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
+key_mapper('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
+key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
+key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
+key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
+key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
+key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
+key_mapper('n', '<leader>af', ':lua vim.lsp.buf.code_action()<CR>')
+key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+]]
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -191,3 +220,4 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+

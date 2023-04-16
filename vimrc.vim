@@ -12,6 +12,9 @@ set expandtab               " convert tabs to white space
 set shiftwidth=4 smarttab   " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 
+set verbosefile=~/.log/nvim/verbose.log
+set verbose=15
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -36,7 +39,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'folke/neodev.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

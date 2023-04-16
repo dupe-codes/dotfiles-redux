@@ -1,0 +1,6 @@
+name: base-environment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pipreqs=0.4.13=pyhd8ed1ab_0
