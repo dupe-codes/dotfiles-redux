@@ -40,6 +40,8 @@ Plug 'folke/neodev.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'sheerun/vim-polyglot'
+Plug 'quarto-dev/quarto-nvim'
+Plug 'jmbuhr/otter.nvim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

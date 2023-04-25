@@ -4,3 +4,4 @@ channels:
   - defaults
 dependencies:
   - pipreqs=0.4.13=pyhd8ed1ab_0
+  - autopep8=1.6.0=pyhd3eb1b0_1
