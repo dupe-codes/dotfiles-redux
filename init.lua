@@ -2,6 +2,12 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+-- Set up colorscheme
+
+-- vim.cmd.colorscheme "catppuccin-frappe"
+-- vim.cmd.colorscheme 'everforest'
+vim.cmd.colorscheme 'kanagawa-dragon'
+
 -- Set up treesitter
 --
 require('nvim-treesitter.configs').setup {
@@ -31,6 +37,11 @@ require('nvim-treesitter.configs').setup {
     }
 }
 
+-- Pets!
+require("pets").setup({
+    default_pet = "dog",
+    death_animation = false,
+})
 
 -- Configure keymappers
 
