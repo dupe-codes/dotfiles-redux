@@ -37,12 +37,6 @@ require('nvim-treesitter.configs').setup {
     }
 }
 
--- Pets!
-require("pets").setup({
-    default_pet = "dog",
-    death_animation = false,
-})
-
 -- Configure keymappers
 
 vim.g.mapleader = ' '

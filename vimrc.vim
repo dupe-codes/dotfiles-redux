@@ -42,9 +42,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'sheerun/vim-polyglot'
 Plug 'quarto-dev/quarto-nvim'
 Plug 'jmbuhr/otter.nvim'
-Plug 'giusgad/hologram.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'giusgad/pets.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'rebelot/kanagawa.nvim'
 
