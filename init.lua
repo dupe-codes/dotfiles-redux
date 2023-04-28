@@ -6,7 +6,7 @@ vim.cmd.source(vimrc)
 
 -- vim.cmd.colorscheme "catppuccin-frappe"
 -- vim.cmd.colorscheme 'everforest'
-vim.cmd.colorscheme 'kanagawa-dragon'
+vim.cmd.colorscheme 'kanagawa'
 
 -- Set up treesitter
 --
