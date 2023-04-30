@@ -9,7 +9,7 @@ vim.cmd.source(vimrc)
 vim.cmd.colorscheme 'kanagawa'
 
 -- Set up treesitter
---
+
 require('nvim-treesitter.configs').setup {
     ensure_installed = {
         'bash',
@@ -64,8 +64,37 @@ key_mapper('v', 'jk', '<ESC>')
 key_mapper('v', 'JK', '<ESC>')
 key_mapper('v', 'jK', '<ESC>')
 
+-- Move between windows with <leader>hjkl
+key_mapper('n', '<leader>h', '<C-w>h')
+key_mapper('n', '<leader>j', '<C-w>j')
+key_mapper('n', '<leader>k', '<C-w>k')
+key_mapper('n', '<leader>l', '<C-w>l')
+
+-- Set up telescope shortcuts for fuzzy finding
+key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
+key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
+key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
+key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
+
 -- Clear search with <leader>c
 key_mapper('n', '<leader>c', ':noh<CR>')
+
+-- Barbar shortcuts & config
+key_mapper('n', '<leader>1', ':BufferGoto 1<CR>')
+key_mapper('n', '<leader>2', ':BufferGoto 2<CR>')
+key_mapper('n', '<leader>3', ':BufferGoto 3<CR>')
+key_mapper('n', '<leader>4', ':BufferGoto 4<CR>')
+key_mapper('n', '<leader>.', ':BufferNext<CR>')
+key_mapper('n', '<leader>,', ':BufferPrevious<CR>')
+key_mapper('n', '<leader>q', ':BufferClose<CR>')
+
+require('barbar').setup {
+    icons = {
+        filetype = {
+            enabled = false,
+        }
+    }
+}
 
 -- Set up nvim-tree
 vim.g.loaded_netrw = 1
@@ -116,7 +145,6 @@ local on_attach = function(_, bufnr)
         attach_opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
-    vim.keymap.set('n', 'so', require('telescope.builtin').lsp_references, attach_opts)
 end
 
 

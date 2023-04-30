@@ -22,9 +22,7 @@ Plug 'neanias/everforest-nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'nvim-tree/nvim-tree.lua'
-Plug 'nvim-tree/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -44,6 +42,10 @@ Plug 'quarto-dev/quarto-nvim'
 Plug 'jmbuhr/otter.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'rebelot/kanagawa.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/telescope.nvim'
+Plug 'jremmen/vim-ripgrep' 
+Plug 'romgrk/barbar.nvim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
