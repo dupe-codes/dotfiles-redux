@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # source z completions
-. ./z.sh
+. ~/z.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
