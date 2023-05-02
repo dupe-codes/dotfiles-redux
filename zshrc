@@ -127,5 +127,3 @@ eval "$(github-copilot-cli alias -- "$0")"
 
 alias pep8="find . -name \"*.py\" | xargs autopep8 -i"
 
-# Prefer GNU ls from coreutils
-alias ls=gls
