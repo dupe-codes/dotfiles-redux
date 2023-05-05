@@ -44,7 +44,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
-Plug 'jremmen/vim-ripgrep' 
+Plug 'jremmen/vim-ripgrep'
 Plug 'romgrk/barbar.nvim'
 
 " Initialize plugin system
@@ -52,4 +52,12 @@ Plug 'romgrk/barbar.nvim'
 call plug#end()
 
 syntax on
+
+" Highlight extra whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+au BufWinEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+au BufWinLeave * call clearmatches()
 

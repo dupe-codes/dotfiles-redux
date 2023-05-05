@@ -9,4 +9,5 @@ terraform
 tmux
 tree-sitter
 miniconda
+ccls
 
