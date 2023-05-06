@@ -46,6 +46,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'romgrk/barbar.nvim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
