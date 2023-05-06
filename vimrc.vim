@@ -59,7 +59,7 @@ call plug#end()
 syntax on
 
 " Highlight extra whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=grey guibg=grey
 match ExtraWhitespace /\s\+$/
 au BufWinEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/

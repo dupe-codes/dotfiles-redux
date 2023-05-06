@@ -286,3 +286,8 @@ cmp.setup {
 -- key_mapper('n', '<leader>cc', '<Plug>NERDCommenterComment')
 -- key_mapper('n', '<leader>cu', '<Plug>NERDCommenterUncomment')
 -- key_mapper('n', '<leader>c<space>', '<Plug>NERDCommenterToggle')
+
+-- Key mappings for using the terminal
+key_mapper('n', '<leader>tt', '<Cmd>terminal<CR>')
+key_mapper('t', '<Esc>', '<C-\\><C-n>')
+
