@@ -48,6 +48,9 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'romgrk/barbar.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'mfussenegger/nvim-lint'
+Plug 'preservim/nerdcommenter'
+
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

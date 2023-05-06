@@ -130,6 +130,25 @@ require('lualine').setup {
     },
 }
 
+-- Setup linting
+
+require('lint').linters_by_ft = {
+    python = { 'pylint', },
+}
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})
+
+vim.diagnostic.config({
+    underline = true,
+    virtual_text = false,
+    signs = true,
+    update_in_insert = true,
+})
+
 -- Setup language service configs
 
 local lspconfig = require 'lspconfig'
@@ -261,3 +280,9 @@ cmp.setup {
     },
 }
 
+-- Nerdcommenter keymappers
+-- These are the defaults - writing down the ones I commonly use as a documented
+-- reminder
+-- key_mapper('n', '<leader>cc', '<Plug>NERDCommenterComment')
+-- key_mapper('n', '<leader>cu', '<Plug>NERDCommenterUncomment')
+-- key_mapper('n', '<leader>c<space>', '<Plug>NERDCommenterToggle')
