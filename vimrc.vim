@@ -50,7 +50,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'mfussenegger/nvim-lint'
 Plug 'preservim/nerdcommenter'
-
+Plug 'Everblush/nvim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

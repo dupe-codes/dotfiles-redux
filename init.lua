@@ -9,6 +9,7 @@ vim.cmd.source(vimrc)
 vim.cmd.colorscheme 'kanagawa'
 -- vim.cmd.colorscheme 'gruvbox'
 -- vim.cmd.colorscheme 'tokyonight-moon'
+-- vim.cmd.colorscheme 'everblush'
 
 -- Set up treesitter
 
