@@ -73,14 +73,14 @@ key_mapper('n', '<leader>j', '<C-w>j')
 key_mapper('n', '<leader>k', '<C-w>k')
 key_mapper('n', '<leader>l', '<C-w>l')
 
--- Set up telescope shortcuts for fuzzy finding
+ --Set up telescope shortcuts for fuzzy finding
 key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
 key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
 key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
 
--- Clear search with <leader>c
-key_mapper('n', '<leader>c', ':noh<CR>')
+-- Clear search with <leader><leader>
+key_mapper('n', '<leader><leader>', ':noh<CR>')
 
 -- Barbar shortcuts & config
 key_mapper('n', '<leader>1', ':BufferGoto 1<CR>')
