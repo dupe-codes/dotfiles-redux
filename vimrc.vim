@@ -52,6 +52,7 @@ Plug 'mfussenegger/nvim-lint'
 Plug 'preservim/nerdcommenter'
 Plug 'Everblush/nvim'
 Plug 'wakatime/vim-wakatime'
+Plug 'mhinz/vim-startify'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
