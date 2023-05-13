@@ -12,3 +12,7 @@ ln -sf ./vimrc.vim $HOME/.config/nvim/vimrc.vim
 ln -sf ./init.lua $HOME/.config/nvim/init.lua
 ln -s ./zshrc $HOME/.zshrc
 
+# symlink clang tooling
+ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
+ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
+
