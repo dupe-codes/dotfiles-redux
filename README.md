@@ -12,3 +12,13 @@
 2. For c/c++ projects, copy .clang-format file to project root directory
 3. In project root directory, execute `pre-commit install` to configure hooks
 
+## C++ project setup
+1. Copy `project-configs/CMakeLists.base.txt` to project root
+2. Copy `project-configs/.ccls` to project root to configure ccls language server
+3. After configuring CMake files, from project root execute:
+    ```
+    mkdir build
+    cd build
+    cmake_init
+    ```
+
