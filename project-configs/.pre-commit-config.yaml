@@ -1,6 +1,6 @@
 # Default pre-commit hooks for coding projects
 # TODO:
-# - Add scala, clorjue hooks
+# - Add scala, clojure hooks
 # - Add rust hooks?
 
 repos:
@@ -8,6 +8,8 @@ repos:
     rev: 23.3.0
     hooks:
     - id: black
+    - id: black-jupyter
+
   - repo: https://github.com/pre-commit/mirrors-clang-format
     rev: v16.0.3
     hooks:
