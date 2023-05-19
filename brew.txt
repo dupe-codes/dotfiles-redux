@@ -12,4 +12,5 @@ miniconda
 ccls
 llvm
 pre-commit
+ripgrep
 
