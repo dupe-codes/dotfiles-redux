@@ -54,6 +54,7 @@ Plug 'Everblush/nvim'
 Plug 'wakatime/vim-wakatime'
 Plug 'mhinz/vim-startify'
 Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'dnlhc/glance.nvim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
