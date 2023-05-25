@@ -70,3 +70,6 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 au BufWinLeave * call clearmatches()
 
+" Configuration for vim-startify
+let g:startify_custom_header =
+             \ startify#pad(readfile(expand('~/.config/nvim/ascii-art.txt')))
