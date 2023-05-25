@@ -12,9 +12,6 @@ set expandtab               " convert tabs to white space
 set shiftwidth=4 smarttab   " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 
-set verbosefile=~/.log/nvim/verbose.log
-set verbose=15
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -73,3 +70,4 @@ au BufWinLeave * call clearmatches()
 " Configuration for vim-startify
 let g:startify_custom_header =
              \ startify#pad(readfile(expand('~/.config/nvim/ascii-art.txt')))
+
