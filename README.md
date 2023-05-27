@@ -22,6 +22,6 @@
     ```
     mkdir build
     cd build
-    cmake_init
+    cmake_init # alias for 'CC=clang CXX=g++-13 cmake ..'
     ```
 
