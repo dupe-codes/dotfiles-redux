@@ -18,3 +18,7 @@ ln -s ./zshrc $HOME/.zshrc
 ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
 ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
 
+# install mambaforge
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh
+

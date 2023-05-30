@@ -8,7 +8,6 @@ rust-analyzer
 terraform
 tmux
 tree-sitter
-miniconda
 ccls
 llvm
 pre-commit
