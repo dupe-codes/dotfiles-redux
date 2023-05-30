@@ -312,3 +312,10 @@ key_mapper('n', '<leader>gd', '<CMD>Glance definitions<CR>')
 key_mapper('n', '<leader>gr', '<CMD>Glance references<CR>')
 key_mapper('n', '<leader>gy', '<CMD>Glance type_definitions<CR>')
 key_mapper('n', '<leader>gm', '<CMD>Glance implementations<CR>')
+
+-- key map to create a new file in the current buffer's directory
+key_mapper(
+    'n',
+    '<leader>nf',
+    ':edit %:h/<C-r>=input("New file name: ")<CR><CR>'
+)
