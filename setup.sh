@@ -8,7 +8,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # symlink config files
 mkdir -p $HOME/.config/nvim
 
-cp ./ascii-art.txt $HOME/.config/nvim/ascii-art.txt
+# configure to copy desired ascii art to nvim; default to 2B
+cp ./ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
 
 ln -sf ./vimrc.vim $HOME/.config/nvim/vimrc.vim
 ln -sf ./init.lua $HOME/.config/nvim/init.lua
