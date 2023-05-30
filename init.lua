@@ -1,3 +1,21 @@
+-- Index of main plugins:
+-- 1. nvim-tree - file explorer
+-- 2. barbar - buffer manager
+-- 3. telescope - fuzzy finder
+-- 4. treesitter - syntax highlighting
+-- 5. treesitter-context - context for treesitter
+-- 6. copilot - ai autocomplete
+-- 7. lualine - statusline
+-- 8. nvim-cmp - autocomplete
+-- 9. nvim-lspconfig - language servers
+-- 10. vim-startify - startup screen
+-- 11. indent-blankline - add line guides to indentation levels
+-- 12. glance - go to definition/references
+-- 13. nerd-commenter - comment lines
+-- 14. nvim-lint - linting on save
+-- 15. nvim-autopairs - auto close brackets
+-- 16. vim-wakatime - track time spent in vim
+
 -- Load vimrc for initial configs
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
@@ -103,6 +121,10 @@ key_mapper('n', '<leader>1', ':BufferGoto 1<CR>')
 key_mapper('n', '<leader>2', ':BufferGoto 2<CR>')
 key_mapper('n', '<leader>3', ':BufferGoto 3<CR>')
 key_mapper('n', '<leader>4', ':BufferGoto 4<CR>')
+key_mapper('n', '<leader>5', ':BufferGoto 5<CR>')
+key_mapper('n', '<leader>6', ':BufferGoto 6<CR>')
+key_mapper('n', '<leader>7', ':BufferGoto 7<CR>')
+key_mapper('n', '<leader>8', ':BufferGoto 8<CR>')
 key_mapper('n', '<leader>.', ':BufferNext<CR>')
 key_mapper('n', '<leader>,', ':BufferPrevious<CR>')
 key_mapper('n', '<leader>q', ':BufferClose<CR>')
@@ -319,4 +341,7 @@ key_mapper(
     '<leader>nf',
     ':edit %:h/<C-r>=input("New file name: ")<CR><CR>'
 )
+
+-- Configure nvim-autopairs
+require('nvim-autopairs').setup {}
 
