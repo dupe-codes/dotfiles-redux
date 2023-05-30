@@ -1,9 +1,11 @@
--- Index of main plugins:
+--------------------------------------------------------------------
+--      | Index of core plugins |
+--------------------------------------------------------------------
 -- 1. nvim-tree - file explorer
 -- 2. barbar - buffer manager
 -- 3. telescope - fuzzy finder
 -- 4. treesitter - syntax highlighting
--- 5. treesitter-context - context for treesitter
+-- 5. treesitter-context - show cursor context pinned to window top
 -- 6. copilot - ai autocomplete
 -- 7. lualine - statusline
 -- 8. nvim-cmp - autocomplete
@@ -15,6 +17,7 @@
 -- 14. nvim-lint - linting on save
 -- 15. nvim-autopairs - auto close brackets
 -- 16. vim-wakatime - track time spent in vim
+--------------------------------------------------------------------
 
 -- Load vimrc for initial configs
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
@@ -204,6 +207,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
         attach_opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
+    vim.keymap.set('n', '<leader>af', vim.lsp.buf.code_action, attach_opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
 end
 
@@ -226,19 +230,6 @@ end
 
 key_mapper('n', '<Leader>e', '<Cmd>lua _G.open_floating_diagnostics()<CR>')
 
---[[
-key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
-key_mapper('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>')
-key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
-key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
-key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
-key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
-key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-key_mapper('n', '<leader>af', ':lua vim.lsp.buf.code_action()<CR>')
-key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
-]]
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
