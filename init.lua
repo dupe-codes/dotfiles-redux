@@ -319,3 +319,4 @@ key_mapper(
     '<leader>nf',
     ':edit %:h/<C-r>=input("New file name: ")<CR><CR>'
 )
+
