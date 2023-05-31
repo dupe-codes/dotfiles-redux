@@ -7,6 +7,9 @@
 2. Set up installs and configurations for nnn in install script
 3. Figure out better install setup for zsh-z
 4. Add dropbar plugin to neovim once nvim-nightly isn't required
+5. Break apart config file:
+    - Subdirectories to configure individual plugins
+    - Separate file to configure key mappings
 
 # Tools Index
 
