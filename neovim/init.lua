@@ -141,9 +141,11 @@ require('barbar').setup {
 }
 
 -- Set up nvim-tree
+-- Key mapping notes:
+-- a: add file or directory (use / at end of filename to make dir)
+-- d: delete file or directory
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
 vim.opt.termguicolors = true
 require("nvim-tree").setup()
 
@@ -152,8 +154,9 @@ local function open_nvim_tree()
     -- require("nvim-tree.api").tree.open()
     require("nvim-tree.api").tree.toggle({ focus = false })
 end
-
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
+key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
 
 -- Setup indent blankline
 

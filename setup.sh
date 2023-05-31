@@ -11,9 +11,9 @@ mkdir -p $HOME/.config/nvim
 # configure to copy desired ascii art to nvim; default to 2B
 cp ./ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
 
-ln -sf ./vimrc.vim $HOME/.config/nvim/vimrc.vim
-ln -sf ./init.lua $HOME/.config/nvim/init.lua
-ln -s ./zshrc $HOME/.zshrc
+ln -sf $PWD/neovim/vimrc.vim $HOME/.config/nvim/vimrc.vim
+ln -sf $PWD/neovim/init.lua $HOME/.config/nvim/init.lua
+ln -s $PWD/zshrc $HOME/.zshrc
 
 # symlink clang tooling
 ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
