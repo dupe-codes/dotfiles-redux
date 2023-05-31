@@ -18,6 +18,7 @@
 # Tools Index
 
 1. nnn - terminal file manager
+2. arttime - pretty pomodoro CLI app
 
 # Notes
 

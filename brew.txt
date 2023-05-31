@@ -12,4 +12,5 @@ ccls
 llvm
 pre-commit
 ripgrep
+arttime
 
