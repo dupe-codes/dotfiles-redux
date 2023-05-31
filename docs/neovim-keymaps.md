@@ -35,7 +35,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 ## Buffer naviation
 
--- Barbar 
+-- Barbar
 key_mapper('n', '<leader>1', ':buffergoto 1<cr>')
 key_mapper('n', '<leader>2', ':buffergoto 2<cr>')
 key_mapper('n', '<leader>3', ':buffergoto 3<cr>')
@@ -71,13 +71,13 @@ end)
 -- Keymap to go back and forth to/from last buffer
 vim.keymap.set('n', '<leader>b', '<C-^>')
 
-
 ## nvim-tree/creating new files
 For use in the nvim-tree buffer:
 
 - a: add file or directory
 - d: delete filter or directory
 key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
+key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
 key_mapper(
     'n',
     '<leader>nf',

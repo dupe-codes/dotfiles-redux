@@ -152,6 +152,7 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
+key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
 
 -- Setup indent blankline
 
