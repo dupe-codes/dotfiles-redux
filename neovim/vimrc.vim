@@ -53,6 +53,7 @@ Plug 'mhinz/vim-startify'
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'dnlhc/glance.nvim'
 Plug 'windwp/nvim-autopairs'
+Plug 'ThePrimeagen/harpoon'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

@@ -210,7 +210,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
         attach_opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
-    vim.keymap.set('n', '<leader>af', vim.lsp.buf.code_action, attach_opts)
+    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
 end
 
@@ -338,4 +338,7 @@ key_mapper(
 
 -- Configure nvim-autopairs
 require('nvim-autopairs').setup {}
+
+-- Add remaps in custom file
+require('dupe.remap')
 
