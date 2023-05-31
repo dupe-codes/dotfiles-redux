@@ -338,3 +338,6 @@ require('nvim-autopairs').setup {}
 -- Add remaps in custom file
 require('dupe.remap')
 
+-- Add vim settings from custom file
+require('dupe.vim-settings')
+
