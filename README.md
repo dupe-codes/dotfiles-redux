@@ -7,9 +7,13 @@
 2. Set up installs and configurations for nnn in install script
 3. Figure out better install setup for zsh-z
 4. Add dropbar plugin to neovim once nvim-nightly isn't required
-5. Break apart config file:
+5. Break apart neovim config files:
     - Subdirectories to configure individual plugins
     - Separate file to configure key mappings
+6. Migrate to lsp-zero for neovim lsp (to replace manually configured)
+7. Replace vimrc.vim with:
+    - vim-settings.lua for vim settings
+    - plugins.lua for installing plugins
 
 # Tools Index
 

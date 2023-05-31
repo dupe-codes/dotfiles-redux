@@ -2,8 +2,10 @@ set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
 set ignorecase              " case insensitive matching
 set hlsearch                " highlight search results
+set incsearch               " incremental search
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
+set relativenumber          " add relative line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=88                   " set colour columns for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
@@ -11,6 +13,7 @@ set tabstop=4               " number of columns occupied by a tab character
 set expandtab               " convert tabs to white space
 set shiftwidth=4 smarttab   " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set scrolloff=8             " keep 8 lines above and below the cursor
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -54,6 +57,8 @@ Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'dnlhc/glance.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'ThePrimeagen/harpoon'
+Plug 'mbbill/undotree'
+Plug 'tpope/vim-fugitive'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
