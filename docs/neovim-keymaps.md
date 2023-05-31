@@ -83,6 +83,8 @@ For use in the nvim-tree buffer:
 
 - a: add file or directory
 - d: delete filter or directory
+- <C-r>: rename a file or directory
+
 key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
 key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
 key_mapper(
