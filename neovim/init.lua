@@ -17,6 +17,9 @@
 -- 14. nvim-lint - linting on save
 -- 15. nvim-autopairs - auto close brackets
 -- 16. vim-wakatime - track time spent in vim
+-- 17. harpoon - bookmark files
+-- 18. vim-fugitive - git integration
+-- 19. undotree - undo history
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
