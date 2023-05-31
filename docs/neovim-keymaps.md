@@ -7,11 +7,18 @@ neovim config files
 
 ## General
 
+Open split view pane:
+<C-w> s (horizontal)
+<C-w> v (vertical)
+
 Move between open panes:
 - <leader>h
 - <leader>j
 - <leader>k
 - <leader>l
+
+Close all open panes:
+<C-w> o
 
 Clear search buffer
 - <leader><leader>
@@ -110,9 +117,18 @@ vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>:UndotreeFocus<CR>')
 ## Git status and commands
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
+-- Accept diffs in visual diff buffers
+vim.keymap.set('n', 'gh', '<cmd>diffget //2<CR>')
+vim.keymap.set('n', 'gl', '<cmd>diffget //3<CR>')
+
+-- Push commits to origin
+vim.keymap.set('n', '<leader>gp', '<cmd>Git push<CR>')
+
 -- When in fugitive buffer
 =  : opens diff for file under cursor
 s  : stages file under cursor
 cc : commits staged files
 dv : visual diff of file under cursor
 
+Note that you can place your cursor on the section headers (e.g. "Unstaged") to apply
+one of these hotkeys to all files in the group
