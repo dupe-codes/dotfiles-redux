@@ -110,3 +110,9 @@ vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>:UndotreeFocus<CR>')
 ## Git status and commands
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
+-- When in fugitive buffer
+=  : opens diff for file under cursor
+s  : stages file under cursor
+cc : commits staged files
+dv : visual diff of file under cursor
+
