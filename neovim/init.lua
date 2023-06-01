@@ -130,7 +130,7 @@ key_mapper('n', '<leader>q', ':BufferClose<CR>')
 require('barbar').setup {
     icons = {
         filetype = {
-            enabled = false,
+            enabled = true,
         }
     }
 }
@@ -165,7 +165,7 @@ require("indent_blankline").setup {
 -- Set up lualine
 require('lualine').setup {
     options = {
-        icons_enabled = false,
+        icons_enabled = true,
         component_separators = '|',
         section_separators = '',
     },
@@ -276,6 +276,10 @@ cmp.setup {
             luasnip.lsp_expand(args.body)
         end,
     },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp.mapping.preset.insert {
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-Space>'] = cmp.mapping.complete {},
@@ -305,6 +309,19 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+    },
+    formatting = {
+        format = function(entry, vim_item)
+          if vim.tbl_contains({ 'path' }, entry.source.name) then
+            local icon, hl_group = require('nvim-web-devicons').get_icon(entry:get_completion_item().label)
+            if icon then
+              vim_item.kind = icon
+              vim_item.kind_hl_group = hl_group
+              return vim_item
+            end
+          end
+          return require('lspkind').cmp_format()(entry, vim_item)
+        end
     },
 }
 
