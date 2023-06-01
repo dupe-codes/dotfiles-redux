@@ -24,7 +24,7 @@ ln -sf $PWD/neovim/after $HOME/.config/nvim/
 # Patched following instructions at
 # https://tech.serhatteker.com/post/2023-04/patch-berkeley-mono-font-with-nerd-fonts/
 mkdir -p $PWD/fonts/
-curl -L -o $PWD/fonts/berkeley-mono-nerd-font.zip https://www.dropbox.com/s/wvmpjlsht24ol5j/berkeley-mono-nerd-font.zip?dl=0
+curl -L -o $PWD/fonts/berkeley-mono-nerd-font.zip "https://www.dropbox.com/s/wvmpjlsht24ol5j/berkeley-mono-nerd-font.zip?dl=0"
 unzip $PWD/fonts/berkeley-mono-nerd-font.zip -d $PWD/fonts/
 echo "Berkeley Mono Nerd Font downloaded and unzipped. Please install manually."
 

@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 - <C-p> find_files()
 - <leader>fs live_grep()
 
-## Buffer naviation
+## Buffer management & navigation
 
 -- Barbar
 key_mapper('n', '<leader>1', ':buffergoto 1<cr>')
@@ -53,6 +53,8 @@ key_mapper('n', '<leader>7', ':buffergoto 7<cr>')
 key_mapper('n', '<leader>8', ':buffergoto 8<cr>')
 key_mapper('n', '<leader>.', ':buffernext<cr>')
 key_mapper('n', '<leader>,', ':bufferprevious<cr>')
+
+key_mapper('n', '<leader>aq', ':BufferCloseAllButCurrent<CR>')
 key_mapper('n', '<leader>q', ':bufferclose<cr>')
 
 -- Harpoon
