@@ -25,6 +25,7 @@
 
 1. nnn - terminal file manager
 2. arttime - pretty pomodoro CLI app
+3. mamba - python package manager (faster conda)
 
 # Notes
 
