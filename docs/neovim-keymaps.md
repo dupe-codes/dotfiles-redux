@@ -1,138 +1,109 @@
 # Neovim Keymaps
 
-An index of my most important neovim keymaps
-
-Many of these are direct copy-and-pastes of the key mapper commands from my
-neovim config files
+An index of my most important neovim keymaps.
 
 ## General
 
-Open split view pane:
-<C-w> s (horizontal)
-<C-w> v (vertical)
-
-Move between open panes:
-- <leader>h
-- <leader>j
-- <leader>k
-- <leader>l
-
-Close all open panes:
-<C-w> o
-
-Clear search buffer
-- <leader><leader>
-
--- Keymap to move visual selection
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
-
--- Keymap to yank into system clipboard
-vim.keymap.set('n', '<leader>y', '"+y')
-vim.keymap.set('v', '<leader>y', '"+y')
-vim.keymap.set('n', '<leader>Y', '"+Y')
-
--- Keymap to replace in file text at current cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left]])
+| Action | Key Map |
+|--------|---------|
+| Open split view pane (horizontal) | `<C-w> s` |
+| Open split view pane (vertical) | `<C-w> v` |
+| Move between open panes | `<leader>h`, `<leader>j`, `<leader>k`, `<leader>l` |
+| Close all open panes | `<C-w> o` |
+| Clear search buffer | `<leader><leader>` |
+| Move visual selection | `'v', 'J'`, `'v', 'K'` |
+| Yank into system clipboard | `'n', '<leader>y'`, `'v', '<leader>y'`, `'n', '<leader>Y'` |
+| Replace in file text at current cursor | `"n", "<leader>s"` |
 
 ## Telescope fuzzy finding
 
-- <C-p> find_files()
-- <leader>fs live_grep()
+| Action | Key Map |
+|--------|---------|
+| find_files() | `<C-p>` |
+| live_grep() | `<leader>fs` |
 
 ## Buffer management & navigation
 
--- Barbar
-key_mapper('n', '<leader>1', ':buffergoto 1<cr>')
-key_mapper('n', '<leader>2', ':buffergoto 2<cr>')
-key_mapper('n', '<leader>3', ':buffergoto 3<cr>')
-key_mapper('n', '<leader>4', ':buffergoto 4<cr>')
-key_mapper('n', '<leader>5', ':buffergoto 5<cr>')
-key_mapper('n', '<leader>6', ':buffergoto 6<cr>')
-key_mapper('n', '<leader>7', ':buffergoto 7<cr>')
-key_mapper('n', '<leader>8', ':buffergoto 8<cr>')
-key_mapper('n', '<leader>.', ':buffernext<cr>')
-key_mapper('n', '<leader>,', ':bufferprevious<cr>')
+Barbar:
 
-key_mapper('n', '<leader>aq', ':BufferCloseAllButCurrent<CR>')
-key_mapper('n', '<leader>q', ':bufferclose<cr>')
+| Action | Key Map |
+|--------|---------|
+| Buffer goto | `'n', '<leader>1'` through to `'n', '<leader>8'` |
+| Buffernext | `'n', '<leader>.'` |
+| Bufferprevious | `'n', '<leader>,'` |
+| BufferCloseAllButCurrent | `'n', '<leader>aq'` |
+| bufferclose | `'n', '<leader>q'` |
 
--- Harpoon
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+Harpoon:
 
-vim.keymap.set("n", "<C-h>", function()
-    ui.nav_file(1)
-end)
-
-vim.keymap.set("n", "<C-j>", function()
-    ui.nav_file(2)
-end)
-
-vim.keymap.set("n", "<C-k>", function()
-    ui.nav_file(3)
-end)
-
-vim.keymap.set("n", "<C-l>", function()
-    ui.nav_file(4)
-end)
-
--- Keymap to go back and forth to/from last buffer
-vim.keymap.set('n', '<leader>b', '<C-^>')
+| Action | Key Map |
+|--------|---------|
+| mark.add_file | `"n", "<leader>a"` |
+| ui.toggle_quick_menu | `"n", "<C-e>"` |
+| ui.nav_file | `"n", "<C-h>"` through to `"n", "<C-l>"` |
+| Go back and forth to/from last buffer | `'n', '<leader>b'` |
 
 ## nvim-tree/creating new files
-For use in the nvim-tree buffer:
 
-- a: add file or directory
-- d: delete filter or directory
-- <C-r>: rename a file or directory
-
-key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
-key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
-key_mapper(
-    'n',
-    '<leader>nf',
-    ':edit %:h/<C-r>=input("New file name: ")<CR><CR>'
-)
+| Action | Key Map |
+|--------|---------|
+| Add file or directory | (in tree) `a` |
+| Delete file or directory | (in tree) `d`) |
+| Rename a file or directory | (in tree) `<C-r>`) |
+| NvimTreeFindFile | `'n', '<leader>ff'` |
+| NvimTreeToggle | `'n', '<leader>nt'` |
+| New file in current buffer's dir | `'n', '<leader>nf'` |
 
 ## language server/completions/code introspection
-vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
-key_mapper('n', '<Leader>e', '<Cmd>lua _G.open_floating_diagnostics()<CR>')
-key_mapper('n', '<leader>gd', '<CMD>Glance definitions<CR>')
-key_mapper('n', '<leader>gr', '<CMD>Glance references<CR>')
-key_mapper('n', '<leader>gy', '<CMD>Glance type_definitions<CR>')
-key_mapper('n', '<leader>gm', '<CMD>Glance implementations<CR>')
+
+| Action | Key Map |
+|--------|---------|
+| Type definition | `'n', '<leader>D'` |
+| Code action | `'n', '<leader>ca'` |
+| Rename | `'n', '<leader>rn'` |
+| Open floating diagnostics | `'n', '<Leader>e'` |
+| Glance definitions | `'n', '<leader>gd'` |
+| Glance references | `'n', '<leader>gr'` |
+| Glance type_definitions | `'n', '<leader>gy'` |
+| Glance implementations | `'n', '<leader>gm'` |
 
 ## Nerdcommenter
-key_mapper('n', '<leader>cc', '<Plug>NERDCommenterComment')
-key_mapper('n', '<leader>cu', '<Plug>NERDCommenterUncomment')
-key_mapper('n', '<leader>c<space>', '<Plug>NERDCommenterToggle')
+
+| Action | Key Map |
+|--------|---------|
+| Comment | `'n', '<leader>cc'` |
+| Uncomment | `'n', '<leader>cu'` |
+| Toggle comment | `'n', '<leader>c<space>'` |
 
 ## Using the terminal
-key_mapper('n', '<leader>tt', '<Cmd>terminal<CR>')
-key_mapper('t', '<Esc>', '<C-\\><C-n>')
+
+| Action | Key Map |
+|--------|---------|
+| Open terminal | `'n', '<leader>tt'` |
+| Escape from terminal | `'t', '<Esc>'` |
 
 ## Undotree
--- Open undotree and focus it
-vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>:UndotreeFocus<CR>')
+
+| Action | Key Map |
+|--------|---------|
+| Open undotree and focus it | `'n', '<leader>u'` |
 
 ## Git status and commands
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
--- Accept diffs in visual diff buffers
-vim.keymap.set('n', 'gh', '<cmd>diffget //2<CR>')
-vim.keymap.set('n', 'gl', '<cmd>diffget //3<CR>')
+| Action | Key Map |
+|--------|---------|
+| Open git status buffer | `'n', '<leader>gs'` |
+| Accept diffs in visual diff buffers | `'n', 'gh'`, `'n', 'gl'` |
+| Push commits to origin | `'n', '<leader>gp'` |
 
--- Push commits to origin
-vim.keymap.set('n', '<leader>gp', '<cmd>Git push<CR>')
+When in fugitive buffer:
 
--- When in fugitive buffer
-=  : opens diff for file under cursor
-s  : stages file under cursor
-cc : commits staged files
-dv : visual diff of file under cursor
+| Action | Key Map |
+|--------|---------|
+| Open diff for file under cursor | `=` |
+| Stage file under cursor | `s` |
+| Commit staged files | `cc` |
+| Visual diff of file under cursor | `dv` |
 
-Note that you can place your cursor on the section headers (e.g. "Unstaged") to apply
-one of these hotkeys to all files in the group
+Note that you can place your cursor on the section headers (e.g. "Unstaged") to apply one of these hotkeys to all files in the group.
+
