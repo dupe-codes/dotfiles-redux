@@ -27,7 +27,6 @@ local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
 -- Set up colorscheme
-
 -- vim.cmd.colorscheme "catppuccin-frappe"
 -- vim.cmd.colorscheme 'everforest'
 vim.cmd.colorscheme 'kanagawa'
@@ -36,7 +35,6 @@ vim.cmd.colorscheme 'kanagawa'
 -- vim.cmd.colorscheme 'everblush'
 
 -- Set up treesitter
-
 require('nvim-treesitter.configs').setup {
     ensure_installed = {
         'bash',
@@ -81,7 +79,6 @@ require('treesitter-context').setup {
 }
 
 -- Configure keymappers
-
 vim.g.mapleader = ' '
 
 local key_mapper = function(mode, key, result)
@@ -155,7 +152,6 @@ key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
 key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
 
 -- Setup indent blankline
-
 require("indent_blankline").setup {
     -- for example, context is off by default, use this to turn it on
     show_current_context = true,
@@ -172,7 +168,6 @@ require('lualine').setup {
 }
 
 -- Setup linting
-
 require('lint').linters_by_ft = {
     python = { 'pylint', },
 }
@@ -191,7 +186,6 @@ vim.diagnostic.config({
 })
 
 -- Setup language service configs
-
 local lspconfig = require 'lspconfig'
 
 local on_attach = function(_, bufnr)
@@ -210,7 +204,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
 end
 
-
+-- Setup diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
         underline = true,
@@ -219,6 +213,23 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
         update_in_insert = true,
     }
 )
+
+local _border = "single"
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    border = _border
+  }
+)
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, {
+    border = _border
+  }
+)
+
+vim.diagnostic.config {
+  float={border=_border}
+}
 
 function _G.open_floating_diagnostics()
     local bufnr, winnr = vim.diagnostic.open_float(0, { scope = "line" })
