@@ -123,13 +123,15 @@ key_mapper('n', '<leader>8', ':BufferGoto 8<CR>')
 key_mapper('n', '<leader>.', ':BufferNext<CR>')
 key_mapper('n', '<leader>,', ':BufferPrevious<CR>')
 key_mapper('n', '<leader>q', ':BufferClose<CR>')
+key_mapper('n', '<leader>aq', ':BufferCloseAllButCurrent<CR>')
 
 require('barbar').setup {
     icons = {
         filetype = {
-            enabled = true,
-        }
-    }
+            enabled = false,
+        },
+        modified = {button = '~'},
+   }
 }
 
 -- Set up nvim-tree
