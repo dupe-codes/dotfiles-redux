@@ -17,6 +17,12 @@ ln -sf $PWD/neovim/init.lua $HOME/.config/nvim/init.lua
 ln -sf $PWD/neovim/lua $HOME/.config/nvim/
 ln -sf $PWD/neovim/after $HOME/.config/nvim/
 
+# pull patched berkeley mono fonts from Dropbox
+mkdir -p $PWD/fonts/
+curl -L -o $PWD/fonts/berkeley-mono-nerd-font.zip https://www.dropbox.com/s/wvmpjlsht24ol5j/berkeley-mono-nerd-font.zip?dl=0
+unzip $PWD/fonts/berkeley-mono-nerd-font.zip -d $PWD/fonts/
+echo "Berkeley Mono Nerd Font downloaded and unzipped. Please install manually."
+
 # symlink zshrc
 ln -s $PWD/zshrc $HOME/.zshrc
 
