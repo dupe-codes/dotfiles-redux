@@ -63,6 +63,9 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'zbirenbaum/copilot-cmp'
 
+" Debugging plugins with dap
+Plug 'mfussenegger/nvim-dap'
+
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()

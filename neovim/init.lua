@@ -27,6 +27,7 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+vim.cmd('au ColorScheme * hi clear SignColumn')
 -- Set up colorscheme
 -- vim.cmd.colorscheme "catppuccin-frappe"
 -- vim.cmd.colorscheme 'everforest'
@@ -181,16 +182,17 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   end,
 })
 
+-- Setup LSP and diagnostics configs
+
 vim.diagnostic.config({
     underline = true,
     virtual_text = false,
     signs = true,
     update_in_insert = true,
+    severity_sort = true,
 })
 
--- Setup language service configs
 local lspconfig = require 'lspconfig'
-
 local on_attach = function(_, bufnr)
     local attach_opts = { silent = true, buffer = bufnr }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
@@ -214,9 +216,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
         virtual_text = false,
         signs = true,
         update_in_insert = true,
+        severity_sort = true,
     }
 )
 
+-- Add borders to diagnostic windows
 local _border = "single"
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
   vim.lsp.handlers.hover, {
