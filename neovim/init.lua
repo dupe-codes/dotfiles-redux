@@ -291,6 +291,13 @@ require("copilot").setup({
 })
 require("copilot_cmp").setup()
 
+local lspkind = require("lspkind")
+lspkind.init({
+  symbol_map = {
+    Copilot = "",
+  },
+})
+
 cmp.setup {
     snippet = {
         expand = function(args)
