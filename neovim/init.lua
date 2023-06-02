@@ -6,7 +6,7 @@
 -- 3. telescope - fuzzy finder
 -- 4. treesitter - syntax highlighting
 -- 5. treesitter-context - show cursor context pinned to window top
--- 6. copilot - ai autocomplete
+-- 6. copilot.lua - ai autocomplete
 -- 7. lualine - statusline
 -- 8. nvim-cmp - autocomplete
 -- 9. nvim-lspconfig - language servers
@@ -20,6 +20,7 @@
 -- 17. harpoon - bookmark files
 -- 18. vim-fugitive - git integration
 -- 19. undotree - undo history
+-- 20. copilot-cmp - display copilot as completion options
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
@@ -283,6 +284,13 @@ local luasnip = require 'luasnip'
 
 luasnip.config.setup {}
 
+-- Configure copilot as a completions source
+require("copilot").setup({
+  suggestion = { enabled = false },
+  panel = { enabled = false },
+})
+require("copilot_cmp").setup()
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -320,8 +328,9 @@ cmp.setup {
         end, { 'i', 's' }),
     },
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
+        { name = "copilot", group_index = 2 },
+        { name = 'nvim_lsp', group_index = 2 },
+        { name = 'luasnip', group_index = 2 },
     },
     formatting = {
         format = function(entry, vim_item)

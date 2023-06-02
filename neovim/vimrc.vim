@@ -20,7 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'neanias/everforest-nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
-Plug 'github/copilot.vim'
+Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -61,6 +61,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'ThePrimeagen/harpoon'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
+Plug 'zbirenbaum/copilot-cmp'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
