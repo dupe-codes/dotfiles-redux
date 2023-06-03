@@ -52,7 +52,6 @@ Harpoon:
 | Rename a file or directory | (in tree) `<C-r>`) |
 | NvimTreeFindFile | `'n', '<leader>ff'` |
 | NvimTreeToggle | `'n', '<leader>nt'` |
-| New file in current buffer's dir | `'n', '<leader>nf'` |
 
 ## language server/completions/code introspection
 
@@ -79,8 +78,7 @@ Harpoon:
 
 | Action | Key Map |
 |--------|---------|
-| Open terminal | `'n', '<leader>tt'` |
-| Escape from terminal | `'t', '<Esc>'` |
+| Toggle terminal | `'n', '<C-\>'` |
 
 ## Undotree
 

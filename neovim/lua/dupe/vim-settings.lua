@@ -13,3 +13,7 @@ hl(0, "DiagnosticSignError", { fg = "#db4b4b", bg = clear })
 hl(0, "DiagnosticSignHint", { fg = "#10B981", bg = clear })
 hl(0, "DiagnosticSignInfo", { fg = "#0db9d7", bg = clear })
 hl(0, "DiagnosticSignWarn", { fg= "#e0af68", bg = clear })
+
+-- Set hidden to preserve buffers
+vim.cmd("set hidden")
+

@@ -62,9 +62,13 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'zbirenbaum/copilot-cmp'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'm-demare/hlargs.nvim'
 
 " Debugging plugins with dap
 Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

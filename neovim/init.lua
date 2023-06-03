@@ -21,6 +21,11 @@
 -- 18. vim-fugitive - git integration
 -- 19. undotree - undo history
 -- 20. copilot-cmp - display copilot as completion options
+-- 21. toggleterm - better terminal support
+-- 22. hlargs - highlight function arguments
+-- 23. nvim-dap - debugger adapter
+-- 24. dap-ui - UI tools for debugger
+-- 25. dap-virtual-test - virtual text support for dap debugging
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
@@ -29,7 +34,7 @@ vim.cmd.source(vimrc)
 
 vim.cmd('au ColorScheme * hi clear SignColumn')
 -- Set up colorscheme
--- vim.cmd.colorscheme "catppuccin-frappe"
+--vim.cmd.colorscheme "catppuccin"
 -- vim.cmd.colorscheme 'everforest'
 vim.cmd.colorscheme 'kanagawa'
 -- vim.cmd.colorscheme 'gruvbox'
@@ -130,7 +135,7 @@ key_mapper('n', '<leader>aq', ':BufferCloseAllButCurrent<CR>')
 require('barbar').setup {
     icons = {
         filetype = {
-            enabled = false,
+            enabled = true,
         },
         modified = {button = '~'},
    }
@@ -358,36 +363,16 @@ cmp.setup {
     },
 }
 
--- Nerdcommenter keymappers
--- These are the defaults - writing down the ones I commonly use as a documented
--- reminder
--- key_mapper('n', '<leader>cc', '<Plug>NERDCommenterComment')
--- key_mapper('n', '<leader>cu', '<Plug>NERDCommenterUncomment')
--- key_mapper('n', '<leader>c<space>', '<Plug>NERDCommenterToggle')
-
--- Key mappings for using the terminal
-key_mapper('n', '<leader>tt', '<Cmd>terminal<CR>')
-key_mapper('t', '<Esc>', '<C-\\><C-n>')
-
 -- Setup glance keymappers
 key_mapper('n', '<leader>gd', '<CMD>Glance definitions<CR>')
 key_mapper('n', '<leader>gr', '<CMD>Glance references<CR>')
 key_mapper('n', '<leader>gy', '<CMD>Glance type_definitions<CR>')
 key_mapper('n', '<leader>gm', '<CMD>Glance implementations<CR>')
 
--- key map to create a new file in the current buffer's directory
-key_mapper(
-    'n',
-    '<leader>nf',
-    ':edit %:h/<C-r>=input("New file name: ")<CR><CR>'
-)
-
 -- Configure nvim-autopairs
 require('nvim-autopairs').setup {}
 
--- Add remaps in custom file
-require('dupe.remap')
-
--- Add vim settings from custom file
-require('dupe.vim-settings')
+-- Load custom submodules
+require('dupe.remap') -- Add remaps in custom file
+require('dupe.vim-settings') -- Add vim settings from custom file
 

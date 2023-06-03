@@ -6,7 +6,7 @@
     - Include jupyter, notebook extensions, RISE (slideshows), jupyterthemes, etc.
 2. Set up installs and configurations for nnn in install script
 3. Figure out better install setup for zsh-z
-4. Add dropbar plugin to neovim once nvim-nightly isn't required
+4. Add dropbar, refactoring plugins to neovim once nvim-nightly isn't required
 5. Break apart neovim config files:
     - Subdirectories to configure individual plugins
     - Separate file to configure key mappings
@@ -16,10 +16,6 @@
     - plugins.lua for installing plugins
 8. Experiment with tmux setup
     Biggest q is how well it would play with warp
-9. Try neovim nightly
-    - Download and build from source
-    - Symlink or alias to use nightly
-    - If issues, symlink back or remove alias to go back to stable
 
 # Tools Index
 
