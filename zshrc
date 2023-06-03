@@ -143,3 +143,5 @@ source $HOME/secrets.sh
 # TODO: Add saved developer assistant prompt
 alias gpt="chatblade -c 3.5 -s"
 
+# Welcome message :]
+echo -e "$(cat $HOME/gundam.txt)"

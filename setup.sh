@@ -13,6 +13,7 @@ mkdir -p $HOME/.config/nvim
 
 # configure to copy desired ascii art to nvim; default to 2B
 cp $PWD/ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
+cp $PWD/ascii-art/gundam.txt $HOME/gundam.txt
 
 # symlink neovim configs
 ln -sf $PWD/neovim/vimrc.vim $HOME/.config/nvim/vimrc.vim

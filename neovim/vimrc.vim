@@ -82,8 +82,8 @@ syntax on
 
 " Highlight extra whitespace in all buffers but terminal windows
 highlight ExtraWhitespace ctermbg=grey guibg=grey
-match ExtraWhitespace /\s\+$/
-au BufWinEnter * if &buftype != 'terminal' | match ExtraWhitespace /\s\+$/ | endif
+"match ExtraWhitespace /\s\+$/
+"au BufWinEnter * if &buftype != 'terminal' | match ExtraWhitespace /\s\+$/ | endif
 au InsertEnter * if &buftype != 'terminal' | match ExtraWhitespace /\s\+\%#\@<!$/ | endif
 au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\s\+$/ | endif
 au BufWinLeave * call clearmatches()
