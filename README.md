@@ -16,6 +16,7 @@
     - plugins.lua for installing plugins
 8. Experiment with tmux setup
     Biggest q is how well it would play with warp
+9. Run nerd patcher on MonoLisa font
 
 # Tools Index
 
