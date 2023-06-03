@@ -135,3 +135,5 @@ alias cmake_init="CC=clang CXX=g++-13 cmake .."
 
 # arttime pomodoro command
 alias pomodoro="arttime --nolearn -t \"Get things done bruv\" -a desktop -g \"25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2\""
+
+source secrets.sh

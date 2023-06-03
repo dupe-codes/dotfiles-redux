@@ -310,6 +310,10 @@ lspkind.init({
   },
 })
 
+local window_config = {
+    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",
+}
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -317,8 +321,8 @@ cmp.setup {
         end,
     },
     window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered(window_config),
+        documentation = cmp.config.window.bordered(window_config),
     },
     mapping = cmp.mapping.preset.insert {
         ['<C-e>'] = cmp.mapping.abort(),

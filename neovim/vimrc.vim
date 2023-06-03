@@ -14,7 +14,6 @@ set expandtab               " convert tabs to white space
 set shiftwidth=4 smarttab   " width for autoindents
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set scrolloff=8             " keep 8 lines above and below the cursor
-"set mouse=a
 
 call plug#begin('~/.config/nvim/plugged')
 

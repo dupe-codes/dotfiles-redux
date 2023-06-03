@@ -20,3 +20,6 @@ vim.keymap.set("n", "<C-l>", function()
     ui.nav_file(4)
 end)
 
+-- Style harpoon menu
+vim.api.nvim_set_hl(0, 'HarpoonWindow', { link = 'NormalFloat' })
+vim.api.nvim_set_hl(0, 'HarpoonBorder', { link = 'FloatBorder' })

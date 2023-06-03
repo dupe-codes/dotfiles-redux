@@ -12,7 +12,7 @@ echo 'Setting up neovim config files...'
 mkdir -p $HOME/.config/nvim
 
 # configure to copy desired ascii art to nvim; default to 2B
-cp ./ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
+cp $PWD/ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
 
 # symlink neovim configs
 ln -sf $PWD/neovim/vimrc.vim $HOME/.config/nvim/vimrc.vim
@@ -29,8 +29,9 @@ unzip $PWD/fonts/berkeley-mono-nerd-font.zip -d $PWD/fonts/
 echo "Berkeley Mono Nerd Font downloaded and unzipped. Please install manually."
 
 # symlink zshrc
-echo 'Setting up zshrc...'
+echo 'Setting up zshrc... Remember to fill in secrets.sh!'
 ln -s $PWD/zshrc $HOME/.zshrc
+cp $PWD/secrets.sh $HOME/secrets.sh
 
 # symlink clang tooling
 echo 'Setting up clang tooling...'
