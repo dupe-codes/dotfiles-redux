@@ -13,4 +13,5 @@ llvm
 pre-commit
 ripgrep
 arttime
+chatblade
 
