@@ -323,6 +323,9 @@ cmp.setup {
             luasnip.lsp_expand(args.body)
         end,
     },
+    --experimental = {
+        --ghost_text = true,
+    --},
     window = {
         completion = cmp.config.window.bordered(window_config),
         documentation = cmp.config.window.bordered(window_config),
