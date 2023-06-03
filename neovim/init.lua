@@ -272,7 +272,10 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-require('neodev').setup {}
+require('neodev').setup {
+    -- pass types to dap UI
+    library = { plugins = { "nvim-dap-ui" }, types = true },
+}
 
 lspconfig.lua_ls.setup {
     on_attach = on_attach,

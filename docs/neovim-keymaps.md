@@ -110,3 +110,9 @@ When in fugitive buffer:
 
 Note that you can place your cursor on the section headers (e.g. "Unstaged") to apply one of these hotkeys to all files in the group.
 
+## Debugger
+
+| Action | Key Map |
+| ------ | ------- |
+| Close hover variables window | `<C-w>q` |
+
