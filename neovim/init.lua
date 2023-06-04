@@ -33,12 +33,13 @@ local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
 vim.cmd('au ColorScheme * hi clear SignColumn')
+
 -- Set up colorscheme
---vim.cmd.colorscheme "catppuccin"
--- vim.cmd.colorscheme 'everforest'
-vim.cmd.colorscheme 'kanagawa'
+vim.cmd.colorscheme "catppuccin"
+ --vim.cmd.colorscheme 'everforest'
+--vim.cmd.colorscheme 'kanagawa'
 -- vim.cmd.colorscheme 'gruvbox'
--- vim.cmd.colorscheme 'tokyonight-moon'
+--vim.cmd.colorscheme 'tokyonight-moon'
 -- vim.cmd.colorscheme 'everblush'
 
 -- Set up treesitter
