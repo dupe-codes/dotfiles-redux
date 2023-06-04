@@ -52,11 +52,36 @@ local icons = {
 }
 
 vim.api.nvim_set_hl(0, "DapStoppedLinehl", { bg = "#555530" })
-vim.fn.sign_define("DapBreakpoint", { text = icons.ui.TinyCircle, texthl = "DapBreakpoint", linehl = "", numhl = "" })
-vim.fn.sign_define("DapBreakpointCondition", { text = icons.ui.CircleWithGap, texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
-vim.fn.sign_define("DapLogPoint", { text = icons.ui.LogPoint, texthl = "DapLogPoint", linehl = "", numhl = "" })
-vim.fn.sign_define("DapStopped", { text = icons.ui.ChevronRight, texthl = "Error", linehl = "DapStoppedLinehl", numhl = "" })
-vim.fn.sign_define("DapBreakpointRejected", { text = icons.ui.Error, texthl = "Error", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpoint", {
+    text = icons.ui.TinyCircle,
+    texthl = "DapBreakpoint",
+    linehl = "",
+    numhl = ""
+})
+vim.fn.sign_define("DapBreakpointCondition", {
+    text = icons.ui.CircleWithGap,
+    texthl = "DapBreakpointCondition",
+    linehl = "",
+    numhl = ""
+})
+vim.fn.sign_define("DapLogPoint", {
+    text = icons.ui.LogPoint,
+    texthl = "DapLogPoint",
+    linehl = "",
+    numhl = ""
+})
+vim.fn.sign_define("DapStopped", {
+    text = icons.ui.ChevronRight,
+    texthl = "Error",
+    linehl = "DapStoppedLinehl",
+    numhl = ""
+})
+vim.fn.sign_define("DapBreakpointRejected", {
+    text = icons.ui.Error,
+    texthl = "Error",
+    linehl = "",
+    numhl = ""
+})
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
@@ -126,8 +151,22 @@ local cpp_dap_config = {
     runInTerminal = true,
     console = "integratedTerminal",
 }
-
 dap.configurations.cpp = { cpp_dap_config }
+
+-- c adapter
+-- uses codelldb, only need config
+
+local c_dap_config = {
+    name = "C Debug And Run",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false
+}
+dap.configurations.c = { c_dap_config }
 
 --#endregion
 
