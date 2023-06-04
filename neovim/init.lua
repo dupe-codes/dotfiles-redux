@@ -263,8 +263,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- Enable the following language servers
 local servers = {
     'ccls',
-    'rust_analyzer',
     'pyright',
+    'rust-analyzer',
     'tsserver',
     'jdtls',
     'metals'

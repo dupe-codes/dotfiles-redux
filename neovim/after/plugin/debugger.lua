@@ -2,12 +2,6 @@ local dap = require('dap')
 local dap_virtual_text_status = require("nvim-dap-virtual-text")
 local dapui = require("dapui")
 
-
-local dap_install = require "dap-install"
-dap_install.setup {
-    installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
-}
-
 dap_virtual_text_status.setup {
     commented = true,
 }
@@ -74,25 +68,52 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
--- TODO: Setup adapters, starting with c++ lldb
-
---dap.adapters.codelldb = {
-  --type = "server",
-  --port = "${port}",
-  --executable = {
-    ---- CHANGE THIS to your path!
-    --command = codelldb.codelldb_path,
-    --args = { "--port", "${port}" },
-
-    ---- On windows you may have to uncomment this:
-    ---- detached = false,
-  --}
---}
+--#region
+-- Setup debug adapters
 
 -- Python adapter
 -- requires debupy installation
 require("dap-python").setup("python", {})
 
+-- Rust adapter
+-- Package installation folder
+local install_root_dir = vim.fn.stdpath "data" .. "/mason"
+
+-- DAP settings from https://github.com/simrat39/rust-tools.nvim#a-better-debugging-experience
+-- config: https://github.com/simrat39/rust-tools.nvim/blob/master/lua/rust-tools/dap.lua
+local extension_path = install_root_dir .. "/packages/codelldb/extension/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
+
+dap.adapters.codelldb = {
+    type = "server",
+    port = "${port}",
+    host = "127.0.0.1",
+    executable = {
+      command = codelldb_path,
+      args = { "--liblldb", liblldb_path, "--port", "${port}" },
+    },
+}
+
+local rust_dap_config = {
+    name = "Rust debug",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+        return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    args = {}, -- TODO: figure out how to pass args
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+    runInTerminal = true,
+    console = "integratedTerminal"
+}
+
+dap.configurations.rust = { rust_dap_config }
+
+--#endregion
+
+--#region
 -- Setup debugging keymaps
 
 local whichkey = require "which-key"
@@ -150,4 +171,5 @@ whichkey.register(keymap_v, {
     nowait = false,
 })
 
+--#endregion
 

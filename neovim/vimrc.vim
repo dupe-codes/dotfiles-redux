@@ -67,12 +67,14 @@ Plug 'm-demare/hlargs.nvim'
 
 " Debugging plugins with dap
 Plug 'mfussenegger/nvim-dap'
-Plug 'ravenxrz/DAPInstall.nvim'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'folke/which-key.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
