@@ -264,7 +264,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local servers = {
     'ccls',
     'pyright',
-    'rust-analyzer',
+    'rust_analyzer',
     'tsserver',
     'jdtls',
     'metals'

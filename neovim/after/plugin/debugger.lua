@@ -111,6 +111,24 @@ local rust_dap_config = {
 
 dap.configurations.rust = { rust_dap_config }
 
+-- c++ adapter
+-- Also used codelldb, only need to create config
+
+local cpp_dap_config = {
+    name = "C++ Debug And Run",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+    runInTerminal = true,
+    console = "integratedTerminal",
+}
+
+dap.configurations.cpp = { cpp_dap_config }
+
 --#endregion
 
 --#region

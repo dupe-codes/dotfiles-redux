@@ -37,8 +37,7 @@
 2. Copy `project-configs/.ccls` to project root to configure ccls language server
 3. After configuring CMake files, from project root execute:
     ```
-    mkdir build
-    cd build
-    cmake_init # alias for 'CC=clang CXX=g++-13 cmake ..'
+    CC=clang CXX=g++-13 cmake -S . -B build/debug -DCMAKE_BUILD_TYPE=DEBUG
+    CC=clang CXX=g++-13 cmake -S . -B build/release -DCMAKE_BUILD_TYPE=RELEASE
     ```
-
+    The first command creates a debug target, the second is a release target
