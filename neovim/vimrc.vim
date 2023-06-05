@@ -18,7 +18,6 @@ set scrolloff=8             " keep 8 lines above and below the cursor
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'neanias/everforest-nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
@@ -42,14 +41,11 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'sheerun/vim-polyglot'
 Plug 'quarto-dev/quarto-nvim'
 Plug 'jmbuhr/otter.nvim'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'romgrk/barbar.nvim'
 Plug 'gruvbox-community/gruvbox'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'mfussenegger/nvim-lint'
 Plug 'preservim/nerdcommenter'
 Plug 'Everblush/nvim'
@@ -75,6 +71,16 @@ Plug 'folke/which-key.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
 
+" Colorschemes
+Plug 'cocopon/iceberg.vim'
+Plug 'neanias/everforest-nvim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'rebelot/kanagawa.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'Domeee/mosel.nvim'
+Plug 'shaunsingh/nord.nvim'
+Plug 'nyoom-engineering/oxocarbon.nvim'
+Plug 'EdenEast/nightfox.nvim'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.

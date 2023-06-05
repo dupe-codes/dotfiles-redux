@@ -35,12 +35,19 @@ vim.cmd.source(vimrc)
 vim.cmd('au ColorScheme * hi clear SignColumn')
 
 -- Set up colorscheme
-vim.cmd.colorscheme "catppuccin"
- --vim.cmd.colorscheme 'everforest'
---vim.cmd.colorscheme 'kanagawa'
--- vim.cmd.colorscheme 'gruvbox'
+-- Nothing beats kanagawa or catppuccin :]
+vim.cmd.colorscheme 'kanagawa'
+--vim.cmd.colorscheme "catppuccin"
+
+--vim.cmd.colorscheme 'everforest'
+--vim.cmd.colorscheme 'gruvbox'
 --vim.cmd.colorscheme 'tokyonight-moon'
--- vim.cmd.colorscheme 'everblush'
+--vim.cmd.colorscheme 'everblush'
+--vim.cmd.colorscheme 'iceberg'
+--vim.cmd.colorscheme 'mosel'
+--vim.cmd.colorscheme 'nord'
+--vim.cmd.colorscheme 'oxocarbon'
+--vim.cmd.colorscheme 'carbonfox'
 
 -- Set up treesitter
 require('nvim-treesitter.configs').setup {
