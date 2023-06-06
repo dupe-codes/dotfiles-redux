@@ -35,10 +35,13 @@ vim.cmd.source(vimrc)
 vim.cmd('au ColorScheme * hi clear SignColumn')
 
 -- Set up colorscheme
--- Nothing beats kanagawa or catppuccin :]
-vim.cmd.colorscheme 'kanagawa'
+-- Nothing beats kanagawa, catppuccin, zenburned,
+-- or rose-pine :]
+--vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme 'zenburned'
 
+vim.cmd.colorscheme 'rose-pine'
 --vim.cmd.colorscheme 'everforest'
 --vim.cmd.colorscheme 'gruvbox'
 --vim.cmd.colorscheme 'tokyonight-moon'

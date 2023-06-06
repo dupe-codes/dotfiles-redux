@@ -81,6 +81,9 @@ Plug 'Domeee/mosel.nvim'
 Plug 'shaunsingh/nord.nvim'
 Plug 'nyoom-engineering/oxocarbon.nvim'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'mcchrish/zenbones.nvim'
+Plug 'rktjmp/lush.nvim'
+Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
