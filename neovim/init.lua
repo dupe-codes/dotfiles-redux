@@ -25,7 +25,7 @@
 -- 22. hlargs - highlight function arguments
 -- 23. nvim-dap - debugger adapter
 -- 24. dap-ui - UI tools for debugger
--- 25. dap-virtual-test - virtual text support for dap debugging
+-- 25. dap-virtual-text - virtual text support for dap debugging
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
@@ -40,8 +40,8 @@ vim.cmd('au ColorScheme * hi clear SignColumn')
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
 --vim.cmd.colorscheme 'zenburned'
-
 vim.cmd.colorscheme 'rose-pine'
+
 --vim.cmd.colorscheme 'everforest'
 --vim.cmd.colorscheme 'gruvbox'
 --vim.cmd.colorscheme 'tokyonight-moon'
@@ -74,6 +74,7 @@ require('nvim-treesitter.configs').setup {
         'scala',
         'terraform',
         'clojure',
+        'markdown',
     },
     highlight = {
         enable = true,
