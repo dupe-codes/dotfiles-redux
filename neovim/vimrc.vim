@@ -60,6 +60,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'zbirenbaum/copilot-cmp'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'm-demare/hlargs.nvim'
+Plug 'folke/trouble.nvim'
 
 " Debugging plugins with dap
 Plug 'mfussenegger/nvim-dap'

@@ -116,3 +116,9 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | ------ | ------- |
 | Close hover variables window | `<C-w>q` |
 
+## Trouble
+
+| Action | Key Map |
+| ------ | ------- |
+| Open trouble | `<leader>xx`|
+
