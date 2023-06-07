@@ -61,6 +61,8 @@ Plug 'zbirenbaum/copilot-cmp'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'm-demare/hlargs.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'folke/todo-comments.nvim'
+Plug 'folke/zen-mode.nvim'
 
 " Debugging plugins with dap
 Plug 'mfussenegger/nvim-dap'

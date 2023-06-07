@@ -121,27 +121,14 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | Action | Key Map |
 | ------ | ------- |
 | Open trouble | `<leader>xx`|
-| Open workspace diagnostics | <leader>xw |
-| Open document diagnostics | <leader>xd |
-| Open loclist | <leader>xl |
-| Open quickfix | <leader>xq |
-| Open LSP references | gR |
+| Open workspace diagnostics | `<leader>xw` |
+| Open document diagnostics | `<leader>xd` |
+| Open loclist | `<leader>xl` |
+| Open quickfix | `<leader>xq` |
+| Open LSP references | `gR` |
 
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-  {silent = true, noremap = true}
-)
+## Zen Mode
+
+| Action | Key Map |
+| ------ | ------- |
+| Toggle zen mode | `<leader>zz` |

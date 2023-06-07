@@ -29,6 +29,8 @@
 -- 26. trouble - diagnostics lists
 -- 27. which-key - show keymaps
 -- 28. mason - package manager, mostly debugging dependencies
+-- 29. todo-comments - highlight TODO comments
+-- 30. zen-mode - distraction free mode
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
