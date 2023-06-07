@@ -39,6 +39,10 @@ vim.cmd.source(vimrc)
 
 vim.cmd('au ColorScheme * hi clear SignColumn')
 
+require('rose-pine').setup({
+    disable_italics = true,
+})
+
 -- Set up colorscheme
 -- Nothing beats kanagawa, catppuccin, zenburned,
 -- or rose-pine :]
