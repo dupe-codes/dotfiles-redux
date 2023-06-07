@@ -26,6 +26,9 @@
 -- 23. nvim-dap - debugger adapter
 -- 24. dap-ui - UI tools for debugger
 -- 25. dap-virtual-text - virtual text support for dap debugging
+-- 26. trouble - diagnostics lists
+-- 27. which-key - show keymaps
+-- 28. mason - package manager, mostly debugging dependencies
 --------------------------------------------------------------------
 
 -- Load vimrc for initial configs
