@@ -1,0 +1,22 @@
+# Default pre-commit hooks for coding projects
+# TODO:
+# - Add scala, clojure hooks
+# - Add rust hooks?
+
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+    - id: black
+    - id: black-jupyter
+
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v16.0.3
+    hooks:
+    - id: clang-format
+
+  - repo: https://github.com/njdup/devmoji-precommit
+    rev: v1.1
+    hooks:
+    - id: devmoji-precommit
+
