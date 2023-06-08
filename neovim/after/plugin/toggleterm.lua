@@ -1,10 +1,11 @@
 -- TODO: Configure toggleterm keymaps
 require("toggleterm").setup({
     open_mapping = [[<C-\>]],
-    direction = "float",
-    float_opts = {
-        border = "curved",
-    },
+    --direction = "float",
+    --float_opts = {
+        --border = "curved",
+    --},
+    size = 24,
     highlights = {
        FloatBorder = {
             guifg="#54546d",
