@@ -6,7 +6,7 @@ require("toggleterm").setup({
         --border = "curved",
     --},
     size = function()
-      return math.floor(vim.o.lines * 0.33)
+      return math.floor(vim.o.lines * 0.40)
     end,
     highlights = {
        FloatBorder = {
