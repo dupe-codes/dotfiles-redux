@@ -84,6 +84,7 @@ require('nvim-treesitter.configs').setup {
         'terraform',
         'clojure',
         'markdown',
+        'zig',
     },
     highlight = {
         enable = true,

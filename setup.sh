@@ -44,3 +44,6 @@ echo 'Installing mambaforge...'
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
 bash Mambaforge-$(uname)-$(uname -m).sh
 
+# symlink devmoji config to home dir
+ln -sf $PWD/project-configs/devmoji.config.js $HOME/devmoji.config.js
+

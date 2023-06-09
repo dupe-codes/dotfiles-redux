@@ -63,6 +63,7 @@ Plug 'm-demare/hlargs.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'folke/todo-comments.nvim'
 Plug 'folke/zen-mode.nvim'
+Plug 'ThePrimeagen/vim-be-good'
 
 " Debugging plugins with dap
 Plug 'mfussenegger/nvim-dap'
