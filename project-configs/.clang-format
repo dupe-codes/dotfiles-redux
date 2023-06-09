@@ -2,5 +2,5 @@
 Language:           Cpp
 BasedOnStyle:       LLVM
 IndentWidth:        4
-BreakBeforeBraces:  BS_Attach
+BreakBeforeBraces:  Attach
 
