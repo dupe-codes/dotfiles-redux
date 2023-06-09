@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/njdup/devmoji-precommit
-    rev: v1.2
+    rev: v1.3.0
     hooks:
     - id: devmoji-precommit
 
