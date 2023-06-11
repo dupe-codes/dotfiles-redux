@@ -288,7 +288,8 @@ local servers = {
     'rust_analyzer',
     'tsserver',
     'jdtls',
-    'metals'
+    'metals',
+    'zls',
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

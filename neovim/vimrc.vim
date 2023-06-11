@@ -89,6 +89,9 @@ Plug 'mcchrish/zenbones.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 
+" Zig support
+Plug 'ziglang/zig.vim'
+
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
 call plug#end()
