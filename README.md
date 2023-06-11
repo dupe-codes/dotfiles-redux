@@ -24,6 +24,7 @@
 2. arttime - pretty pomodoro CLI app
 3. mamba - python package manager (faster conda)
 4. chatblade - GPT CLI query tool
+5. fzf - command line fuzzy search
 
 # Notes
 

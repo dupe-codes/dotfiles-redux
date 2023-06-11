@@ -59,3 +59,7 @@ echo -e "$(cat $HOME/gundam.txt)"
 # Update PATH for riscv toolchain (OS course)
 PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
 
+# Add fzf key bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias fsearch="fzf --preview \"bat --color=always --style=header,grid --line-range :500 {}\""
+

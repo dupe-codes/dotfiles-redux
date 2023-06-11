@@ -14,4 +14,5 @@ pre-commit
 ripgrep
 arttime
 chatblade
+fzf
 

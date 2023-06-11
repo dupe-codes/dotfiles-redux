@@ -1,3 +1,29 @@
+vim.g.mapleader = ' '
+
+local key_mapper = function(mode, key, result)
+    vim.api.nvim_set_keymap(
+        mode,
+        key,
+        result,
+        { noremap = true, silent = true }
+    )
+end
+
+-- Unmap arrow keys
+key_mapper('', '<up>', '<nop>')
+key_mapper('', '<down>', '<nop>')
+key_mapper('', '<left>', '<nop>')
+key_mapper('', '<right>', '<nop>')
+
+-- Move between windows with <leader>hjkl
+key_mapper('n', '<leader>h', '<C-w>h')
+key_mapper('n', '<leader>j', '<C-w>j')
+key_mapper('n', '<leader>k', '<C-w>k')
+key_mapper('n', '<leader>l', '<C-w>l')
+
+-- Clear search with <leader><leader>
+key_mapper('n', '<leader><leader>', ':noh<CR>')
+
 -- Keymap to go back and forth to/from last buffer
 vim.keymap.set('n', '<leader>b', '<C-^>')
 
