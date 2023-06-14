@@ -1,4 +1,5 @@
 -- Setup LSPs, diagnositcs, and completions
+-- Done here because it involves so many plugins
 
 local key_mapper = require('dupe.util').key_mapper
 

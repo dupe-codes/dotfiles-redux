@@ -1,7 +1,3 @@
--- Load vimrc for initial configs and plugins
--- local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
--- vim.cmd.source(vimrc)
-
 -- Initialize lazy.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -22,4 +18,4 @@ require("dupe.vim-settings")  -- Add vim settings from custom file
 require("dupe.remap")         -- Add remaps in custom file
 require("dupe.plugins")       -- Add lazy managed plugins
 require("dupe.colorscheme")   -- Add colorscheme setup
-require("dupe.lsp")           -- configure lsp
+require("dupe.lsp")           -- configure LSP, completions, and diagnostics
