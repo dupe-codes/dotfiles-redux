@@ -2,11 +2,6 @@
 echo 'Installing brew packages from packages.txt...'
 <packages.txt xargs brew install
 
-# Install vim-plug
-echo 'Installing vim-plug...'
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # symlink config files
 echo 'Setting up neovim config files...'
 mkdir -p $HOME/.config/nvim
@@ -16,10 +11,8 @@ cp $PWD/ascii-art/ascii-art-2b.txt $HOME/.config/nvim/ascii-art.txt
 cp $PWD/ascii-art/gundam.txt $HOME/gundam.txt
 
 # symlink neovim configs
-ln -sf $PWD/neovim/vimrc.vim $HOME/.config/nvim/vimrc.vim
 ln -sf $PWD/neovim/init.lua $HOME/.config/nvim/init.lua
 ln -sf $PWD/neovim/lua $HOME/.config/nvim/
-ln -sf $PWD/neovim/after $HOME/.config/nvim/
 
 # pull patched berkeley mono fonts from Dropbox
 # Patched following instructions at
