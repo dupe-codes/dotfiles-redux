@@ -64,7 +64,7 @@ local plugins = {
         end,
     },
     { "preservim/nerdcommenter" },
-    { "wakatime/vim-wakatime" },
+    { "wakatime/vim-wakatime", lazy = false },
     {
         "mhinz/vim-startify",
         config = function()
