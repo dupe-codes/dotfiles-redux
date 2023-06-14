@@ -1,28 +1,5 @@
 # Smooth setup of a smooth developer environment :]
 
-## TODO:
-
-1. Set up preferred base conda environment.yaml for jupyter notebook environments
-    - Include jupyter, notebook extensions, RISE (slideshows), jupyterthemes, etc.
-2. Set up installs and configurations for nnn in install script
-3. Figure out better install setup for zsh-z
-4. Add dropbar, refactoring plugins to neovim once nvim-nightly isn't required
-5. Migrate to lsp-zero for neovim lsp (to replace manually configured)
-6. Replace vimrc.vim with:
-    - vim-settings.lua for vim settings
-    - plugins.lua for installing plugins
-7. Experiment with tmux setup
-    Biggest q is how well it would play with warp
-8. Run nerd patcher on MonoLisa font
-
-# Tools Index
-
-1. nnn - terminal file manager
-2. arttime - pretty pomodoro CLI app
-3. mamba - python package manager (faster conda)
-4. chatblade - GPT CLI query tool
-5. fzf - command line fuzzy search
-
 # Notes
 
 ## pre-commit hooks

@@ -1,6 +1,6 @@
 # Install brew packages from brew.txt
-echo 'Installing brew packages from brew.txt...'
-<brew.txt xargs brew install
+echo 'Installing brew packages from packages.txt...'
+<packages.txt xargs brew install
 
 # Install vim-plug
 echo 'Installing vim-plug...'
