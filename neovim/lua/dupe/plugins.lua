@@ -1,6 +1,5 @@
 local plugins = {
-    { "ryanoasis/vim-devicons", },
-    { "zbirenbaum/copilot.lua", lazy = false },
+    { "zbirenbaum/copilot.lua", lazy = false, },
     { "nvim-lua/plenary.nvim", },
     {
         "nvim-tree/nvim-tree.lua",
@@ -8,7 +7,7 @@ local plugins = {
             require("dupe.configs.nvim-tree")
         end,
     },
-    { "nvim-tree/nvim-web-devicons" },
+    { "nvim-tree/nvim-web-devicons", lazy = false },
     { "onsails/lspkind-nvim" },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
