@@ -1,14 +1,11 @@
+ccls
 coreutils
 neovim
 hugo
-lua-language-server
 nnn
-pyright
-rust-analyzer
 terraform
 tmux
 tree-sitter
-ccls
 llvm
 pre-commit
 ripgrep

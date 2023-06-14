@@ -19,8 +19,6 @@ vim.cmd("set hidden")
 
 -- Highlight extra whitespace in all buffers but terminal windows
 vim.cmd("highlight ExtraWhitespace ctermbg=grey guibg=grey")
-vim.cmd("match ExtraWhitespace /\\s\\+$/")
-vim.cmd("au BufWinEnter * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+$/ | endif")
 vim.cmd("au InsertEnter * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+\\%#\\@<!$/ | endif")
 vim.cmd("au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+$/ | endif")
 vim.cmd("au BufWinLeave * call clearmatches()")
@@ -43,3 +41,5 @@ vim.cmd("set softtabstop=4")         -- see multiple spaces as tabstops so <BS> 
 vim.cmd("set scrolloff=8")           -- keep 8 lines above and below the cursor
 vim.cmd("syntax on")
 
+-- Setup path to include mason installed packages
+vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. ":" .. vim.env.PATH

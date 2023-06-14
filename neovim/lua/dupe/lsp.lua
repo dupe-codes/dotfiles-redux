@@ -12,6 +12,7 @@ vim.diagnostic.config({
 })
 
 local lspconfig = require 'lspconfig'
+
 local on_attach = function(_, bufnr)
     local attach_opts = { silent = true, buffer = bufnr }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
@@ -72,12 +73,10 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Enable the following language servers
 local servers = {
-    'ccls',
+    'ccls', -- NOTE: ccls must be installed separate from Mason
+    'jdtls',
     'pyright',
     'rust_analyzer',
-    'tsserver',
-    'jdtls',
-    'metals',
     'zls',
 }
 for _, lsp in ipairs(servers) do
@@ -188,5 +187,4 @@ cmp.setup {
         end
     },
 }
-
 

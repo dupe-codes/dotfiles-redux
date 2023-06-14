@@ -158,14 +158,44 @@ local plugins = {
     { "folke/which-key.nvim", lazy = false },
 
     -- Package dependency management
-    { "williamboman/mason.nvim" },
     {
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
-        depends = { "williamboman/mason.nvim" },
-        config = function()
-            require("dupe.configs.mason-tools")
-        end,
+        "williamboman/mason.nvim",
+        cmd = {
+            "Mason",
+            "MasonInstall",
+            "MasonInstallAll",
+            "MasonUninstall",
+            "MasonUninstallAll",
+            "MasonLog",
+        },
+        opts = {
+            ensure_installed = {
+                "codelldb",
+                "jdtls",
+                "lua-language-server",
+                "pyright",
+                "rust-analyzer",
+                "zls",
+            },
+        },
+        config = function(_, opts)
+            require("mason").setup(opts)
+
+             -- custom cmd to install listed mason binaries
+             -- credit to NvChad :]
+            vim.api.nvim_create_user_command("MasonInstallAll", function()
+                vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
+            end, {})
+            vim.g.mason_binaries_list = opts.ensure_installed
+        end
     },
+    --{
+        --"WhoIsSethDaniel/mason-tool-installer.nvim",
+        --depends = { "williamboman/mason.nvim" },
+        --config = function()
+            --require("dupe.configs.mason-tools")
+        --end,
+    --},
 
     -- Color schemes
     { "cocopon/iceberg.vim" },
