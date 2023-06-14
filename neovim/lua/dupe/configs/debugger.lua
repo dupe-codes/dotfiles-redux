@@ -93,17 +93,19 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
+-- Debugging packages installation folder
+local install_root_dir = vim.fn.stdpath "data" .. "/mason"
+
+
 --#region
 -- Setup debug adapters
 
 -- Python adapter
--- requires debupy installation
-require("dap-python").setup("python", {})
+-- requires debugpy installation
+local debugpy_path = install_root_dir .. "/packages/debugpy/venv/bin/python"
+require("dap-python").setup(debugpy_path)
 
 -- Rust adapter
--- Package installation folder
-local install_root_dir = vim.fn.stdpath "data" .. "/mason"
-
 -- DAP settings from https://github.com/simrat39/rust-tools.nvim#a-better-debugging-experience
 -- config: https://github.com/simrat39/rust-tools.nvim/blob/master/lua/rust-tools/dap.lua
 local extension_path = install_root_dir .. "/packages/codelldb/extension/"

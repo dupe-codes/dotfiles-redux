@@ -8,6 +8,8 @@ local plugins = {
         end,
     },
     { "nvim-tree/nvim-web-devicons", lazy = false },
+
+    -- START: LSPs, completions, diagnostics
     { "onsails/lspkind-nvim" },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -19,6 +21,16 @@ local plugins = {
     { "hrsh7th/vim-vsnip" },
     { "L3MON4D3/LuaSnip" },
     { "saadparwaiz1/cmp_luasnip" },
+    -- configure linting with null-ls
+    {
+        "jose-elias-alvarez/null-ls.nvim",
+        ft = {"python"},
+        config = function()
+            require("dupe.configs.null-ls")
+        end,
+    },
+    -- END: LSPs, completions, diagnostics
+
     {
         "nvim-lualine/lualine.nvim",
         config = function()
@@ -54,12 +66,6 @@ local plugins = {
         "romgrk/barbar.nvim",
         config = function()
             require("dupe.configs.barbar")
-        end,
-    },
-    {
-        "mfussenegger/nvim-lint",
-        config = function()
-            require("dupe.configs.linting")
         end,
     },
     { "preservim/nerdcommenter" },
@@ -171,9 +177,12 @@ local plugins = {
         opts = {
             ensure_installed = {
                 "codelldb",
+                "debugpy",
                 "jdtls",
                 "lua-language-server",
+                "mypy",
                 "pyright",
+                "ruff",
                 "rust-analyzer",
                 "zls",
             },
@@ -189,13 +198,6 @@ local plugins = {
             vim.g.mason_binaries_list = opts.ensure_installed
         end
     },
-    --{
-        --"WhoIsSethDaniel/mason-tool-installer.nvim",
-        --depends = { "williamboman/mason.nvim" },
-        --config = function()
-            --require("dupe.configs.mason-tools")
-        --end,
-    --},
 
     -- Color schemes
     { "cocopon/iceberg.vim" },
