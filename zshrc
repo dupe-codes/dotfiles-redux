@@ -39,7 +39,6 @@ export NNN_ICONLOOKUP=1
 
 eval "$(github-copilot-cli alias -- "$0")"
 
-alias pep8="find . -name \"*.py\" | xargs autopep8 -i"
 alias cpp="g++-13"
 alias cmake_init="CC=clang CXX=g++-13 cmake .."
 
