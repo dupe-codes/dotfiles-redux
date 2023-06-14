@@ -194,4 +194,3 @@ local plugins = {
 
 require("lazy").setup(plugins)
 
-
