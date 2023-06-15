@@ -1,0 +1,18 @@
+# Get editor completions based on the config schema
+"$schema"   = 'https://starship.rs/config-schema.json'
+
+format      = """$username$directory$git_branch$git_status
+[➜](bold blue) """
+
+add_newline = true
+
+[character]
+success_symbol = '[➜](bold green)'
+
+[username]
+style_user = 'white bold'
+style_root = 'red bold'
+format = '[$user]($style) in '
+disabled = false
+show_always = true
+

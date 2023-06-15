@@ -221,6 +221,17 @@ local plugins = {
             require("dupe.configs.zig")
         end,
     },
+
+    -- nushell language support
+    {
+        "LhKipp/nvim-nu",
+        build = ":TSInstall nu",
+        config = function()
+            require('nu').setup({
+                use_lsp_features = true,
+            })
+        end,
+    }
 }
 
 require("lazy").setup(plugins)
