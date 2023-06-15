@@ -10,5 +10,6 @@ du-dust
 exa
 gitui
 ncspot
+porsmo
 ripgrep
 

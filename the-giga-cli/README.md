@@ -24,4 +24,5 @@ Here lies an exploration of more configurable CLI setup
 **fun applications**:
 1. ncspot   - music player
 2. wiki-tui - wikipedia terminal interface
+3. porsmo   - small pomodoro client
 
