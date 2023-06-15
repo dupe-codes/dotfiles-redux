@@ -231,7 +231,16 @@ local plugins = {
                 use_lsp_features = true,
             })
         end,
-    }
+    },
+
+    -- tmux integration
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+        config = function()
+            require("dupe.configs.tmux-navigator")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)

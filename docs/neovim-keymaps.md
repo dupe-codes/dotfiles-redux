@@ -40,7 +40,7 @@ Harpoon:
 |--------|---------|
 | mark.add_file | `"n", "<leader>a"` |
 | ui.toggle_quick_menu | `"n", "<C-e>"` |
-| ui.nav_file | `"n", "<C-h>"` through to `"n", "<C-l>"` |
+| ui.nav_file | `"n", "<C-1>"` through to `"n", "<C-4>"` |
 | Go back and forth to/from last buffer | `'n', '<leader>b'` |
 
 ## nvim-tree/creating new files

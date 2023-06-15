@@ -62,3 +62,4 @@ PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias fsearch="fzf --preview \"bat --color=always --style=header,grid --line-range :500 {}\""
 
+export XDG_CONFIG_HOME="$HOME/.config"
