@@ -9,5 +9,6 @@ coreutils
 du-dust
 exa
 gitui
+ncspot
 ripgrep
 

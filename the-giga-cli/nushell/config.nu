@@ -185,7 +185,7 @@ let light_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   # true or false to enable or disable the welcome banner at startup
-  show_banner: true
+  show_banner: false
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
     clickable_links: true # enable or disable clickable links. Your terminal has to support links.
@@ -543,6 +543,36 @@ let-env config = {
   ]
 }
 
-# Set up starship prompt
+##### Setup starship prompt #####
+
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
 source ~/.cache/starship/init.nu
+
+#### Source secrets ####
+source ~/secrets.nu
+
+#### Configure aliases ####
+
+alias nnn = nnn -ea -P p
+alias fs = fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"
+alias gpt = chatblade -c 3.5 -s
+alias pomodoro = arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
+
+# github copilot cli aliases
+alias ?? = github-copilot-cli what-the-shell
+alias git? = github-copilot-cli git-assist
+
+def tm [] {
+    if (tmux list-sessions | str contains "base:") {
+        # If it exists, attach to it
+        tmux attach-session -t base
+    } else {
+        # If it doesn't exist, create it
+        tmux new-session -s base
+    }
+}
+
+### Finally, open welcome message! ###
+open $"($env.HOME)/nu-welcome.txt"
 

@@ -14,8 +14,14 @@ Here lies an exploration of more configurable CLI setup
 8. mprocs   - concurrent process runner
 9. ripgrep  - bettr grep
 10. gitui   - git TUI
+11. fzf     - fuzzy finder
+12. nnn     - file navigator
 
 **blocked**:
 1. fig      - AI prompt completions
     - Nushell is currently [unsupported](https://github.com/withfig/fig/issues/879)
+
+**fun applications**:
+1. ncspot   - music player
+2. wiki-tui - wikipedia terminal interface
 

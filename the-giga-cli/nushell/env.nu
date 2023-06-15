@@ -96,7 +96,7 @@ let-env PATH = (
 
 let-env BAT_THEME = "Dracula"
 
-##### Setup starship prompt #####
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
+let-env NNN_FIFO = "/tmp/nnn.fifo"
+let-env NNN_PLUG = "p:preview-tui"
+let-env NNN_ICONLOOKUP = 1
 
