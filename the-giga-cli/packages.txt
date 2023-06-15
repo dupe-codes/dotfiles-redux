@@ -1,4 +1,13 @@
+-- Brew
 nushell
 starship
 tmux
+
+-- Cargo
+bat
+coreutils
+du-dust
+exa
+gitui
+ripgrep
 

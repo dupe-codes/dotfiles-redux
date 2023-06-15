@@ -15,3 +15,7 @@ ln -sf $PWD/nushell/starship.toml $HOME/.config/
 echo "Configuring tmux..."
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 ln -sf $PWD/tmux $HOME/.config/
+
+# TODO: Install packages from packages.txt
+#       Split between brew/cargo/other based on comment headers
+
