@@ -7,7 +7,9 @@ ln -sf $PWD/kitty $HOME/.config/
 # TODO: Figure out how to congifure nushell in XDG_CONFIG_HOME
 #       It will need to be copied because nushell doesn't seem to properly
 #       work with symlinks
-# echo "Configuring nushell..."
+echo "Configuring nushell..."
+cp $PWD/nushell/nu-welcome.txt $HOME/nu-welcome.txt
+echo "Remember to configure your secrets.nu file!"
 
 echo "Creating starship config symlink..."
 ln -sf $PWD/nushell/starship.toml $HOME/.config/

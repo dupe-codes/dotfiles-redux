@@ -1,6 +1,6 @@
 -- TODO: Configure toggleterm keymaps
 require("toggleterm").setup({
-    open_mapping = [[<C-\>]],
+    open_mapping = [[<C-t>]],
     --direction = "float",
     --float_opts = {
         --border = "curved",

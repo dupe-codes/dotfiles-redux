@@ -83,7 +83,7 @@ Harpoon:
 
 | Action | Key Map |
 |--------|---------|
-| Toggle terminal | `'n', '<C-\>'` |
+| Toggle terminal | `'n', '<C-t>'` |
 
 ## Undotree
 
