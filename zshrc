@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="amuse"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting history)
@@ -63,3 +66,7 @@ PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
 alias fsearch="fzf --preview \"bat --color=always --style=header,grid --line-range :500 {}\""
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+

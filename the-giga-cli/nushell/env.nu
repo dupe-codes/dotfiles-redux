@@ -86,7 +86,10 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-let-env PATH = ($env.PATH | append "/usr/local/bin/")
+let-env PATH = (
+    $env.PATH |
+    append "/usr/local/bin/"
+)
 
 # Setup starship prompt
 mkdir ~/.cache/starship
