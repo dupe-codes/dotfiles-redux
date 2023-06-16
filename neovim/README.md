@@ -27,7 +27,12 @@
 25. **dap-virtual-text** - virtual text support for dap debugging
 26. **trouble** - diagnostics lists
 27. **which-key** - show keymaps
-28. **mason** - package manager, mostly debugging dependencies
+28. **mason** - package manager, to download external debugging/LSP dependencies
 29. **todo-comments** - highlight TODO comments
 30. **zen-mode** - distraction free mode
+31. **inc-rename** - highlight objects being renamed in code
+32. **ChatGPT** - ChatGPT-powered ai tools in the editor
+33. **vim-tmux-navigator - support for jumping between tmux panes & neovim
+
+
 

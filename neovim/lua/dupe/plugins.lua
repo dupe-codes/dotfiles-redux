@@ -132,7 +132,7 @@ local plugins = {
             require("dupe.configs.zen-mode")
         end,
     },
-    { "ThePrimeagen/vim-be-good" },
+    { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
 
     -- Debugging plugins with dap
     {
