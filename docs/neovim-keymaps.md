@@ -132,3 +132,13 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | Action | Key Map |
 | ------ | ------- |
 | Toggle zen mode | `<leader>zz` |
+
+## ChatGPT plugin
+
+| Action | Key Map |
+| ------ | ------- |
+| Explain code | `v, <C-e>` |
+| Add tests | `v, <C-t>` |
+| Edit with instructions | `v, <C-i>` |
+| Open chat | `<C-g>` |
+

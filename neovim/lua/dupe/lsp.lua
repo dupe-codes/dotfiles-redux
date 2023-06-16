@@ -26,7 +26,6 @@ local on_attach = function(_, bufnr)
         attach_opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, attach_opts)
 end
 
 -- Setup diagnostics

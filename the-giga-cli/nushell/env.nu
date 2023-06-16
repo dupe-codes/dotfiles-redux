@@ -100,3 +100,5 @@ let-env NNN_FIFO = "/tmp/nnn.fifo"
 let-env NNN_PLUG = "p:preview-tui"
 let-env NNN_ICONLOOKUP = 1
 
+let-env EDITOR = "nvim"
+

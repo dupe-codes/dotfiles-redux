@@ -241,6 +241,25 @@ local plugins = {
             require("dupe.configs.tmux-navigator")
         end,
     },
+
+    {
+        "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-lua/telescope.nvim",
+        },
+        config = function()
+            require("dupe.configs.chatgpt")
+        end,
+    },
+    {
+        "smjonas/inc-rename.nvim",
+        config = function()
+            require("dupe.configs.inc-rename")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
