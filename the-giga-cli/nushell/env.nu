@@ -88,10 +88,12 @@ let-env NU_PLUGIN_DIRS = [
 
 ##### Environment Variable Configuration #####
 
+# TODO: carrapace path is homebrew specific - generalize it
 let-env PATH = (
     $env.PATH |
-    append "/usr/local/bin/" |
-    append $"($env.HOME)/.cargo/bin"
+    prepend "/usr/local/bin/" |
+    prepend $"($env.HOME)/.cargo/bin" |
+    prepend $"($env.HOME)/Library/Application Support/carapace/bin"
 )
 
 let-env BAT_THEME = "Dracula"
