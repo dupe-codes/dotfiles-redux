@@ -261,6 +261,13 @@ local plugins = {
             require("dupe.configs.inc-rename")
         end,
     },
+    {
+        "simrat39/rust-tools.nvim",
+        ft = {"rust"},
+        config = function()
+            require('dupe.configs.rust-tools')
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
