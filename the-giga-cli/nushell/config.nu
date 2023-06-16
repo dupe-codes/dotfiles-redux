@@ -292,7 +292,7 @@ let-env config = {
   float_precision: 2 # the precision for displaying floats in tables
   use_ansi_coloring: true
   bracketed_paste: true # enable bracketed paste, currently useless on windows
-  edit_mode: vi
+  edit_mode: emacs
   shell_integration: true
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
