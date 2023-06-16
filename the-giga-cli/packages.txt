@@ -12,4 +12,5 @@ gitui
 ncspot
 porsmo
 ripgrep
+bottom
 

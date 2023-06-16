@@ -16,6 +16,7 @@ Here lies an exploration of more configurable CLI setup
 10. gitui   - git TUI
 11. fzf     - fuzzy finder
 12. nnn     - file navigator
+13. btm     - tui activity monitor
 
 **blocked**:
 1. fig      - AI prompt completions
