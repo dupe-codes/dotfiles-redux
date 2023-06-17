@@ -18,10 +18,17 @@ hl(0, "DiagnosticSignWarn", { fg= "#e0af68", bg = clear })
 vim.cmd("set hidden")
 
 -- Highlight extra whitespace in all buffers but terminal windows
-vim.cmd("highlight ExtraWhitespace ctermbg=grey guibg=grey")
+hl(0, "ExtraWhitespace", { link = "DiffChange" })
 vim.cmd("au InsertEnter * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+\\%#\\@<!$/ | endif")
 vim.cmd("au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+$/ | endif")
-vim.cmd("au BufWinLeave * call clearmatches()")
+--vim.cmd("au BufWinLeave * call clearmatches()")
+
+-- Highlight text beyond 80 chars
+hl(0, "OverLength", { link = 'DiffChange' })
+vim.cmd("au InsertEnter * 2match OverLength /\\%89v.\\+/")
+vim.cmd("au InsertLeave * 2match OverLength /\\%89v.\\+/")
+vim.cmd("au BufEnter * 2match OverLength /\\%89v.\\+/")
+vim.cmd("au BufWritePre * 2match OverLength /\\%89v.\\+/")
 
 vim.cmd("set nocompatible")          -- disable compatibility to old-time vi
 vim.cmd("set showmatch")             -- show matching brackets.
@@ -32,7 +39,6 @@ vim.cmd("set autoindent")            -- indent a new line the same amount as the
 vim.cmd("set number")                -- add line numbers
 vim.cmd("set relativenumber")        -- add relative line numbers
 vim.cmd("set wildmode=longest,list") -- get bash-like tab completions
-vim.cmd("set cc=88")                 -- set colour columns for good coding style
 vim.cmd("filetype plugin indent on") -- allows auto-indenting depending on file type
 vim.cmd("set tabstop=4")             -- number of columns occupied by a tab character
 vim.cmd("set expandtab")             -- convert tabs to white space

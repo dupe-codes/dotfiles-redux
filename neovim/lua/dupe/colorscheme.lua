@@ -1,6 +1,7 @@
 vim.cmd('au ColorScheme * hi clear SignColumn')
 
 require('rose-pine').setup({
+    variant = "moon",
     disable_italics = true,
 })
 

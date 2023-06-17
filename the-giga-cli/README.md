@@ -4,19 +4,20 @@ Here lies an exploration of more configurable CLI setup
 
 ## Planned Tools
 
-1. kitty    - terminal emulator
-2. nushell  - shell
-3. starship - customized prompt
-4. tmux     - terminal multiplexing
-5. exa      - better ls
-6. bat      - better cat
-7. dust     - visual disk usage
-8. mprocs   - concurrent process runner
-9. ripgrep  - bettr grep
-10. gitui   - git TUI
-11. fzf     - fuzzy finder
-12. nnn     - file navigator
-13. btm     - tui activity monitor
+1. kitty        - terminal emulator
+2. nushell      - shell
+3. starship     - customized prompt
+4. tmux         - terminal multiplexing
+5. exa          - better ls
+6. bat          - better cat
+7. dust         - visual disk usage
+8. mprocs       - concurrent process runner
+9. ripgrep      - bettr grep
+10. gitui       - git TUI
+11. fzf         - fuzzy finder
+12. nnn         - file navigator
+13. btm         - tui activity monitor
+14. carapace    - better terminal completions
 
 **blocked**:
 1. fig      - AI prompt completions

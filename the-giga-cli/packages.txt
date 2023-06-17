@@ -13,4 +13,5 @@ ncspot
 porsmo
 ripgrep
 bottom
+carapace
 
