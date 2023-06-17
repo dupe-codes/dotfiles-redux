@@ -29,11 +29,6 @@ local plugins = {
             require("dupe.configs.null-ls")
         end,
     },
-    -- breadcrumbs :]
-    {
-        "SmiteshP/nvim-navic",
-        dependencies = { "neovim/nvim-lspconfig" },
-    },
     -- END: LSPs, completions, diagnostics
 
     {

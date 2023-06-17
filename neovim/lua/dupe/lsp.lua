@@ -12,10 +12,8 @@ vim.diagnostic.config({
 })
 
 local lspconfig = require 'lspconfig'
-local navic = require("nvim-navic") -- breadcrumbs
-navic.setup({})
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     local attach_opts = { silent = true, buffer = bufnr }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
@@ -28,13 +26,7 @@ local on_attach = function(client, bufnr)
         attach_opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
-
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
-    end
 end
--- TODO: Customize styling and appearance of navic breadcrumbs
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 -- Setup diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
