@@ -58,7 +58,7 @@ Harpoon:
 | Action | Key Map |
 |--------|---------|
 | Type definition | `'n', '<leader>D'` |
-| Code action | `'n', '<leader>ca'` |
+| Code actions | `'n', '<leader>ca'` |
 | Rename | `'n', '<leader>rn'` |
 | Open docs on current cursor | `'n', K` |
 | Open manual entry at cursor | `'n', K -> K -> K` |
@@ -68,8 +68,8 @@ Harpoon:
 | Accept completion | `<Tab>` |
 | Glance definitions | `'n', '<leader>gd'` |
 | Glance references | `'n', '<leader>gr'` |
-| Glance type_definitions | `'n', '<leader>gy'` |
-| Glance implementations | `'n', '<leader>gm'` |
+| Glance type_definitions | `'n', '<leader>gt'` |
+| Glance implementations | `'n', '<leader>gi'` |
 
 ## Nerdcommenter
 

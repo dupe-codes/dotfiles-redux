@@ -14,18 +14,17 @@ vim.diagnostic.config({
 local lspconfig = require 'lspconfig'
 
 local on_attach = function(_, bufnr)
-    local attach_opts = { silent = true, buffer = bufnr }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, attach_opts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, attach_opts)
-    vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, attach_opts)
-    vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, attach_opts)
-    vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, attach_opts)
-    vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
-        attach_opts)
-    vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
-    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
+    -- NOTE: these are disabled b/c setting keymaps here is failing for some LSPs
+    --local attach_opts = { silent = true, buffer = bufnr }
+    --vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
+    --vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
+    --vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, attach_opts)
+    --vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, attach_opts)
+    --vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, attach_opts)
+    --vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
+        --attach_opts)
+    --vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
+    --vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
 end
 
 -- Setup diagnostics
@@ -70,10 +69,9 @@ key_mapper('n', '<Leader>e', '<Cmd>lua _G.open_floating_diagnostics()<CR>')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
--- Enable the following language servers
 local servers = {
-    'ccls', -- NOTE: ccls must be installed separate from Mason
-    'jdtls',
+    'ccls',             -- NOTE: ccls must be installed separate from Mason
+    'jdtls',            -- NOTE: jdtls isn't working, getting an exit code 1 on attach
     'pyright',
     'rust_analyzer',
     'zls',
@@ -186,4 +184,9 @@ cmp.setup {
         end
     },
 }
+
+-- Setup keymaps for capabilities not handled by glance
+key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+key_mapper('n', '<C-s>', ':lua vim.lsp.buf.signature_help()<CR>')
+key_mapper('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
 

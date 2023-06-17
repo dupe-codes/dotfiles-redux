@@ -29,7 +29,16 @@ local plugins = {
             require("dupe.configs.null-ls")
         end,
     },
-    -- END: LSPs, completions, diagnostics
+    -- code actions with lightbulb and menu
+    {
+        "kosayoda/nvim-lightbulb",
+        lazy = false,
+        dependencies = { "antoinemadec/FixCursorHold.nvim" },
+        config = function()
+            require("dupe.configs.lightbulb")
+        end,
+    },
+     --END: LSPs, completions, diagnostics
 
     {
         "nvim-lualine/lualine.nvim",
@@ -57,6 +66,7 @@ local plugins = {
     { "nvim-lua/popup.nvim" },
     {
         "nvim-lua/telescope.nvim",
+        dependencies = { "nvim-telescope/telescope-ui-select.nvim" },
         config = function()
             require("dupe.configs.telescope")
         end,
