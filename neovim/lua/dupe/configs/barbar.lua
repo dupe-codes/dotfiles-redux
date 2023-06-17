@@ -23,4 +23,3 @@ require('barbar').setup {
    }
 }
 
-
