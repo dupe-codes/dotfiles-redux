@@ -1,3 +1,0 @@
-[submodule "the-giga-cli/nushell/nu_scripts"]
-	path = the-giga-cli/nushell/nu_scripts
-	url = git@github.com:nushell/nu_scripts.git
