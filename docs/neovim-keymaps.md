@@ -142,3 +142,11 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | Edit with instructions | `v, <C-i>` |
 | Open chat | `<C-g>` |
 
+## Neotest
+
+| Action | Key Map |
+| ------ | ------- |
+| Run closest test | `'n', <leader>tr` |
+| Run all tests | `'n', <leader>ta` |
+| Toggle test summary pane | `'n', <leader>ts` |
+

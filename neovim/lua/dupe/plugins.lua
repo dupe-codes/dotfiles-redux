@@ -279,12 +279,19 @@ local plugins = {
             require('dupe.configs.rust-tools')
         end,
     },
+
+    -- Unit test runner support
+    { "vim-test/vim-test" },
     {
-        "nvim-neotest/neotest.nvim",
+        "nvim-neotest/neotest",
+        ft = { "python", "rust", }, -- NOTE: add other langs as needed
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
             "antoinemadec/FixCursorHold.nvim",
+            "nvim-neotest/neotest-python",
+            "nvim-neotest/neotest-vim-test",
+            "nvim-neotest/neotest-rust",
         },
         config = function()
             require("dupe.configs.neotest")
