@@ -228,6 +228,7 @@ local plugins = {
     -- Zig support
     {
         "ziglang/zig.vim",
+        ft = { "zig" },
         config = function()
             require("dupe.configs.zig")
         end,
@@ -281,7 +282,6 @@ local plugins = {
     },
 
     -- Unit test runner support
-    { "vim-test/vim-test" },
     {
         "nvim-neotest/neotest",
         ft = { "python", "rust", }, -- NOTE: add other langs as needed
@@ -291,7 +291,8 @@ local plugins = {
             "antoinemadec/FixCursorHold.nvim",
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-vim-test",
-            "nvim-neotest/neotest-rust",
+            "vim-test/vim-test",
+            "rouge8/neotest-rust",
         },
         config = function()
             require("dupe.configs.neotest")
