@@ -28,4 +28,5 @@ Here lies an exploration of more configurable CLI setup
 1. ncspot   - music player
 2. wiki-tui - wikipedia terminal interface
 3. porsmo   - small pomodoro client
+4. yewtube  - CLI youtube player
 

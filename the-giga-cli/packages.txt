@@ -3,6 +3,7 @@ fd
 nushell
 starship
 tmux
+vlc
 
 -- Cargo
 bat
@@ -15,4 +16,7 @@ porsmo
 ripgrep
 bottom
 carapace
+
+-- Pip
+yewtube
 
