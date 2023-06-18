@@ -549,6 +549,7 @@ source ~/secrets.nu
 
 #### Configure aliases ####
 
+alias code-i = code-insiders
 alias nnn = nnn -ea -P p
 alias fs = fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"
 alias gpt = chatblade -c 3.5 -s

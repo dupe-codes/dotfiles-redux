@@ -85,7 +85,13 @@ end
 
 require('neodev').setup {
     -- pass types to dap UI
-    library = { plugins = { "nvim-dap-ui" }, types = true },
+    library = {
+        plugins = {
+            "nvim-dap-ui",
+            "neotest",
+        },
+        types = true
+    },
 }
 
 lspconfig.lua_ls.setup {

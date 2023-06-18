@@ -1,4 +1,5 @@
 -- Brew
+fd
 nushell
 starship
 tmux

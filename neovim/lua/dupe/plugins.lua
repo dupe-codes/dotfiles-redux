@@ -40,6 +40,7 @@ local plugins = {
     },
      --END: LSPs, completions, diagnostics
 
+    { "antoinemadec/FixCursorHold.nvim", lazy = false },
     {
         "nvim-lualine/lualine.nvim",
         config = function()
@@ -278,6 +279,17 @@ local plugins = {
             require('dupe.configs.rust-tools')
         end,
     },
+    {
+        "nvim-neotest/neotest.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim",
+        },
+        config = function()
+            require("dupe.configs.neotest")
+        end,
+    }
 }
 
 require("lazy").setup(plugins)
