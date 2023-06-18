@@ -569,6 +569,8 @@ def tm [] {
     }
 }
 
+use nu_scripts/modules/virtual_environments/conda.nu
+
 ### Finally, open welcome message! ###
 open $"($env.HOME)/nu-welcome.txt"
 

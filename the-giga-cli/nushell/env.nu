@@ -103,4 +103,4 @@ let-env NNN_PLUG = "p:preview-tui"
 let-env NNN_ICONLOOKUP = 1
 
 let-env EDITOR = "nvim"
-
+let-env CONDA_NO_PROMPT = true
