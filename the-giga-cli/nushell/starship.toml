@@ -16,3 +16,7 @@ format = '[$user]($style) in '
 disabled = false
 show_always = true
 
+[conda]
+format = '\[$symbol$environment\] '
+ignore_base = false
+

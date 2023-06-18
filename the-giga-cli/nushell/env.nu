@@ -93,7 +93,9 @@ let-env PATH = (
     $env.PATH |
     prepend "/usr/local/bin/" |
     prepend $"($env.HOME)/.cargo/bin" |
-    prepend $"($env.HOME)/Library/Application Support/carapace/bin"
+    prepend $"($env.HOME)/Library/Application Support/carapace/bin" |
+    # Add mamba to path - it will be automatically preferred on conda commands
+    prepend $"($env.HOME)/mambaforge/bin"
 )
 
 let-env BAT_THEME = "Dracula"
@@ -103,4 +105,7 @@ let-env NNN_PLUG = "p:preview-tui"
 let-env NNN_ICONLOOKUP = 1
 
 let-env EDITOR = "nvim"
+
+# Conda/mamba configurations
 let-env CONDA_NO_PROMPT = true
+

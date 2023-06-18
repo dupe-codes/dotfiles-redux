@@ -569,7 +569,8 @@ def tm [] {
     }
 }
 
-use nu_scripts/modules/virtual_environments/conda.nu
+use ~/Library/ApplicationSupport/nushell/nu_scripts/modules/virtual_environments/conda.nu
+conda activate # always start base conda environment
 
 ### Finally, open welcome message! ###
 open $"($env.HOME)/nu-welcome.txt"
