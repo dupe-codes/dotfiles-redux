@@ -297,6 +297,14 @@ local plugins = {
         config = function()
             require("dupe.configs.neotest")
         end,
+    },
+
+    -- Notification
+    {
+        "rcarriga/nvim-notify",
+        config = function()
+            require("dupe.configs.notify")
+        end,
     }
 }
 

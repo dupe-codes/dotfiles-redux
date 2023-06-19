@@ -150,3 +150,8 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | Run all tests | `'n', <leader>ta` |
 | Toggle test summary pane | `'n', <leader>ts` |
 
+## Notifications
+
+| Action | Key Map |
+| ------ | ------- |
+| Open notifications history | `n, <leader>sn` |

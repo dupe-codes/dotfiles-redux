@@ -4,7 +4,11 @@ local key_mapper = require('dupe.util').key_mapper
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+    view = {
+        adaptive_size = true,
+    },
+})
 
 local function open_nvim_tree()
     -- open the tree
