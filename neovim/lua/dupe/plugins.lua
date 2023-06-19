@@ -305,7 +305,14 @@ local plugins = {
         config = function()
             require("dupe.configs.notify")
         end,
-    }
+    },
+
+    {
+        "stevearc/dressing.nvim",
+        config = function()
+            require("dupe.configs.dressing")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
