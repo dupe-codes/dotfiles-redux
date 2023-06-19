@@ -313,6 +313,13 @@ local plugins = {
             require("dupe.configs.dressing")
         end,
     },
+    {
+        "AckslD/swenv.nvim",
+        ft = { "python" },
+        config = function()
+            require("dupe.configs.swenv")
+        end,
+    }
 }
 
 require("lazy").setup(plugins)

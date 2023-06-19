@@ -5,5 +5,8 @@ require('lualine').setup {
         component_separators = '|',
         section_separators = '',
     },
+    sections = {
+        lualine_c = { { "swenv", icon = "" }, "filename"}
+    },
 }
 
