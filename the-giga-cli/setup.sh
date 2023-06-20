@@ -22,3 +22,5 @@ ln -sf $PWD/tmux $HOME/.config/
 # TODO: Install packages from packages.txt
 #       Split between brew/cargo/other based on comment headers
 
+# TODO: Install mambaforge
+

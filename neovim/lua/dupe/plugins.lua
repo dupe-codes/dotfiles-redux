@@ -299,14 +299,13 @@ local plugins = {
         end,
     },
 
-    -- Notification
+    -- notification
     {
         "rcarriga/nvim-notify",
         config = function()
             require("dupe.configs.notify")
         end,
     },
-
     {
         "stevearc/dressing.nvim",
         config = function()

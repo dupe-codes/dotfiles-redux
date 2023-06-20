@@ -128,7 +128,7 @@ lspkind.init({
 })
 
 local window_config = {
-    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",
+    winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:Visual",
 }
 
 cmp.setup {
@@ -150,7 +150,7 @@ cmp.setup {
         ['<C-Space>'] = cmp.mapping.complete {},
         ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
+            select = false,
         },
         ['<C-f>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
