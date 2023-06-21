@@ -32,7 +32,14 @@
 30. **zen-mode** - distraction free mode
 31. **inc-rename** - highlight objects being renamed in code
 32. **ChatGPT** - ChatGPT-powered ai tools in the editor
-33. **vim-tmux-navigator - support for jumping between tmux panes & neovim
-
-
+33. **vim-tmux-navigator** - support for jumping between tmux panes & neovim
+34. **null-ls** - use neovim as an LSP to inject more diagnostics from non-lsp sources
+35. **nvim-lightbulb* - show lightbulb icon in gutter when code actions available
+36. **ChatGPT** - integrated access to ChatGPT powered AI commands
+37. **ince-rename** - better rename code action support
+38. **rust-tools** - helpful tools and configs for rust development
+39. **neotest** - test runner integrated into neovim
+40. **nvim-notify** - popup windows to notify messages
+41. **dressing** - popup windows for other I/O channels like select
+42. **swenv** - switch python environments (but mostly to show conda env in lualine)
 
