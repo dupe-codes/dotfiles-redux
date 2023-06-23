@@ -19,6 +19,8 @@ repos:
     hooks:
     - id: clang-format
 
+  # TODO: Update this to apply on the commit-msg hook, not
+  #       prepare-commit-msg
   - repo: https://github.com/njdup/devmoji-precommit
     rev: v1.3.0
     hooks:

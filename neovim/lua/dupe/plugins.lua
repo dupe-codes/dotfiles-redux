@@ -139,6 +139,8 @@ local plugins = {
     },
     {
         "folke/zen-mode.nvim",
+        dependencies = { "folke/twilight.nvim" },
+        event = "VeryLazy",
         config = function()
             require("dupe.configs.zen-mode")
         end,
@@ -318,7 +320,7 @@ local plugins = {
         config = function()
             require("dupe.configs.swenv")
         end,
-    }
+    },
 }
 
 require("lazy").setup(plugins)
