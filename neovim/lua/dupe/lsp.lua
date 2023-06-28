@@ -70,7 +70,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = {
-    'ccls',             -- NOTE: ccls must be installed separate from Mason
     'jdtls',            -- NOTE: jdtls isn't working, getting an exit code 1 on attach
     'pyright',
     'rust_analyzer',
@@ -103,6 +102,25 @@ lspconfig.lua_ls.setup {
                 callSnippet = 'Replace',
             },
         },
+    },
+}
+
+-- NOTE: ccls must be installed separate from Mason
+--lspconfig.ccls.setup {
+    --on_attach = on_attach,
+    --capabilities = capabilities,
+    --filetypes = { 'cpp', },
+--}
+
+-- TODO: Figure out if this works with compile_commands.json
+--       If it does, then we can remove ccls
+lspconfig.clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'c', 'cpp', },
+    cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
     },
 }
 

@@ -2,7 +2,7 @@
 "$schema"   = 'https://starship.rs/config-schema.json'
 
 format      = """$conda$username$directory$git_branch$git_status
-[](bold red)[](bold purple)[](bold yellow) """
+[](bold yellow)[](bold yellow)[](bold yellow) """
 
 add_newline = true
 
