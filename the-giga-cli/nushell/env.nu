@@ -95,7 +95,9 @@ let-env PATH = (
     prepend $"($env.HOME)/.cargo/bin" |
     prepend $"($env.HOME)/Library/Application Support/carapace/bin" |
     # Add mamba to path - it will be automatically preferred on conda commands
-    prepend $"($env.HOME)/mambaforge/bin"
+    prepend $"($env.HOME)/mambaforge/bin" |
+    # Add go packages
+    prepend $"($env.HOME)/go/bin"
 )
 
 let-env BAT_THEME = "Dracula"

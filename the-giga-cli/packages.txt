@@ -20,3 +20,5 @@ carapace
 -- Pip
 yewtube
 
+-- Go
+github.com/maaslalani/nap@main

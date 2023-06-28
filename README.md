@@ -1,5 +1,11 @@
 # Smooth setup of a smooth developer environment :]
 
+# Why "redux?"
+
+I have an original "dotfiles" repository made years ago when I was first learning how to
+to code. It's a dumpster fire. Thus, this is the "redux" replacement, bigger, better,
+faster, stronger.
+
 # Notes
 
 ## pre-commit hooks

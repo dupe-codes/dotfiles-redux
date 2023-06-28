@@ -19,6 +19,7 @@ Here lies an exploration of more configurable CLI setup
 13. btm         - tui activity monitor
 14. carapace    - better terminal completions
 15. fd          - better find
+16. nap         - TUI snippets manager
 
 **blocked**:
 1. fig      - AI prompt completions
