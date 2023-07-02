@@ -66,10 +66,10 @@ Harpoon:
 | Move forward/back in completions | `<C-f> <C-b>` |
 | Abort completions | `<C-e>` |
 | Accept completion | `<Tab>` |
-| Glance definitions | `'n', '<leader>gd'` |
-| Glance references | `'n', '<leader>gr'` |
-| Glance type_definitions | `'n', '<leader>gt'` |
-| Glance implementations | `'n', '<leader>gi'` |
+| Glance definitions | `'n', 'gd'` |
+| Glance references | `'n', 'gr'` |
+| Glance type_definitions | `'n', 'gt'` |
+| Glance implementations | `'n', 'gi'` |
 
 ## Nerdcommenter
 
@@ -96,8 +96,14 @@ Harpoon:
 | Action | Key Map |
 |--------|---------|
 | Open git status buffer | `'n', '<leader>gs'` |
-| Accept diffs in visual diff buffers | `'n', 'gh'`, `'n', 'gl'` |
+| Accept diffs in visual diff buffers | `'n', '<leader>gh'`, `'n', '<leader>gl'` |
 | Push commits to origin | `'n', '<leader>gp'` |
+| Git blame | `'n', '<leader>gb'` |
+| Git log | `'n', '<leader>gc'` |
+| Search changed files | `'n', '<leader>go'` |
+| Search branches | `'n', '<leader>gr'` |
+| Search commits | `'n', '<leader>gm'` |
+| Visual diff against commit | `'n', '<leader>gd'` |
 
 When in fugitive buffer:
 

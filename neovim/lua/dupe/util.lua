@@ -8,5 +8,5 @@ local key_mapper = function(mode, key, result)
 end
 
 return {
-    key_mapper = key_mapper
+    key_mapper = key_mapper,
 }

@@ -63,7 +63,6 @@ local plugins = {
         end
     },
     { "sheerun/vim-polyglot" },
-    { "jmbuhr/otter.nvim" },
     { "nvim-lua/popup.nvim" },
     {
         "nvim-lua/telescope.nvim",
@@ -112,12 +111,22 @@ local plugins = {
             require("dupe.configs.undotree")
         end,
     },
+
+    -- Git plugins
     {
         "tpope/vim-fugitive",
         config = function()
-            require("dupe.configs.fugitive")
+            require("dupe.configs.git")
         end,
     },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("dupe.configs.gitsigns")
+        end,
+    },
+    -- End git plugins
+
     { "zbirenbaum/copilot-cmp" },
     {
         "akinsho/toggleterm.nvim",
