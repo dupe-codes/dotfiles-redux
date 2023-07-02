@@ -8,7 +8,7 @@ module.exports = {
     },
     {
       code: "clean",
-      emoji: "Broom",
+      emoji: "Soap",
       description: "Tidy up code source code or docs",
     },
   ],
