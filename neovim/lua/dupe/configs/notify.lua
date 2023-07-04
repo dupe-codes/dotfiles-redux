@@ -6,6 +6,7 @@ vim.opt.termguicolors = true
 --       left or right
 require("notify").setup({
     timeout = 500,
+    top_down = false,
 })
 vim.notify = require("notify")
 
