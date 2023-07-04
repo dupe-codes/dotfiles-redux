@@ -62,8 +62,8 @@ local plugins = {
             require("dupe.configs.treesitter")
         end
     },
-    { "sheerun/vim-polyglot" },
-    { "nvim-lua/popup.nvim" },
+    { "sheerun/vim-polyglot" }, -- TODO: needed?
+    { "nvim-lua/popup.nvim" }, -- TODO: needed?
     {
         "nvim-lua/telescope.nvim",
         dependencies = { "nvim-telescope/telescope-ui-select.nvim" },
