@@ -13,7 +13,6 @@
 11. **indent-blankline** - add line guides to indentation levels
 12. **glance** - go to definition/references
 13. **nerd-commenter** - comment lines
-14. **nvim-lint** - linting on save
 15. **nvim-autopairs** - auto close brackets
 16. **vim-wakatime** - track time spent in vim
 17. **harpoon** - bookmark files
@@ -42,4 +41,6 @@
 40. **nvim-notify** - popup windows to notify messages
 41. **dressing** - popup windows for other I/O channels like select
 42. **swenv** - switch python environments (but mostly to show conda env in lualine)
+43. **symbols-outline** - show tree view of symbols in file
+44. **gitsigns** - more git support and functionality
 

@@ -161,3 +161,10 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | Action | Key Map |
 | ------ | ------- |
 | Open notifications history | `n, <leader>sn` |
+
+## Symbols Outline
+
+| Action | Key Map |
+| ------ | ------- |
+| Open symbols outline | `n, <leader>o` |
+

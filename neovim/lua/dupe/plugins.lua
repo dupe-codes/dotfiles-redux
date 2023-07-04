@@ -318,6 +318,13 @@ local plugins = {
             require("dupe.configs.swenv")
         end,
     },
+    -- Symbols outline
+    {
+        "simrat39/symbols-outline.nvim",
+        config = function()
+            require("dupe.configs.symbols-outline")
+        end,
+    }
 }
 
 require("lazy").setup(plugins)
