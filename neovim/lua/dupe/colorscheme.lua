@@ -5,11 +5,11 @@ require('rose-pine').setup({
     disable_italics = true,
 })
 
-vim.cmd.colorscheme 'rose-pine'
+--vim.cmd.colorscheme 'rose-pine'
 
 -- FAVORITES:
 --vim.cmd.colorscheme 'kanagawa'
---vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "catppuccin"
 --vim.cmd.colorscheme 'zenburned'
 
 -- OTHERS:
