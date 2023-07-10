@@ -1,6 +1,7 @@
 # Dev tooling
 python
 base-devel
+unzip
 
 # Display server
 xorg-server
