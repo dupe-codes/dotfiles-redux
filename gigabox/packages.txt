@@ -1,0 +1,64 @@
+# Dev tooling
+python
+base-devel
+
+# Display server
+xorg-server
+
+# Display manager
+lightdm
+web-greeter@yay
+
+# Window manager
+openbox
+picom
+obmenu-generator@yay
+
+# GUI toolkit
+perl-gtk3
+
+# Panel/taskbar
+tint2
+
+# Notifications
+dunst
+
+# Desktop wallpaper
+nitrogen
+
+# Window switcher/app launcher
+rofi
+
+# GUI file manager
+thunar
+thunar-archive-plugin
+thunar-volman
+ffmpegthumbnailer
+tumbler
+
+# TODO: More audio stuff
+# Volume control
+pavucontrol
+
+# Text editor
+neovim
+
+# Terminal emulators
+kitty
+wezterm
+
+# Photo editor
+gimp
+
+# Calendar utility
+gsimplecal
+
+# Clipboard manager
+parcellite
+
+# Image viewer
+viewnior
+
+# Power manager
+xfce4-power-manager
+

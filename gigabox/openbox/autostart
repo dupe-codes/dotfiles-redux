@@ -1,0 +1,6 @@
+# Load set nitrogen desktop wallpaper
+nitrogen --restore &
+
+# Start tint2 panel
+tint2 &
+

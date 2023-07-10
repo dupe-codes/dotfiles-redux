@@ -1,11 +1,11 @@
--- Brew
+-- package manager
 fd
 nushell
 starship
 tmux
 vlc
 
--- Cargo
+-- cargo
 bat
 coreutils
 du-dust
@@ -17,8 +17,8 @@ ripgrep
 bottom
 carapace
 
--- Pip
+-- pip
 yewtube
 
--- Go
+-- go
 github.com/maaslalani/nap@main
