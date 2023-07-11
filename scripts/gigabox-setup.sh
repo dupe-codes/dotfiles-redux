@@ -16,6 +16,7 @@ unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
 #       Need to find good icon pack options
 # TODO: Link fonts to ~/.fonts
 #       Need to find good font with icon options
+# TODO: Link themes to ~/.themes
 
 # TODO: Link all configuration files
 

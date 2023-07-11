@@ -63,3 +63,6 @@ viewnior
 # Power manager
 xfce4-power-manager
 
+# Browser
+brace-bin@yay
+
