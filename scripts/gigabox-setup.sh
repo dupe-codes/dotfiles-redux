@@ -8,6 +8,10 @@ makepkg -si
 # TODO: download and install packages
 
 # Download resources (wallpapers, fonts, etc.) from dropbox
+# TODO: Include needed fonts and icons:
+# 	Material
+# 	Feather IcoMoon
+# 	Papirus-Dark-Custom
 mkdir -p $HOME/gigabox
 wget -O $HOME/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=0'
 unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
@@ -19,6 +23,12 @@ unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
 # TODO: Link themes to ~/.themes
 
 # TODO: Link all configuration files
+
+# Setup web-greeter login screen
+git clone https://github.com/hertg/lightdm-neon.git
+cd lightdm-neon
+make build
+sudo make install
 
 # Enable services
 sudo systemctl enable lightdm.service

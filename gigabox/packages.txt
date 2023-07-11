@@ -1,4 +1,6 @@
 # Dev tooling
+nodejs
+npm
 python
 base-devel
 unzip
