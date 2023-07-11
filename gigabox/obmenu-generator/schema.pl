@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 
 # obmenu-generator - schema file
-# https://github.com/owl4ce/dotfiles
 
 require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 my $editor = $CONFIG->{editor};
