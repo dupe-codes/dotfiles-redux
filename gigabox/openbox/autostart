@@ -4,3 +4,6 @@ nitrogen --restore &
 # Start tint2 panel
 tint2 &
 
+# Start picom compositor
+picom -b
+
