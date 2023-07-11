@@ -169,7 +169,7 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 1 0
 taskbar_name_background_id = 3
 taskbar_name_active_background_id = 3
-taskbar_name_font = Iosevka 8.2998046875
+taskbar_name_font = BerkeleyMono Nerd Font Mono 8.2998046875
 taskbar_name_font_color = #3b4252 100
 taskbar_name_active_font_color = #3b4252 100
 taskbar_distribute_size = 0
@@ -184,7 +184,7 @@ task_centered = 1
 urgent_nb_of_blink = 3
 task_maximum_size = 17 17
 task_padding = 0 0 0
-task_font = Sans 0
+task_font = BerkeleyMono Nerd Font Mono 0
 task_tooltip = 1
 task_thumbnail = 1
 task_thumbnail_size = 210
@@ -225,10 +225,10 @@ launcher_tooltip = 0
 # Clock
 time1_format = %H %M
 time2_format = 
-time1_font = Iosevka Bold 16
+time1_font = BerkeleyMono Nerd Font Mono Bold 16
 time1_timezone = 
 time2_timezone = 
-time2_font = Iosevka Italic 10
+time2_font = BerkeleyMono Nerd Font Mono Italic 10
 clock_font_color = #f9f9f9 100
 clock_padding = 0 3
 clock_background_id = 4
@@ -317,76 +317,8 @@ button_background_id = 6
 button_centered = 1
 button_max_icon_size = 0
 
-#-------------------------------------
+-------------------------------------
 # Button 3
-button = new
-button_text = 
-button_tooltip = [L] Change Window Button-Style [R] Swap Window Button-Location L/R [M] Toggle Decoration
-button_lclick_command = ~/.config/openbox/joyful-desktop/ob-button-set.sh
-button_rclick_command = ~/.config/openbox/joyful-desktop/ob-button-set.sh swap
-button_mclick_command = ~/.config/openbox/joyful-desktop/ob-button-set.sh decor
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #f9f9f9 100
-button_padding = 3 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 0
-
-#-------------------------------------
-# Button 4
-button = new
-button_text = 
-button_tooltip = [L] Toggle Mode
-button_lclick_command = ~/.config/openbox/joyful-desktop/toggle-mode.sh mode
-button_rclick_command = 
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #f9f9f9 100
-button_padding = 3 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 0
-
-#-------------------------------------
-# Button 5
-button = new
-button_text = 
-button_tooltip = [L] Toggle V/H Panel [R] Swap L/R/T/B Panel
-button_lclick_command = ~/.config/openbox/joyful-desktop/toggle-orientation.sh vh
-button_rclick_command = ~/.config/openbox/joyful-desktop/toggle-orientation.sh lrtb
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #f9f9f9 100
-button_padding = 3 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 0
-
-#-------------------------------------
-# Button 6
-button = new
-button_text = 
-button_tooltip = [L] Switch Theme
-button_lclick_command = ~/.config/openbox/joyful-desktop/toggle-mode.sh
-button_rclick_command = 
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font = Material 17
-button_font_color = #f9f9f9 100
-button_padding = 3 0
-button_background_id = 6
-button_centered = 1
-button_max_icon_size = 0
-
-#-------------------------------------
-# Button 7
 button = new
 button_text = 
 button_tooltip = [L] Power Menu [R] Media Menu
@@ -403,7 +335,7 @@ button_centered = 1
 button_max_icon_size = 0
 
 #-------------------------------------
-# Button 8
+# Button 4
 button = new
 button_text = 
 button_tooltip = [L] Screenshot [R] Screenshot Menu [M] Selection Screenshot [S] Countdown Screenshot
@@ -420,7 +352,7 @@ button_centered = 1
 button_max_icon_size = 0
 
 #-------------------------------------
-# Button 9
+# Button 5
 button = new
 button_text = 
 button_tooltip = [L] Ncmpcpp [R] Ncmpcpp - Album Art [M] Ncmpcpp - Single Album Art
@@ -443,5 +375,5 @@ tooltip_hide_timeout = 0.2
 tooltip_padding = 8 6
 tooltip_background_id = 7
 tooltip_font_color = #f9f9f9 100
-tooltip_font = Cantarell 9
+tooltip_font = BerkeleyMono Nerd Font Mono 9
 

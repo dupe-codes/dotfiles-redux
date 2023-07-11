@@ -10,6 +10,9 @@ mkdir -p $HOME/gigabox
 wget -O $HOME/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=0'
 unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
 
+# TODO: Link icons to /usr/share/icons and ~/.icons
+# TODO: Link fonts to ~/.fonts
+
 # Enable services
 #sudo systemctl enable lightdm.service
 
