@@ -1,3 +1,5 @@
+# /bin/bash
+
 # Download yay package manager
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin

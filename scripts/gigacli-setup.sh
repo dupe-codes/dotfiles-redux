@@ -1,3 +1,5 @@
+# bin/bash
+
 # Setup script for THE GIGA CLI
 echo "Setting up THE GIGA CLI\n\n"
 
