@@ -74,3 +74,5 @@ brace-bin@yay
 # Clipboard manager
 parcellite
 
+# Fonts
+noto-fonts

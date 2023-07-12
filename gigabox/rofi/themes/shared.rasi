@@ -3,7 +3,7 @@
 
 * {
   text-font:                        "BerkeleyMono Nerd Font Mono Bold 12";
-  icon-font:                        "Material 14";
+  icon-font:                        "Material 12";
   center-align:                     0.5;
   window-padding:                   15.4% 8%;
   button-padding:                   14px;
@@ -18,7 +18,7 @@
   // Below for "exts.rasi" theme configuration.
   // Auto-configured through shell-script.
 
-  exts-textbox-font:                "BerkeleyMono Nerd Font Mono Bold 48";
+  exts-textbox-font:                "BerkeleyMono Nerd Font Mono Bold 36";
   exts-window-padding:              6.5% 4% 4% 4%;
   exts-window-width:                26%;
   exts-window-height:               100%;

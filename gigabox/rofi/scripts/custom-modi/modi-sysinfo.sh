@@ -136,7 +136,7 @@ G_='' G="<span font_desc='${ROW_ICON_FONT}' weight='bold'>${G_}</span>   ${PK
 
 #fi
 
-MESSAGE='🌸'
+MESSAGE='YO'
 
 printf '%b\n' '\0use-hot-keys\037true' '\0markup-rows\037true' "\0message\037${MESSAGE}"
 printf '%s\0nonselectable\037true\n' "$A" "$B" "$C" "$D" "$E" "$F" "$G"
