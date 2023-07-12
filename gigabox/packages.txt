@@ -71,3 +71,6 @@ xfce4-power-manager
 # Browser
 brace-bin@yay
 
+# Clipboard manager
+parcellite
+

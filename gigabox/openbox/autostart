@@ -7,3 +7,6 @@ tint2 &
 # Start picom compositor
 picom -b
 
+# Start dunst notification daemon
+dunst &
+
