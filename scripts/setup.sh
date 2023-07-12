@@ -44,4 +44,3 @@ bash Mambaforge-$(uname)-$(uname -m).sh
 # symlink devmoji config to home dir
 ln -sf $PWD/project-configs/devmoji.config.js $HOME/devmoji.config.js
 
-https://www.dropbox.com/scl/fi/hgfofjxg7roscfep5grrs/melt.jpg?rlkey=w5aexamugapv9ks7htnv2fo3d&dl=0

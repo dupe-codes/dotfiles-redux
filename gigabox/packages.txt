@@ -5,6 +5,9 @@ python
 base-devel
 unzip
 
+# Account management
+accountsservice
+
 # Display server
 xorg-server
 

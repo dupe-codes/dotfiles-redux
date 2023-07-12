@@ -21,6 +21,7 @@ unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
 # TODO: Link fonts to ~/.fonts
 #       Need to find good font with icon options
 # TODO: Link themes to ~/.themes
+# TODO: cp wallpapers to /usr/share/backgrounds/
 
 # TODO: Link all configuration files
 
