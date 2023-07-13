@@ -59,6 +59,14 @@ cd lightdm-neon
 make build
 sudo make install
 
+# Setup dupe user image :]
+sudo mkdir -p /var/lib/AccountsService/icons
+sudo cp $PWD/gigabox/resources/dupe.png /var/lib/AccountsService/
+sudo chmod 644 /var/lib/AccountsService/dupe.png
+sudo mkdir -p /var/lib/AccountsService/users
+sudo echo -e "[User]\nIcon=/var/lib/AccountsService/icons/dupe.png" > /var/lib/AccountsService/users/dupe
+sudo chmod 644 /var/lib/AccountsService/users/dupe
+
 # Enable services
 sudo systemctl enable lightdm.service
 
