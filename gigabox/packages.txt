@@ -2,6 +2,7 @@
 nodejs
 npm
 python
+go
 base-devel
 unzip
 

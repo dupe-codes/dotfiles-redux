@@ -1,29 +1,57 @@
 # /bin/bash
 
+install_packages_from_file() {
+    FILE=$1
+    pacman_pkgs=""
+    yay_pkgs=""
+
+    while IFS= read -r line
+    do
+        # skip comments
+        if [[ $line == \#* ]]; then
+            continue
+        fi
+
+        # check if line ends with "@yay"
+        if [[ $line == *@yay ]]; then
+            # remove @yay and add to yay list
+            yay_pkgs+=" ${line%@yay}"
+        else
+            # add to pacman list
+            pacman_pkgs+=" $line"
+        fi
+    done <"$FILE"
+
+    if [ -n "$pacman_pkgs" ]; then
+        echo "Installing packages with pacman..."
+        sudo pacman -S --noconfirm $pacman_pkgs
+    fi
+
+    if [ -n "$yay_pkgs" ]; then
+        echo "Installing packages with yay..."
+        yay -S --noconfirm $yay_pkgs
+    fi
+}
+
+echo "Setting up the GIGABOX...\n\n"
+
 # Download yay package manager
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
-# TODO: download and install packages
+install_packages_from_file $PWD/gigabox/packages.txt
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup default stable
 
 # Download resources (wallpapers, fonts, etc.) from dropbox
 # TODO: Include needed fonts and icons:
 # 	Material
 # 	Feather IcoMoon
 # 	Papirus-Dark-Custom
-mkdir -p $HOME/gigabox
-wget -O $HOME/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=0'
-unzip $HOME/gigabox/resources.zip -d $HOME/gigabox/
-
-# TODO: Link icons to /usr/share/icons and ~/.icons
-#       Need to find good icon pack options
-# TODO: Link fonts to ~/.fonts
-#       Need to find good font with icon options
-# TODO: Link themes to ~/.themes
-# TODO: cp wallpapers to /usr/share/backgrounds/
-
-# TODO: Link all configuration files
+wget -O $PWD/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=0'
+unzip $PWD/gigabox/resources.zip -d $PWD/gigabox/resources/
 
 # Setup web-greeter login screen
 git clone https://github.com/hertg/lightdm-neon.git

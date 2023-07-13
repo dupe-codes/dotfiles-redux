@@ -1,0 +1,49 @@
+- defaults:
+  link:
+    relink: true
+    create: true
+
+- shell:
+  - command: ./scripts/gigabox-setup.sh
+    description: Install packages for and configure gigabox linux desktop
+    stdin: true
+    stdout: true
+    stderr: true
+
+  - command: ./scripts/gigacli-setup.sh
+    description: Install packages and configure gigacli
+    stdin: true
+    stdout: true
+    stderr: true
+
+- link:
+  # configs: gigabox
+  ~/.config/dunst:              gigabox/dunst
+  ~/.config/gtk-3.0:            gigabox/gtk-3.0
+  ~/.config/obmenu-generator:   gigabox/obmenu-generator
+  ~/.config/openbox:            gigabox/openbox
+  ~/.config/picom:              gigabox/picom
+  ~/.config/tint2:              gigabox/tint2
+  ~/.config/rofi:               gigabox/rofi
+  /etc/lightdm/lightdm.conf:    gigabox/lightdm/lightdm.conf
+  /etc/lightdm/web-greeter.yml: gigabox/lightdm/web-greeter.yml
+
+  # configs: gigacli
+  ~/.config/nvim:   neovim
+  ~/.config/kitty:  gigacli/kitty
+  ~/.config/tmux:   gigacli/tmux
+  # TODO: add nushell
+  ~/nu-welcome.txt: gigacli/nu-welcome.txt
+
+  # TODO: configure posix-shell
+
+  # resources
+  ~/.icons:               gigabox/resources/icons
+  /usr/share/icons:       gigabox/resources/icons
+  ~/.fonts:               gigabox/resources/fonts
+  ~/.themes:              gigabox/themes
+  /usr/share/backgrounds: gigabox/resources/wallpapers
+
+  # tools
+  ~/devmoji.config.js: project-configs/devmoji.config.js
+

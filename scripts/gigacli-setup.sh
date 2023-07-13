@@ -1,30 +1,60 @@
 # bin/bash
 
+install_packages_from_file() {
+    FILE=$1
+    pacman_pkgs=""
+    pip_pkgs=""
+    cargo_pkgs=""
+    go_pkgs=""
+
+    while IFS= read -r line
+    do
+        # skip comments
+        if [[ $line == \#* ]]; then
+            continue
+        fi
+
+        # check if line ends with "@pip", "@cargo", "@go" or nothing
+        if [[ $line == *@pip ]]; then
+            pip_pkgs+=" ${line%@pip}"
+        elif [[ $line == *@cargo ]]; then
+            cargo_pkgs+=" ${line%@cargo}"
+        elif [[ $line == *@go ]]; then
+            go_pkgs+=" ${line%@go}"
+        else
+            pacman_pkgs+=" $line"
+        fi
+    done <"$FILE"
+
+    if [ -n "$pacman_pkgs" ]; then
+        echo "Installing packages with pacman..."
+        sudo pacman -S --noconfirm $pacman_pkgs
+    fi
+
+    if [ -n "$pip_pkgs" ]; then
+        echo "Installing packages with pip..."
+        pip install $pip_pkgs
+    fi
+
+    if [ -n "$cargo_pkgs" ]; then
+        echo "Installing packages with cargo..."
+        cargo install $cargo_pkgs
+    fi
+
+    if [ -n "$go_pkgs" ]; then
+        echo "Installing packages with go..."
+        go install $go_pkgs
+    fi
+}
+
 # Setup script for THE GIGA CLI
 echo "Setting up THE GIGA CLI\n\n"
 
-echo "Configuring kitty..."
-ln -sf $PWD/the-giga-cli/kitty $HOME/.config/
+install_packages_from_file $PWD/gigacli/packages.txt
 
-# TODO: Figure out how to congifure nushell in XDG_CONFIG_HOME
-#       It will need to be copied because nushell doesn't seem to properly
-#       work with symlinks
-#       Also git clone nu_scripts into nushell config dir
-echo "Configuring nushell..."
-cp $PWD/the-giga-cli/nushell/nu-welcome.txt $HOME/nu-welcome.txt
-echo "Remember to configure your secrets.nu file!"
-
-echo "Creating starship config symlink..."
-ln -sf $PWD/the-giga-cli/nushell/starship.toml $HOME/.config/
-
-echo "Configuring tmux..."
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-ln -sf $PWD/the-giga-cli/tmux $HOME/.config/
 
-# TODO: Install packages from packages.txt
-#       Split between brew/cargo/other based on comment headers
-#       Set package manager based on OS; e.g., brew for macOS, 
-#       pacman for arch linux
-
-# TODO: Install mambaforge
+echo 'Installing mambaforge...'
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh
 

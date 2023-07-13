@@ -53,7 +53,7 @@ source $HOME/secrets.sh
 alias gpt="chatblade -c 3.5 -s"
 
 # Welcome message :]
-echo -e "$(cat $HOME/gundam.txt)"
+echo -e "$(cat $HOME/posix-welcome.txt)"
 
 # Update PATH for riscv toolchain (OS course)
 PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin

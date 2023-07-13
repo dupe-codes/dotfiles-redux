@@ -1,24 +1,20 @@
--- package manager
 fd
 nushell
 starship
 tmux
 vlc
 
--- cargo
-bat
-coreutils
-du-dust
-exa
-gitui
-ncspot
-porsmo
-ripgrep
-bottom
-carapace
+bat@cargo
+coreutils@cargo
+du-dust@cargo
+exa@cargo
+gitui@cargo
+ncspot@cargo
+porsmo@cargo
+ripgrep@cargo
+bottom@cargo
+carapace@cargo
 
--- pip
-yewtube
+yewtube@pip
 
--- go
-github.com/maaslalani/nap@main
+github.com/maaslalani/nap@main@go
