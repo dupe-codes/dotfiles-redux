@@ -14,13 +14,13 @@ up to but not including the "install desktop environment step":
     - unmount /mnt
     - shutdown now
 
-3. Install git then configure ssh auth
+3. Install any necessary graphics, video, and audio drivers
+
+4. Install git then configure ssh auth
     - install ssh-keygen: `pacman -S openssh`
     - follow keygen instructions at [github.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 4. git clone dotfiles-redux
 
-5. run gigabox-setup.sh script
-
-6. run gigaclie-setup.sh script
+5. From within the dotfiles-redux directory, run: `./install`
 
