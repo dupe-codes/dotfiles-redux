@@ -39,19 +39,12 @@ echo "Setting up the GIGABOX...\n\n"
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
+cd ..
 
 install_packages_from_file $PWD/gigabox/packages.txt
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup default stable
-
-# Download resources (wallpapers, fonts, etc.) from dropbox
-# TODO: Include needed fonts and icons:
-# 	Material
-# 	Feather IcoMoon
-# 	Papirus-Dark-Custom
-wget -O $PWD/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=0'
-unzip $PWD/gigabox/resources.zip -d $PWD/gigabox/resources/
 
 # Setup web-greeter login screen
 git clone https://github.com/hertg/lightdm-neon.git
