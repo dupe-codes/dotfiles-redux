@@ -20,7 +20,7 @@ up to but not including the "install desktop environment step":
     - install ssh-keygen: `sudo pacman -S openssh`
     - follow keygen instructions at [github.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-5. install python `sudo pacman -S python`; then, make sure pip is on path: `python -m ensurepip --upgrade`
+5. install python `sudo pacman -S python python-pip`
 
 6. git clone dotfiles-redux
 
