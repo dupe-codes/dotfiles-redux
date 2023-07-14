@@ -11,6 +11,9 @@ accountsservice
 
 # Display server
 xorg-server
+xorg-randr
+xorg-xrdb
+psmisc
 
 # Display manager
 lightdm
@@ -70,10 +73,11 @@ viewnior
 xfce4-power-manager
 
 # Browser
-brace-bin@yay
+brave-bin@yay
 
 # Clipboard manager
 parcellite
 
 # Fonts
 noto-fonts
+
