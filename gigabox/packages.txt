@@ -1,9 +1,7 @@
 # Dev tooling
 nodejs
 npm
-python
 go
-base-devel
 unzip
 
 # Account management
@@ -11,7 +9,7 @@ accountsservice
 
 # Display server
 xorg-server
-xorg-randr
+xorg-xrandr
 xorg-xrdb
 psmisc
 
@@ -48,7 +46,7 @@ tumbler
 
 # TODO: More audio stuff
 # Volume control
-pavucontrol
+# pavucontrol
 
 # Text editor
 neovim
@@ -70,7 +68,7 @@ parcellite
 viewnior
 
 # Power manager
-xfce4-power-manager
+# xfce4-power-manager
 
 # Browser
 brave-bin@yay

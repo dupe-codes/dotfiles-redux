@@ -17,10 +17,12 @@ up to but not including the "install desktop environment step":
 3. Install any necessary graphics, video, and audio drivers
 
 4. Install git then configure ssh auth
-    - install ssh-keygen: `pacman -S openssh`
+    - install ssh-keygen: `sudo pacman -S openssh`
     - follow keygen instructions at [github.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-4. git clone dotfiles-redux
+5. install python `sudo pacman -S python`; then, make sure pip is on path
 
-5. From within the dotfiles-redux directory, run: `./install`
+6. git clone dotfiles-redux
+
+7. From within the dotfiles-redux directory, run: `./install`
 

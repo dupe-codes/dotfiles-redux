@@ -48,7 +48,10 @@ install_packages_from_file() {
 }
 
 # Setup script for THE GIGA CLI
-echo "Setting up THE GIGA CLI\n\n"
+echo "Setting up THE GIGA CLI"
+
+source "$HOME/.cargo/env"
+export PATH="$HOME/.local/bin:$PATH"
 
 install_packages_from_file $PWD/gigacli/packages.txt
 
