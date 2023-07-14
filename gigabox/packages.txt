@@ -3,6 +3,7 @@ nodejs
 npm
 go
 unzip
+wget
 
 # Account management
 accountsservice

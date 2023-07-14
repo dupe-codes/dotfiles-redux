@@ -111,3 +111,6 @@ let-env EDITOR = "nvim"
 # Conda/mamba configurations
 let-env CONDA_NO_PROMPT = true
 
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+

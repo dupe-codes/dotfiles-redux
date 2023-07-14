@@ -33,20 +33,21 @@
   ~/.config/rofi:               gigabox/rofi
 
   # configs: gigacli
-  ~/.config/nvim:           neovim
-  ~/.config/kitty:          gigacli/kitty
-  ~/.config/tmux:           gigacli/tmux
-  ~/.config/nushell:        gigacli/nushell
-  ~/.config/starship.toml:  gigacli/starship.toml
-  ~/nu-welcome.txt:         gigacli/nu-welcome.txt
+  ~/.config/nvim:               neovim
+  ~/.config/kitty:              gigacli/kitty
+  ~/.config/tmux:               gigacli/tmux
+  ~/.config/nushell:            gigacli/nushell
+  ~/.config/starship.toml:      gigacli/starship.toml
+  ~/nu-welcome.txt:             gigacli/nu-welcome.txt
+  ~/secrets.nu:                 gigacli/secrets.nu
 
   # TODO: configure posix-shell
 
   # resources
-  ~/.icons:               gigabox/resources/icons
-  ~/.fonts:               gigabox/resources/fonts
-  ~/.themes:              gigabox/themes
+  ~/.icons:                     gigabox/resources/icons
+  ~/.fonts:                     gigabox/resources/fonts
+  ~/.themes:                    gigabox/themes
 
   # tools
-  ~/devmoji.config.js: project-configs/devmoji.config.js
+  ~/devmoji.config.js:          project-configs/devmoji.config.js
 

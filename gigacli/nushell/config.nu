@@ -539,9 +539,6 @@ let-env config = {
 }
 
 ##### Setup starship prompt #####
-
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
 source ~/.cache/starship/init.nu
 
 #### Source secrets ####
