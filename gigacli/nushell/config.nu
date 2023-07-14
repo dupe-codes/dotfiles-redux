@@ -264,7 +264,6 @@ let-env config = {
     max_size: 10000
     sync_on_enter: true
     file_format: "plaintext"
-    history_isolation: true
   }
   completions: {
     case_sensitive: false
@@ -566,7 +565,7 @@ def tm [] {
     }
 }
 
-use ~/Library/ApplicationSupport/nushell/nu_scripts/modules/virtual_environments/conda.nu
+use ~/.config/nushell/nu_scripts/modules/virtual_environments/conda.nu
 conda activate # always start base conda environment
 
 ### Finally, open welcome message! ###
