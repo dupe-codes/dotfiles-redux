@@ -1,3 +1,7 @@
 resources/
 .DS_Store
 .luarc.json
+
+# Various tool generated artefacts
+gigacli/nushell/history.txt
+
