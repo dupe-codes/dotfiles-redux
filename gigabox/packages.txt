@@ -1,4 +1,4 @@
-# Dev tooling
+# Dev & command line tooling
 nodejs
 npm
 go

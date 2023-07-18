@@ -207,6 +207,7 @@ local plugins = {
                 "ruff",
                 "rust-analyzer",
                 "zls",
+                "clangd",
             },
         },
         config = function(_, opts)
