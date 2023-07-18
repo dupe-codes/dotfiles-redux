@@ -119,7 +119,7 @@ background_color = #91d7e3 100
 border_color = #bf3f3f 0
 background_color_hover = #b7e5ed 100
 border_color_hover = #bf3f3f 0
-background_color_pressed = #da54b6 100
+background_color_pressed = #dce0e8 100
 border_color_pressed = #555555 0
 
 # Background 10: Power Button
@@ -132,7 +132,7 @@ background_color = #91d7e3 100
 border_color = #bf3f3f 0
 background_color_hover = #b7e5ed 100
 border_color_hover = #bf3f3f 0
-background_color_pressed = #f4b6bf 100
+background_color_pressed = #dce0e8 100
 border_color_pressed = #555555 0
 
 # Background 11: Inactive desktops
@@ -250,20 +250,20 @@ launcher_item_app = /usr/share/applications/nitrogen.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %H:%M
-time2_format = 
+time1_format = %H:%M on %a %b %d
+time2_format =
 time1_font = BerkeleyMono Nerd Font Mono Bold 11
-time1_timezone = 
-time2_timezone = 
+time1_timezone =
+time2_timezone =
 time2_font = BerkeleyMono Nerd Font Mono 8
 clock_font_color = #91d7e3 100
 clock_padding = 4 0
 clock_background_id = 0
 clock_tooltip = 
-clock_tooltip_timezone = 
-clock_lclick_command = zenity --calendar --text ""
-clock_rclick_command = orage
-clock_mclick_command = 
+clock_tooltip_timezone =
+clock_lclick_command = orage
+clock_rclick_command =
+clock_mclick_command =
 clock_uwheel_command = xbacklight -inc 2
 clock_dwheel_command = xbacklight -dec 2
 

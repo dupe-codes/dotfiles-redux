@@ -60,7 +60,7 @@ wezterm
 gimp
 
 # Calendar utility
-gsimplecal
+orage
 
 # Clipboard manager
 parcellite
