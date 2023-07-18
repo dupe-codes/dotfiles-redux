@@ -69,10 +69,10 @@ parcellite
 viewnior
 
 # Power manager
-# xfce4-power-manager
+xfce4-power-manager
 
 # Task manager
-# xfce4-taskmanager
+xfce4-taskmanager
 
 # Browser
 brave-bin@yay
