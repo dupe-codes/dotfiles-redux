@@ -11,14 +11,14 @@ border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #e6e9ef 100
+background_color = #24273a 100
 border_color = #bf3f3f 0
 background_color_hover = #000000 80
 border_color_hover = #bf3f3f 0
 background_color_pressed = #000000 80
 border_color_pressed = #555555 0
 
-# Background 2: Tarea minimizada, Tarea predeterminada
+# Background 2: Minimized task, default task
 rounded = 0
 border_width = 0
 border_sides = TBLR
@@ -31,20 +31,20 @@ border_color_hover = #cccccc 30
 background_color_pressed = #dce0e8 100
 border_color_pressed = #777777 30
 
-# Background 3: Tarea activa
+# Background 3: Task active
 rounded = 0
 border_width = 3
 border_sides = B
 border_content_tint_weight = 0
 background_content_tint_weight = 5
-background_color = #eff1f5 0
-border_color = #ea76cb 100
-background_color_hover = #eff1f5 100
-border_color_hover = #f595dc 100
+background_color = #939ab7 0
+border_color = #91d7e3 100
+background_color_hover = #91d7e3 100
+border_color_hover = #91d7e3 100
 background_color_pressed = #dce0e8 100
-border_color_pressed = #da54b6 100
+border_color_pressed = #91d7e3 100
 
-# Background 4: Tarea urgente
+# Background 4: Urgent task
 rounded = 0
 border_width = 0
 border_sides = 
@@ -57,7 +57,7 @@ border_color_hover = #bf3f3f 0
 background_color_pressed = #e64553 100
 border_color_pressed = #bf3f3f 0
 
-# Background 5: Mensaje emergente
+# Background 5: Popup message
 rounded = 2
 border_width = 4
 border_sides = TBLR
@@ -70,7 +70,7 @@ border_color_hover = #4c4f69 100
 background_color_pressed = #4c4f69 100
 border_color_pressed = #4c4f69 100
 
-# Background 6: 
+# Background 6:
 rounded = 0
 border_width = 0
 border_sides = TBLR
@@ -83,20 +83,20 @@ border_color_hover = #cccccc 30
 background_color_pressed = #777777 21
 border_color_pressed = #777777 30
 
-# Background 7: Nombre del escritorio activo
+# Background 7: Active Desktop
 rounded = 0
 border_width = 3
 border_sides = B
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #eff1f5 100
-border_color = #ea7acb 100
-background_color_hover = #eff1f5 100
-border_color_hover = #f8bae7 100
+background_color = #5b6078 100
+border_color = #91d7e3 100
+background_color_hover = #91d7e3 100
+border_color_hover = #91d7e3 100
 background_color_pressed = #eff1f5 100
-border_color_pressed = #ea7acb 100
+border_color_pressed = #91d7e3 100
 
-# Background 8: Bandeja del sistema
+# Background 8: System Tray
 rounded = 12
 border_width = 3
 border_sides = TBLR
@@ -109,33 +109,33 @@ border_color_hover = #000000 0
 background_color_pressed = #9ca0b0 23
 border_color_pressed = #000000 0
 
-# Background 9: 
+# Background 9: Menu button
 rounded = 12
 border_width = 3
 border_sides = TB
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #ea76cb 100
+background_color = #91d7e3 100
 border_color = #bf3f3f 0
-background_color_hover = #ee86d2 100
+background_color_hover = #b7e5ed 100
 border_color_hover = #bf3f3f 0
 background_color_pressed = #da54b6 100
 border_color_pressed = #555555 0
 
-# Background 10: Botón
+# Background 10: Power Button
 rounded = 12
 border_width = 3
 border_sides = TB
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #d20f39 100
+background_color = #91d7e3 100
 border_color = #bf3f3f 0
-background_color_hover = #e64553 100
+background_color_hover = #b7e5ed 100
 border_color_hover = #bf3f3f 0
-background_color_pressed = #4c4f69 100
+background_color_pressed = #f4b6bf 100
 border_color_pressed = #555555 0
 
-# Background 11: Nombre de escritorio inactivo
+# Background 11: Inactive desktops
 rounded = 0
 border_width = 0
 border_sides = B
@@ -143,7 +143,7 @@ border_content_tint_weight = 0
 background_content_tint_weight = 0
 background_color = #bf3f3f 0
 border_color = #ea76cb 100
-background_color_hover = #eff1f5 72
+background_color_hover = #8087a2 72
 border_color_hover = #f595dc 100
 background_color_pressed = #eff1f5 100
 border_color_pressed = #da54b6 100
@@ -192,8 +192,8 @@ taskbar_name_padding = 4 0
 taskbar_name_background_id = 11
 taskbar_name_active_background_id = 7
 taskbar_name_font = BerkeleyMono Nerd Font Mono 11
-taskbar_name_font_color = #4c4f69 20
-taskbar_name_active_font_color = #9ca0b0 100
+taskbar_name_font_color = #cad3f5 20
+taskbar_name_active_font_color = #cad3f5 100
 taskbar_distribute_size = 1
 taskbar_sort_order = none
 task_align = center
@@ -210,7 +210,7 @@ task_font = BerkeleyMono Nerd Font Mono 9
 task_tooltip = 1
 task_thumbnail = 1
 task_thumbnail_size = 210
-task_font_color = #eeeeee 100
+task_font_color = #939ab7 100
 task_icon_asb = 99 0 0
 task_background_id = 2
 task_active_background_id = 3
@@ -256,7 +256,7 @@ time1_font = BerkeleyMono Nerd Font Mono Bold 11
 time1_timezone = 
 time2_timezone = 
 time2_font = BerkeleyMono Nerd Font Mono 8
-clock_font_color = #ea76cb 100
+clock_font_color = #91d7e3 100
 clock_padding = 4 0
 clock_background_id = 0
 clock_tooltip = 
@@ -299,7 +299,7 @@ button_rclick_command = ~/.config/rofi/bin/runner
 utton_uwheel_command = 
 button_dwheel_command = 
 button_font = BerkeleyMono Nerd Font Mono 12
-button_font_color = #ffffff 100
+button_font_color = #24273a 100
 button_padding = 28 0
 button_background_id = 9
 button_centered = 0
@@ -311,10 +311,10 @@ button = new
 button_text = 
 button_lclick_command = dunstctl history-pop
 button_rclick_command = dunstctl close-all
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
-button_font_color = #ffffff 100
+button_mclick_command =
+button_uwheel_command =
+button_dwheel_command =
+button_font_color = #24273a 100
 button_padding = 6 0
 button_background_id = 9
 button_centered = 0
@@ -326,11 +326,11 @@ button = new
 button_text = ⏻
 button_lclick_command = ~/.config/rofi/bin/powermenu
 button_rclick_command = xfce4-taskmanager
-button_mclick_command = 
-button_uwheel_command = 
-button_dwheel_command = 
+button_mclick_command =
+button_uwheel_command =
+button_dwheel_command =
 button_font = BerkeleyMono Nerd Font Mono 12
-button_font_color = #ffffff 100
+button_font_color = #24273a 100
 button_padding = 5 0
 button_background_id = 10
 button_centered = 0
