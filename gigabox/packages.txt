@@ -71,6 +71,9 @@ viewnior
 # Power manager
 # xfce4-power-manager
 
+# Task manager
+# xfce4-taskmanager
+
 # Browser
 brave-bin@yay
 

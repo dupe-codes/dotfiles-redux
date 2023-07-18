@@ -1,53 +1,53 @@
 - defaults:
-  link:
-    relink: true
-    create: true
-    force:  true
+    link:
+        relink: true
+        create: true
+        force:  true
 
-  shell:
-    stdin:  true
-    stdout: true
-    stderr: true
+    shell:
+        stdin:  true
+        stdout: true
+        stderr: true
 
 - shell:
-  - command: sh ./scripts/gigabox-setup.sh
-    description: Install packages for and configure gigabox linux desktop
+    - command: sh ./scripts/gigabox-setup.sh
+      description: Install packages for and configure gigabox linux desktop
 
-  - command: sh ./scripts/download-resources.sh
-    description: Download all resource files (fonts, icons, wallpapers, etc.)
+    - command: sh ./scripts/download-resources.sh
+      description: Download all resource files (fonts, icons, wallpapers, etc.)
 
-  - command: sh ./sudo-link-resources.sh
-    description: Link resources that require sudo powers
+    - command: sh ./sudo-link-resources.sh
+      description: Link resources that require sudo powers
 
-  - command: sh ./scripts/gigacli-setup.sh
-    description: Install packages and configure gigacli
+    - command: sh ./scripts/gigacli-setup.sh
+      description: Install packages and configure gigacli
 
 - link:
-  # configs: gigabox
-  ~/.config/dunst:              gigabox/dunst
-  ~/.config/gtk-3.0:            gigabox/gtk-3.0
-  ~/.config/obmenu-generator:   gigabox/obmenu-generator
-  ~/.config/openbox:            gigabox/openbox
-  ~/.config/picom:              gigabox/picom
-  ~/.config/tint2:              gigabox/tint2
-  ~/.config/rofi:               gigabox/rofi
+    # configs: gigabox
+    ~/.config/dunst:              gigabox/dunst
+    ~/.config/gtk-3.0:            gigabox/gtk-3.0
+    ~/.config/obmenu-generator:   gigabox/obmenu-generator
+    ~/.config/openbox:            gigabox/openbox
+    ~/.config/picom:              gigabox/picom
+    ~/.config/tint2:              gigabox/tint2
+    ~/.config/rofi:               gigabox/rofi
 
-  # configs: gigacli
-  ~/.config/nvim:               neovim
-  ~/.config/kitty:              gigacli/kitty
-  ~/.config/tmux:               gigacli/tmux
-  ~/.config/nushell:            gigacli/nushell
-  ~/.config/starship.toml:      gigacli/starship.toml
-  ~/nu-welcome.txt:             gigacli/nu-welcome.txt
-  ~/secrets.nu:                 gigacli/secrets.nu
+    # configs: gigacli
+    ~/.config/nvim:               neovim
+    ~/.config/kitty:              gigacli/kitty
+    ~/.config/tmux:               gigacli/tmux
+    ~/.config/nushell:            gigacli/nushell
+    ~/.config/starship.toml:      gigacli/starship.toml
+    ~/nu-welcome.txt:             gigacli/nu-welcome.txt
+    ~/secrets.nu:                 gigacli/secrets.nu
 
-  # TODO: configure posix-shell
+    # TODO: configure posix-shell
 
-  # resources
-  ~/.icons:                     gigabox/resources/icons
-  ~/.fonts:                     gigabox/resources/fonts
-  ~/.themes:                    gigabox/themes
+    # resources
+    ~/.icons:                     gigabox/resources/icons
+    ~/.fonts:                     gigabox/resources/fonts
+    ~/.themes:                    gigabox/themes
 
-  # tools
-  ~/devmoji.config.js:          project-configs/devmoji.config.js
+    # tools
+    ~/devmoji.config.js:          project-configs/devmoji.config.js
 
