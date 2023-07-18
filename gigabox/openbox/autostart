@@ -10,3 +10,6 @@ picom -b
 # Start dunst notification daemon
 dunst &
 
+# Start power manager
+xfce4-power-manager &
+
