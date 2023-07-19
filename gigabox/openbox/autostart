@@ -1,27 +1,16 @@
-# Load set nitrogen desktop wallpaper
+# Source environment variables
+. "${HOME}/.gigabox"
+xrdb "${HOME}/.Xresources"
+
 nitrogen --restore &
-
-# Start tint2 panel
 tint2 &
-
-# Start picom compositor
 picom -b
-
-# Start dunst notification daemon
 dunst &
-
-# Start power manager
 xfce4-power-manager &
+nm-applet &
+1password --silent &
+parcellite &
 
 # Volume control
 # pavucontrol &
-
-# Network management
-nm-applet &
-
-# 1password tray
-1password --silent &
-
-# Clipboard manager
-parcellite &
 

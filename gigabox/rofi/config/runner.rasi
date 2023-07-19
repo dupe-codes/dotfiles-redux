@@ -16,7 +16,7 @@ window {
     border:                         2px;
     border-color:                   @BDR;
     border-radius:                  10px;
-    width:                          350px;
+    width:                          700px;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;

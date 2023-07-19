@@ -17,7 +17,7 @@ window {
     border:                         2px;
     border-color:                   @BDR;
     border-radius:                  10px;
-    width:                          500px;
+    width:                          1000px;
     anchor:                         center;
     x-offset:                       0;
     y-offset:                       0;
@@ -37,7 +37,7 @@ textbox-prompt-colon {
     background-color:               @SEL;
     text-color:                     @FG;
     padding:                        8px 12px 8px 12px;
-    font:			                "BerkeleyMono Nerd Font Mono 16";
+    font:			                "BerkeleyMono Nerd Font Mono 20";
 }
 
 entry {
@@ -104,7 +104,7 @@ element-icon {
     text-color:       		        inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    size:                           24px;
+    size:                           36px;
     border:                         0px;
 }
 

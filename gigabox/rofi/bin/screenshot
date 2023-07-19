@@ -19,11 +19,11 @@ if [[ "$layout" == "TRUE" ]]; then
 	infive="靖"
 	inten="福"
 else
-	screen=" Capture Desktop"
-	area=" Capture Area"
-	window="缾 Capture Window"
-	infive="靖 Take in 3s"
-	inten="福 Take in 10s"
+	screen=" Capture desktop"
+	area="󰆞 Capture area"
+	window=" Capture window"
+	infive="󰔛 Take in 3s"
+	inten="󰔛 Take in 10s"
 fi
 
 # Notify and view screenshot
@@ -80,7 +80,7 @@ fi
 # Variable passed to rofi
 options="$screen\n$area\n$window\n$infive\n$inten"
 
-chosen="$(echo -e "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -p 'Screenshot...' -dmenu -selected-row 0)"
 case $chosen in
     $screen)
 		shotnow

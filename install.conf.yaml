@@ -22,6 +22,9 @@
     - command: sh ./scripts/gigacli-setup.sh
       description: Install packages and configure gigacli
 
+- create:
+    - ~/Screenshots
+
 - link:
     # configs: gigabox
     ~/.config/dunst:              gigabox/dunst
@@ -31,6 +34,8 @@
     ~/.config/picom:              gigabox/picom
     ~/.config/tint2:              gigabox/tint2
     ~/.config/rofi:               gigabox/rofi
+    ~/.Xresources:                gigabox/.Xresources
+    ~/.gigabox:                   gigabox/.gigabox
 
     # configs: gigacli
     ~/.config/nvim:               neovim
