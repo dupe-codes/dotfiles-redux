@@ -16,7 +16,7 @@
     - command: sh ./scripts/download-resources.sh
       description: Download all resource files (fonts, icons, wallpapers, etc.)
 
-    - command: sh ./sudo-link-resources.sh
+    - command: sh ./scripts/sudo-link-resources.sh
       description: Link resources that require sudo powers
 
     - command: sh ./scripts/gigacli-setup.sh

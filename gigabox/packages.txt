@@ -47,7 +47,7 @@ tumbler
 
 # TODO: More audio stuff
 # Volume control
-# pavucontrol
+pavucontrol
 
 # Text editor
 neovim

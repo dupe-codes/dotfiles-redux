@@ -1,6 +1,10 @@
-resources/
 .DS_Store
 .luarc.json
+
+# Relics from installs
+resources/
+yay-bin/
+lightdm-neon/
 
 # Various tool generated artefacts
 gigacli/nushell/history.txt

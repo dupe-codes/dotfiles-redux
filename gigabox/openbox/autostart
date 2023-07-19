@@ -13,3 +13,12 @@ dunst &
 # Start power manager
 xfce4-power-manager &
 
+# Volume control
+# pavucontrol &
+
+# Network management
+nm-applet &
+
+# 1password tray
+1password --silent &
+
