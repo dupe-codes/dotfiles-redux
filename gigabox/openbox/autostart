@@ -22,3 +22,6 @@ nm-applet &
 # 1password tray
 1password --silent &
 
+# Clipboard manager
+parcellite &
+

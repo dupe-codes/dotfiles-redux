@@ -74,6 +74,9 @@ xfce4-power-manager
 # Task manager
 xfce4-taskmanager
 
+# Backlight controls
+xorg-xbacklight
+
 # Browser
 brave-bin@yay
 
