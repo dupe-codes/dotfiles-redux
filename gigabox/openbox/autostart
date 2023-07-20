@@ -2,7 +2,6 @@
 . "${HOME}/.gigabox"
 xrdb "${HOME}/.Xresources"
 
-nitrogen --restore &
 tint2 &
 picom -b
 dunst &
@@ -14,3 +13,8 @@ blueman-applet &
 
 # Audio config
 pa-applet &
+
+# Configure displays
+autorandr --change &
+sleep 1s && nitrogen --restore &
+
