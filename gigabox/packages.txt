@@ -8,11 +8,12 @@ wget
 # Account management
 accountsservice
 
-# Display server
+# Display server & x11 tools
 xorg-server
 xorg-xrandr
 xorg-xrdb
 psmisc
+xdotool
 
 # Display manager
 lightdm
@@ -64,9 +65,11 @@ orage@yay
 
 # Clipboard manager
 parcellite
+xclip
 
-# Image viewer
+# Images
 viewnior
+maim
 
 # Power manager
 xfce4-power-manager
@@ -79,10 +82,17 @@ xorg-xbacklight
 
 # Browser
 brave-bin@yay
+vivaldiXft.dpi: 144
+
 
 # Clipboard manager
 parcellite
 
 # Fonts
 noto-fonts
+
+# Bluetooth
+bluez
+bluez-utils
+blueman
 

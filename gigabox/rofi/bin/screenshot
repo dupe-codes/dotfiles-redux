@@ -3,7 +3,7 @@ rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
 
 time=`date +%Y-%m-%d-%I-%M-%S`
 geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
-dir="`xdg-user-dir PICTURES`/Screenshots"
+dir="$HOME/screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
 # Icons

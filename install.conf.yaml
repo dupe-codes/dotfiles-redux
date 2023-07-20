@@ -23,7 +23,7 @@
       description: Install packages and configure gigacli
 
 - create:
-    - ~/Screenshots
+    - ~/screenshots
 
 - link:
     # configs: gigabox

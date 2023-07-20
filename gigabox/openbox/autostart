@@ -10,6 +10,7 @@ xfce4-power-manager &
 nm-applet &
 1password --silent &
 parcellite &
+blueman-applet &
 
 # Volume control
 # pavucontrol &
