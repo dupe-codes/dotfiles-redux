@@ -1,0 +1,6 @@
+[giga-displays]
+
+THREE-DISPLAY: --output eDP-1 --mode 2256x1504 --right-of DP-1 --output DP-1 --primary --mode 2560x1440 --output DP-2 --mode 2560x1440 --left-of DP-1 --rotate left
+
+TWO-DISPLAY: --output DP-1 --primary --mode 2560x1440 --output DP-2 --mode 2560x1440 --left-of DP-1 --rotate left --output eDP-1 --off
+

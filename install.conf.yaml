@@ -31,6 +31,7 @@
     ~/.config/gtk-3.0:            gigabox/gtk-3.0
     ~/.config/obmenu-generator:   gigabox/obmenu-generator
     ~/.config/openbox:            gigabox/openbox
+    ~/.ob-randrrc:                gigabox/.ob-randrrc
     ~/.config/picom:              gigabox/picom
     ~/.config/tint2:              gigabox/tint2
     ~/.config/rofi:               gigabox/rofi
