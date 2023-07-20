@@ -230,8 +230,8 @@ systray_background_id = 8
 systray_sort = ascending
 systray_icon_size = 32
 systray_icon_asb = 100 0 0
-systray_monitor = 1
-systray_name_filter = 
+systray_monitor = primary
+systray_name_filter =
 
 #-------------------------------------
 # Launcher
