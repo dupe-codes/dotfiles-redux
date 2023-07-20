@@ -12,6 +12,5 @@ nm-applet &
 parcellite &
 blueman-applet &
 
-# Volume control
-# pavucontrol &
-
+# Audio config
+pa-applet &

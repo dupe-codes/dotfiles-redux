@@ -57,4 +57,5 @@ sudo make install
 # Enable services
 sudo systemctl enable lightdm.service
 sudo systemctl enable bluetooth.service
+systemctl --user enable pulseaudio
 

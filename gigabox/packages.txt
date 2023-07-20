@@ -46,9 +46,14 @@ thunar-volman
 ffmpegthumbnailer
 tumbler
 
-# TODO: More audio stuff
-# Volume control
+# Volume control & audio utils
 pavucontrol
+pulseaudio
+pulseaudio-alsa
+pa-applet-git@yay
+mpd
+mpc
+ncmpcpp
 
 # Text editor
 neovim
