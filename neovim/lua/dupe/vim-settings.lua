@@ -45,6 +45,7 @@ vim.cmd("set expandtab")             -- convert tabs to white space
 vim.cmd("set shiftwidth=4 smarttab") -- width for autoindents
 vim.cmd("set softtabstop=4")         -- see multiple spaces as tabstops so <BS> does the right thing
 vim.cmd("set scrolloff=8")           -- keep 8 lines above and below the cursor
+vim.cmd("set cmdheight=0")           -- hide command line
 vim.cmd("syntax on")
 
 -- Setup path to include mason installed packages

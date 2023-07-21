@@ -16,5 +16,5 @@ pa-applet &
 
 # Configure displays
 autorandr --change &
-sleep 1s && nitrogen --restore &
+sleep 2s && nitrogen --restore &
 
