@@ -12,6 +12,7 @@ accountsservice
 xorg-server
 xorg-xrandr
 xorg-xrdb
+xlockmore
 psmisc
 xdotool
 

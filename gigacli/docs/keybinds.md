@@ -1,6 +1,6 @@
 ## tmux
 
-prefix key = ctrl + space
+prefix key = ctrl + b
 
 | Action | Key Map |
 |--------|---------|
