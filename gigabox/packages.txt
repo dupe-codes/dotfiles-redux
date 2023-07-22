@@ -30,6 +30,10 @@ perl-gtk3
 
 # Panel/taskbar
 tint2
+polybar
+
+# Console calculator
+calc
 
 # Notifications
 dunst
@@ -90,7 +94,6 @@ xorg-xbacklight
 brave-bin@yay
 vivaldiXft.dpi: 144
 
-
 # Clipboard manager
 parcellite
 
@@ -102,4 +105,9 @@ bluez
 bluez-utils
 blueman
 pulseaudio-bluetooth
+
+# Network
+networkmanager
+network-manager-applet
+networkmanager-dmenu-git@yay
 
