@@ -3,6 +3,10 @@ nushell
 starship
 tmux
 vlc
+arttime-git
+terraform
+python-pre-commit
+fzf
 
 bat@cargo
 coreutils@cargo
@@ -16,5 +20,6 @@ bottom@cargo
 carapace@cargo
 
 yewtube@pip
+chatblade@pip
 
 github.com/maaslalani/nap@main@go

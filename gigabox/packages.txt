@@ -44,12 +44,16 @@ nitrogen
 # Window switcher/app launcher
 rofi
 
-# GUI file manager
+# file management
 thunar
 thunar-archive-plugin
 thunar-volman
 ffmpegthumbnailer
 tumbler
+python-gpgme
+dropbox@yay
+thunar-dropbox@yay
+dropbox-cli@yay
 
 # Volume control & audio utils
 pavucontrol

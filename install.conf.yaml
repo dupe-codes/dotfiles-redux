@@ -35,7 +35,7 @@
     ~/.config/picom:              gigabox/picom
     ~/.config/tint2:              gigabox/tint2
     ~/.config/polybar:            gigabox/polybar
-    ~/.config/rofi:               gigabox/rofi/rofi
+    ~/.config/rofi:               gigabox/rofi/rofi-catppuccin
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox
 
