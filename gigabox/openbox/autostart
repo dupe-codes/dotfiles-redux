@@ -10,13 +10,13 @@ nm-applet &
 parcellite &
 blueman-applet &
 
-## Launch Polybar
-bash ~/.config/polybar/launch.sh --blocks
-
 # Audio config
 # pa-applet &
 
 # Configure displays
 autorandr --change &
 sleep 2s && nitrogen --restore &
+
+## Launch Polybar
+bash ~/.config/polybar/blocks/launch.sh
 
