@@ -2,7 +2,6 @@
 . "${HOME}/.gigabox"
 xrdb "${HOME}/.Xresources"
 
-tint2 &
 picom -b
 dunst &
 xfce4-power-manager &
@@ -11,8 +10,11 @@ nm-applet &
 parcellite &
 blueman-applet &
 
+## Launch Polybar
+bash ~/.config/polybar/launch.sh --blocks
+
 # Audio config
-pa-applet &
+# pa-applet &
 
 # Configure displays
 autorandr --change &

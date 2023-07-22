@@ -34,6 +34,7 @@
     ~/.ob-randrrc:                gigabox/.ob-randrrc
     ~/.config/picom:              gigabox/picom
     ~/.config/tint2:              gigabox/tint2
+    ~/.config/polybar:            gigabox/polybar
     ~/.config/rofi:               gigabox/rofi/rofi
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox

@@ -79,7 +79,6 @@ xclip
 
 # Images
 viewnior
-maim
 
 # Power manager
 xfce4-power-manager
@@ -92,7 +91,7 @@ xorg-xbacklight
 
 # Browser
 brave-bin@yay
-vivaldiXft.dpi: 144
+vivaldi
 
 # Clipboard manager
 parcellite
@@ -105,9 +104,15 @@ bluez
 bluez-utils
 blueman
 pulseaudio-bluetooth
+blueberry
 
 # Network
 networkmanager
 network-manager-applet
 networkmanager-dmenu-git@yay
+dmenu
+
+# Chats
+discord
+zulip-desktop@yay
 
