@@ -81,8 +81,10 @@ orage@yay
 parcellite
 xclip
 
-# Images
+# Docs & images
 viewnior
+xreader
+ristretto
 
 # Power manager
 xfce4-power-manager
