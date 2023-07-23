@@ -20,5 +20,5 @@ sleep 2s && nitrogen --restore &
 # Launch Polybar
 bash ~/.config/polybar/blocks/launch.sh
 
-xset r rate 200 40 # keyboard repeat delay and interval
+xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAD_RATE & # keyboard repeat delay and interval
 

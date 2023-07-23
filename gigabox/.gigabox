@@ -1,1 +1,5 @@
 # gigabox environment vars
+
+export KEYBOARD_REPEAT_DELAY=200
+export KEYBOARD_REPEAT_RATE=40
+
