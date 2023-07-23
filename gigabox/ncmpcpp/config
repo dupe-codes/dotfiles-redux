@@ -1,3 +1,6 @@
+# User's ncmpcpp main configuration.
+# https://github.com/owl4ce/dotfiles
+
 # MPD
 # ---
 mpd_host = "127.0.0.1"
@@ -75,4 +78,6 @@ song_list_format = " {%t $R   $8%a$8}|{%f $R   $8%l$8} $8"
 song_status_format = "$b$6$7[$8      $7]$6 $2 $7{$8 %b }|{$8 %t }|{$8 %f }$7 $8"
 
 song_window_title_format = "Now Playing .."
+
+execute_on_song_change = "~/.config/ncmpcpp/scripts/songinfo.sh"
 

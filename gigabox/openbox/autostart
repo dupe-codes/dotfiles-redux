@@ -17,6 +17,8 @@ blueman-applet &
 autorandr --change &
 sleep 2s && nitrogen --restore &
 
-## Launch Polybar
+# Launch Polybar
 bash ~/.config/polybar/blocks/launch.sh
+
+xset r rate 200 40 # keyboard repeat delay and interval
 

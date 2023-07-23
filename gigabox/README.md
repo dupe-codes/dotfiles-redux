@@ -26,3 +26,19 @@ up to but not including the "install desktop environment step":
 
 7. From within the dotfiles-redux directory, run: `./install`
 
+## Additional setup options
+
+### Enable tap-to-click
+
+Add the following to /etc/X11/xorg.conf.d/30-touchpad.conf:
+
+```
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "TappingButtonMap" "lrm"
+EndSection
+```
+

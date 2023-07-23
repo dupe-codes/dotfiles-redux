@@ -13,5 +13,6 @@ gigabox/obmenu-generator/icons/
 gigabox/obmenu-generator/cache.db
 mpd.db
 mpd.state
+previews/
 error.log
 lyrics/
