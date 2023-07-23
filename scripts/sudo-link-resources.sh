@@ -15,3 +15,5 @@ sudo mkdir -p /var/lib/AccountsService/users
 sudo bash -c 'echo -e "[User]\nIcon=/var/lib/AccountsService/icons/dupe.png" > /var/lib/AccountsService/users/dupe'
 sudo chmod 644 /var/lib/AccountsService/users/dupe
 
+# Set betterlockscreen image
+betterlockscreen -u $PWD/gigabox/resources/wallpapers/queen.jpg

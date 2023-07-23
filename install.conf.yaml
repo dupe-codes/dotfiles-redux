@@ -23,7 +23,7 @@
       description: Install packages and configure gigacli
 
 - create:
-    - ~/screenshots
+    - ~/Screenshots
 
 - link:
     # configs: gigabox
@@ -36,6 +36,7 @@
     ~/.config/tint2:              gigabox/tint2
     ~/.config/polybar:            gigabox/polybar
     ~/.config/rofi:               gigabox/rofi/rofi-catppuccin
+    ~/.config/betterlockscreen:   gigabox/betterlockscreen
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox
 

@@ -167,6 +167,7 @@
     <!-- 'Left', 'Middle', 'Right'. -->
     <moveButton>Middle</moveButton>
   </dock>
+
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Brightness control. -->
@@ -180,6 +181,7 @@
         <command>~/.scripts/change-brightness.sh -</command>
       </action>
     </keybind>
+
     <!-- Audio-volume control. -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -196,6 +198,7 @@
         <command>~/.scripts/change-volume.sh 0</command>
       </action>
     </keybind>
+
     <!-- Media control. -->
     <keybind key="XF86AudioPrev">
       <action name="Execute">
@@ -217,6 +220,7 @@
         <command>~/.scripts/music-controller.sh toggle</command>
       </action>
     </keybind>
+
     <!-- Move window-focus across visible windows. -->
     <keybind key="W-Left">
       <action name="DirectionalCycleWindows">
@@ -246,8 +250,17 @@
         <direction>down</direction>
       </action>
     </keybind>
+
     <!-- Tile window-placement across visible windows. -->
-    <keybind key="W-S-Left">
+    <keybind key="A-S-f">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>1/1</width>
+        <height>1/1</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-a">
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -255,7 +268,7 @@
         <height>1/1</height>
       </action>
     </keybind>
-    <keybind key="W-S-Right">
+    <keybind key="A-S-d">
       <action name="MoveResizeTo">
         <x>-0</x>
         <y>0</y>
@@ -263,20 +276,53 @@
         <height>1/1</height>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="A-S-w">
       <action name="MoveResizeTo">
+        <y>0</y>
+        <width>1/1</width>
+        <height>1/2</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-s">
+      <action name="MoveResizeTo">
+        <y>-0</y>
+        <width>1/1</width>
+        <height>1/2</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-q">
+      <action name="MoveResizeTo">
+        <x>0</x>
         <y>0</y>
         <width>1/2</width>
         <height>1/2</height>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="A-S-e">
       <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>1/2</width>
+        <height>1/2</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-z">
+      <action name="MoveResizeTo">
+        <x>0</x>
         <y>-0</y>
         <width>1/2</width>
         <height>1/2</height>
       </action>
     </keybind>
+    <keybind key="A-S-x">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>1/2</width>
+        <height>1/2</height>
+      </action>
+    </keybind>
+
     <!-- Manage workspaces/desktop. -->
     <keybind key="W-1">
       <action name="GoToDesktop">
@@ -293,32 +339,7 @@
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <keybind key="W-5">
-      <action name="GoToDesktop">
-        <to>5</to>
-      </action>
-    </keybind>
-    <keybind key="W-6">
-      <action name="GoToDesktop">
-        <to>6</to>
-      </action>
-    </keybind>
-    <keybind key="W-7">
-      <action name="GoToDesktop">
-        <to>7</to>
-      </action>
-    </keybind>
-    <keybind key="W-8">
-      <action name="GoToDesktop">
-        <to>8</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-1">
+   <keybind key="W-S-1">
       <action name="SendToDesktop">
         <to>1</to>
       </action>
@@ -333,114 +354,41 @@
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-S-4">
-      <action name="SendToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-5">
-      <action name="SendToDesktop">
-        <to>5</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-6">
-      <action name="SendToDesktop">
-        <to>6</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-7">
-      <action name="SendToDesktop">
-        <to>7</to>
-      </action>
-    </keybind>
-    <keybind key="W-S-8">
-      <action name="SendToDesktop">
-        <to>8</to>
-      </action>
-    </keybind>
+
     <!-- Basic window control and menus. -->
-    <keybind key="A-space">
-      <action name="ShowMenu">
-        <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="W-c">
+    <keybind key="A-q">
       <action name="Close"/>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="A-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="A-x">
       <action name="ToggleFullscreen"/>
     </keybind>
-    <keybind key="W-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="W-t">
+    <keybind key="A-t">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="W-x">
-      <action name="ToggleMaximize"/>
-    </keybind>
-    <keybind key="W-z">
-      <action name="Iconify"/>
-    </keybind>
-    <!-- Switch active windows. -->
+
+    <!-- Rofi app switcher and launcher -->
     <keybind key="A-Tab">
-      <action name="NextWindow">
-        <bar>no</bar>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <keybind key="A-S-Tab">
-      <action name="PreviousWindow">
-        <bar>no</bar>
-        <finalactions>
-          <action name="Focus"/>
-          <action name="Raise"/>
-          <action name="Unshade"/>
-        </finalactions>
-      </action>
-    </keybind>
-    <!-- Rofi-menu scripts. -->
-    <keybind key="W-Escape">
       <action name="Execute">
-        <command>~/.config/rofi/scripts/rofi-exts.sh</command>
+        <command>~/.config/polybar/blocks/scripts/open-windows.sh</command>
       </action>
     </keybind>
-    <keybind key="W-Print">
+    <keybind key="A-space">
       <action name="Execute">
-        <command>~/.config/rofi/scripts/rofi-exts.sh screenshot</command>
+        <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
       </action>
     </keybind>
-    <keybind key="W-r">
+
+    <!-- Screenshots -->
+    <keybind key="A-p">
       <action name="Execute">
-        <command>~/.config/rofi/scripts/rofi-main.sh</command>
+        <command>~/.config/rofi/bin/screenshot</command>
       </action>
     </keybind>
-    <!-- Screenshots. -->
-    <keybind key="Print">
-      <action name="Execute">
-        <command>~/.scripts/screenshot-screen.sh</command>
-      </action>
-    </keybind>
-    <keybind key="C-Print">
-      <action name="Execute">
-        <command>~/.scripts/screenshot-countdown.sh</command>
-      </action>
-    </keybind>
-    <keybind key="S-Print">
-      <action name="Execute">
-        <command>~/.scripts/screenshot-selection.sh</command>
-      </action>
-    </keybind>
-    <!-- Dunst-specifics. -->
+
+    <!-- Dunst-specifics -->
     <keybind key="C-Escape">
       <action name="Execute">
         <command>dunstctl history-pop</command>
@@ -461,33 +409,8 @@
         <command>dunstctl close-all</command>
       </action>
     </keybind>
-    <!-- Misc. -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>~/.scripts/launch-apps.sh file_manager</command>
-      </action>
-    </keybind>
-    <keybind key="W-l">
-      <action name="Execute">
-        <command>loginctl --no-ask-password lock-session</command>
-      </action>
-    </keybind>
-    <keybind key="W-Return">
-      <action name="Execute">
-        <command>~/.scripts/launch-apps.sh terminal</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-Return">
-      <action name="Execute">
-        <command>~/.config/openbox/joyful-desktop/terminal-set.sh reverse</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-r">
-      <action name="Execute">
-        <command>~/.config/openbox/joyful-desktop/toggle-mode.sh apply</command>
-      </action>
-    </keybind>
   </keyboard>
+
   <mouse>
     <!-- Number of pixels the mouse must move before a drag begins. -->
     <dragThreshold>1</dragThreshold>

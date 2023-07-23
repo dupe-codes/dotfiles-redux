@@ -20,6 +20,9 @@ xdotool
 lightdm
 web-greeter@yay
 
+# Screen lock & system utils
+betterlockscreen@yay
+
 # Window manager
 openbox
 picom
@@ -71,9 +74,6 @@ neovim
 kitty
 wezterm
 
-# Photo editor
-gimp
-
 # Calendar utility
 orage@yay
 
@@ -85,6 +85,7 @@ xclip
 viewnior
 xreader
 ristretto
+gimp
 
 # Power manager
 xfce4-power-manager
@@ -121,4 +122,9 @@ dmenu
 # Chats
 discord
 zulip-desktop@yay
+
+# Applications
+libreoffice-still
+obsidian
+1password@yay
 

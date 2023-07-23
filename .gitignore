@@ -1,5 +1,6 @@
 .DS_Store
 .luarc.json
+.mypy_cache
 
 # Relics from installs
 resources/
@@ -10,3 +11,4 @@ lightdm-neon/
 gigacli/nushell/history.txt
 gigabox/obmenu-generator/icons/
 gigabox/obmenu-generator/cache.db
+
