@@ -127,4 +127,5 @@ zulip-desktop@yay
 libreoffice-still
 obsidian
 1password@yay
+clamtk
 

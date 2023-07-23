@@ -10,8 +10,8 @@ nm-applet &
 parcellite &
 blueman-applet &
 
-# Audio config
-# pa-applet &
+# MPD daemon start (if no other user instance exists)
+[ ! -s /tmp/mpd.pid ] && mpd &
 
 # Configure displays
 autorandr --change &

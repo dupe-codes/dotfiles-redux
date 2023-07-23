@@ -58,5 +58,7 @@ sudo make install
 sudo systemctl enable lightdm.service
 sudo systemctl enable bluetooth.service
 sudo systemctl enable NetworkManager.sevice
+sudo systemctl enable clamav-freshclam.service
+sudo systemctl enable clamav-daemon.service
 systemctl --user enable pulseaudio
 

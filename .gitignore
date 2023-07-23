@@ -11,4 +11,7 @@ lightdm-neon/
 gigacli/nushell/history.txt
 gigabox/obmenu-generator/icons/
 gigabox/obmenu-generator/cache.db
-
+mpd.db
+mpd.state
+error.log
+lyrics/
