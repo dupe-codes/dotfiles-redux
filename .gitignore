@@ -1,6 +1,8 @@
 .DS_Store
 .luarc.json
 .mypy_cache
+*.pyc
+__pycache__
 
 # Relics from installs
 resources/
