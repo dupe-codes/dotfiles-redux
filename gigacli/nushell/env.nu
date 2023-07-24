@@ -107,6 +107,7 @@ let-env NNN_PLUG = "p:preview-tui"
 let-env NNN_ICONLOOKUP = 1
 
 let-env EDITOR = "nvim"
+let-env RANGER_LOAD_DEFAULT_RC = false
 
 # Conda/mamba configurations
 let-env CONDA_NO_PROMPT = true

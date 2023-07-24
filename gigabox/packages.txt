@@ -105,6 +105,7 @@ parcellite
 
 # Fonts
 noto-fonts
+noto-fonts-emoji
 
 # Bluetooth
 bluez
@@ -128,4 +129,6 @@ libreoffice-still
 obsidian
 1password@yay
 clamtk
+github-desktop-bin@yay
+intellij-idea-community-edition
 
