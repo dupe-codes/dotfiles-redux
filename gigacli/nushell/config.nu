@@ -547,13 +547,20 @@ source ~/secrets.nu
 
 alias code-i = code-insiders
 alias nnn = nnn -ea -P p
-alias fs = fzf --preview "bat --color=always --style=header,grid --line-range :500 {}"
+alias r = ranger
 alias gpt = chatblade -c 3.5 -s
 alias pomodoro = arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
+
+alias ll = exa -l -g --icons --git
+alias llt = exa -1 --icons --tree --git-ignore
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell
 alias git? = github-copilot-cli git-assist
+
+def search [] {
+  ^fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | ^xargs nvim
+}
 
 def tm [] {
     if (tmux list-sessions | str contains "base:") {
@@ -564,6 +571,8 @@ def tm [] {
         tmux new-session -s base
     }
 }
+
+source ~/.zoxide.nu
 
 use ~/.config/nushell/nu_scripts/modules/virtual_environments/conda.nu
 conda activate # always start base conda environment

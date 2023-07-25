@@ -9,6 +9,8 @@ python-pre-commit
 fzf
 ranger
 python-pygments
+git-delta
+httpie
 
 bat@cargo
 coreutils@cargo

@@ -92,6 +92,7 @@ let-env NU_PLUGIN_DIRS = [
 let-env PATH = (
     $env.PATH |
     prepend "/usr/local/bin/" |
+    prepend $"($env.HOME)/.local/bin" |
     prepend $"($env.HOME)/.cargo/bin" |
     prepend $"($env.HOME)/Library/Application Support/carapace/bin" |
     # Add mamba to path - it will be automatically preferred on conda commands
@@ -111,6 +112,8 @@ let-env RANGER_LOAD_DEFAULT_RC = false
 
 # Conda/mamba configurations
 let-env CONDA_NO_PROMPT = true
+
+zoxide init nushell | save -f ~/.zoxide.nu
 
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu

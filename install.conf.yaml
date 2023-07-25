@@ -49,8 +49,9 @@
     ~/.config/tmux:               gigacli/tmux
     ~/.config/nushell:            gigacli/nushell
     ~/.config/starship.toml:      gigacli/starship.toml
+    ~/.config/ranger:             gigacli/ranger
     ~/nu-welcome.txt:             gigacli/nu-welcome.txt
-    ~/secrets.nu:                 gigacli/secrets.nu
+    ~/.gitconfig:                 gigacli/.gitconfig
 
     # TODO: configure posix-shell
 
