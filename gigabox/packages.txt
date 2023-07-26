@@ -15,6 +15,7 @@ xorg-xrdb
 xlockmore
 psmisc
 xdotool
+xorg-xcursorgen
 
 # Display manager
 lightdm
@@ -86,6 +87,7 @@ viewnior
 xreader
 ristretto
 gimp
+inkscape
 
 # Power manager
 xfce4-power-manager
@@ -103,9 +105,10 @@ vivaldi
 # Clipboard manager
 parcellite
 
-# Fonts
+# Fonts, Icons, & Cursors
 noto-fonts
 noto-fonts-emoji
+catppuccin-macchiato-cursors@yay
 
 # Bluetooth
 bluez
