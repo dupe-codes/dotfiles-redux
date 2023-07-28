@@ -50,6 +50,7 @@
     ~/.config/nushell:            gigacli/nushell
     ~/.config/starship.toml:      gigacli/starship.toml
     ~/.config/ranger:             gigacli/ranger
+    ~/.config/bat:                gigacli/bat
     ~/nu-welcome.txt:             gigacli/nu-welcome.txt
     ~/.gitconfig:                 gigacli/.gitconfig
 

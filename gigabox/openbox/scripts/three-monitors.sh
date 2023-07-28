@@ -8,5 +8,5 @@ sleep 2s && nitrogen --restore &
 bash ~/.config/polybar/blocks/launch.sh
 
 . $HOME/.gigabox
-xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAD_RATE # keyboard repeat delay and interval
+xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAT_RATE # keyboard repeat delay and interval
 
