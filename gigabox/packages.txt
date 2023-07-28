@@ -4,6 +4,7 @@ npm
 go
 unzip
 wget
+docker
 
 # Account management
 accountsservice

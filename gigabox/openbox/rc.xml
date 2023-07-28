@@ -222,28 +222,28 @@
     </keybind>
 
     <!-- Move window-focus across visible windows. -->
-    <keybind key="W-Left">
+    <keybind key="A-C-a">
       <action name="DirectionalCycleWindows">
         <bar>yes</bar>
         <dialog>no</dialog>
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="A-C-d">
       <action name="DirectionalCycleWindows">
         <bar>yes</bar>
         <dialog>no</dialog>
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-Up">
+    <keybind key="A-C-w">
       <action name="DirectionalCycleWindows">
         <bar>yes</bar>
         <dialog>no</dialog>
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-Down">
+    <keybind key="A-C-s">
       <action name="DirectionalCycleWindows">
         <bar>yes</bar>
         <dialog>no</dialog>
@@ -324,32 +324,32 @@
     </keybind>
 
     <!-- Manage workspaces/desktop. -->
-    <keybind key="W-1">
+    <keybind key="A-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-2">
+    <keybind key="A-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-3">
+    <keybind key="A-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-   <keybind key="W-S-1">
+   <keybind key="A-S-1">
       <action name="SendToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-S-2">
+    <keybind key="A-S-2">
       <action name="SendToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-S-3">
+    <keybind key="A-S-3">
       <action name="SendToDesktop">
         <to>3</to>
       </action>
