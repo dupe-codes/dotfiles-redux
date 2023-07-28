@@ -110,6 +110,7 @@ parcellite
 noto-fonts
 noto-fonts-emoji
 catppuccin-macchiato-cursors@yay
+font-manager
 
 # Bluetooth
 bluez

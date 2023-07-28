@@ -111,12 +111,14 @@
        these are default values to use when other ones are not already set by other applications,
        or saved in your session use obconf if you want to change these without having to log out and back in. -->
   <desktops>
-    <number>3</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>1</name>
       <name>2</name>
       <name>3</name>
+      <name>4</name>
+      <name>5</name>
     </names>
     <!-- The number of milliseconds to show the popup for when switching desktops.
          Set this to 0 to disable the popup. -->
@@ -286,7 +288,7 @@
     </keybind>
     <keybind key="A-S-s">
       <action name="MoveResizeTo">
-        <x>0<x>
+        <x>0</x>
         <y>-0</y>
         <width>1/1</width>
         <height>1/2</height>
@@ -326,6 +328,7 @@
     </keybind>
 
     <!-- Manage workspaces/desktop. -->
+
     <keybind key="A-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -341,6 +344,16 @@
         <to>3</to>
       </action>
     </keybind>
+    <keybind key="A-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="A-5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
    <keybind key="A-S-1">
       <action name="SendToDesktop">
         <to>1</to>
@@ -354,6 +367,16 @@
     <keybind key="A-S-3">
       <action name="SendToDesktop">
         <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="A-S-5">
+      <action name="SendToDesktop">
+        <to>5</to>
       </action>
     </keybind>
 
