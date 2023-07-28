@@ -34,7 +34,6 @@ prefix key = ctrl + b
 |--------|---------|
 | Enter copy mode | prefix [ |
 
-
 ### Custom navigation keybinds
 
 | Action | Key Map |

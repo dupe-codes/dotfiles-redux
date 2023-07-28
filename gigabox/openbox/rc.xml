@@ -278,6 +278,7 @@
     </keybind>
     <keybind key="A-S-w">
       <action name="MoveResizeTo">
+        <x>0</x>
         <y>0</y>
         <width>1/1</width>
         <height>1/2</height>
@@ -285,6 +286,7 @@
     </keybind>
     <keybind key="A-S-s">
       <action name="MoveResizeTo">
+        <x>0<x>
         <y>-0</y>
         <width>1/1</width>
         <height>1/2</height>
@@ -378,6 +380,26 @@
     <keybind key="A-space">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
+      </action>
+    </keybind>
+
+    <!-- Cycle through windows -->
+    <keybind key="A-C-q">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-C-e">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
 
