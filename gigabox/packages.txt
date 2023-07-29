@@ -137,4 +137,6 @@ clamtk
 github-desktop-bin@yay
 intellij-idea-community-edition
 safeeyes@yay
+redshift
+geoclue
 

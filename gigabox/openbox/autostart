@@ -11,6 +11,14 @@ parcellite &
 blueman-applet &
 safeeyes &
 
+# Start geolocation service + redshift
+if ! pgrep -x agent > /dev/null; then
+    /usr/lib/geoclue-2.0/demos/agent &
+fi
+if ! pgrep -x redshift > /dev/null; then
+    redshift -P &
+fi
+
 # MPD daemon start (if no other user instance exists)
 [ ! -s /tmp/mpd.pid ] && mpd &
 
