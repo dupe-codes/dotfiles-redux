@@ -444,12 +444,12 @@
         <command>dunstctl context</command>
       </action>
     </keybind>
-    <keybind key="C-space">
+    <keybind key="C-S-Escape">
       <action name="Execute">
         <command>dunstctl close</command>
       </action>
     </keybind>
-    <keybind key="C-S-space">
+    <keybind key="C-S-Return">
       <action name="Execute">
         <command>dunstctl close-all</command>
       </action>

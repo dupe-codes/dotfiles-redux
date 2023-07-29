@@ -40,3 +40,12 @@ prefix = alt + ctrl
 | Window switcher (across all desktops) | alt + tab |
 | Screenshot tools | alt + p |
 
+## Manage dunst notifications
+
+| Action | Key Map |
+|--------|---------|
+| Pop off notifcations stack | C-Escape |
+| Open notification context | C-Return |
+| Close top notification | C-S-Escape |
+| Close all notifications | C-S-Return |
+
