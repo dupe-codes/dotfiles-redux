@@ -30,6 +30,7 @@ our $SCHEMA = [
     {item  => ["$ENV{HOME}/.scripts/screenshot-countdown.sh", "Countdown ?s", "$ENV{HOME}/.icons/Gladient/screenshot.png"]},
     {end   => undef},
     {sep   => undef},
+    {item => ["$ENV{HOME}/.config/openbox/scripts/toggle-safeeyes.sh", "Toggle Safe Eyes", "$ENV{HOME}/.icons/Gladient/eyecandy.artistic.png"]},
     {pipe  => ["$ENV{HOME}/.config/openbox/pipe-menu/ob-randr.py", "Monitor Settings", "$ENV{HOME}/.icons/Gladient/monitor-settings.png"]},
     {beg => ["Monitor Scripts", "$ENV{HOME}/.icons/Gladient/monitor-settings.png"]},
     {item  => ["$ENV{HOME}/.config/openbox/scripts/laptop-only.sh", "Laptop Only", "$ENV{HOME}/.icons/Gladient/monitor-settings.png"]},
