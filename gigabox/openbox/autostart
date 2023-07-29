@@ -9,6 +9,7 @@ nm-applet &
 1password --silent &
 parcellite &
 blueman-applet &
+safeeyes &
 
 # MPD daemon start (if no other user instance exists)
 [ ! -s /tmp/mpd.pid ] && mpd &
