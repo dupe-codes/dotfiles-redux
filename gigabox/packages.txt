@@ -139,4 +139,5 @@ intellij-idea-community-edition
 safeeyes@yay
 redshift
 geoclue
+cbonsai@yay
 

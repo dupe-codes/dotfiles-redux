@@ -1,0 +1,33 @@
+feeds:
+    - url: http://news.ycombinator.com/rss
+      name: hacker news
+
+    - url: https://lethain.com/feeds/
+      name: irrational exuberance
+
+    - url: https://blog.pragmaticengineer.com/rss/
+      name: pragmatic engineer
+
+    - url: https://jvns.ca/atom.xml
+      name: julia evans
+
+    - url: https://danluu.com/atom.xml
+      name: dan luu
+
+    - url: https://www.joelonsoftware.com/feed/
+      name: joel on software
+
+    - url: https://deepmind.com/blog/feed/basic/
+      name: deepmind
+
+    - url: https://thegradient.pub/rss/
+      name: the gradient
+
+    - url: http://googleresearch.blogspot.com/atom.xml
+      name: google ai
+
+    - url: http://www.quantamagazine.org/feed/
+      name: quanta magazine
+
+    - url: https://news.mit.edu/rss/research
+      name: mit research news

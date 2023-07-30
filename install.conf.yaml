@@ -53,6 +53,7 @@
     ~/.config/bat:                gigacli/bat
     ~/.config/gitui:              gigacli/gitui
     ~/.config/bottom:             gigacli/bottom
+    ~/.config/nom:                gigacli/nom
     ~/nu-welcome.txt:             gigacli/nu-welcome.txt
     ~/.gitconfig:                 gigacli/.gitconfig
 

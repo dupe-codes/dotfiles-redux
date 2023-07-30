@@ -27,3 +27,5 @@ yewtube@pip
 chatblade@pip
 
 github.com/maaslalani/nap@main@go
+github.com/guyfedwards/nom/cmd/nom@latest@go
+
