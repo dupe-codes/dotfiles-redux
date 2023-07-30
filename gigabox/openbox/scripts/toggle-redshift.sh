@@ -15,13 +15,14 @@ sleep 5s
 REDSHIFT_ON=$(
     xrandr --verbose |
     awk -F: '
+        BEGIN { result="false" }
         /Gamma/ {
             if ( $2 + $3 + $4 != 3.0 ) {
-                print "true";
-            } else {
-                print "false";
+                result="true";
+                exit;
             }
         }
+        END { print result }
     '
 )
 
