@@ -10,8 +10,9 @@ fi
 
 #redshift -x
 pkill -USR1 '^redshift$'
+sleep 5s
 
-REDSHIFT_ON =$(
+REDSHIFT_ON=$(
     xrandr --verbose |
     awk -F: '
         /Gamma/ {
@@ -23,7 +24,8 @@ REDSHIFT_ON =$(
         }
     '
 )
-if [ "$REDSHIFT_ON" = "true"]; then
+
+if [ "$REDSHIFT_ON" = "true" ]; then
     notify-send "Redshift" "Toggled on "
 else
     notify-send "Redshift" "Toggled off "
