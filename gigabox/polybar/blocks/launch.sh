@@ -13,7 +13,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Uncomment below to instead launch a polybar per open monitor
 if type "xrandr"; then
-	for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+	for m in $(xrandr --query | grep " connected" | cut -d " " -f1); do
 		MONITOR=$m polybar -q main -c "$DIR"/config.ini &
 	done
 else

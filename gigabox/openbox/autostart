@@ -22,6 +22,12 @@ fi
 # MPD daemon start (if no other user instance exists)
 [ ! -s /tmp/mpd.pid ] && mpd &
 
+# TODO: Run appropriate monitor setup script based on active desktops
+#       Configure based on monitor count - 1 (to exclude closed laptop display)
+#       This should do the trick:
+#       MONITOR_COUNT=$(xrandr --query | grep " connected" | cut -d " " -f1 | wc -l)
+#       if [ $MONITOR_COUNT -eq 1 ]; then ...
+
 # Configure displays
 autorandr --change &
 sleep 2s && nitrogen --restore &
@@ -29,5 +35,5 @@ sleep 2s && nitrogen --restore &
 # Launch Polybar
 bash ~/.config/polybar/blocks/launch.sh
 
-xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAD_RATE & # keyboard repeat delay and interval
+xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAT_RATE &
 

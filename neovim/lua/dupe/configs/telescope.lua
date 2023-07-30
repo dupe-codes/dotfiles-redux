@@ -2,9 +2,38 @@ local key_mapper = require('dupe.util').key_mapper
 
  --Set up telescope shortcuts for fuzzy finding
 key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
-key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
-key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
-key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
+
+local keymap = {
+    f = {
+        name = "Find",
+        s = {
+            ':lua require"telescope.builtin".live_grep()<CR>',
+            "Fuzzy search"
+        },
+        h = {
+            ':lua require"telescope.builtin".help_tags()<CR>',
+            "Search help tags"
+        },
+        b = {
+            ':lua require"telescope.builtin".buffers()<CR>',
+            "Search buffers"
+        },
+        c = {
+            '<cmd>TodoTelescope<CR>',
+            "Search TODOs & notes"
+        },
+    }
+}
+
+local whichkey = require("which-key")
+whichkey.register(keymap, {
+    mode = "n",
+    prefix = "<leader>",
+    buffer = nil,
+    silent = true,
+    noremap = true,
+    nowait = false,
+})
 
 local dropdown_configs = {
   layout_strategy = "vertical",

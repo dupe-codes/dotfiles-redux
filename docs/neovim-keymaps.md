@@ -21,6 +21,10 @@ An index of my most important neovim keymaps.
 |--------|---------|
 | find_files() | `<C-p>` |
 | live_grep() | `<leader>fs` |
+| buffers     | `<leader>fb` |
+| help tags     | `<leader>fh` |
+| todo comments     | `<leader>fc` |
+
 
 ## Buffer management & navigation
 
@@ -50,7 +54,7 @@ Harpoon:
 | Add file or directory | (in tree) `a` |
 | Delete file or directory | (in tree) `d`) |
 | Rename a file or directory | (in tree) `<C-r>`) |
-| NvimTreeFindFile | `'n', '<leader>ff'` |
+| NvimTreeFindFile | `'n', '<leader>nf'` |
 | NvimTreeToggle | `'n', '<leader>nt'` |
 
 ## language server/completions/code introspection

@@ -254,6 +254,15 @@
     </keybind>
 
     <!-- Tile window-placement across visible windows. -->
+
+    <keybind key="A-S-c">
+      <action name="MoveResizeTo">
+        <x>1/6</x>
+        <y>1/6</y>
+        <width>2/3</width>
+        <height>2/3</height>
+      </action>
+    </keybind>
     <keybind key="A-S-f">
       <action name="MoveResizeTo">
         <x>0</x>
@@ -395,6 +404,7 @@
     </keybind>
 
     <!-- Rofi app switcher and launcher -->
+
     <keybind key="A-Tab">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/open-windows.sh</command>
@@ -403,6 +413,11 @@
     <keybind key="A-space">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-space">
+      <action name="Execute">
+        <command>~/.config/polybar/blocks/scripts/powermenu.sh</command>
       </action>
     </keybind>
 
