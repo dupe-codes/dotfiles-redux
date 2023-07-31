@@ -554,6 +554,8 @@ alias ll = exa -l -g --icons --git
 alias llt = exa -1 --icons --tree --git-ignore
 alias gitui = gitui -t macchiato.ron
 alias bonsai = cbonsai -L 42 --screensaver
+alias read = nom
+alias weather = wthrr -u f,mph -f d,w
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell

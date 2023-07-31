@@ -39,6 +39,8 @@ prefix = alt + ctrl
 | App launcher | alt + space |
 | Window switcher (across all desktops) | alt + tab |
 | Screenshot tools | alt + p |
+| Power menu | alt + escape |
+| Util scripts menu | alt + shift + space |
 
 ## Manage dunst notifications
 

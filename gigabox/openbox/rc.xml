@@ -415,9 +415,14 @@
         <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
       </action>
     </keybind>
-    <keybind key="A-S-space">
+    <keybind key="A-Escape">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/powermenu.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-space">
+      <action name="Execute">
+        <command>~/.config/polybar/blocks/scripts/util-scripts.sh</command>
       </action>
     </keybind>
 
