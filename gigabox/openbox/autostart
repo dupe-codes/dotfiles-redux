@@ -10,6 +10,7 @@ nm-applet &
 blueman-applet &
 safeeyes &
 greenclip daemon &
+dropbox &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then
