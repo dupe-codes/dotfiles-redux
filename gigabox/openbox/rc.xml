@@ -410,6 +410,11 @@
         <command>~/.config/polybar/blocks/scripts/open-windows.sh</command>
       </action>
     </keybind>
+    <keybind key="A-S-Tab">
+      <action name="Execute">
+        <command>~/.config/polybar/blocks/scripts/clipboard.sh</command>
+      </action>
+    </keybind>
     <keybind key="A-space">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
@@ -917,6 +922,9 @@
     -->
     <application class="*" type="normal">
       <decor>yes</decor>
+    </application>
+    <application name="kitty">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>

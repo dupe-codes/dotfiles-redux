@@ -41,6 +41,7 @@ prefix = alt + ctrl
 | Screenshot tools | alt + p |
 | Power menu | alt + escape |
 | Util scripts menu | alt + shift + space |
+| Clipboard history | alt + shift + tab |
 
 ## Manage dunst notifications
 

@@ -9,7 +9,7 @@ options="$toggle_safe_eyes\n$toggle_redshift\n$main_monitor_mode\n$two_monitor_m
 
 dir="~/.config/polybar/blocks/scripts/rofi"
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
-chosen="$(echo -e "$options" | $rofi_command -p "Run util script..." -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -p "Run utility script" -dmenu -selected-row 0)"
 
 # TODO: Make gigabox dir environment variable to use instead of
 #       hard-coding ~/projects/dotfiles-redux

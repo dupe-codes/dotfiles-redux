@@ -7,9 +7,9 @@ dunst &
 xfce4-power-manager &
 nm-applet &
 1password --silent &
-parcellite &
 blueman-applet &
 safeeyes &
+greenclip daemon &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then

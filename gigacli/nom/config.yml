@@ -1,4 +1,7 @@
 feeds:
+    - url: https://www.dupe.sh/blog.xml
+      name: dupe.codes
+
     - url: http://news.ycombinator.com/rss
       name: hacker news
 

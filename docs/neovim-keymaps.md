@@ -14,6 +14,7 @@ An index of my most important neovim keymaps.
 | Move visual selection | `'v', 'J'`, `'v', 'K'` |
 | Yank into system clipboard | `'n', '<leader>y'`, `'v', '<leader>y'`, `'n', '<leader>Y'` |
 | Replace in file text at current cursor | `"n", "<leader>s"` |
+| Go back/forward through cursor locations | `ctrl + o/i`
 
 ## Telescope fuzzy finding
 
