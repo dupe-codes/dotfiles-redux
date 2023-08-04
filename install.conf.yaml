@@ -40,6 +40,8 @@
     ~/.config/betterlockscreen:   gigabox/betterlockscreen
     ~/.config/ncmpcpp:            gigabox/ncmpcpp
     ~/.config/mpd:                gigabox/mpd
+    ~/.config/remind:             gigabox/remind
+    ~/.scripts/reminders.sh:      gigabox/openbox/scripts/reminders.sh
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox
 
