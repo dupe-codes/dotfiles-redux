@@ -86,10 +86,11 @@ xclip
 
 # Docs & images
 viewnior
-xreader
 ristretto
 gimp
 inkscape
+zathura
+zathura-pdf-mupdf
 
 # Power manager
 xfce4-power-manager
@@ -141,4 +142,5 @@ safeeyes@yay
 redshift
 geoclue
 cbonsai@yay
+remind
 

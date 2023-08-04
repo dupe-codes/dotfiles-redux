@@ -11,6 +11,7 @@ blueman-applet &
 safeeyes &
 greenclip daemon &
 dropbox &
+remind -z60 ~/.config/remind/reminders.rem &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then
