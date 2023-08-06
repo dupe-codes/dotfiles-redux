@@ -102,7 +102,6 @@ xfce4-taskmanager
 xorg-xbacklight
 
 # Browser
-brave-bin@yay
 vivaldi
 
 # Clipboard manager
