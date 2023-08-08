@@ -70,10 +70,12 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = {
-    'jdtls',            -- NOTE: jdtls isn't working, getting an exit code 1 on attach
+    -- NOTE: jdtls isn't working, getting an exit code 1 on attach
+    'jdtls',
     'pyright',
     'rust_analyzer',
     'zls',
+    'ocamllsp',
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

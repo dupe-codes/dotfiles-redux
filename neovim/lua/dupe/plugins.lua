@@ -208,6 +208,7 @@ local plugins = {
                 "rust-analyzer",
                 "zls",
                 "clangd",
+                "ocaml-lsp",
             },
         },
         config = function(_, opts)
@@ -324,6 +325,13 @@ local plugins = {
         "simrat39/symbols-outline.nvim",
         config = function()
             require("dupe.configs.symbols-outline")
+        end,
+    },
+    -- Coq proof assistant
+    {
+        "whonore/Coqtail",
+        config = function()
+            require("dupe.configs.coqtail")
         end,
     }
 }
