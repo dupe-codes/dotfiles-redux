@@ -1,11 +1,12 @@
 # Configure options
 toggle_safe_eyes=" Toggle safe eyes"
 toggle_redshift=" Toggle redshift"
+toggle_notifications=" Toggle notifications"
 main_monitor_mode=" Turn on main monitor mode"
 two_monitor_mode=" Turn on two monitor mode"
 laptop_mode=" Turn on laptop mode"
 
-options="$toggle_safe_eyes\n$toggle_redshift\n$main_monitor_mode\n$two_monitor_mode\n$laptop_mode"
+options="$toggle_safe_eyes\n$toggle_redshift\n$toggle_notifications\n$main_monitor_mode\n$two_monitor_mode\n$laptop_mode"
 
 dir="~/.config/polybar/blocks/scripts/rofi"
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
@@ -20,6 +21,9 @@ case $chosen in
         ;;
     $toggle_redshift)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh
+        ;;
+    $toggle_notifications)
+        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-dunst.sh
         ;;
     $main_monitor_mode)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/main-only.sh

@@ -124,7 +124,7 @@ starship init nu | save -f ~/.cache/starship/init.nu
 # Configure opam env
 # TODO: Figure out how to get better support for opam switches
 let-env OPAM_SWITCH_PREFIX = $"($env.HOME)/.opam/default"
-let-env CAML_LD_LIBRARY_PATH = $"($env.HOME)/.opam/default/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml'"
+let-env CAML_LD_LIBRARY_PATH = $"($env.HOME)/.opam/default/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml"
 let-env OCAML_TOPLEVEL_PATH = $"($env.HOME)/.opam/default/lib/toplevel"
 let-env MANPATH = $":($env.HOME)/.opam/default/man"
 
