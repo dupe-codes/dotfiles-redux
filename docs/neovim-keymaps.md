@@ -167,9 +167,10 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | ------ | ------- |
 | Open notifications history | `n, <leader>sn` |
 
-## Symbols Outline
+## Symbols & type hints
 
 | Action | Key Map |
 | ------ | ------- |
-| Open symbols outline | `n, <leader>o` |
+| Open symbols outline | `n, <leader>oo` |
+| OCaml: toggle type hints | `n, <leader>ot` |
 

@@ -4,5 +4,5 @@ require("symbols-outline").setup({
     position = "right",
 })
 
-key_mapper("n", "<leader>o", "<cmd>SymbolsOutline<CR>")
+key_mapper("n", "<leader>oo", "<cmd>SymbolsOutline<CR>")
 
