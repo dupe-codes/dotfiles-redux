@@ -11,20 +11,38 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
+-- codelens configuration
+local augroup_codelens = vim.api.nvim_create_augroup("custom-lsp-codelens", { clear = true })
+vim.api.nvim_set_hl(0, "VirtNonText", { link = "Comment" })
+
 local lspconfig = require 'lspconfig'
 
+local lsp_cmds = vim.api.nvim_create_augroup('lsp_cmds', {clear = true})
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = lsp_cmds,
+  desc = 'on_attach',
+  callback = function(_)
+    local filetype = vim.api.nvim_buf_get_option(0, "filetype")
+
+    if filetype == "ocaml" then
+        -- Display type information
+        vim.api.nvim_clear_autocmds { group = augroup_codelens, buffer = 0 }
+        vim.api.nvim_create_autocmd(
+            { "BufEnter", "BufWritePost", "CursorHold" },
+            {
+                group = augroup_codelens,
+                callback = require("dupe.codelens").refresh_virtlines,
+                buffer = 0,
+            }
+        )
+        key_mapper('n', '<leader>ot', ':lua require("dupe.codelens").toggle_virtlines()<CR>')
+    end
+  end
+})
+
 local on_attach = function(_, bufnr)
-    -- NOTE: these are disabled b/c setting keymaps here is failing for some LSPs
-    --local attach_opts = { silent = true, buffer = bufnr }
-    --vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, attach_opts)
-    --vim.keymap.set('n', 'gd', vim.lsp.buf.definition, attach_opts)
-    --vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, attach_opts)
-    --vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, attach_opts)
-    --vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, attach_opts)
-    --vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
-        --attach_opts)
-    --vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, attach_opts)
-    --vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, attach_opts)
+    -- NOTE: on_attach isn't being fired for... whatever reason
+    --       the LspAttach autocmd logic would ideally be here but, alas..
 end
 
 -- Setup diagnostics
@@ -67,6 +85,7 @@ key_mapper('n', '<Leader>e', '<Cmd>lua _G.open_floating_diagnostics()<CR>')
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.codeLens = { dynamicRegistration = false }
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = {
@@ -215,4 +234,3 @@ cmp.setup {
 key_mapper('n', '<leader>cd', ':lua vim.lsp.buf.hover()<CR>')
 key_mapper('n', '<C-s>', ':lua vim.lsp.buf.signature_help()<CR>')
 key_mapper('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
-
