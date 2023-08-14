@@ -22,6 +22,10 @@ local keymap = {
             '<cmd>TodoTelescope<CR>',
             "Search TODOs & notes"
         },
+        i = {
+          ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
+          'Search files including hidden/ignored'
+        }
     }
 }
 

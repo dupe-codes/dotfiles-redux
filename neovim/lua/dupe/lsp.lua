@@ -4,7 +4,7 @@
 local key_mapper = require('dupe.util').key_mapper
 
 vim.diagnostic.config({
-    underline = false,
+    underline = true,
     virtual_text = false,
     signs = true,
     update_in_insert = true,
@@ -30,7 +30,7 @@ end
 -- Setup diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = false,
+        underline = true,
         virtual_text = false,
         signs = true,
         update_in_insert = true,
@@ -212,7 +212,7 @@ cmp.setup {
 }
 
 -- Setup keymaps for capabilities not handled by glance
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+key_mapper('n', '<leader>cd', ':lua vim.lsp.buf.hover()<CR>')
 key_mapper('n', '<C-s>', ':lua vim.lsp.buf.signature_help()<CR>')
 key_mapper('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
 

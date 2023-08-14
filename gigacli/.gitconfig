@@ -15,3 +15,5 @@
     line-numbers = true
     syntax-theme = Catppuccin-macchiato
 
+[init]
+	defaultBranch = main

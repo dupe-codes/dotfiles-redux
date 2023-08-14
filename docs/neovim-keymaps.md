@@ -66,7 +66,7 @@ Harpoon:
 | Code actions | `'n', '<leader>ca'` |
 | Rename | `'n', '<leader>rn'` |
 | Open docs on current cursor | `'n', K` |
-| Open manual entry at cursor | `'n', K -> K -> K` |
+| Open manual entry at cursor | `'n', <leader>cd`, repeated |
 | Open floating diagnostics | `'n', '<Leader>e'` |
 | Move forward/back in completions | `<C-f> <C-b>` |
 | Abort completions | `<C-e>` |
