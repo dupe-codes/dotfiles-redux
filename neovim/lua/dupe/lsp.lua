@@ -13,7 +13,7 @@ vim.diagnostic.config({
 
 -- codelens configuration
 local augroup_codelens = vim.api.nvim_create_augroup("custom-lsp-codelens", { clear = true })
-vim.api.nvim_set_hl(0, "VirtNonText", { link = "Comment" })
+vim.api.nvim_set_hl(0, "VirtNonText", { link = "Type" })
 
 local lspconfig = require 'lspconfig'
 
