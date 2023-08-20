@@ -14,7 +14,7 @@ An index of my most important neovim keymaps.
 | Move visual selection | `'v', 'J'`, `'v', 'K'` |
 | Yank into system clipboard | `'n', '<leader>y'`, `'v', '<leader>y'`, `'n', '<leader>Y'` |
 | Replace in file text at current cursor | `"n", "<leader>s"` |
-| Go back/forward through cursor locations | `ctrl + o/i`
+| Go back/forward through cursor locations | `ctrl + o/i` |
 
 ## Telescope fuzzy finding
 
@@ -173,4 +173,26 @@ Note that you can place your cursor on the section headers (e.g. "Unstaged") to 
 | ------ | ------- |
 | Open symbols outline | `n, <leader>oo` |
 | OCaml: toggle type hints | `n, <leader>ot` |
+
+## Marks
+
+| Action                                                                    | Key Map       |
+|----------------------------------------------------------------------------|--------------|
+| Set mark x                                                                | `mx`          |
+| Set the next available alphabetical (lowercase) mark                      | `m,`          |
+| Toggle the next available mark at the current line                        | `m;`          |
+| Delete mark x                                                             | `dmx`         |
+| Delete all marks on the current line                                      | `dm-`         |
+| Delete all marks in the current buffer                                    | `dm<space>`   |
+| Move to next mark                                                         | `m]`          |
+| Move to previous mark                                                     | `m[`          |
+| Preview mark (press `<cr>` to preview the next mark)                      | `m:`          |
+| Add a bookmark from bookmark group[0-9]                                   | `m[0-9]`      |
+| Delete all bookmarks from bookmark group[0-9]                             | `dm[0-9]`     |
+| Move to the next bookmark of the same type (across buffers)               | `m}`          |
+| Move to the previous bookmark of the same type (across buffers)           | `m{`          |
+| Delete the bookmark under the cursor                                      | `dm=`         |
+| Annotate mark under cursor                                                | `ma`          |
+| List all marks in current buffer                                          | `<leader>mb`  |
+| List all marks across _all_ buffers                                       | `<leader>ma`  |
 

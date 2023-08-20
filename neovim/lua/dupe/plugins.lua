@@ -333,7 +333,23 @@ local plugins = {
         config = function()
             require("dupe.configs.coqtail")
         end,
-    }
+    },
+    -- Lean theorem prover
+    {
+        'Julian/lean.nvim',
+        event = { 'BufReadPre *.lean', 'BufNewFile *.lean' },
+        dependencies = {
+            'neovim/nvim-lspconfig',
+            'nvim-lua/plenary.nvim',
+        }
+    },
+    -- better marks support
+    {
+        'chentoast/marks.nvim',
+        config = function()
+            require("dupe.configs.marks")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)

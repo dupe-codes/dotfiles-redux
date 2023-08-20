@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+vim.g.maplocalleader = '  '
 
 local key_mapper = require('dupe.util').key_mapper
 

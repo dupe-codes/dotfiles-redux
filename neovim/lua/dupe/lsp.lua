@@ -145,6 +145,12 @@ lspconfig.clangd.setup {
     },
 }
 
+-- Lean theorem prover
+require('lean').setup {
+    lsp = { on_attach = on_attach },
+    mappings = true,
+}
+
 -- nvim-cmp setup for snippets
 
 local cmp = require 'cmp'
