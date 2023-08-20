@@ -1,2 +1,2 @@
-let-env OPENAI_API_KEY = "copy key here"
+$env.OPENAI_API_KEY = "copy key here"
 

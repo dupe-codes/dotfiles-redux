@@ -43,22 +43,11 @@ def create_right_prompt [] {
     ([$last_exit_code, (char space), $time_segment] | str join)
 }
 
-# Use nushell functions to define your right and left prompt
-let-env PROMPT_COMMAND = {|| create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
-
-# The prompt indicators are environmental variables that represent
-# the state of the prompt
-let-env PROMPT_INDICATOR = {|| "> " }
-let-env PROMPT_INDICATOR_VI_INSERT = {|| ": " }
-let-env PROMPT_INDICATOR_VI_NORMAL = {|| "> " }
-let-env PROMPT_MULTILINE_INDICATOR = {|| "::: " }
-
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
 # - converted from a value back to a string when running external commands (to_string)
 # Note: The conversions happen *after* config.nu is loaded
-let-env ENV_CONVERSIONS = {
+$env.ENV_CONVERSIONS = {
   "PATH": {
     from_string: { |s| $s | split row (char esep) | path expand --no-symlink }
     to_string: { |v| $v | path expand --no-symlink | str join (char esep) }
@@ -72,14 +61,14 @@ let-env ENV_CONVERSIONS = {
 # Directories to search for scripts when calling source or use
 #
 # By default, <nushell-config-dir>/scripts is added
-let-env NU_LIB_DIRS = [
+$env.NU_LIB_DIRS = [
     ($nu.default-config-dir | path join 'scripts')
 ]
 
 # Directories to search for plugin binaries when calling register
 #
 # By default, <nushell-config-dir>/plugins is added
-let-env NU_PLUGIN_DIRS = [
+$env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
 
@@ -89,7 +78,7 @@ let-env NU_PLUGIN_DIRS = [
 ##### Environment Variable Configuration #####
 
 # TODO: carrapace path is homebrew specific - generalize it
-let-env PATH = (
+$env.PATH = (
     $env.PATH |
     prepend "/usr/local/bin/" |
     prepend $"($env.HOME)/.local/bin" |
@@ -99,22 +88,24 @@ let-env PATH = (
     prepend $"($env.HOME)/mambaforge/bin" |
     # Add go packages
     prepend $"($env.HOME)/go/bin" |
-    prepend $"($env.HOME)/.opam/default/bin"
+    prepend $"($env.HOME)/.opam/default/bin" |
+    # Add elan path for lean theorem prover
+    prepend $"($env.HOME)/.elan/bin"
 )
 
 # CLI tool configurations
-let-env BAT_THEME = "Catppuccin-macchiato"
-let-env FZF_DEFAULT_OPTS = "--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+$env.BAT_THEME = "Catppuccin-macchiato"
+$env.FZF_DEFAULT_OPTS = "--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 
-let-env NNN_FIFO = "/tmp/nnn.fifo"
-let-env NNN_PLUG = "p:preview-tui"
-let-env NNN_ICONLOOKUP = 1
+$env.NNN_FIFO = "/tmp/nnn.fifo"
+$env.NNN_PLUG = "p:preview-tui"
+$env.NNN_ICONLOOKUP = 1
 
-let-env EDITOR = "nvim"
-let-env RANGER_LOAD_DEFAULT_RC = false
+$env.EDITOR = "nvim"
+$env.RANGER_LOAD_DEFAULT_RC = false
 
 # Conda/mamba configurations
-let-env CONDA_NO_PROMPT = true
+$env.CONDA_NO_PROMPT = true
 
 zoxide init nushell | save -f ~/.zoxide.nu
 
@@ -123,8 +114,8 @@ starship init nu | save -f ~/.cache/starship/init.nu
 
 # Configure opam env
 # TODO: Figure out how to get better support for opam switches
-let-env OPAM_SWITCH_PREFIX = $"($env.HOME)/.opam/default"
-let-env CAML_LD_LIBRARY_PATH = $"($env.HOME)/.opam/default/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml"
-let-env OCAML_TOPLEVEL_PATH = $"($env.HOME)/.opam/default/lib/toplevel"
-let-env MANPATH = $":($env.HOME)/.opam/default/man"
+$env.OPAM_SWITCH_PREFIX = $"($env.HOME)/.opam/default"
+$env.CAML_LD_LIBRARY_PATH = $"($env.HOME)/.opam/default/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml"
+$env.OCAML_TOPLEVEL_PATH = $"($env.HOME)/.opam/default/lib/toplevel"
+$env.MANPATH = $":($env.HOME)/.opam/default/man"
 

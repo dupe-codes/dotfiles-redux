@@ -179,7 +179,7 @@ let carapace_completer = {|spans|
 }
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   show_banner: false
   ls: {
     use_ls_colors: true
@@ -556,6 +556,7 @@ alias gitui = gitui -t macchiato.ron
 alias bonsai = cbonsai -L 42 --screensaver
 alias read = nom
 alias weather = wthrr -u f,mph -f d,w
+alias hpie = /usr/bin/http
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell
