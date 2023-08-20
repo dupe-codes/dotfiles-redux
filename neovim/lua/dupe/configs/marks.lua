@@ -5,6 +5,12 @@ require('marks').setup {
     }
 }
 
+-- Clear marks on opening a file; otherwise, old marks are shown, even if
+-- they had been previously deleted!
+-- Marks are used on a per session basis, anyway, so this is the behavior
+-- we want
+vim.api.nvim_create_autocmd({ "BufRead" }, { command = ":delm a-zA-Z0-9", })
+
 local keymap = {
     m = {
         name = "Marks",
