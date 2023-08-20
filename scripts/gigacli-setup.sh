@@ -63,3 +63,6 @@ bash Mambaforge-$(uname)-$(uname -m).sh
 
 cp $HOME/secrets.nu $PWD/gigacli/secrets.nu
 
+echo 'Installing zoxide...'
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
