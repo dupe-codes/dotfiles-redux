@@ -334,6 +334,7 @@ local plugins = {
             require("dupe.configs.coqtail")
         end,
     },
+    { "joom/latex-unicoder.vim" },
     -- Lean theorem prover
     {
         'Julian/lean.nvim',
