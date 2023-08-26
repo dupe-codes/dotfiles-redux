@@ -17,6 +17,7 @@
   "everforest-nvim": { "branch": "main", "commit": "6fd9285fff13e6e62fbde7ef577acdbe142862c2" },
   "gitsigns.nvim": { "branch": "main", "commit": "5a04466685008f29c71fa5ec25d421deb1c83fea" },
   "glance.nvim": { "branch": "master", "commit": "3e7158ffaaa0fa1f7268df30ae40f24c07b840d1" },
+  "hardtime.nvim": { "branch": "main", "commit": "3548e7d08c659308d9923effdaa8fa4cc0725c9a" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
   "iceberg.vim": { "branch": "master", "commit": "e01ac08c2202e7544531f4d806f6893539da6471" },
   "inc-rename.nvim": { "branch": "main", "commit": "ed0f6f2b917cac4eb3259f907da0a481b27a3b7e" },

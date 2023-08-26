@@ -351,6 +351,12 @@ local plugins = {
             require("dupe.configs.marks")
         end,
     },
+    -- vim motions training
+    {
+       "m4xshen/hardtime.nvim",
+       dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+       opts = {}
+    },
 }
 
 require("lazy").setup(plugins)

@@ -924,7 +924,7 @@
       <decor>yes</decor>
     </application>
     <application name="kitty">
-      <decor>no</decor>
+      <decor>yes</decor>
     </application>
   </applications>
 </openbox_config>
