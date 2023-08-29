@@ -355,7 +355,9 @@ local plugins = {
     {
        "m4xshen/hardtime.nvim",
        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-       opts = {}
+       config = function()
+           require("dupe.configs.hardtime")
+       end,
     },
 }
 

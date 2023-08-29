@@ -36,6 +36,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
             }
         )
         key_mapper('n', '<leader>ot', ':lua require("dupe.codelens").toggle_virtlines()<CR>')
+
+        -- format on save
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = 0,
+            callback = function()
+                vim.lsp.buf.format()
+            end,
+        })
     end
   end
 })
