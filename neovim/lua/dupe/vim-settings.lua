@@ -40,7 +40,7 @@ vim.cmd("set number")                -- add line numbers
 vim.cmd("set relativenumber")        -- add relative line numbers
 vim.cmd("set wildmode=longest,list") -- get bash-like tab completions
 vim.cmd("filetype plugin indent on") -- allows auto-indenting depending on file type
-vim.cmd("set tabstop=4")             -- number of columns occupied by a tab character
+vim.cmd("set tabstop=2")             -- number of columns occupied by a tab character
 vim.cmd("set expandtab")             -- convert tabs to white space
 vim.cmd("set shiftwidth=4 smarttab") -- width for autoindents
 vim.cmd("set softtabstop=4")         -- see multiple spaces as tabstops so <BS> does the right thing
