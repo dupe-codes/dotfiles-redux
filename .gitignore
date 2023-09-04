@@ -18,3 +18,6 @@ mpd.state
 previews/
 error.log
 lyrics/
+
+# Application files or directories to be kept local
+gigabox/gtk-3.0/bookmarks
