@@ -359,6 +359,8 @@ local plugins = {
            require("dupe.configs.hardtime")
        end,
     },
+    -- markdown rendering
+    { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 }
 
 require("lazy").setup(plugins)

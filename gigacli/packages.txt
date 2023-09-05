@@ -12,6 +12,7 @@ python-pygments
 git-delta
 httpie
 htop
+glow
 
 bat@cargo
 coreutils@cargo

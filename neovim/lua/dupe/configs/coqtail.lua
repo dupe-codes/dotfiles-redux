@@ -4,6 +4,7 @@ vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=coq")
 
 local whichkey = require("which-key")
 
+-- TODO: This doesn't seem to work for symbolic notation like ++
 local getcurword = function()
     -- Add '.' to definition of a keyword
     local old_keywd = vim.api.nvim_get_option('iskeyword')
@@ -62,5 +63,4 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-
 
