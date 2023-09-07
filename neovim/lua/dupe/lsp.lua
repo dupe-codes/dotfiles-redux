@@ -103,6 +103,7 @@ local servers = {
     'rust_analyzer',
     'zls',
     'ocamllsp',
+    'racket_langserver',
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -190,9 +191,6 @@ cmp.setup {
             luasnip.lsp_expand(args.body)
         end,
     },
-    --experimental = {
-        --ghost_text = true,
-    --},
     window = {
         completion = cmp.config.window.bordered(window_config),
         documentation = cmp.config.window.bordered(window_config),

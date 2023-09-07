@@ -95,6 +95,11 @@ local plugins = {
     },
     {
         "windwp/nvim-autopairs",
+        --cond = function ()
+            ---- disable autopairs for racket filetype
+            --local filetype = vim.api.nvim_buf_get_option(0, "filetype")
+            --return filetype ~= "racket"
+        --end,
         config = function()
             require("dupe.configs.autopairs")
         end,
@@ -361,6 +366,14 @@ local plugins = {
     },
     -- markdown rendering
     { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+
+    -- racket lang support
+    -- TODO: This caused errors, maybe conflict with nvim-autopairs
+    --       Need to figure out how to disable autopairs on racket files
+    --{
+      --"gpanders/nvim-parinfer",
+      --ft = { "racket" },
+    --}
 }
 
 require("lazy").setup(plugins)

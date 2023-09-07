@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 require("notify").setup({
     timeout = 500,
     top_down = false,
+    background_colour = "#000000",
 })
 vim.notify = require("notify")
 

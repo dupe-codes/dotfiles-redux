@@ -2,6 +2,7 @@
 nodejs
 npm
 go
+racket
 unzip
 wget
 docker
