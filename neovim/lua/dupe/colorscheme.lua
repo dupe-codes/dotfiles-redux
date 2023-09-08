@@ -1,5 +1,5 @@
 vim.cmd('au ColorScheme * hi clear SignColumn')
-vim.cmd('au ColorScheme * hi Normal ctermbg=none guibg=none')
+--vim.cmd('au ColorScheme * hi Normal ctermbg=none guibg=none')
 
 require('rose-pine').setup({
     variant = "moon",

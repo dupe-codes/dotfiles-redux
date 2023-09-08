@@ -42,8 +42,8 @@ vim.cmd("set wildmode=longest,list") -- get bash-like tab completions
 vim.cmd("filetype plugin indent on") -- allows auto-indenting depending on file type
 vim.cmd("set tabstop=2")             -- # cols for tab. TODO: set this based on filetype
 vim.cmd("set expandtab")             -- convert tabs to white space
-vim.cmd("set shiftwidth=4 smarttab") -- width for autoindents
-vim.cmd("set softtabstop=4")         -- see multiple spaces as tabstops so <BS> does the right thing
+vim.cmd("set shiftwidth=2 smarttab") -- width for autoindents
+vim.cmd("set softtabstop=2")         -- see multiple spaces as tabstops so <BS> does the right thing
 vim.cmd("set scrolloff=8")           -- keep 8 lines above and below the cursor
 vim.cmd("set cmdheight=0")           -- hide command line
 vim.cmd("syntax on")

@@ -367,6 +367,10 @@ local plugins = {
     -- markdown rendering
     { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
+    {
+        "xiyaowong/transparent.nvim",
+        lazy = false,
+    },
     -- racket lang support
     -- TODO: This caused errors, maybe conflict with nvim-autopairs
     --       Need to figure out how to disable autopairs on racket files
