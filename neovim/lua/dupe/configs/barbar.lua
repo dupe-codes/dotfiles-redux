@@ -20,7 +20,7 @@ require('barbar').setup {
         },
         modified = {button = '~'},
         button = ' ',
-   }
+   },
 }
 
 

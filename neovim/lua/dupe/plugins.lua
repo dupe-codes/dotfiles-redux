@@ -95,11 +95,6 @@ local plugins = {
     },
     {
         "windwp/nvim-autopairs",
-        --cond = function ()
-            ---- disable autopairs for racket filetype
-            --local filetype = vim.api.nvim_buf_get_option(0, "filetype")
-            --return filetype ~= "racket"
-        --end,
         config = function()
             require("dupe.configs.autopairs")
         end,
@@ -188,7 +183,20 @@ local plugins = {
     {
         "nvim-telescope/telescope-dap.nvim",
     },
+
+    -- Cheatsheets and keybind hints
     { "folke/which-key.nvim", lazy = false },
+    {
+        "sudormrfbin/cheatsheet.nvim",
+        dependencies = {
+            "nvim-lua/telescope.nvim",
+            "nvim-lua/popup.nvim",
+            "nvim-lua/plenary.nvim"
+        },
+        config = function()
+            require("dupe.configs.cheatsheet")
+        end
+    },
 
     -- Package dependency management
     {
@@ -240,8 +248,13 @@ local plugins = {
     },
     { "rebelot/kanagawa.nvim" },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    { "mcchrish/zenbones.nvim" },
+    { "mcchrish/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" } },
     { "rose-pine/neovim", name = "rose-pine", lazy = false },
+    { "ramojus/mellifluous.nvim" },
+    { "nyoom-engineering/oxocarbon.nvim" },
+    { "Yazeed1s/oh-lucy.nvim" },
+    { "oxfist/night-owl.nvim" },
+    { "EdenEast/nightfox.nvim" },
 
     -- Zig support
     {
@@ -357,13 +370,13 @@ local plugins = {
         end,
     },
     -- vim motions training
-    {
-       "m4xshen/hardtime.nvim",
-       dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-       config = function()
-           require("dupe.configs.hardtime")
-       end,
-    },
+    --{
+       --"m4xshen/hardtime.nvim",
+       --dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+       --config = function()
+           --require("dupe.configs.hardtime")
+       --end,
+    --},
     -- markdown rendering
     { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
@@ -371,13 +384,6 @@ local plugins = {
         "xiyaowong/transparent.nvim",
         lazy = false,
     },
-    -- racket lang support
-    -- TODO: This caused errors, maybe conflict with nvim-autopairs
-    --       Need to figure out how to disable autopairs on racket files
-    --{
-      --"gpanders/nvim-parinfer",
-      --ft = { "racket" },
-    --}
 }
 
 require("lazy").setup(plugins)
