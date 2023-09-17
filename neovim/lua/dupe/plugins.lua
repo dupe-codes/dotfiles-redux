@@ -384,6 +384,13 @@ local plugins = {
         "xiyaowong/transparent.nvim",
         lazy = false,
     },
+    -- Yank clipboard
+    {
+        "AckslD/nvim-neoclip.lua",
+        config = function()
+            require("neoclip").setup()
+        end,
+    },
 }
 
 require("lazy").setup(plugins)

@@ -18,13 +18,17 @@ local keymap = {
             ':lua require"telescope.builtin".buffers()<CR>',
             "Search buffers"
         },
-        c = {
+        t = {
             '<cmd>TodoTelescope<CR>',
             "Search TODOs & notes"
         },
         i = {
           ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
           'Search files including hidden/ignored'
+        },
+        c = {
+          '<cmd>Telescope neoclip<CR>',
+          'Search clipboard history'
         }
     }
 }
