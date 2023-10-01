@@ -34,3 +34,6 @@ feeds:
 
     - url: https://news.mit.edu/rss/research
       name: mit research news
+
+    - url: https://project-mage.org/rss.xml
+      name: project mage

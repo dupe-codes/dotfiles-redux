@@ -90,7 +90,9 @@ $env.PATH = (
     prepend $"($env.HOME)/go/bin" |
     prepend $"($env.HOME)/.opam/default/bin" |
     # Add elan path for lean theorem prover
-    prepend $"($env.HOME)/.elan/bin"
+    prepend $"($env.HOME)/.elan/bin" |
+    # Path to doom emacs
+    prepend $"($env.HOME)/.config/emacs/bin"
 )
 
 # CLI tool configurations

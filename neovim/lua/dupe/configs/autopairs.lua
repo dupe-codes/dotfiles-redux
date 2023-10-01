@@ -1,4 +1,4 @@
 -- Configure nvim-autopairs
 require('nvim-autopairs').setup {
-  disable_filetype = { "TelescopePrompt" , "vim", "racket" },
+  disable_filetype = { "TelescopePrompt" , "vim" },
 }

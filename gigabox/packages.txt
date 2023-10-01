@@ -6,6 +6,7 @@ racket
 unzip
 wget
 docker
+arttime-git@yay
 
 # Account management
 accountsservice
@@ -71,8 +72,9 @@ mpd
 mpc
 ncmpcpp
 
-# Text editor
+# Text editors
 neovim
+emacs-nativecomp
 
 # Terminal emulators
 kitty
