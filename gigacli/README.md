@@ -2,7 +2,7 @@
 
 Here lies an exploration of more configurable CLI setup
 
-## Planned Tools
+## Tools
 
 1. kitty        - terminal emulator
 2. nushell      - shell
@@ -15,11 +15,19 @@ Here lies an exploration of more configurable CLI setup
 9. ripgrep      - bettr grep
 10. gitui       - git TUI
 11. fzf         - fuzzy finder
-12. nnn         - file navigator
+12. ranger      - file navigator
 13. btm         - tui activity monitor
 14. carapace    - better terminal completions
 15. fd          - better find
 16. nap         - TUI snippets manager
+17. arttime     - ascii art + pomodoro
+18. git-delta   - better git diffs
+19. httpie      - HTTP client
+20. htop        - process viewer
+21. glow        - tui markdown reader
+22. wthrr       - terminal weather client
+23. nom         - tui RSS feed
+
 
 **blocked**:
 1. fig      - AI prompt completions

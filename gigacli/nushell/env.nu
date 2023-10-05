@@ -92,7 +92,9 @@ $env.PATH = (
     # Add elan path for lean theorem prover
     prepend $"($env.HOME)/.elan/bin" |
     # Path to doom emacs
-    prepend $"($env.HOME)/.config/emacs/bin"
+    prepend $"($env.HOME)/.config/emacs/bin" |
+    # Path to Haskell tools
+    prepend $"($env.HOME)/.ghcup/bin"
 )
 
 # CLI tool configurations

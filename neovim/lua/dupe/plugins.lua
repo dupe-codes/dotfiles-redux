@@ -391,6 +391,16 @@ local plugins = {
             require("neoclip").setup()
         end,
     },
+
+    -- Haskell tooling
+    {
+        "mrcjkb/haskell-tools.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        version = '^2', -- Recommended
+        ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
+    },
 }
 
 require("lazy").setup(plugins)

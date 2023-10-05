@@ -13,6 +13,7 @@ git-delta
 httpie
 htop
 glow
+cloc
 
 bat@cargo
 coreutils@cargo
