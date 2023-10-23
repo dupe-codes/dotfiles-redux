@@ -9,14 +9,14 @@
 
 tools_descriptions=(
     "nom"       "rss feed reader"
-    "yewtube"   "youtube video player"
+    "yt"        "youtube video player"
     "wthrr"     "weather forecasts"
     "glow"      "markdown reader"
     "nap"       "snippets manager"
     "btm"       "activity monitor"
     "dust"      "disk space visualizer"
     "gitui"     "git ui"
-    "ncmcpp"    "music player client"
+    "ncmpcpp"   "music player client"
 )
 
 prompt_list=""
