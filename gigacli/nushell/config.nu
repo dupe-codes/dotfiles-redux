@@ -188,9 +188,7 @@ $env.config = {
   rm: {
     always_trash: false
   }
-  cd: {
-    abbreviations: false
-  }
+  cd: {}
   table: {
     # options: basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
     mode: light

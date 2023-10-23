@@ -50,10 +50,11 @@ local plugins = {
     { "folke/neodev.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
         config = function()
             require("dupe.configs.indent-blankline")
         end,
-        lazy = false
+        lazy = false,
     },
     {
         "nvim-treesitter/nvim-treesitter",
