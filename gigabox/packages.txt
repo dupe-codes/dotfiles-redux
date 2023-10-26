@@ -51,6 +51,7 @@ nitrogen
 # Window switcher/app launcher
 rofi
 rofi-greenclip@yay
+rofi-calc
 
 # file management
 thunar

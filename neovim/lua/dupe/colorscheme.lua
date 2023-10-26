@@ -25,8 +25,10 @@ require('catppuccin').setup({
 
 require('tokyonight').setup({
     styles = {
-      comments = { italic = false },
-      keywords = { italic = false },
+      comments  = { italic = true },
+      functions = { italic = true },
+      variables = { italic = false },
+      keywords  = { italic = true },
   },
 })
 
