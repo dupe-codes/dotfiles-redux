@@ -1,13 +1,13 @@
 configuration {
 	font:							"BerkeleyMono Nerd Font Mono 16";
     show-icons:                     true;
-	icon-theme: 					"Papirus";
+	  icon-theme: 					"Papirus";
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
+	  hide-scrollbar: 				true;
+	  sidebar-mode: 					false;
 }
 
 @import "colors.rasi"
@@ -16,10 +16,10 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px 0px 0px 0px;
-	border-color:					@ac;
+	  border:							0px 0px 0px 0px;
+	  border-color:					@ac;
     border-radius:                  0px;
-	width:							800px;
+	  width:							800px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -27,9 +27,9 @@ window {
 
 prompt {
     enabled: 						true;
-	padding: 						6px 7px 4px 7px;
-	background-color: 				@bga;
-	text-color: 					@fg;
+	  padding: 						6px 7px 4px 7px;
+	  background-color: 				@bga;
+	  text-color: 					@fg;
 }
 
 textbox-prompt-colon {
@@ -48,7 +48,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
-	padding: 						6px;
+	  padding: 						6px;
     blink:                          true;
 }
 
@@ -57,9 +57,9 @@ inputbar {
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	border:							0px;
+	  border:							0px;
     border-radius:                  0px;
-	border-color:					@ac;
+	  border-color:					@ac;
     margin:                         0px;
     padding:                        0px;
 }
@@ -68,7 +68,7 @@ listview {
     background-color:               @al;
     padding:                        0px;
     columns:                        1;
-    lines:                          6;
+    lines:                          7;
     spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;

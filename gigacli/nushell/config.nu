@@ -556,6 +556,7 @@ alias read = nom
 alias weather = wthrr -u f,mph -f d,w
 alias hpie = /usr/bin/http
 alias tools = ~/launcher.sh
+alias c = clear
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell
