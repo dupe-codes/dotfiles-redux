@@ -1,0 +1,15 @@
+home: ~/.nap
+default_language: go
+theme: catppuccin-macchiato
+
+background: "#1f2335"
+foreground: "#a9b1d6"
+primary_color: "#7aa2f7"
+primary_color_subdued: "#7dcfff"
+green: "#9ece6a"
+bright_green: "#73daca"
+bright_red: "#f7768e"
+red: "#db4b4b"
+black: "#545c7e"
+gray: "#3d59a1"
+white: "#292e42"
