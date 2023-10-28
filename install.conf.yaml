@@ -10,16 +10,16 @@
         stderr: true
 
 - shell:
-    - command: sh ./scripts/gigabox-setup.sh
+    - command: sh ./install-scripts/gigabox-setup.sh
       description: Install packages for and configure gigabox linux desktop
 
-    - command: sh ./scripts/download-resources.sh
+    - command: sh ./install-scripts/download-resources.sh
       description: Download all resource files (fonts, icons, wallpapers, etc.)
 
-    - command: sh ./scripts/sudo-link-resources.sh
+    - command: sh ./install-scripts/sudo-link-resources.sh
       description: Link resources that require sudo powers
 
-    - command: sh ./scripts/gigacli-setup.sh
+    - command: sh ./install-scripts/gigacli-setup.sh
       description: Install packages and configure gigacli
 
 - create:
