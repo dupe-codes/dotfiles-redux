@@ -558,6 +558,7 @@ alias hpie = /usr/bin/http
 alias tools = ~/launcher.sh
 alias t = ~/launcher.sh
 alias c = clear
+alias timer = ~/scripts/timer.sh
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell

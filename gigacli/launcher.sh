@@ -7,6 +7,7 @@ tools=(
     ["jrnl"]="cli journal client:o:entry"
     ["timew"]="time tracker:r:start/stop,r:tags"
     ["task"]="launch work session:r:tags,r:duration"
+    ["timer"]="run timer script:r:tags"
     ["search"]="search current dir:"
     ["ncmpcpp"]="music player client:"
     ["ranger"]="file manager:"
@@ -32,6 +33,7 @@ background_args=(
 declare -a tool_order=(
     "jrnl"
     "timew"
+    "timer"
     "task"
     "search"
     "ncmpcpp"
@@ -52,6 +54,7 @@ declare -a tool_order=(
 declare -A aliases=(
     ["search"]="search_command"
     ["task"]="task_command"
+    ["timer"]="timer_command"
     # add other aliases as needed
 )
 
@@ -66,6 +69,11 @@ task_command() {
         termdown $duration && timew stop; \
         notify-send "󰁫 Timer" "Completed task: $tags"; \
         paplay ~/sounds/positive-notification.wav &
+}
+
+timer_command() {
+    local tags=$1
+    ~/scripts/timer.sh $tags
 }
 
 prompt_args() {

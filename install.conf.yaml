@@ -59,6 +59,7 @@
     ~/nu-welcome.txt:             gigacli/nu-welcome.txt
     ~/.gitconfig:                 gigacli/.gitconfig
     ~/launcher.sh:                gigacli/launcher.sh
+    ~/scripts:                    gigacli/scripts
 
     # TODO: configure posix-shell
 
