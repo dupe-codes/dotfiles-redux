@@ -55,7 +55,7 @@
     <font place="ActiveWindow">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>16</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Normal</weight>
       <!-- 'italic' or 'normal'. -->
@@ -64,7 +64,7 @@
     <font place="InactiveWindow">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>16</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Normal</weight>
       <!-- 'italic' or 'normal'. -->
@@ -73,7 +73,7 @@
     <font place="MenuHeader">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>16</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Bold</weight>
       <!-- 'italic' or 'normal'. -->
@@ -82,7 +82,7 @@
     <font place="MenuItem">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>15</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Normal</weight>
       <!-- 'italic' or 'normal'. -->
@@ -91,7 +91,7 @@
     <font place="ActiveOnScreenDisplay">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>15</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Normal</weight>
       <!-- 'italic' or 'normal'. -->
@@ -100,7 +100,7 @@
     <font place="InactiveOnScreenDisplay">
       <name>BerkeleyMono Nerd Font Mono</name>
       <!-- Font size in points. -->
-      <size>15</size>
+      <size>14</size>
       <!-- 'bold' or 'normal'. -->
       <weight>Normal</weight>
       <!-- 'italic' or 'normal'. -->
@@ -924,7 +924,7 @@
       <decor>yes</decor>
     </application>
     <application name="kitty">
-      <decor>yes</decor>
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>

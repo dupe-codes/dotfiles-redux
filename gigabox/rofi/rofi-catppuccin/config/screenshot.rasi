@@ -8,114 +8,105 @@ configuration {
 }
 
 @import "font.rasi"
-@import "colors.rasi"
+@import "giga-colors.rasi"
 
 /* Line Responsible For Button Layouts */
 /* BUTTON = FALSE */
 
 window {
     transparency:                   "real";
-    background-color:               @BG;
-    text-color:                     @FG;
-    border:                         2px;
-    border-color:                   @BDR;
-    border-radius:                  10px;
-    width:                          700px;
+    background-color:               @bg;
+    text-color:                     @fg;
+    border:                         0px 0px 0px 0px;
+    width:                          800px;
     anchor:                         center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 			            true;
-    margin: 			            0px 0px 0px 8px;
-    padding: 			            8px;
-    background-color: 		        @BG;
-    text-color: 		            @FG;
-    border:                  	    0px 0px 2px 0px;
-    border-color:                   @BDR;
-    border-radius:                  10px;
+    enabled: 			              true;
+    padding: 						        6px 7px 4px 7px;
+    background-color: 		      @bga;
+    text-color: 		            @fg;
 }
 
 textbox-prompt-colon {
-    expand: 			            false;
-    str: 			                "";
-    border-radius:                  100%;
-    background-color:               @BG;
-    text-color:                     @FG;
-    padding:                        8px 12px 8px 12px;
-    font:			                "BerkeleyMono Nerd Font Mono 20";
+	padding: 						      6px 7px 4px 7px;
+	background-color: 				@ac;
+	text-color: 					    @fg;
+	expand:                   false;
+  str: 			                "";
+	font:							        "feather 12";
 }
 
 entry {
-    background-color:               @BG;
-    text-color:                     @FG;
-    placeholder-color:              @FG;
+    background-color:               @al;
+    text-color:                     @fg;
+    placeholder-color:              @fg;
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search...";
     blink:                          true;
-    border:                  	    0px 0px 2px 0px;
-    border-color:                   @BDR;
-    border-radius:                  10px;
-    padding:                        8px;
+    padding:                        6px;
 }
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    background-color:               @BG;
-    text-color:                     @FG;
+    background-color:               @bga;
+    text-color:                     @fg;
     expand:                         false;
-    border:                  		0px 0px 0px 0px;
+    border:                  		    0px 0px 0px 0px;
     border-radius:                  0px;
-    border-color:                  	@BDR;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
     position:                       center;
 }
 
 case-indicator {
-    background-color:               @BG;
-    text-color:                     @FG;
+    background-color:               @bg;
+    text-color:                     @fg;
     spacing:                        0;
 }
 
-
 listview {
-    background-color:               @BG;
+    background-color:               @al;
+    padding:                        0px;
     columns:                        1;
-    lines:							5;
-    spacing:                        4px;
+    lines:							            5;
+    spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
 }
 
 mainbox {
-    background-color:               @BG;
+    background-color:               @al;
+    border:                         0px;
+    border-radius:                  0px;
     children:                       [ inputbar, listview ];
-    spacing:                       	15px;
-    padding:                        15px;
+    spacing:                       	6px;
+    padding:                        6px;
 }
 
 element {
-    background-color:               @BG;
-    text-color:                     @FG;
+    background-color:               @al;
+    text-color:                     @fga;
     orientation:                    horizontal;
-    border-radius:                  10px;
-    padding:                        6px 6px 6px 6px;
+    border-radius:                  0px;
+    padding:                        3px 3px 3px 3px;
 }
 
 element-icon {
-    background-color: 				inherit;
-    text-color:       				inherit;
-    size:                           0px;
+    background-color: 				      transparent;
+    text-color:       				      inherit;
+    size:                           24px;
     border:                         0px;
 }
 
 element-text {
-    background-color: 				inherit;
-    text-color:       				inherit;
+    background-color: 				      transparent;
+    text-color:       				      inherit;
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;
@@ -123,31 +114,8 @@ element-text {
 }
 
 element selected {
-    background-color:               @BGA;
-    text-color:                     @SEL;
-    border:                  		0px 0px 0px 0px;
-    border-radius:                  10px;
-    border-color:                  	@BDR;
-}
-
-element.active,
-element.selected.urgent {
-  background-color: @ON;
-  text-color: @BG;
-  border-color: @ON;
-}
-
-element.selected.urgent {
-  border-color: @BDR;
-}
-
-element.urgent,
-element.selected.active {
-  background-color: @OFF;
-  text-color: @BG;
-  border-color: @OFF;
-}
-
-element.selected.active {
-  border-color: @BDR;
+    background-color:               @se;
+    text-color:                     @fga;
+    border:                  		    0px 0px 0px 0px;
+    border-radius:                  0px;
 }

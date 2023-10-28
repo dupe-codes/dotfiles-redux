@@ -1,3 +1,21 @@
 <leader> shift space ; utility script menu
+<leader> esc ; open power menu
+<leader> space ; open app launcher
+<leader> p ; open screenshotting menu
 <leader> shift tab ; view clipboard history
+<leader> shift [w a s d ...] ; reposition window
+<leader> shift [c f] ; center/fullscreen window
+<leader> shift
+<leader> ctrl q/e ; cycle windows on current desktop
+<leader> ctrl [w a s d] ; directionally select windows
+<leader> tab ; cycle windows on all desktops
+<leader> [1 2 ... 5] ; go to desktop
+<leader> shift [1 2 ... 5] ; send to desktop
+<leader> q ; close current window
+<leader> t ; toggle window decorations
+<leader> x ; toggle fullscreen
+<leader> d ; toggle show desktop
+ctrl esc ; view last notification
+ctrl shift esc ; close last notification
+ctrl shift return ; close all notifications
 

@@ -68,7 +68,7 @@ listview {
     background-color:               @al;
     padding:                        0px;
     columns:                        1;
-    lines:                          7;
+    lines:                          8;
     spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;
@@ -90,7 +90,7 @@ element {
     text-color:                     @fga;
     orientation:                    horizontal;
     border-radius:                  0px;
-	padding: 						3px 3px 3px -23px;
+	  padding: 						            3px 3px 3px -23px;
 }
 
 element-icon {
