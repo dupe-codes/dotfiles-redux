@@ -1,4 +1,4 @@
-# Nushell Config File
+# nushell config file
 #
 # version = 0.80.1
 
@@ -8,8 +8,8 @@ let dark_theme = {
     leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
     header: green_bold
     empty: blue
-    # Closures can be used to choose colors for specific values.
-    # The value (in this case, a bool) is piped into the closure.
+    # closures can be used to choose colors for specific values.
+    # the value (in this case, a bool) is piped into the closure.
     bool: {|| if $in { 'light_cyan' } else { 'light_gray' } }
     int: white
     filesize: {|e|
@@ -93,8 +93,8 @@ let light_theme = {
     leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
     header: green_bold
     empty: blue
-    # Closures can be used to choose colors for specific values.
-    # The value (in this case, a bool) is piped into the closure.
+    # closures can be used to choose colors for specific values.
+    # the value (in this case, a bool) is piped into the closure.
     bool: {|| if $in { 'dark_cyan' } else { 'dark_gray' } }
     int: dark_gray
     filesize: {|e|
@@ -172,13 +172,13 @@ let light_theme = {
     shape_vardecl: purple
 }
 
-### Carrapace powered completions ###
+### carrapace powered completions ###
 
 let carapace_completer = {|spans|
   carapace $spans.0 nushell $spans | from json
 }
 
-# The default config record. This is where much of your global configuration is setup.
+# the default config record. this is where much of your global configuration is setup.
 $env.config = {
   show_banner: false
   ls: {
@@ -205,11 +205,11 @@ $env.config = {
     help_banner: true
     exit_esc: true
 
-    command_bar_text: '#C4C9C6'
-    # command_bar: {fg: '#C4C9C6' bg: '#223311' }
+    command_bar_text: '#c4c9c6'
+    # command_bar: {fg: '#c4c9c6' bg: '#223311' }
 
-    status_bar_background: {fg: '#1D1F21' bg: '#C4C9C6' }
-    # status_bar_text: {fg: '#C4C9C6' bg: '#223311' }
+    status_bar_background: {fg: '#1d1f21' bg: '#c4c9c6' }
+    # status_bar_text: {fg: '#c4c9c6' bg: '#223311' }
 
     highlight: {bg: 'yellow' fg: 'black' }
 
@@ -240,7 +240,7 @@ $env.config = {
       show_index: true
 
       # selected_cell: {fg: 'white', bg: '#777777'}
-      # selected_row: {fg: 'yellow', bg: '#C1C2A3'}
+      # selected_row: {fg: 'yellow', bg: '#c1c2a3'}
       # selected_column: blue
 
       # padding_column_right: 2
@@ -301,8 +301,8 @@ $env.config = {
       null  # replace with source code to run before the repl input is run
     }]
     env_change: {
-      PWD: [{|before, after|
-        null  # replace with source code to run if the PWD environment is different since the last repl input
+      pwd: [{|before, after|
+        null  # replace with source code to run if the pwd environment is different since the last repl input
       }]
     }
     display_output: {||
@@ -313,8 +313,8 @@ $env.config = {
     }
   }
   menus: [
-      # Configuration for default nushell menus
-      # Note the lack of source parameter
+      # configuration for default nushell menus
+      # note the lack of source parameter
       {
         name: completion_menu
         only_buffer_difference: false
@@ -322,7 +322,7 @@ $env.config = {
         type: {
             layout: columnar
             columns: 4
-            col_width: 20   # Optional value. If missing all the screen width is used to calculate column width
+            col_width: 20   # optional value. if missing all the screen width is used to calculate column width
             col_padding: 2
         }
         style: {
@@ -352,7 +352,7 @@ $env.config = {
         type: {
             layout: description
             columns: 4
-            col_width: 20   # Optional value. If missing all the screen width is used to calculate column width
+            col_width: 20   # optional value. if missing all the screen width is used to calculate column width
             col_padding: 2
             selection_rows: 4
             description_rows: 10
@@ -363,8 +363,8 @@ $env.config = {
             description_text: yellow
         }
       }
-      # Example of extra menus created using a nushell source
-      # Use the source field to create a list of records that populates
+      # example of extra menus created using a nushell source
+      # use the source field to create a list of records that populates
       # the menu
       {
         name: commands_menu
@@ -448,7 +448,7 @@ $env.config = {
       name: completion_previous
       modifier: shift
       keycode: backtab
-      mode: [emacs, vi_normal, vi_insert] # Note: You can add the same keybinding to all modes by using a list
+      mode: [emacs, vi_normal, vi_insert] # note: you can add the same keybinding to all modes by using a list
       event: { send: menuprevious }
     }
     {
@@ -510,7 +510,7 @@ $env.config = {
         ]
       }
     }
-    # Keybindings used to trigger the user defined menus
+    # keybindings used to trigger the user defined menus
     {
       name: commands_menu
       modifier: control
@@ -535,23 +535,23 @@ $env.config = {
   ]
 }
 
-##### Setup starship prompt #####
+##### setup starship prompt #####
 source ~/.cache/starship/init.nu
 
-#### Source secrets ####
+#### source secrets ####
 source ~/secrets.nu
 
-#### Configure aliases ####
+#### configure aliases ####
 
 alias code-i = code-insiders
-alias nnn = nnn -ea -P p
+alias nnn = nnn -ea -p p
 alias r = ranger
 alias gpt = chatblade -c 3.5 -s
-alias pomodoro = arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
+alias pomodoro = arttime --nolearn -t "get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
 alias ll = exa -l -g --icons --git
 alias llt = exa -1 --icons --tree --git-ignore
 alias gitui = gitui -t macchiato.ron
-alias bonsai = cbonsai -L 42 --screensaver
+alias bonsai = cbonsai -l 42 --screensaver
 alias read = nom
 alias weather = wthrr -u f,mph -f d,w
 alias hpie = /usr/bin/http
@@ -569,11 +569,17 @@ def search [] {
 
 def tm [] {
     if (tmux list-sessions | str contains "base:") {
-        # If it exists, attach to it
+        # if it exists, attach to it
         tmux attach-session -t base
     } else {
-        # If it doesn't exist, create it
-        tmux new-session -s base
+        echo "creating tmux session ..."
+        tmux new-session -s base -d -n code
+        gum spin --spinner dot --title "Creating window 'code' ..." -- sleep 1
+        tmux new-window -t base -n terminal
+        gum spin --spinner dot --title "Creating window 'terminal' ..." -- sleep 1
+        tmux new-window -t base -n timer
+        gum spin --spinner dot --title "Creating window 'timer' ..." -- sleep 1
+        tmux attach-session -t base:1
     }
 }
 
