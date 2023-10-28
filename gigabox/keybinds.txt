@@ -1,0 +1,3 @@
+<leader> shift space ; utility script menu
+<leader> shift tab ; view clipboard history
+

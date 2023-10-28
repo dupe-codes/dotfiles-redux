@@ -1,5 +1,6 @@
 # Configure options
-calculator=" Calculator"
+calculator=" Use calculator"
+keybinds=" View keybinds"
 toggle_safe_eyes=" Toggle safe eyes"
 toggle_redshift=" Toggle redshift"
 toggle_notifications=" Toggle notifications"
@@ -7,7 +8,7 @@ main_monitor_mode=" Turn on main monitor mode"
 two_monitor_mode=" Turn on two monitor mode"
 laptop_mode=" Turn on laptop mode"
 
-options="$calculator\n$toggle_safe_eyes\n$toggle_redshift\n$toggle_notifications\n$main_monitor_mode\n$two_monitor_mode\n$laptop_mode"
+options="$calculator\n$keybinds\n$toggle_safe_eyes\n$toggle_redshift\n$toggle_notifications\n$main_monitor_mode\n$two_monitor_mode\n$laptop_mode"
 
 dir="~/.config/polybar/blocks/scripts/rofi"
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
@@ -19,6 +20,9 @@ chosen="$(echo -e "$options" | $rofi_command -p "Run utility script" -dmenu -sel
 case $chosen in
     $calculator)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/calculator.sh
+        ;;
+    $keybinds)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/keybinds.sh
         ;;
     $toggle_safe_eyes)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh
