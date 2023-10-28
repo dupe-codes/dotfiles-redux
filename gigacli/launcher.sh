@@ -88,12 +88,26 @@ prompt_args() {
     echo "${args[@]}"
 }
 
+# Find the maximum length of tool names for alignment
+max_length=0
+for tool in "${!tools[@]}"; do
+    current_length=${#tool}
+    if (( current_length > max_length )); then
+        max_length=$current_length
+    fi
+done
+
 prompt_list=""
 for tool in "${tool_order[@]}"; do
     IFS=':' read -r description args <<< "${tools[$tool]}"
-    prompt_list+="$tool"
-    [ -n "$description" ] && prompt_list+=" ($description)"
-    prompt_list+="\n"
+
+   # Calculate the padding needed for alignment
+    current_length=${#tool}
+    let padding=$max_length-$current_length
+    pad=$(printf "%${padding}s")
+
+    line="$tool$pad      $description\n"  # Additional spaces for clearer separation
+    prompt_list+="$line"
 done
 
 selected_tool=$(echo -e "$prompt_list" | gum choose --height 20)
