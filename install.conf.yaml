@@ -65,8 +65,8 @@
     # resources
     ~/.icons:                     gigabox/resources/icons
     ~/.fonts:                     gigabox/resources/fonts
+    ~/sounds:                     gigabox/resources/sounds
     ~/.themes:                    gigabox/themes
 
     # tools
     ~/devmoji.config.js:          project-configs/devmoji.config.js
-

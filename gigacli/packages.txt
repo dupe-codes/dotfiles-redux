@@ -13,6 +13,7 @@ httpie
 htop
 glow
 cloc
+timew
 
 bat@cargo
 coreutils@cargo
@@ -28,6 +29,7 @@ wthrr@cargo
 
 yewtube@pip
 chatblade@pip
+termdown@pip
 
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go
