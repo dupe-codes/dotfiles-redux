@@ -301,7 +301,7 @@ $env.config = {
       null  # replace with source code to run before the repl input is run
     }]
     env_change: {
-      pwd: [{|before, after|
+      PWD: [{|before, after|
         null  # replace with source code to run if the pwd environment is different since the last repl input
       }]
     }
@@ -544,14 +544,14 @@ source ~/secrets.nu
 #### configure aliases ####
 
 alias code-i = code-insiders
-alias nnn = nnn -ea -p p
+alias nnn = nnn -ea -P p
 alias r = ranger
 alias gpt = chatblade -c 3.5 -s
-alias pomodoro = arttime --nolearn -t "get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
+alias pomodoro = arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"
 alias ll = exa -l -g --icons --git
 alias llt = exa -1 --icons --tree --git-ignore
 alias gitui = gitui -t macchiato.ron
-alias bonsai = cbonsai -l 42 --screensaver
+alias bonsai = cbonsai -L 42 --screensaver
 alias read = nom
 alias weather = wthrr -u f,mph -f d,w
 alias hpie = /usr/bin/http
@@ -572,7 +572,7 @@ def tm [] {
         # if it exists, attach to it
         tmux attach-session -t base
     } else {
-        echo "creating tmux session ..."
+        echo "Creating tmux session ..."
         tmux new-session -s base -d -n code
         gum spin --spinner dot --title "Creating window 'code' ..." -- sleep 1
         tmux new-window -t base -n terminal
