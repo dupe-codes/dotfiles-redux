@@ -39,3 +39,10 @@ Here lies an exploration of more configurable CLI setup
 3. porsmo   - small pomodoro client
 4. yewtube  - CLI youtube player
 
+## Setup
+
+### Time-tracking with timewarrior
+
+Symlink ~/.local/share/timewarrior to datastore/timetracking to sync time tracking data
+across machines
+

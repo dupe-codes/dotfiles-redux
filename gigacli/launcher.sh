@@ -8,6 +8,7 @@ tools=(
     ["timew"]="time tracker:r:start/stop,r:tags"
     ["task"]="launch work session:r:tags,r:duration"
     ["timer"]="run timer script:r:tags"
+    ["break"]="take a break :r:short/long?"
     ["search"]="search current dir:"
     ["ncmpcpp"]="music player client:"
     ["ranger"]="file manager:"
@@ -35,6 +36,7 @@ declare -a tool_order=(
     "timew"
     "timer"
     "task"
+    "break"
     "search"
     "ncmpcpp"
     "ranger"
@@ -55,6 +57,7 @@ declare -A aliases=(
     ["search"]="search_command"
     ["task"]="task_command"
     ["timer"]="timer_command"
+    ["break"]="break_command"
     # add other aliases as needed
 )
 
@@ -66,7 +69,8 @@ task_command() {
     local tags=$1
     local duration=$2
     timew start $tags; \
-        termdown $duration && timew stop; \
+        termdown $duration; \
+        timew stop; \
         notify-send "󰁫 Timer" "Completed task: $tags"; \
         paplay ~/sounds/positive-notification.wav &
 }
@@ -74,6 +78,19 @@ task_command() {
 timer_command() {
     local tags=$1
     ~/scripts/timer.sh $tags
+}
+
+break_command() {
+    local break_type=$1
+    # accept "short" or "s"
+    if [ "$break_type" = "short" ] || [ "$break_type" = "s" ]; then
+        local duration="5m"
+    else
+        local duration="15m"
+    fi
+    termdown $duration && \
+        notify-send "󰁫 Timer" "Break is over"; \
+        paplay ~/sounds/positive-notification.wav &
 }
 
 prompt_args() {

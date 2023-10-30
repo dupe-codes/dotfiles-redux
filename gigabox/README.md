@@ -41,4 +41,3 @@ Section "InputClass"
     Option "TappingButtonMap" "lrm"
 EndSection
 ```
-

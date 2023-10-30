@@ -117,12 +117,13 @@ noto-fonts-emoji
 catppuccin-macchiato-cursors@yay
 font-manager
 
-# Bluetooth
+# Bluetooth & peripherals
 bluez
 bluez-utils
 blueman
 pulseaudio-bluetooth
 blueberry
+logiops@yay
 
 # Network
 networkmanager
@@ -146,4 +147,3 @@ redshift
 geoclue
 cbonsai@yay
 remind
-
