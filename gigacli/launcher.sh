@@ -95,6 +95,7 @@ break_command() {
 
 prompt_args() {
     local args_list="$1"
+    local tool="$2"
     local args=()
     IFS=',' read -ra args_descriptor <<< "$args_list"
 
@@ -103,9 +104,9 @@ prompt_args() {
         local arg_name=${descriptor:2}
 
         if [ "$prefix" = "r:" ]; then
-            args+=("$(gum input --placeholder "$arg_name")")
+            args+=("$(gum input --placeholder "$tool: $arg_name")")
         elif [ "$prefix" = "o:" ]; then
-            read -p "(optional) $arg_name? " arg_value
+            read -p "$tool: (optional) $arg_name? " arg_value
             [ -n "$arg_value" ] && args+=("$arg_value")
         fi
     done
@@ -145,7 +146,7 @@ fi
 
 args_descriptor=${tools[$tool]#*:}
 if [ -n "$args_descriptor" ] && [ "$args_descriptor" != ":" ]; then
-    arguments=$(prompt_args "$args_descriptor")
+    arguments=$(prompt_args "$args_descriptor" "$tool")
     set -- $arguments
 fi
 bg_args=${background_args[$tool]}

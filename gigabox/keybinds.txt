@@ -7,7 +7,7 @@
 <leader> shift [c f] ; center/fullscreen window
 <leader> shift
 <leader> ctrl q/e ; cycle windows on current desktop
-<leader> ctrl [w a s d] ; directionally select windows
+<leader> ctrl [w a s d] ; directionally select current desktop windows
 <leader> tab ; cycle windows on all desktops
 <leader> [1 2 ... 5] ; go to desktop
 <leader> shift [1 2 ... 5] ; send to desktop
@@ -16,6 +16,6 @@
 <leader> x ; toggle fullscreen
 <leader> d ; toggle show desktop
 ctrl esc ; view last notification
+ctrl return ; open notification context
 ctrl shift esc ; close last notification
 ctrl shift return ; close all notifications
-

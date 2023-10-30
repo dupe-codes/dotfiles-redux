@@ -569,18 +569,18 @@ def search [] {
 }
 
 def tm [] {
-    if (tmux list-sessions | str contains "base:") {
+    if (tmux list-sessions | str contains "gigacli:") {
         # if it exists, attach to it
-        tmux attach-session -t base
+        tmux attach-session -t gigacli
     } else {
-        echo "Creating tmux session ..."
-        tmux new-session -s base -d -n code
+        echo "Creating giga tmux session ..."
+        tmux new-session -s gigacli -d -n code
         gum spin --spinner dot --title "Creating window 'code' ..." -- sleep 1
-        tmux new-window -t base -n terminal
+        tmux new-window -t gigacli -n terminal
         gum spin --spinner dot --title "Creating window 'terminal' ..." -- sleep 1
-        tmux new-window -t base -n timer
+        tmux new-window -t gigacli -n timer
         gum spin --spinner dot --title "Creating window 'timer' ..." -- sleep 1
-        tmux attach-session -t base:1
+        tmux attach-session -t gigacli:1
     }
 }
 
