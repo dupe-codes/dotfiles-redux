@@ -10,12 +10,12 @@ require("nvim-tree").setup({
     },
 })
 
-local function open_nvim_tree()
-    -- open the tree
-    -- require("nvim-tree.api").tree.open()
-    require("nvim-tree.api").tree.toggle({ focus = false })
-end
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+--local function open_nvim_tree()
+    ---- open the tree
+    ---- require("nvim-tree.api").tree.open()
+    --require("nvim-tree.api").tree.toggle({ focus = false })
+--end
+--vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 key_mapper('n', '<leader>nf', ':NvimTreeFindFile<CR>')
 key_mapper('n', '<leader>nt', ':NvimTreeToggle<CR>')
