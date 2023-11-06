@@ -26,19 +26,10 @@ window {
 }
 
 prompt {
-    enabled: 						true;
-	  padding: 						6px 7px 4px 7px;
-	  background-color: 				@bga;
-	  text-color: 					@fg;
-}
-
-textbox-prompt-colon {
-	padding: 						6px 7px 4px 7px;
-	background-color: 				@ac;
-	text-color: 					@fg;
-	expand: false;
-	str: "";
-	font:							"feather 12";
+    enabled: 						    true;
+	  padding: 						    6px 7px 4px 7px;
+	  background-color: 			@bga;
+	  text-color: 					  @fg;
 }
 
 entry {
@@ -47,19 +38,19 @@ entry {
     placeholder-color:              @fg;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    "Search...";
-	  padding: 						6px;
+    placeholder:                    "...";
+	  padding: 						            6px;
     blink:                          true;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, prompt ];
+	children: 						            [ prompt, entry ];
     background-color:               @bga;
     text-color:                     @fg;
     expand:                         false;
-	  border:							0px;
+	  border:							            0px;
     border-radius:                  0px;
-	  border-color:					@ac;
+	  border-color:					          @ac;
     margin:                         0px;
     padding:                        0px;
 }
