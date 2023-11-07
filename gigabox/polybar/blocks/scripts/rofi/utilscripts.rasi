@@ -58,8 +58,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        0px;
-    columns:                        1;
-    lines:                          9;
+    columns:                        2;
+    lines:                          8;
     spacing:                        6px;
     cycle:                          true;
     dynamic:                        true;
