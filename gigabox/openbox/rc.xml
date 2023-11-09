@@ -457,6 +457,11 @@
         <command>~/.config/rofi/bin/screenshot</command>
       </action>
     </keybind>
+    <keybind key="A-S-p">
+      <action name="Execute">
+        <command>~/.config/openbox/scripts/quick-screenshot.sh</command>
+      </action>
+    </keybind>
 
     <!-- Dunst-specifics -->
     <keybind key="C-Escape">
