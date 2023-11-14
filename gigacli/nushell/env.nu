@@ -94,7 +94,8 @@ $env.PATH = (
     # Path to doom emacs
     prepend $"($env.HOME)/.config/emacs/bin" |
     # Path to Haskell tools
-    prepend $"($env.HOME)/.ghcup/bin"
+    prepend $"($env.HOME)/.ghcup/bin" |
+    prepend $"($env.HOME)/.cabal/bin"
 )
 
 # CLI tool configurations
