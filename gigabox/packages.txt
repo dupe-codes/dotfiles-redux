@@ -5,6 +5,7 @@ go
 racket
 unzip
 wget
+jq
 docker
 arttime-git@yay
 
@@ -49,9 +50,11 @@ dunst
 nitrogen
 
 # Window switcher/app launcher
+# Also, util scripts
 rofi
 rofi-greenclip@yay
 rofi-calc
+zenity
 
 # file management
 thunar
@@ -147,3 +150,7 @@ redshift
 geoclue
 cbonsai@yay
 remind
+
+# Email
+neomutt
+
