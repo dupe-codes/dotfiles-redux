@@ -2,6 +2,7 @@
 calculator=" Use calculator"
 keybinds=" View keybinds"
 note=" Take a note"
+gpt=" Message ChatGPT"
 toggle_safe_eyes=" Toggle safe eyes"
 toggle_redshift=" Toggle redshift"
 toggle_notifications=" Toggle notifications"
@@ -15,6 +16,7 @@ laptop_mode=" Turn on laptop mode"
 options="$calculator\n"\
 "$keybinds\n"\
 "$note\n"\
+"$gpt\n"\
 "$toggle_safe_eyes\n"\
 "$toggle_redshift\n"\
 "$toggle_notifications\n"\
@@ -41,6 +43,9 @@ case $chosen in
         ;;
     $note)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/note-taking.sh
+        ;;
+    $gpt)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/gpt-convo.sh
         ;;
     $toggle_safe_eyes)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh

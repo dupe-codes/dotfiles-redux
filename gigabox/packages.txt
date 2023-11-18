@@ -142,6 +142,7 @@ zulip-desktop@yay
 libreoffice-still
 obsidian
 1password@yay
+1password-cli@yay
 clamtk
 github-desktop-bin@yay
 intellij-idea-community-edition
