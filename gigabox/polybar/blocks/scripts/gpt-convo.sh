@@ -8,6 +8,12 @@ if [ ! -f "$CONVO_FILE" ]; then
     echo '[]' > "$CONVO_FILE"
 fi
 
+# Define associative array of available roles for GPT to take on
+# Each entry is a role title mapped to the system prompt to send to GPT to assume
+declare -A roles
+roles["math tutor"]="You are a helpful math tutor."
+roles["engineer"]="You are an experienced senior software engineer."
+
 send_query() {
     local messages=$(cat "$CONVO_FILE")
     local data=$(jq -n \
@@ -29,6 +35,10 @@ send_query() {
 }
 
 format_conversation() {
+    CURRENT_PROMPT=$(jq -r '[.[] | select(.role == "system")][-1].content // "None" | split(": ")[1]' "$CONVO_FILE")
+    ROLE_HEADER="Current role prompt: $CURRENT_PROMPT"
+    echo "$ROLE_HEADER"
+
     jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" \
     | awk '{
         line=$0;
@@ -61,6 +71,20 @@ while true; do
         SAVE_FILE="$HOME/datastore/chatgpt/convo-${TIMESTAMP}-${UUID}.txt"
         format_conversation > "$SAVE_FILE"
         notify-send "ChatGPT" "Conversation saved to $SAVE_FILE"
+        continue
+    fi
+
+    if [[ "$USER_QUERY" =~ ^\\role\ (.+) ]]; then
+        ROLE_SELECTION="${BASH_REMATCH[1]}"
+        if [[ -n "${roles[$ROLE_SELECTION]}" ]]; then
+            jq --arg role_msg "system: ${roles[$ROLE_SELECTION]}" \
+               '. = [{"role": "system", "content": $role_msg}] + .' \
+               "$CONVO_FILE" > temp && mv temp "$CONVO_FILE"
+
+            notify-send "GPT Convo" "Role changed to $ROLE_SELECTION"
+        else
+            notify-send "GPT Convo" "Role $ROLE_SELECTION does not exist."
+        fi
         continue
     fi
 

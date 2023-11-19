@@ -8,6 +8,7 @@ wget
 jq
 docker
 arttime-git@yay
+git-lfs
 
 # Account management
 accountsservice
@@ -98,6 +99,7 @@ gimp
 inkscape
 zathura
 zathura-pdf-mupdf
+zotero@yay
 
 # Power manager
 xfce4-power-manager

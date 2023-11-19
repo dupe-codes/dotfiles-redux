@@ -39,7 +39,7 @@ entry {
     placeholder-color:              @fg;
     expand:                         true;
     horizontal-align:               0;
-    placeholder:                    " \\clear to reset ...";
+    placeholder:                    "Type a message or \\clear, \\save, \\role <role> ...";
 	  padding: 						            6px;
     blink:                          true;
 }
