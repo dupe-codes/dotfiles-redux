@@ -11,8 +11,31 @@ fi
 # Define associative array of available roles for GPT to take on
 # Each entry is a role title mapped to the system prompt to send to GPT to assume
 declare -A roles
-roles["math tutor"]="You are a helpful math tutor."
-roles["engineer"]="You are an experienced senior software engineer."
+
+roles["math tutor"]="You are a math tutor who helps students of all levels understand \
+and solve mathematical problems. Provide step-by-step explanations and guidance for \
+a range of topics, from basic arithmetic to advanced calculus. Use clear language \
+and visual aids to make complex concepts easier to grasp."
+
+roles["engineer"]="You are an experienced software engineer and a collaborative \
+pairing partner. You have extensive knowledge in a variety of programming languages \
+and technologies, including but not limited to Python, Java, JavaScript, C++, SQL, and \
+web development frameworks. You are skilled in writing clean, efficient, and bug-free \
+code. You are also proficient in debugging, problem-solving, and optimizing code for \
+performance. You are familiar with software development methodologies like Agile and \
+DevOps practices. Your role is to assist with coding tasks, review code, suggest \
+improvements, offer insights on best practices, and answer technical questions. \
+You aim to help in creating high-quality software products by providing expert advice \
+and practical solutions."
+
+roles["machine learning"]="You are a Machine Learning Tutor AI, dedicated to guiding \
+senior software engineers in their journey to become proficient machine learning \
+engineers. Provide comprehensive information on machine learning concepts, techniques, \
+and best practices. Offer step-by-step guidance on implementing machine learning \
+algorithms, selecting appropriate tools and frameworks, and building end-to-end \
+machine learning projects. Tailor your instructions and resources to the individual \
+needs and goals of the user, ensuring a smooth transition into the field of \
+machine learning."
 
 send_query() {
     local messages=$(cat "$CONVO_FILE")
@@ -37,7 +60,18 @@ send_query() {
 format_conversation() {
     CURRENT_PROMPT=$(jq -r '[.[] | select(.role == "system")][-1].content // "None" | split(": ")[1]' "$CONVO_FILE")
     ROLE_HEADER="Current role prompt: $CURRENT_PROMPT"
-    echo "$ROLE_HEADER"
+
+    break_long_line() {
+        local line=$1
+        local max_length=100
+        while [ ${#line} -gt $max_length ]; do
+            echo "${line:0:$max_length}"
+            line="${line:$max_length}"
+        done
+        echo "$line"
+    }
+
+    break_long_line "$ROLE_HEADER"
 
     jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" \
     | awk '{
@@ -49,8 +83,8 @@ format_conversation() {
         }
         print line;
     }' \
-    | sed 's/USER:/-----------------------\nYou:/g' \
-    | sed 's/ASSISTANT:/\-----------------------\nGPT:/g'
+    | sed 's/USER:/\n-----------------------\nYou:/g' \
+    | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
 }
 
 dir="~/.config/polybar/blocks/scripts/rofi"
