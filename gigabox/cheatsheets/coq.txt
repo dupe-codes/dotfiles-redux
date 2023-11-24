@@ -1,28 +1,31 @@
-[tact] intros x ; move x from goal to context
-[tact] reflexivity ; finish proof (when goal ~= e = e)
-[tact] apply ; prove goal a hypo/lemma/constructor
-[tact] apply... in H ; apply a hypothesis/lemma/constructor ...
-[tact] simpl ; simplify computations in goal
-[tact] simpl in H ; simplify computations in hypothesis
-[tact] rewrite ; rewrite goal using hypothesis/lemma
-[tact] rewrite ... in H ; rewrite a hypothesis
-[tact] symmetry ; change goal from e1 = e2 to e2 = e1
-[tact] symmetry in H ; change H from e1 = e2 to e2 = e1
-[tact] unfold ; replace constant by its definition
-[tact] unfold... in H ; replace constant in H
-[tact] destruct... as... ; case analysis on inductive types ...
-[tact] destruct... eqn:... ; destruct with name for new eqns ...
-[tact] induction... as... ; induction on values of inductive types
-[tact] injection... as... ; reason by injectivity on equalities ...
-[tact] discriminate... ; reason by disjointness of constructs ...
-[tact] assert (H: e) ; introduce "local lemma" e called .H
-[tact] generalize dependent x ; move x from context back to goal ...
-[tact] f_equal ; change goal from f x = f xy to x = y
+[tact] intros x := move x from goal to context
+[tact] reflexivity := finish proof (when goal ~= e = e)
+[tact] apply := prove goal a hypo/lemma/constructor
+[tact] apply... in H := apply a hypothesis/lemma/constructor ...
+[tact] simpl := simplify computations in goal
+[tact] simpl in H := simplify computations in hypothesis
+[tact] rewrite := rewrite goal using hypothesis/lemma
+[tact] rewrite ... in H := rewrite a hypothesis
+[tact] symmetry := change goal from e1 = e2 to e2 = e1
+[tact] symmetry in H := change H from e1 = e2 to e2 = e1
+[tact] unfold := replace constant by its definition
+[tact] unfold... in H := replace constant in H
+[tact] destruct... as... := case analysis on inductive types ...
+[tact] destruct... eqn:... := destruct with name for new eqns ...
+[tact] induction... as... := induction on values of inductive types
+[tact] injection... as... := reason by injectivity on equalities ...
+[tact] discriminate... := reason by disjointness of constructs ...
+[tact] assert (H: e) := introduce "local lemma" e called H
+[tact] generalize dependent x := move x from context back to goal ...
+[tact] f_equal := change goal from f x = f y to x = y
+[tact] inversion... := reason by inject/disjoint on ind types ...
 
 [descriptions]
-[tact] destruct... as... ; case analysis on values of inductively defined types
-[tact] generalize dependent x ; move the variable x (and anything else that depends on it) from the context back to an explicit hypothesis in the goal formula
-[tact] apply... in H ; apply a hypothesis, lemma, or constructor to a hypothesis in the context (forward reasoning)
-[tact] destruct... eqn:... ; specify the name of an equation to be added to the context, recording the result of the case analysis
-[tact] injection... as... ; reason by injectivity on equalities between values of inductively defined types
-[tact] discriminate... ; reason by disjointness of constructors on equalities between values of inductively defined types
+[tact] destruct... as... := case analysis on values of inductively defined types
+[tact] generalize dependent x := move the variable x (and anything else that depends on it) from the context back to an explicit hypothesis in the goal formula
+[tact] apply... in H := apply a hypothesis, lemma, or constructor to a hypothesis in the context (forward reasoning)
+[tact] destruct... eqn:... := specify the name of an equation to be added to the context, recording the result of the case analysis
+[tact] injection... as... := reason by injectivity on equalities between values of inductively defined types
+[tact] discriminate... := reason by disjointness of constructors on equalities between values of inductively defined types
+[tact] inversion... := reason by injectivity and disjointness on values of inductively defined types. Like destruct, but goes further by automatically discharging impossible cases, and adding inferred equalities to the context
+
