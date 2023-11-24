@@ -3,6 +3,12 @@
 declare -A SITES
 SITES=(
     [" Old Reader: RSS Feeds"]="https://theoldreader.com"
+    ["󱚌 Google Scholar"]="https://scholar.google.com"
+    ["󰌢 Arxiv"]="https://arxiv.org"
+    ["󰚩 ChatGPT"]="https://chat.openai.com"
+    [" Twitch"]="https://www.twitch.tv"
+    [" Nerdfonts"]="https://www.nerdfonts.com/cheat-sheet"
+    ["󰗃 YouTube"]="https://www.youtube.com"
 )
 
 dir="~/.config/polybar/blocks/scripts/rofi"
