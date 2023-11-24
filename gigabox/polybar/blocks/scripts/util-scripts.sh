@@ -1,6 +1,6 @@
 # Configure options
 calculator=" Use calculator"
-keybinds=" View keybinds"
+cheatsheets="󰎞 View cheatsheets"
 note=" Take a note"
 gpt=" Message ChatGPT"
 clipboard=" View clipboard"
@@ -16,7 +16,7 @@ two_monitor_mode=" Turn on two monitor mode"
 laptop_mode=" Turn on laptop mode"
 
 options="$calculator\n"\
-"$keybinds\n"\
+"$cheatsheets\n"\
 "$note\n"\
 "$gpt\n"\
 "$clipboard\n"\
@@ -42,8 +42,8 @@ case $chosen in
     $calculator)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/calculator.sh
         ;;
-    $keybinds)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/keybinds.sh
+    $cheatsheets)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/cheatsheets.sh
         ;;
     $note)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/note-taking.sh
