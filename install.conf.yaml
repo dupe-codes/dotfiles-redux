@@ -47,6 +47,7 @@
 
     # configs: gigacli
     ~/.config/nvim:               neovim
+    ~/.config/doom:               doom
     ~/.config/kitty:              gigacli/kitty
     ~/.config/tmux:               gigacli/tmux
     ~/.config/nushell:            gigacli/nushell

@@ -66,3 +66,6 @@ cp $HOME/secrets.nu $PWD/gigacli/secrets.nu
 echo 'Installing zoxide...'
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
+echo 'Installing doom emacs...'
+git clone https://github.com/hlissner/doom-emacs $HOME/.emacs.d
+$HOME/.emacs.d/bin/doom install
