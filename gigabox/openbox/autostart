@@ -5,9 +5,7 @@ xrdb "${HOME}/.Xresources"
 picom -b
 dunst &
 xfce4-power-manager &
-nm-applet &
 1password --silent &
-blueman-applet &
 safeeyes &
 greenclip daemon &
 dropbox &
