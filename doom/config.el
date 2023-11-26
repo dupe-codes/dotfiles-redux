@@ -13,6 +13,7 @@
 (setq display-line-numbers-type 'relative)
 (setq scroll-margin 8)
 (setq org-directory "~/org/")
+(global-visual-line-mode t)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -68,7 +69,6 @@ _h_ decrease width    _l_ increase width
        ("\\.lagda.md\\'" . agda2-mode))
      auto-mode-alist))
 
-
 ; C-l isn't working in kitty for *gestures broadly* reasons
 ; so we'll use C-c C-g for agda2-load instead
 ; Set up keybind to switch from horizontal to vertial agda information
@@ -86,6 +86,8 @@ _h_ decrease width    _l_ increase width
           (lambda ()
             (define-key agda2-mode-map (kbd "C-c C-l") nil)
             (define-key agda2-mode-map (kbd "C-c C-g") 'agda2-load)
+            (define-key agda2-mode-map (kbd "C-c C-,") nil)
+            (define-key agda2-mode-map (kbd "C-c ,") 'agda2-goal-and-context)
             (define-key agda2-mode-map (kbd "C-c C-v") 'agda-vertical-view)))
 
 ;; ================
