@@ -30,6 +30,7 @@ wthrr@cargo
 yewtube@pip
 chatblade@pip
 termdown@pip
+wakatime@pip
 
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go

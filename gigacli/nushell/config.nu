@@ -559,6 +559,7 @@ alias tools = ~/launcher.sh
 alias t = ~/launcher.sh
 alias c = clear
 alias timer = ~/scripts/timer.sh
+alias emacs = emacs -nw
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell

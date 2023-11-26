@@ -5,9 +5,18 @@
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
 
+;; ================
+;; General settings
+;; ================
+
 (setq doom-theme 'doom-tokyo-night)
 (setq display-line-numbers-type 'relative)
+(setq scroll-margin 8)
 (setq org-directory "~/org/")
+
+;; default to mononoki
+(setq doom-font
+      (font-spec :family "mononoki" :height 120 :weight 'normal :width 'normal))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -32,6 +41,14 @@
 ;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
 
+;; ==============
+;; package setups
+;; ==============
+
+(global-wakatime-mode)
+
+;; Agda configs
+
 ; Configure agda mode on relevant files
 (setq auto-mode-alist
    (append
@@ -39,16 +56,29 @@
        ("\\.lagda.md\\'" . agda2-mode))
      auto-mode-alist))
 
-;; ========
-;; Keybinds
-;; ========
-
-(setq x-super-keysym 'meta) ; map super to meta key
 
 ; C-l isn't working in kitty for *gestures broadly* reasons
 ; so we'll use C-c C-g for agda2-load instead
+; Set up keybind to switch from horizontal to vertial agda information
+; view
+(defun agda-vertical-view ()
+  "Set up Agda mode in a split window configuration."
+  (interactive)
+  (agda2-load)
+  (delete-other-windows)
+  (split-window-right)
+  (other-window 1)
+  (switch-to-buffer "*Agda information*")
+  (other-window 1))
 (add-hook 'agda2-mode-hook
           (lambda ()
             (define-key agda2-mode-map (kbd "C-c C-l") nil)
-            (define-key agda2-mode-map (kbd "C-c C-g") 'agda2-load)))
+            (define-key agda2-mode-map (kbd "C-c C-g") 'agda2-load)
+            (define-key agda2-mode-map (kbd "C-c C-v") 'agda-vertical-view)))
+
+;; ================
+;; General Keybinds
+;; ================
+
+(setq x-super-keysym 'meta) ; map super to meta key
 
