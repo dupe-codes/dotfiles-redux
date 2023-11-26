@@ -14,10 +14,6 @@
 (setq scroll-margin 8)
 (setq org-directory "~/org/")
 
-;; default to mononoki
-(setq doom-font
-      (font-spec :family "mononoki" :height 120 :weight 'normal :width 'normal))
-
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -46,6 +42,22 @@
 ;; ==============
 
 (global-wakatime-mode)
+
+;; hydra ui controls
+
+(defhydra doom-window-resize-hydra (:hint nil)
+  "
+             _k_ increase height
+_h_ decrease width    _l_ increase width
+             _j_ decrease height
+"
+  ("h" evil-window-decrease-width)
+  ("j" evil-window-increase-height)
+  ("k" evil-window-decrease-height)
+  ("l" evil-window-increase-width)
+  ("q" nil))
+(map! :leader
+      :desc "Hydra resize" "w SPC" #'doom-window-resize-hydra/body)
 
 ;; Agda configs
 

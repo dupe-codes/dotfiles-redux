@@ -5,12 +5,11 @@ note=" Take a note"
 gpt=" Message ChatGPT"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
+colors=" Change polybar colors"
+wallpapers=" Manage favorite wallpapers"
 toggle_safe_eyes=" Toggle safe eyes"
 toggle_redshift=" Toggle redshift"
 toggle_notifications=" Toggle notifications"
-sync_polybar_colors=" Sync polybar colors"
-save_polybar_colors=" Save polybar colors"
-load_polybar_colors=" Load polybar colors"
 main_monitor_mode=" Turn on main monitor mode"
 two_monitor_mode=" Turn on two monitor mode"
 laptop_mode=" Turn on laptop mode"
@@ -21,6 +20,8 @@ options="$calculator\n"\
 "$gpt\n"\
 "$clipboard\n"\
 "$websites\n"\
+"$colors\n"\
+"$wallpapers\n"\
 "$toggle_safe_eyes\n"\
 "$toggle_redshift\n"\
 "$toggle_notifications\n"\
@@ -57,20 +58,17 @@ case $chosen in
     $websites)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/websites.sh
         ;;
+    $colors)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/color-tools/chooser.sh
+        ;;
+    $wallpapers)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/wallpapers.sh
+        ;;
     $toggle_safe_eyes)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh
         ;;
     $toggle_redshift)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh
-        ;;
-    $sync_polybar_colors)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/sync-polybar-colors.sh
-        ;;
-    $save_polybar_colors)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/save-colors.sh
-        ;;
-    $load_polybar_colors)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/load-colors.sh
         ;;
     $toggle_notifications)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-dunst.sh

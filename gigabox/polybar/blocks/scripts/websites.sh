@@ -13,7 +13,7 @@ SITES=(
 
 dir="~/.config/polybar/blocks/scripts/rofi"
 site_keys=$(printf '%s\n' "${!SITES[@]}")
-selected_site=$(echo -e "$site_keys" | rofi -theme $dir/utilscripts.rasi -dmenu -p "Choose a site:")
+selected_site=$(echo -e "$site_keys" | rofi -theme $dir/utilscripts.rasi -i -dmenu -p "Choose a site:")
 
 if [ -z "$selected_site" ]; then
     echo "No selection made. Exiting."

@@ -3,11 +3,10 @@
 SAVED_COLORS_DIR="$HOME/.config/polybar/blocks/saved-colors"
 CURRENT_COLORS_FILE="$HOME/.config/polybar/blocks/colors.ini"
 
-# Function to load the selected colors config
 load_saved_config() {
     dir="~/.config/polybar/blocks/scripts/rofi"
     rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
-    config_name=$(ls "$SAVED_COLORS_DIR" | $rofi_command -dmenu -p "Select a saved colors config: ")
+    config_name=$(ls "$SAVED_COLORS_DIR" | $rofi_command -i -dmenu -p "Select a saved colors config: ")
 
     if [ -z "$config_name" ]; then
         exit 1
@@ -22,7 +21,6 @@ load_saved_config() {
 
     cp "$selected_config_file" "$CURRENT_COLORS_FILE"
 
-    # Verification message
     if [ -f "$CURRENT_COLORS_FILE" ]; then
         notify-send "Loaded the colors config from '${config_name}'"
     else
