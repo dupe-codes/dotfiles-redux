@@ -931,5 +931,11 @@
     <application name="kitty">
       <decor>no</decor>
     </application>
+    <application name="zulip">
+      <decor>no</decor>
+    </application>
+    <application name="discord">
+      <decor>no</decor>
+    </application>
   </applications>
 </openbox_config>
