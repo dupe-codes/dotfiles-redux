@@ -15,3 +15,5 @@ tattoo_samurai_chick.jpg
 cyberpunked.png
 nightsky.jpg
 dragon-prince.JPG
+face_mod.jpg
+gas_mask.png

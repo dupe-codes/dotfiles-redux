@@ -594,3 +594,24 @@ conda activate # always start base conda environment
 ### Finally, open welcome message! ###
 open $"($env.HOME)/nu-welcome.txt"
 
+# Function to update opam switch environment vars
+def --env opam-switch [] {
+  let opam_env = (opam env | lines)
+  mut env_update = {}
+  for $line in $opam_env {
+      let parts = ($line | split row ';')
+      let assignment = ($parts.0 | str trim)
+      let kv = ($assignment | split row '=')
+      let key = $kv.0
+      let value = ($kv.1 | str replace --all "'" '')
+
+      if $key == "PATH" {
+        let path_list = ($value | split row ':')
+        $env_update = ($env_update | insert $key $path_list)
+      } else {
+        $env_update = ($env_update | insert $key $value)
+      }
+  }
+  echo $env_update
+  $env_update | load-env
+}

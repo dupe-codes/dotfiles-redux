@@ -3,6 +3,7 @@ nodejs
 npm
 go
 racket
+opam
 unzip
 wget
 jq
