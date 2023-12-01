@@ -50,4 +50,5 @@
 ;(unpin! t)
 
 (package! wakatime-mode)
-
+(package! copilot
+          :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))

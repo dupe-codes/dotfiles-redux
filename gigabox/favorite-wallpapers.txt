@@ -17,3 +17,4 @@ nightsky.jpg
 dragon-prince.JPG
 face_mod.jpg
 gas_mask.png
+cyborg_ghost.png

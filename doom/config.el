@@ -90,6 +90,21 @@ _h_ decrease width    _l_ increase width
             (define-key agda2-mode-map (kbd "C-c ,") 'agda2-goal-and-context)
             (define-key agda2-mode-map (kbd "C-c C-v") 'agda-vertical-view)))
 
+;; Copilot configs
+
+;; accept completion from copilot and fallback to company
+;; TODO: Change generated completions from ghosted text to
+;;       selectable option in completions menu
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
+;; TODO: configure flyerror checker to show in side gutter
+
 ;; ================
 ;; General Keybinds
 ;; ================
