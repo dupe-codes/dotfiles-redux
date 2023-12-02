@@ -222,7 +222,6 @@ local plugins = {
                 "rust-analyzer",
                 "zls",
                 "clangd",
-                "ocaml-lsp",
             },
         },
         config = function(_, opts)

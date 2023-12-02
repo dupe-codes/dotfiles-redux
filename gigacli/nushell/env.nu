@@ -77,25 +77,32 @@ $env.NU_PLUGIN_DIRS = [
 
 ##### Environment Variable Configuration #####
 
+def prepend-if-not-exists [curr_path path_to_prepend] {
+    if $path_to_prepend in $curr_path {
+        $curr_path
+    } else {
+        $curr_path | prepend $path_to_prepend
+    }
+}
+
 # TODO: carrapace path is homebrew specific - generalize it
+# NOTE: The conda nushell script will also prepend mambaforge,
+#       but its invocations of conda fail without including it in the path
+#       here to start so... whatevs, we have multiple mambas. nbd.
 $env.PATH = (
     $env.PATH |
-    prepend "/usr/local/bin/" |
-    prepend $"($env.HOME)/.local/bin" |
-    prepend $"($env.HOME)/.cargo/bin" |
-    prepend $"($env.HOME)/Library/Application Support/carapace/bin" |
-    # Add mamba to path - it will be automatically preferred on conda commands
-    prepend $"($env.HOME)/mambaforge/bin" |
-    # Add go packages
-    prepend $"($env.HOME)/go/bin" |
-    prepend $"($env.HOME)/.opam/default/bin" |
-    # Add elan path for lean theorem prover
-    prepend $"($env.HOME)/.elan/bin" |
-    # Path to doom emacs
-    prepend $"($env.HOME)/.config/emacs/bin" |
-    # Path to Haskell tools
-    prepend $"($env.HOME)/.ghcup/bin" |
-    prepend $"($env.HOME)/.cabal/bin"
+    split row (char esep) |
+    prepend-if-not-exists $in "/usr/local/bin/" |
+    prepend-if-not-exists $in $"($env.HOME)/.local/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.cargo/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/Library/Application Support/carapace/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/mambaforge/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/go/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.opam/default/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.elan/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.config/emacs/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.ghcup/bin" |
+    prepend-if-not-exists $in $"($env.HOME)/.cabal/bin"
 )
 
 # CLI tool configurations
