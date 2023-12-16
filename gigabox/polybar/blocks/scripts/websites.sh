@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# TODO: Migrate this to a website-bookmarks.txt file
+#       And add a "save bookmark" rofi script which
+#       asks for the bookmark name and url, then adds it
+#       to the file
 declare -A SITES
 SITES=(
     [" Old Reader: RSS Feeds"]="https://theoldreader.com"

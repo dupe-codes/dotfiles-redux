@@ -1,0 +1,28 @@
+df["col_name"]    := access column "col_name"
+df.iloc[...]      := access df by integer location
+df.loc[...]       := access df by label or boolean mask
+df.head()         := returns first 5 rows
+df.tail()         := returns last 5 rows
+df.describe()     := returns summary statistics for numerical columns
+df.info()         := returns summary of df, including col data types
+df.read_csv(...)  := read csv file into df
+df.dropna(...)    := drop rows with missing values
+df.fillna(...)    := fill missing values
+df.isna()         := returns boolean df, True = missing value
+df.mul/add/sub... := element-wise arithmetic operations
+df.max/min/sum... := returns max/min/sum... of each column
+df.groupby(...)   := group df by column(s)
+convert multiindex := rename columns then df.reset_index
+df.pivot_table(...) := create pivot table
+pd.crosstab(...)    := create cross tabulation
+
+[descriptions]
+df.iloc[..] := access sections of a dataframe by integer location; e.g., df.iloc[0] returns first row as a series, df.iloc[[0,1]] returns rows 1 and 2 as data frame
+df.loc[...] := access rows & cols by label; e.g., df.loc["viper"] returns row labelled "viper" as a series, while df.loc[["viper"]] returns it as a dataframe, and df.loc[[False, True]] returns only first row as dataframe
+df.read_csv(...)  := also takes index_col keyword argument to specify label or index of column to use as row labels of df; e.g., df = pd.read_csv("data.csv", index_col="col_name")
+df.mul/add/sub... := these take an additional axis keyword argument, which can be used to adjust alignments (e.g. align a df and series by index (row) or column); but, prefer operators if these adjuments aren't necessary
+df.max/min/sum... := prefer these over python builtins because they are optimized for dataframes
+df.groupby(...)   := this can be chained with aggregations; e.g., df.groupby('grouping column').agg({'aggregating column': 'aggregating function'}), or college.groupby('stabbr').agg({'satmtmid': 'max'}).head(). This syntax handles more complex grouping and aggregation logic; e.g., df.groupby('stabbr').agg({'satmtmid': ['min', 'max'], 'satvrmid': ['min', 'max'], 'ugds': 'mean'}).round(0).head(10)
+convert multiindex := grouping and aggregating by multiple columns can create multi-indexes, which are hard to work with. We can flatten them by renaming the columns and calling reset_index to convert row multi-levels to columns
+df.pivot_table(...) := create a pivot table where the rows are designated by the index arg and columns to pivot on are the columns arg; e.g., emp.pivot_table(index='dept', columns='gender', values='salary', aggfunc='mean').round(-3) 
+pd.crosstab(...)    := creates a crosstabulation, a.k.a the frequency between two variables. Supports relative frequency; e.g., pd.crosstab(index=emp['gender'], columns=emp['race'], normalize='columns').round(2)

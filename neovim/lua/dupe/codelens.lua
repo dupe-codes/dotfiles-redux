@@ -1,5 +1,8 @@
 -- Thanks to @tjdevries:
 -- https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/lua/tj/lsp/codelens.lua
+--
+-- TODO: This isn't work since the switch away from a mason isntalled ocaml lsp to one
+--       install in opam switches
 
 local M = {}
 
@@ -41,6 +44,9 @@ end
 M.refresh_virtlines = function()
   local bufnr = vim.api.nvim_get_current_buf()
   local params = { textDocument = vim.lsp.util.make_text_document_params() }
+
+  -- TODO: The result passed here is empty. What gives?
+
   vim.lsp.buf_request(bufnr, "textDocument/codeLens", params, function(err, result, _, _)
     if err then
       return

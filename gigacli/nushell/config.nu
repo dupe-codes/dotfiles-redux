@@ -188,7 +188,6 @@ $env.config = {
   rm: {
     always_trash: false
   }
-  cd: {}
   table: {
     # options: basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
     mode: light
@@ -560,6 +559,7 @@ alias t = ~/launcher.sh
 alias c = clear
 alias timer = ~/scripts/timer.sh
 alias emacs = emacs -nw
+alias music = ncmpcpp
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell

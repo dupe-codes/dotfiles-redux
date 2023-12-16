@@ -937,5 +937,8 @@
     <application name="discord">
       <decor>no</decor>
     </application>
+    <application name="zotero">
+      <decor>no</decor>
+    </application>
   </applications>
 </openbox_config>

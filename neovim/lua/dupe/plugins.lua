@@ -255,6 +255,12 @@ local plugins = {
     { "Yazeed1s/oh-lucy.nvim" },
     { "oxfist/night-owl.nvim" },
     { "EdenEast/nightfox.nvim" },
+    {
+        "craftzdog/solarized-osaka.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
 
     -- Zig support
     {

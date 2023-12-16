@@ -107,7 +107,7 @@ $env.PATH = (
 
 # CLI tool configurations
 $env.BAT_THEME = "tokyonight_night"
-$env.FZF_DEFAULT_OPTS = "--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+$env.FZF_DEFAULT_OPTS = "--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796" 
 
 $env.NNN_FIFO = "/tmp/nnn.fifo"
 $env.NNN_PLUG = "p:preview-tui"
@@ -119,7 +119,8 @@ $env.RANGER_LOAD_DEFAULT_RC = false
 # Conda/mamba configurations
 $env.CONDA_NO_PROMPT = true
 
-zoxide init nushell | save -f ~/.zoxide.nu
+# TODO: Re-enable this after next zoxide release fixes nushell compatability
+# zoxide init nushell | save -f ~/.zoxide.nu
 
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu

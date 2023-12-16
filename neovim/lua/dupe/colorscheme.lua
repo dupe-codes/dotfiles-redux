@@ -45,6 +45,8 @@ require('tokyonight').setup({
 --vim.cmd.colorscheme 'carbonfox'
 --vim.cmd.colorscheme 'nightfox'
 vim.cmd.colorscheme 'tokyonight-night'
+--vim.cmd.colorscheme 'solarized-osaka'
+
 
 ----------------------------------------------
 -- TODO: These need adjustments

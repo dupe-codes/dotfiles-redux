@@ -65,6 +65,11 @@ search_command() {
     fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
 }
 
+
+# TODO: when inputting task arguments (tags, duration), include list of
+#       options to choose from
+#       Get list of existings tags from timew tags
+#       Have standard durations like 25m, 30m, 45m, 1hr
 task_command() {
     local tags=$1
     local duration=$2
