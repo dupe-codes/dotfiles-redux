@@ -62,7 +62,9 @@
     ~/launcher.sh:                gigacli/launcher.sh
     ~/scripts:                    gigacli/scripts
 
-    # TODO: configure posix-shell
+    # config: posix-shell
+    ~/.wezterm.lua:               posix-cli/.wezterm.lua
+    ~/.xonshrc:                   posix-cli/.xonshrc
 
     # resources
     ~/.icons:                     gigabox/resources/icons
