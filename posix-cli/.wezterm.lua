@@ -14,6 +14,7 @@ config.animation_fps = 1
 
 -- TODO: Maybe switch to another shell (bash, zsh, etc.), xonsh is a
 --       a bit annoying so far
+--       Okay, try out oil shell: https://www.oilshell.org
 config.default_prog = { '/usr/bin/xonsh' }
 
 return config

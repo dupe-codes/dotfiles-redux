@@ -89,7 +89,6 @@ format_conversation() {
 
 dir="~/.config/polybar/blocks/scripts/rofi"
 
-# TODO: This is a big WIP. The running list of TODOs...
 while true; do
     USER_QUERY=$(format_conversation | rofi -theme $dir/chatgpt.rasi -dmenu -p "󰍦 Message ChatGPT")
     [ $? -ne 0 ] && break

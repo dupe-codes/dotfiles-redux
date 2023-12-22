@@ -14,7 +14,8 @@ find_files() | <C-p>
 live_grep() | <leader>fs
 buffers | <leader>fb
 help tags | <leader>fh
-todo comments | <leader>fc
+todo comments | <leader>ft
+clipboard history | <leader>fc
 
 ## buffer
 buffer goto | <leader>1 through to <leader>8

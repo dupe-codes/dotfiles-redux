@@ -281,23 +281,12 @@ local plugins = {
     },
 
     {
-        "jackMort/ChatGPT.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-lua/telescope.nvim",
-        },
-        config = function()
-            require("dupe.configs.chatgpt")
-        end,
-    },
-    {
         "smjonas/inc-rename.nvim",
         config = function()
             require("dupe.configs.inc-rename")
         end,
     },
+
     {
         "simrat39/rust-tools.nvim",
         ft = {"rust"},
@@ -324,7 +313,7 @@ local plugins = {
         end,
     },
 
-    -- notification
+    -- notifications
     {
         "rcarriga/nvim-notify",
         config = function()
@@ -344,6 +333,7 @@ local plugins = {
             require("dupe.configs.swenv")
         end,
     },
+
     -- Symbols outline
     {
         "simrat39/symbols-outline.nvim",
@@ -351,6 +341,7 @@ local plugins = {
             require("dupe.configs.symbols-outline")
         end,
     },
+
     -- Coq proof assistant
     {
         "whonore/Coqtail",
@@ -359,6 +350,7 @@ local plugins = {
         end,
     },
     { "joom/latex-unicoder.vim" },
+
     -- Lean theorem prover
     {
         'Julian/lean.nvim',
@@ -368,6 +360,7 @@ local plugins = {
             'nvim-lua/plenary.nvim',
         }
     },
+
     -- better marks support
     {
         'chentoast/marks.nvim',
@@ -375,6 +368,7 @@ local plugins = {
             require("dupe.configs.marks")
         end,
     },
+
     -- vim motions training
     --{
        --"m4xshen/hardtime.nvim",
@@ -383,6 +377,7 @@ local plugins = {
            --require("dupe.configs.hardtime")
        --end,
     --},
+
     -- markdown rendering
     { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
@@ -390,6 +385,7 @@ local plugins = {
         "xiyaowong/transparent.nvim",
         lazy = false,
     },
+
     -- Yank clipboard
     {
         "AckslD/nvim-neoclip.lua",
@@ -407,7 +403,28 @@ local plugins = {
         version = '^2', -- Recommended
         ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
     },
-}
+
+    -- DB tooling
+    {
+        'kristijanhusak/vim-dadbod-ui',
+        dependencies = {
+            { 'tpope/vim-dadbod', lazy = true },
+            {
+                'kristijanhusak/vim-dadbod-completion',
+                ft = { 'sql', 'mysql', 'plsql' },
+                lazy = true
+            },
+        },
+        cmd = {
+            'DBUI',
+            'DBUIToggle',
+            'DBUIAddConnection',
+            'DBUIFindBuffer',
+        },
+        init = function()
+            require('dupe.configs/dadbod-ui')
+            end,
+        },
+    }
 
 require("lazy").setup(plugins)
-
