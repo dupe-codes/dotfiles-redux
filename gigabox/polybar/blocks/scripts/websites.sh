@@ -13,6 +13,7 @@ SITES=(
     [" Twitch"]="https://www.twitch.tv"
     [" Nerdfonts"]="https://www.nerdfonts.com/cheat-sheet"
     ["󰗃 YouTube"]="https://www.youtube.com"
+    [" imissmycafe"]="https://imissmycafe.com"
 )
 
 dir="~/.config/polybar/blocks/scripts/rofi"

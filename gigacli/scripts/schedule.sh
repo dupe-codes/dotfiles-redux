@@ -1,7 +1,7 @@
 #!/bin/bash
 
 schedules_dir="$HOME/projects/dotfiles-redux/gigacli/scripts/schedules"
-quotes_dir="$HOME/projects/dotfiles-redux/gigacli/scripts/quotes"
+quotes_dir="$HOME/datastore/quotes"
 
 weather_icons=(
     ["Overcast"]="󰖐"
