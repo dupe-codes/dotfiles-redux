@@ -9,6 +9,7 @@ tools=(
     ["task"]=" launch work session:r:tags,r:duration"
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
+    ["schedule"]="󰃭 display today's schedule"
     ["search"]="󰥨 search current dir:"
     ["ncmpcpp"]=" run music player:"
     ["ranger"]=" navigate filesystem:"
@@ -37,6 +38,7 @@ declare -a tool_order=(
     "timer"
     "task"
     "break"
+    "schedule"
     "search"
     "ncmpcpp"
     "ranger"
@@ -58,13 +60,17 @@ declare -A aliases=(
     ["task"]="task_command"
     ["timer"]="timer_command"
     ["break"]="break_command"
+    ["schedule"]="schedule_command"
     # add other aliases as needed
 )
+
+schedule_command() {
+    $HOME/scripts/schedule.sh
+}
 
 search_command() {
     fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
 }
-
 
 # TODO: when inputting task arguments (tags, duration), include list of
 #       options to choose from

@@ -23,3 +23,6 @@ arcade-pop.png
 white-hair-dreaming.png
 guitar-mess.png
 kneeling-gun-gal.jpg
+smiling-wide.png
+pink-stare.png
+glasses.png

@@ -1,0 +1,2 @@
+“The best way to predict the future is to implement it.”
+  — David Heinemeier Hansson
