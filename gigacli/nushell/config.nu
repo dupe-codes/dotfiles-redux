@@ -560,6 +560,8 @@ alias c = clear
 alias timer = ~/scripts/timer.sh
 alias emacs = emacs -nw
 alias music = ncmpcpp
+alias commit = ~/scripts/commit.sh
+alias schedule = ~/scripts/schedule.sh
 
 # github copilot cli aliases
 alias ?? = github-copilot-cli what-the-shell

@@ -10,6 +10,7 @@ tools=(
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
     ["schedule"]="󰃭 display today's schedule"
+    ["commit"]=" (conventionally) commit changes"
     ["search"]="󰥨 search current dir:"
     ["ncmpcpp"]=" run music player:"
     ["ranger"]=" navigate filesystem:"
@@ -39,6 +40,7 @@ declare -a tool_order=(
     "task"
     "break"
     "schedule"
+    "commit"
     "search"
     "ncmpcpp"
     "ranger"
@@ -61,8 +63,13 @@ declare -A aliases=(
     ["timer"]="timer_command"
     ["break"]="break_command"
     ["schedule"]="schedule_command"
+    ["commit"]="commit_command"
     # add other aliases as needed
 )
+
+commit_command() {
+    $HOME/scripts/commit.sh
+}
 
 schedule_command() {
     $HOME/scripts/schedule.sh
