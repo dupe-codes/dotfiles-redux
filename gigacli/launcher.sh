@@ -6,7 +6,7 @@ declare -A background_args
 tools=(
     ["jrnl"]="󱓧 write a journal entry:o:entry"
     ["timew"]=" track time:r:start/stop,r:tags"
-    ["task"]=" launch work session:r:tags,r:duration"
+    ["task"]=" launch work session:"
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
     ["schedule"]="󰃭 display today's schedule"
@@ -79,14 +79,17 @@ search_command() {
     fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
 }
 
-# TODO: when inputting task arguments (tags, duration), include list of
-#       options to choose from
-#       Get list of existings tags from timew tags
-#       Have standard durations like 25m, 30m, 45m, 1hr
 task_command() {
-    local tags=$1
-    local duration=$2
-    timew start $tags; \
+    tags_list=()
+    while IFS= read -r line; do
+        tags_list+=("$line")
+    done < <(timew tags | awk 'NR > 3 {print $1}')
+    durations=("25m" "30m" "45m" "1hr")
+
+    tag=$(gum filter --placeholder "Choose a tag..." --no-strict "${tags_list[@]}")
+    duration=$(gum filter --placeholder "Choose a duration..." --no-strict "${durations[@]}")
+
+    timew start $tag; \
         termdown $duration; \
         timew stop; \
         notify-send "󰁫 Timer" "Completed task: $tags"; \
