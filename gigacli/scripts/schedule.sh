@@ -1,7 +1,8 @@
 #!/bin/bash
 
-schedules_dir="$HOME/projects/dotfiles-redux/gigacli/scripts/schedules"
-quotes_dir="$HOME/datastore/quotes"
+schedules_dir="$HOME/datastore/scheduling/schedules"
+quotes_dir="$HOME/datastore/scheduling/quotes"
+activities_dir="$HOME/datastore/scheduling/activities"
 
 weather_icons=(
     ["Overcast"]="󰖐"
@@ -41,9 +42,24 @@ get_todays_schedule() {
 display_schedule() {
     todays_schedule=$(get_todays_schedule)
     if [[ $todays_schedule != "No schedule found for today." ]]; then
-        echo "$todays_schedule" | gum table -w 10,50 --selected.foreground "#9ece6a" \
+        selected_row=$(\
+            echo "$todays_schedule" \
+            | gum table -w 10,50 --selected.foreground "#9ece6a" \
             --header.foreground "#9d7cd8" \
-            | cut -d ',' -f 1,2
+            | cut -d ',' -f 1,2 \
+            | xargs)
+        if [ ! -z "$selected_row" ]; then
+            selected_activity=$(echo "$selected_row" \
+                | cut -d ',' -f 2 \
+                | awk '{$1=$1};1' \
+                | tr '[:upper:]' '[:lower:]')
+            filename=$(echo "$selected_activity" | tr ' ' '_' | tr -d '\n').md
+            if [[ -f "$activities_dir/$filename" ]]; then
+                glow "$activities_dir/$filename"
+            else
+                echo "No additional information available for $selected_activity."
+            fi
+        fi
     else
         echo $todays_schedule
     fi
