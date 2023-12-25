@@ -593,9 +593,6 @@ source ~/.zoxide.nu
 use ~/.config/nushell/nu_scripts/modules/virtual_environments/conda.nu
 conda activate # always start base conda environment
 
-### Finally, open welcome message! ###
-open $"($env.HOME)/nu-welcome.txt"
-
 # Function to update opam switch environment vars
 def --env opam-switch [] {
   let opam_env = (opam env | lines)
@@ -617,3 +614,6 @@ def --env opam-switch [] {
   echo $env_update
   $env_update | load-env
 }
+
+### Finally, open welcome message! Must be done here at the end ###
+open $"($env.HOME)/nu-welcome.txt"

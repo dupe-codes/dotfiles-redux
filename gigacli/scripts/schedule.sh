@@ -19,7 +19,8 @@ get_weather_icon() {
 
 display_intro() {
     date=$(date "+%A, %B %d, %Y")
-    weather=$(curl -s wttr.in/?format="%C")
+    weather=$(gum spin --show-output --spinner line --title "Loading ..." -- \
+        curl -s wttr.in/?format="%C")
     weather_icon=$(get_weather_icon "$weather")
     quote_file=$(find $quotes_dir -type f | shuf -n 1)
     quote=$(cat "$quote_file")
