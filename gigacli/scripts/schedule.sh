@@ -7,6 +7,7 @@ activities_dir="$HOME/datastore/scheduling/activities"
 weather_icons=(
     ["Overcast"]="󰖐"
     ["Light_rain"]="󰖗"
+    ["Parly_cloudy"]="󰖕"
     # TODO: Add more weather icons
 )
 

@@ -8,6 +8,7 @@ websites=" Visit bookmarked websites"
 colors=" Change polybar colors"
 wallpapers=" Manage favorite wallpapers"
 toggle_safe_eyes=" Toggle safe eyes"
+snooze_safe_eyes=" Snooze safe eyes"
 toggle_redshift=" Toggle redshift"
 toggle_notifications=" Toggle notifications"
 main_monitor_mode=" Turn on main monitor mode"
@@ -23,6 +24,7 @@ options="$calculator\n"\
 "$colors\n"\
 "$wallpapers\n"\
 "$toggle_safe_eyes\n"\
+"$snooze_safe_eyes\n"\
 "$toggle_redshift\n"\
 "$toggle_notifications\n"\
 "$main_monitor_mode\n"\
@@ -66,6 +68,9 @@ case $chosen in
         ;;
     $toggle_safe_eyes)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh
+        ;;
+    $snooze_safe_eyes)
+        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh --snooze
         ;;
     $toggle_redshift)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh
