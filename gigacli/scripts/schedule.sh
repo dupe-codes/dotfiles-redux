@@ -6,11 +6,12 @@ activities_dir="$HOME/datastore/scheduling/activities"
 
 weather_icons=(
     ["Overcast"]="󰖐"
+    ["Light_rain"]="󰖗"
     # TODO: Add more weather icons
 )
 
 get_weather_icon() {
-    local condition="$1"
+    local condition="${1// /_}" # replace spaces with underscores
     if [[ ${weather_icons[$condition]} ]]; then
         echo "${weather_icons[$condition]}"
     else
@@ -25,7 +26,7 @@ display_intro() {
     weather_icon=$(get_weather_icon "$weather")
     quote_file=$(find $quotes_dir -type f | shuf -n 1)
     quote=$(cat "$quote_file")
-    intro_message=" Today is $date.\n\n$weather_icon It's currently $weather.\n\n$quote"
+    intro_message=" Today is $date\n\n$weather_icon Current weather: $weather\n\n$quote"
     echo -e "$intro_message" | gum style --border double --align center \
         --width 50 --border-foreground "#7dcfff" --padding "1"
 }
@@ -55,7 +56,7 @@ display_schedule() {
                 | tr '[:upper:]' '[:lower:]')
             filename=$(echo "$selected_activity" | tr ' ' '_' | tr -d '\n').md
             if [[ -f "$activities_dir/$filename" ]]; then
-                glow "$activities_dir/$filename"
+                glow -p "$activities_dir/$filename"
             else
                 echo "No additional information available for $selected_activity."
             fi
