@@ -159,3 +159,5 @@ remind
 # Email
 neomutt
 
+# scheduling
+at

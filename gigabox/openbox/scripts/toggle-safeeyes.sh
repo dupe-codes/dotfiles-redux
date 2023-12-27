@@ -9,7 +9,7 @@ disable_safeeyes() {
     local is_snoozed=$1
     safeeyes --disable
     if [ "$is_snoozed" = true ]; then
-        notify-send "Safe Eyes" "Snoozed"
+        notify-send "Safe Eyes" "Snoozed for 1 hour"
     else
         notify-send "Safe Eyes" "Disabled"
     fi
@@ -23,8 +23,10 @@ if [[ "$1" == "--snooze" ]]; then
         exit 0
     fi
     disable_safeeyes true
-    # Schedule the enable function to run after 1 hour
-    nohup bash -c "sleep 3600; enable_safeeyes" &
+    # TODO: Clean up path once gigabox + gigacli scripts are consolidated
+    #       and properly linked to ~/scripts
+    echo "~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh" \
+        | at now +1 hours
     exit 0
 fi
 

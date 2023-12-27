@@ -10,6 +10,7 @@ wallpapers=" Manage favorite wallpapers"
 toggle_safe_eyes=" Toggle safe eyes"
 snooze_safe_eyes=" Snooze safe eyes"
 toggle_redshift=" Toggle redshift"
+snooze_redshift=" Snooze redshift"
 toggle_notifications=" Toggle notifications"
 main_monitor_mode=" Turn on main monitor mode"
 two_monitor_mode=" Turn on two monitor mode"
@@ -26,6 +27,7 @@ options="$calculator\n"\
 "$toggle_safe_eyes\n"\
 "$snooze_safe_eyes\n"\
 "$toggle_redshift\n"\
+"$snooze_redshift\n"\
 "$toggle_notifications\n"\
 "$main_monitor_mode\n"\
 "$two_monitor_mode\n"\
@@ -74,6 +76,9 @@ case $chosen in
         ;;
     $toggle_redshift)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh
+        ;;
+    $snooze_redshift)
+        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh --snooze
         ;;
     $toggle_notifications)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-dunst.sh
