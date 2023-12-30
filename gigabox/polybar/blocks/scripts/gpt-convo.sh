@@ -41,7 +41,7 @@ send_query() {
     local messages=$(cat "$CONVO_FILE")
     local data=$(jq -n \
                     --argjson messages "$messages" \
-                    '{"model": "gpt-3.5-turbo", "messages": $messages}')
+                    '{"model": "gpt-4", "messages": $messages}')
 
     local response=$(curl -s -X POST "$API_URL" \
         -H "Content-Type: application/json" \

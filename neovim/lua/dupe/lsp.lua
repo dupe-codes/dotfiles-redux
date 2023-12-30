@@ -135,15 +135,6 @@ lspconfig.lua_ls.setup {
     },
 }
 
--- NOTE: ccls must be installed separate from Mason
---lspconfig.ccls.setup {
-    --on_attach = on_attach,
-    --capabilities = capabilities,
-    --filetypes = { 'cpp', },
---}
-
--- TODO: Figure out if this works with compile_commands.json
---       If it does, then we can remove ccls
 lspconfig.clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,

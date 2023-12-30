@@ -58,6 +58,8 @@ display_schedule() {
             filename=$(echo "$selected_activity" | tr ' ' '_' | tr -d '\n').md
             if [[ -f "$activities_dir/$filename" ]]; then
                 glow -p "$activities_dir/$filename"
+                # also print to stdout
+                glow "$activities_dir/$filename"
             else
                 echo "No additional information available for $selected_activity."
             fi

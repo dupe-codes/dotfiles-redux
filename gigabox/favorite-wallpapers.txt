@@ -28,3 +28,7 @@ pink-stare.png
 glasses.png
 self-embrace.jpeg
 god_iz_dead.jpg
+dream-floral.png
+bubblegum-chill.png
+cyborg-damaged.png
+cool-casual-school.png

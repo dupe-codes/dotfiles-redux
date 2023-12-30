@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.14...3.26)
 
 project(PROJECT_NAME LANGUAGES CXX)
 
-# Export compile commands so that ccls language server can use them
+# Export compile commands so that c language server can use them
 # After running initializing cmake, run `ln -s build/compile_commands.json compile_commands.json`
 # in the project root
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
