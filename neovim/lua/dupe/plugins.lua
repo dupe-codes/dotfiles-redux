@@ -95,12 +95,6 @@ local plugins = {
         end,
     },
     {
-        "windwp/nvim-autopairs",
-        config = function()
-            require("dupe.configs.autopairs")
-        end,
-    },
-    {
         "ThePrimeagen/harpoon",
         config = function()
             require("dupe.configs.harpoon")
@@ -422,9 +416,21 @@ local plugins = {
             'DBUIFindBuffer',
         },
         init = function()
-            require('dupe.configs/dadbod-ui')
-            end,
+            require('dupe.configs.dadbod-ui')
+        end,
+    },
+    {
+        "epwalsh/obsidian.nvim",
+        version = "*",
+        lazy = true,
+        ft = "markdown",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
         },
-    }
+        config = function()
+            require("dupe.configs.obsidian")
+        end,
+    },
+}
 
 require("lazy").setup(plugins)

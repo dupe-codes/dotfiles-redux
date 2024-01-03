@@ -22,6 +22,7 @@ get_weather_icon() {
 
 display_intro() {
     date=$(date "+%A, %B %d, %Y")
+    # TODO: Update to just show full wttr.in output; then remove get_weather_icon
     weather=$(gum spin --show-output --spinner line --title "Loading ..." -- \
         curl -s wttr.in/?format="%C")
     weather_icon=$(get_weather_icon "$weather")
