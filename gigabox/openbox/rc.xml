@@ -430,6 +430,11 @@
         <command>~/.config/polybar/blocks/scripts/util-scripts.sh</command>
       </action>
     </keybind>
+    <keybind key="A-c">
+      <action name="Execute">
+        <command>~/.config/polybar/blocks/scripts/calculator.sh</command>
+      </action>
+    </keybind>
 
     <!-- Cycle through windows -->
     <keybind key="A-C-q">

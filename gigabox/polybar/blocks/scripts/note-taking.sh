@@ -14,5 +14,5 @@ if [ -z "$INPUT_TEXT" ]; then
     exit 0
 fi
 
-echo -e "\n- $INPUT_TEXT" >> "$NOTE_PATH"
+echo -e "- $INPUT_TEXT" >> "$NOTE_PATH"
 notify-send "Note-taking" "Note added to $TODAYS_NOTE"

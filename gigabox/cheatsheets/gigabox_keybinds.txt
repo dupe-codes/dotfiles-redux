@@ -2,6 +2,7 @@
 <leader> esc := open power menu
 <leader> space := open app launcher
 <leader> p := open screenshotting menu
+<leader> c := open calculator
 <leader> shift tab := view clipboard history
 <leader> shift [w a s d ...] := reposition window
 <leader> shift [c f] := center/fullscreen window
