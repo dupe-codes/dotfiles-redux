@@ -43,3 +43,6 @@ capsule_machine.png
 pistol-demon.png
 deconstructed-face.png
 graffiti_stroll.png
+ruby-haired.png
+hilda-and-marianne.png
+catherine.png

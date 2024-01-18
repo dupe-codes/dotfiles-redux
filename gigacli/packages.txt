@@ -26,6 +26,7 @@ ripgrep@cargo
 bottom@cargo
 carapace@cargo
 wthrr@cargo
+cargo-update@cargo
 
 yewtube@pip
 chatblade@pip
