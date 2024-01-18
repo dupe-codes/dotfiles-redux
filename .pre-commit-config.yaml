@@ -1,5 +1,5 @@
 repos:
-  - repo: https://github.com/njdup/devmoji-precommit
+  - repo: https://github.com/dupe-codes/devmoji-precommit
     rev: v1.3.0
     hooks:
     - id: devmoji-precommit
