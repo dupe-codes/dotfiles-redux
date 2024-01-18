@@ -36,3 +36,4 @@ wakatime@pip
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go
 
+@githubnext/github-copilot-cli@npm

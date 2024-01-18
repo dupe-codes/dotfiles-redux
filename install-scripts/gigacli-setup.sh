@@ -6,6 +6,7 @@ install_packages_from_file() {
     pip_pkgs=""
     cargo_pkgs=""
     go_pkgs=""
+    npm_pkgs=""
 
     while IFS= read -r line
     do
@@ -21,6 +22,8 @@ install_packages_from_file() {
             cargo_pkgs+=" ${line%@cargo}"
         elif [[ $line == *@go ]]; then
             go_pkgs+=" ${line%@go}"
+        elif [[ $line == *@npm ]]; then
+            npm_pkgs+=" ${line%@npm}"
         else
             pacman_pkgs+=" $line"
         fi
@@ -44,6 +47,11 @@ install_packages_from_file() {
     if [ -n "$go_pkgs" ]; then
         echo "Installing packages with go..."
         go install $go_pkgs
+    fi
+
+    if [ -n "$npm_pkgs" ]; then
+        echo "Installing packages with npm..."
+        npm install -g $npm_pkgs
     fi
 }
 
