@@ -41,7 +41,7 @@
   "nerdcommenter": { "branch": "master", "commit": "e361a44230860d616f799a337bc58f5218ab6e9c" },
   "night-owl.nvim": { "branch": "main", "commit": "5106bb2d420bb4c6867cd577f9413de039052275" },
   "nightfox.nvim": { "branch": "main", "commit": "a4bc2bd3d7ff1770ae104068458d3b0b8f8ec00d" },
-  "null-ls.nvim": { "branch": "main", "commit": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" },
+  "none-ls.nvim": { "branch": "main", "commit": "0258d435e4e3354f81bd3d124676b9991c0012fd" },
   "nvim-cmp": { "branch": "main", "commit": "538e37ba87284942c1d76ed38dd497e54e65b891" },
   "nvim-dap": { "branch": "master", "commit": "9adbfdca13afbe646d09a8d7a86d5d031fb9c5a5" },
   "nvim-dap-python": { "branch": "master", "commit": "091e4ae00a12085f9ed4200a3cd04af7179b8a23" },

@@ -21,14 +21,16 @@ local plugins = {
     { "hrsh7th/vim-vsnip" },
     { "L3MON4D3/LuaSnip" },
     { "saadparwaiz1/cmp_luasnip" },
+
     -- configure linting with null-ls
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         ft = {"python"},
         config = function()
-            require("dupe.configs.null-ls")
+            require("dupe.configs.none-ls")
         end,
     },
+
     -- code actions with lightbulb and menu
     {
         "kosayoda/nvim-lightbulb",

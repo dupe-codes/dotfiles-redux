@@ -5,6 +5,7 @@ format      = """$conda$username$directory$git_branch$git_status$cmd_duration
 [](bold yellow)[](bold yellow)[](bold yellow) """
 
 add_newline = true
+command_timeout = 1000
 
 [character]
 success_symbol = '[➜](bold green)'

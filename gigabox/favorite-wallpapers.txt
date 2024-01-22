@@ -46,3 +46,5 @@ graffiti_stroll.png
 ruby-haired.png
 hilda-and-marianne.png
 catherine.png
+smoking-boy.png
+sunset-city.png
