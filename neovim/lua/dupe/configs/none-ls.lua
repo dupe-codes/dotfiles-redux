@@ -1,10 +1,18 @@
-local null_lus = require('null-ls');
+local null_ls = require('null-ls');
 
--- TODO: Potentially choose one out of: ruff, mypy
-null_lus.setup({
+-- set mypy to use python exe from current virtualenv
+local python_env = require('swenv.api').get_current_venv()
+local mypy_config = null_ls.builtins.diagnostics.mypy
+if python_env then
+    mypy_config = mypy_config.with({
+        extra_args = { '--python-executable', python_env.path .. '/bin/python' }
+    })
+end
+
+null_ls.setup({
     sources = {
-        null_lus.builtins.diagnostics.mypy,
-        null_lus.builtins.diagnostics.ruff,
+        mypy_config,
+        null_ls.builtins.diagnostics.ruff,
     },
 })
 
