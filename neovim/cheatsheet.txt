@@ -17,6 +17,25 @@ help tags | <leader>fh
 todo comments | <leader>ft
 clipboard history | <leader>fc
 
+## oil
+Open oil | <leader>ff
+actions.show_help | g?
+actions.select | <CR>
+actions.select_vsplit | <C-s>
+actions.select_split | <C-h>
+actions.select_tab | <C-t>
+actions.preview | <C-p>
+actions.close | <C-c>
+actions.refresh | <C-l>
+actions.parent | -
+actions.open_cwd | _
+actions.cd | `
+actions.tcd | ~
+actions.change_sort | gs
+actions.open_external | gx
+actions.toggle_hidden | g.
+actions.toggle_trash | g\
+
 ## buffer
 buffer goto | <leader>1 through to <leader>8
 buffernext | <leader>.
