@@ -5,7 +5,7 @@ key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
 
 local keymap = {
     f = {
-        name = "Find",
+        name = "Find & files",
         s = {
             ':lua require"telescope.builtin".live_grep()<CR>',
             "Fuzzy search"

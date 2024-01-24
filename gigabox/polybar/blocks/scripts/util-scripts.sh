@@ -1,7 +1,7 @@
 # Configure options
 calculator=" Use calculator"
 cheatsheets="󰎞 View cheatsheets"
-note=" Take a note"
+note=" Take a quick note"
 gpt=" Message ChatGPT"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
@@ -51,7 +51,7 @@ case $chosen in
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/cheatsheets.sh
         ;;
     $note)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/note-taking.sh
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/quick-note.sh
         ;;
     $gpt)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/gpt-convo.sh

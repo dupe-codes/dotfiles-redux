@@ -433,6 +433,14 @@ local plugins = {
             require("dupe.configs.obsidian")
         end,
     },
+    {
+        "stevearc/oil.nvim",
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require("dupe.configs.oil")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
