@@ -64,7 +64,9 @@
 
     # config: posix-shell
     ~/.wezterm.lua:               posix-cli/.wezterm.lua
-    ~/.xonshrc:                   posix-cli/.xonshrc
+    ~/.zshrc:                     posix-cli/.zshrc
+    ~/.condarc:                   posix-cli/.condarc
+    ~/posix-welcome.txt:          posix-cli/posix-welcome.txt
 
     # resources
     ~/.icons:                     gigabox/resources/icons

@@ -543,7 +543,6 @@ source ~/secrets.nu
 #### configure aliases ####
 
 alias code-i = code-insiders
-alias nnn = nnn -ea -P p
 alias r = ranger
 alias gpt = chatblade -c 3.5 -s
 alias pomodoro = arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"

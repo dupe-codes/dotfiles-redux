@@ -48,3 +48,5 @@ hilda-and-marianne.png
 catherine.png
 smoking-boy.png
 sunset-city.png
+elegance.png
+arcade-guns.png

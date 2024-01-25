@@ -107,7 +107,7 @@ $env.PATH = (
 
 # CLI tool configurations
 $env.BAT_THEME = "tokyonight_night"
-$env.FZF_DEFAULT_OPTS = "--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796" 
+$env.FZF_DEFAULT_OPTS = "--color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
 $env.SHELL = "/usr/bin/nu"
 $env.EDITOR = "nvim"
