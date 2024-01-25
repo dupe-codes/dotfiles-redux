@@ -102,7 +102,6 @@ local servers = {
     'pyright',
     'rust_analyzer',
     'zls',
-    'ocamllsp',
     'racket_langserver',
 }
 for _, lsp in ipairs(servers) do
@@ -112,6 +111,7 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+
 require('neodev').setup {
     -- pass types to dap UI
     library = {
@@ -120,6 +120,14 @@ require('neodev').setup {
             "neotest",
         },
         types = true
+    },
+}
+
+lspconfig.ocamllsp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        codelens = { enable = true },
     },
 }
 
