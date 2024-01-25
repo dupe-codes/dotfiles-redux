@@ -1,65 +1,74 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="amuse"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting history)
-source $ZSH/oh-my-zsh.sh
+export SHELL="/usr/bin/zsh"
 
-# Completions settings
-# --------------------
-# CASE_SENSITIVE="true"
-# HYPHEN_INSENSITIVE="true"
+# install plugins
+source $HOME/.config/zsh/antigen.zsh
 
-# source z completions
-. ~/z.sh
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle atuinsh/atuin@main
+antigen apply
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/dupe/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/dupe/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/dupe/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/dupe/mambaforge/bin:$PATH"
+prepend_path_if_not_exists() {
+    if [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="$1:$PATH"
     fi
-fi
-unset __conda_setup
+}
 
-if [ -f "/Users/dupe/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/dupe/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
+prepend_path_if_not_exists "/usr/local/bin"
+prepend_path_if_not_exists "$HOME/.local/bin"
+prepend_path_if_not_exists "$HOME/.cargo/bin"
+prepend_path_if_not_exists "$HOME/Library/Application Support/carapace/bin"
+prepend_path_if_not_exists "$HOME/go/bin"
+prepend_path_if_not_exists "$HOME/.opam/default/bin"
+prepend_path_if_not_exists "$HOME/.elan/bin"
+prepend_path_if_not_exists "$HOME/.config/emacs/bin"
+prepend_path_if_not_exists "$HOME/.ghcup/bin"
+prepend_path_if_not_exists "$HOME/.cabal/bin"
+export PATH
 
 export EDITOR="nvim"
-
-alias nnn="tmux new -s nnn_session \"nnn -ea -P p\""
-export NNN_FIFO=/tmp/nnn.fifo
-export NNN_PLUG='p:preview-tui'
-export NNN_ICONLOOKUP=1
-
 eval "$(github-copilot-cli alias -- "$0")"
-
-alias cpp="g++-13"
-alias cmake_init="CC=clang CXX=g++-13 cmake .."
-
-# arttime pomodoro command
-alias pomodoro="arttime --nolearn -t \"Get things done bruv\" -a desktop -g \"25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2\""
-
-# Source secrets env vars
 source $HOME/secrets.sh
 
-# alias for chatblade gpt usage
-# TODO: Add saved developer assistant prompt
-alias gpt="chatblade -c 3.5 -s"
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+giga() {
+    if tmux list-sessions | grep -q "gigacli:"; then
+        tmux attach-session -t gigacli
+    else
+        windows=("code" "terminal" "timer" "music")
+        echo "Creating giga tmux session ..."
+
+        tmux new-session -s gigacli -d -n "${windows[1]}"
+        gum spin --spinner dot --title "Creating window '${windows[1]}' ..." -- sleep 0.8
+
+        for window in ${windows[@]:1}; do
+            tmux new-window -t gigacli -n "$window"
+            gum spin --spinner dot --title "Creating window '$window' ..." -- sleep 0.8
+        done
+
+        tmux attach-session -t gigacli:1
+    fi
+}
 
 # Welcome message :]
 echo -e "$(cat $HOME/posix-welcome.txt)"
 
-# Update PATH for riscv toolchain (OS course)
-PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+export CONDA_NO_PROMPT=true
 
-# Add fzf key bindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-alias fsearch="fzf --preview \"bat --color=always --style=header,grid --line-range :500 {}\""
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dupe/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dupe/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/dupe/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dupe/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
-export XDG_CONFIG_HOME="$HOME/.config"

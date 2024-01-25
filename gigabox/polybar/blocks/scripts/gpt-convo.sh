@@ -87,6 +87,16 @@ format_conversation() {
     | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
 }
 
+save_conversation() {
+    CURRENT_PROMPT=$(jq -r '[.[] | select(.role == "system")][-1].content // "None" | split(": ")[1]' "$CONVO_FILE")
+    ROLE_HEADER="Current role prompt: $CURRENT_PROMPT"
+    echo "$ROLE_HEADER"
+
+    jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" \
+    | sed 's/USER:/\n-----------------------\nYou:/g' \
+    | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
+}
+
 dir="~/.config/polybar/blocks/scripts/rofi"
 
 while true; do
@@ -102,7 +112,7 @@ while true; do
         TIMESTAMP=$(date +"%Y-%m-%d-%H-%M-%S")
         UUID=$(uuidgen)
         SAVE_FILE="$HOME/datastore/chatgpt/convo-${TIMESTAMP}-${UUID}.txt"
-        format_conversation > "$SAVE_FILE"
+        save_conversation > "$SAVE_FILE"
         notify-send "ChatGPT" "Conversation saved to $SAVE_FILE"
         continue
     fi

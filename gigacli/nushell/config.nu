@@ -571,7 +571,7 @@ def search [] {
   ^fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | ^xargs nvim
 }
 
-def tm [] {
+def giga [] {
     if (tmux list-sessions | str contains "gigacli:") {
         tmux attach-session -t gigacli
     } else {
@@ -589,6 +589,7 @@ def tm [] {
 }
 
 source ~/.zoxide.nu
+source ~/.local/share/atuin/init.nu
 
 use ~/.config/nushell/nu_scripts/modules/virtual_environments/conda.nu
 conda activate # always start base conda environment

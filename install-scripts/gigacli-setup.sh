@@ -77,3 +77,8 @@ curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | 
 echo 'Installing doom emacs...'
 git clone https://github.com/hlissner/doom-emacs $HOME/.emacs.d
 $HOME/.emacs.d/bin/doom install
+
+echo 'Setting up atuin...'
+mkdir -p ~/.local/share/atuin/
+atuin init nu > ~/.local/share/atuin/init.nu
+

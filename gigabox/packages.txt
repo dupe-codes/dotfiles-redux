@@ -123,6 +123,7 @@ noto-fonts
 noto-fonts-emoji
 catppuccin-macchiato-cursors@yay
 font-manager
+gucharmap
 
 # Bluetooth & peripherals
 bluez
