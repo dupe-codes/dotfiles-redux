@@ -3,7 +3,7 @@ vim.g.maplocalleader = '  '
 
 local key_mapper = require('dupe.util').key_mapper
 
-    -- Unmap arrow keys
+-- Unmap arrow keys
 key_mapper('', '<up>', '<nop>')
 key_mapper('', '<down>', '<nop>')
 key_mapper('', '<left>', '<nop>')
@@ -32,4 +32,3 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 
 -- Keymap to replace in file text at current cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
