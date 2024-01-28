@@ -1,5 +1,0 @@
-# TODO: Migrate development packages from main packages.txt
-#       into this file
-
-# databases
-sqlite

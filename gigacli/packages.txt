@@ -1,3 +1,6 @@
+# TODO: Migrate dev tooling packages from gigabox/packages.txt
+#       to here
+
 atuin
 fd
 nushell
@@ -15,6 +18,7 @@ htop
 glow
 cloc
 timew
+sqlite
 
 bat@cargo
 coreutils@cargo
@@ -33,6 +37,7 @@ yewtube@pip
 chatblade@pip
 termdown@pip
 wakatime@pip
+pgcli@pip
 
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go
