@@ -20,7 +20,10 @@
       description: Link resources that require sudo powers
 
     - command: sh ./install-scripts/gigacli-setup.sh
-      description: Install packages and configure gigacli
+      description: Install packages for and configure gigacli
+
+    - command: sh ./install-scripts/posix-cli-setup.sh
+      description: Install packages for and configure the posix cli
 
 - create:
     - ~/screenshots
@@ -72,6 +75,7 @@
     ~/.icons:                     gigabox/resources/icons
     ~/.fonts:                     gigabox/resources/fonts
     ~/sounds:                     gigabox/resources/sounds
+    ~/Music:                      gigabox/resources/music
     ~/.themes:                    gigabox/themes
 
     # tools
