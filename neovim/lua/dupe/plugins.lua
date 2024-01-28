@@ -422,18 +422,6 @@ local plugins = {
         end,
     },
     {
-        "epwalsh/obsidian.nvim",
-        version = "*",
-        lazy = true,
-        ft = "markdown",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        config = function()
-            require("dupe.configs.obsidian")
-        end,
-    },
-    {
         "stevearc/oil.nvim",
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
