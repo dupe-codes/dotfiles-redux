@@ -1,3 +1,4 @@
+
 require("zen-mode").setup({
     plugins = {
         tmux = { enabled = true, },
@@ -7,5 +8,5 @@ require("zen-mode").setup({
     end
 })
 
-vim.keymap.set('n', '<leader>zz', '<cmd>:ZenMode<cr>')
+vim.keymap.set('n', '<leader>zen', '<cmd>:ZenMode<cr>')
 

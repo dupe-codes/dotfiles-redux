@@ -109,7 +109,10 @@ open quickfix | <leader>xq
 open lsp references | gR
 
 ## zen-mode
-toggle zen mode | <leader>zz
+toggle zen mode | <leader>zen
+
+## databases
+open databases ui | <leader>zo
 
 ## chatgpt
 explain code | v, <C-e>
