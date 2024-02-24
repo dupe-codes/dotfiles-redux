@@ -51,3 +51,5 @@ sunset-city.png
 elegance.png
 arcade-guns.png
 boy-n-girl.png
+perfect-blue.png
+chill-drive.png
