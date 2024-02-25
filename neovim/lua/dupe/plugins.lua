@@ -85,13 +85,6 @@ local plugins = {
 
     -- stats tracking
     { "wakatime/vim-wakatime", lazy = false },
-    {
-        "https://gitlab.com/code-stats/code-stats-vim.git",
-        lazy = false,
-        config = function()
-            require("dupe.configs.code-stats")
-        end,
-    },
 
     {
         "mhinz/vim-startify",
