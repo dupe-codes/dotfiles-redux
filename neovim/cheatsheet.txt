@@ -14,8 +14,11 @@ find_files() | <C-p>
 live_grep() | <leader>fs
 buffers | <leader>fb
 help tags | <leader>fh
-todo comments | <leader>ft
 clipboard history | <leader>fc
+
+## todo comments
+see todos in current file | <leader>xt
+search todo comments with telescope | <leader>ft
 
 ## oil
 Open oil | <leader>ff
