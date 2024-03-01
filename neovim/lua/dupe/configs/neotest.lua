@@ -1,4 +1,3 @@
--- TODO: Figure out test debugging capabilities
 require("neotest").setup({
     adapters = {
         require("neotest-python")({
@@ -25,6 +24,10 @@ local keymap = {
         s = {
             "<cmd>lua require('neotest').summary.toggle()<CR>",
             "Toggle test summary"
+        },
+        d = {
+            "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
+            "Run nearest test with debugger"
         },
     }
 }

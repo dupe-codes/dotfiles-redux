@@ -1,4 +1,4 @@
-## general
+## generalcheat
 open split view pane (horizontal) | <C-w> s
 open split view pane (vertical) | <C-w> v
 move between open panes | <leader>h, <leader>j, <leader>k, <leader>l
@@ -117,14 +117,9 @@ toggle zen mode | <leader>zen
 ## databases
 open databases ui | <leader>zo
 
-## chatgpt
-explain code | v, <C-e>
-add tests | v, <C-t>
-edit with instructions | v, <C-i>
-open chat | <C-g>
-
 ## neotest
 run closest test | <leader>tr
+run closest with debugging | <leader>td
 run all tests | <leader>ta
 toggle test summary pane | <leader>ts
 
