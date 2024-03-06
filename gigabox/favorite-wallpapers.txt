@@ -56,3 +56,6 @@ chill-drive.png
 plugged-in-power.png
 hair-tie.png
 blue-peace.png
+mage-girl.png
+masked-peace-sign.png
+monster-puppets.png
