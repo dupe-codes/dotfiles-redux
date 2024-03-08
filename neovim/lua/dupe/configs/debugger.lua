@@ -118,7 +118,9 @@ table.insert(dap.configurations.python, {
     type = "python",
     request = "launch",
     name = "Run Django server",
-    program = vim.fn.getcwd() .. "/" .. find_django_manage_file(),
+    program = function()
+      return vim.fn.getcwd() .. "/" .. find_django_manage_file()
+    end,
     args = { "runserver", "0.0.0.0:8000", "--noreload" },
 })
 
