@@ -59,3 +59,4 @@ blue-peace.png
 mage-girl.png
 masked-peace-sign.png
 monster-puppets.png
+grainy-downer.png

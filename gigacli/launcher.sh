@@ -7,7 +7,7 @@ tools=(
     ["jrnl"]="󱓧 write a journal entry:o:entry"
     ["timew"]=" track time:r:start/stop,r:tags"
     ["task"]=" launch work session:"
-    ["task-log"]=" log past task:"
+    ["log-task"]=" log past task:"
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
     ["schedule"]="󰃭 display today's schedule"
@@ -39,7 +39,7 @@ declare -a tool_order=(
     "timew"
     "timer"
     "task"
-    "task-log"
+    "log-task"
     "break"
     "schedule"
     "commit"
@@ -62,7 +62,7 @@ declare -a tool_order=(
 declare -A aliases=(
     ["search"]="search_command"
     ["task"]="task_command"
-    ["task-log"]="task_log"
+    ["log-task"]="log_task"
     ["timer"]="timer_command"
     ["break"]="break_command"
     ["schedule"]="schedule_command"
@@ -99,7 +99,7 @@ task_command() {
         paplay ~/sounds/positive-notification.wav &
 }
 
-task_log() {
+log_task() {
     tags_list=()
     while IFS= read -r line; do
         tags_list+=("$line")
