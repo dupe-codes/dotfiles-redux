@@ -7,6 +7,7 @@ tools=(
     ["jrnl"]="󱓧 write a journal entry:o:entry"
     ["timew"]=" track time:r:start/stop,r:tags"
     ["task"]=" launch work session:"
+    ["task-log"]=" log past task:"
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
     ["schedule"]="󰃭 display today's schedule"
@@ -38,6 +39,7 @@ declare -a tool_order=(
     "timew"
     "timer"
     "task"
+    "task-log"
     "break"
     "schedule"
     "commit"
@@ -60,6 +62,7 @@ declare -a tool_order=(
 declare -A aliases=(
     ["search"]="search_command"
     ["task"]="task_command"
+    ["task-log"]="task_log"
     ["timer"]="timer_command"
     ["break"]="break_command"
     ["schedule"]="schedule_command"
@@ -94,6 +97,20 @@ task_command() {
         timew stop; \
         notify-send "󰁫 Timer" "Completed task: $tags"; \
         paplay ~/sounds/positive-notification.wav &
+}
+
+task_log() {
+    tags_list=()
+    while IFS= read -r line; do
+        tags_list+=("$line")
+    done < <(timew tags | awk 'NR > 3 {print $1}')
+
+    tag=$(gum filter --placeholder "Choose a tag finished task..." --no-strict "${tags_list[@]}")
+    start_time=$(gum input --placeholder "Enter start datetime (e.g., 2024-03-01T10:00)")
+    end_time=$(gum input --placeholder "Enter end datetime (e.g., 2024-03-01T11:00)")
+
+    timew track "$tag" from "$start_time" to "$end_time"
+    notify-send "Timewarrior" "Logged past task: $tag from $start_time to $end_time"
 }
 
 timer_command() {
