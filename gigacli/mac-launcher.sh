@@ -3,7 +3,11 @@
 # Version of the cli launcher that works on macOS
 #
 # The original version is incompatible because macOS's verson
-# of bash does not support associative arrays.
+# of bash does not support associative arrays. We thus use zsh,
+# which has different syntax.
+#
+# We also need to swap out the tools used to send notifications
+# and play sounds
 
 typeset -A tools
 typeset -A background_args
