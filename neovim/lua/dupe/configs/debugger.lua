@@ -105,6 +105,23 @@ local install_root_dir = vim.fn.stdpath "data" .. "/mason"
 local debugpy_path = install_root_dir .. "/packages/debugpy/venv/bin/python"
 require("dap-python").setup(debugpy_path)
 
+function find_django_manage_file()
+  -- search for manage.py in current directory and all subdirectories
+  local manage_files = vim.fn.globpath(".", "**/manage.py", false, true)
+  if manage_files == nil or #manage_files == 0 then
+      return ""
+  end
+  return manage_files[1]
+end
+
+table.insert(dap.configurations.python, {
+    type = "python",
+    request = "launch",
+    name = "Run Django server",
+    program = vim.fn.getcwd() .. "/" .. find_django_manage_file(),
+    args = { "runserver", "0.0.0.0:8000", "--noreload" },
+})
+
 -- Rust adapter
 -- DAP settings from https://github.com/simrat39/rust-tools.nvim#a-better-debugging-experience
 -- config: https://github.com/simrat39/rust-tools.nvim/blob/master/lua/rust-tools/dap.lua
