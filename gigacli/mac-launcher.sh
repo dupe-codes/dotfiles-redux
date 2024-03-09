@@ -113,9 +113,10 @@ log_task() {
         tags_list+=("$line")
     done < <(timew tags | awk 'NR > 3 {print $1}')
 
+    today=$(date "+%Y-%m-%d")
     tag=$(gum filter --placeholder "Choose a tag finished task..." --no-strict "${tags_list[@]}")
-    start_time=$(gum input --placeholder "Enter start datetime (e.g., 2024-03-01T10:00)")
-    end_time=$(gum input --placeholder "Enter end datetime (e.g., 2024-03-01T11:00)")
+    start_time=$(gum input --prompt "Start time: " --value "${today}T")
+    end_time=$(gum input --prompt "End time: " --value "${today}T")
 
     timew track "$tag" from "$start_time" to "$end_time"
     osascript -e \
