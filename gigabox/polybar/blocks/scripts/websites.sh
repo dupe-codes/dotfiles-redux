@@ -14,6 +14,7 @@ SITES=(
     [" Nerdfonts"]="https://www.nerdfonts.com/cheat-sheet"
     ["󰗃 YouTube"]="https://www.youtube.com"
     [" imissmycafe"]="https://imissmycafe.com"
+    [" HuggingFace Papers"]="https://huggingface.co/papers"
 )
 
 dir="~/.config/polybar/blocks/scripts/rofi"
