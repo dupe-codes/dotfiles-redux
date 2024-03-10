@@ -61,6 +61,7 @@ alias emacs='emacs -nw'
 alias music='ncmpcpp'
 alias commit='~/scripts/commit.sh'
 alias schedule='~/scripts/schedule.sh'
+alias ls=ll
 
 search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim

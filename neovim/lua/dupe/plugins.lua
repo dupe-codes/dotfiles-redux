@@ -383,6 +383,9 @@ local plugins = {
     {
         "xiyaowong/transparent.nvim",
         lazy = false,
+        config = function()
+            require('dupe.configs.transparent')
+        end,
     },
 
     -- Yank clipboard

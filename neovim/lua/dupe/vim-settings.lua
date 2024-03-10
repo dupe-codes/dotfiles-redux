@@ -63,7 +63,11 @@ vim.cmd("set softtabstop=2")         -- see multiple spaces as tabstops so <BS> 
 vim.cmd("set scrolloff=8")           -- keep 8 lines above and below the cursor
 vim.cmd("set cmdheight=0")           -- hide command line
 vim.cmd("syntax on")
-vim.cmd("set cursorline")            -- highlight current line
+
+-- highlight current line
+-- TODO: figure out why this isn't working
+hl(0, "CursorLine", { link = 'PMenu' })
+vim.cmd("set cursorline")
 
 -- Setup path to include mason installed packages
 vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. ":" .. vim.env.PATH

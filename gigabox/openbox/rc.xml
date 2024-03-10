@@ -936,7 +936,7 @@
     <application name="kitty">
       <decor>no</decor>
     </application>
-    <application name="wezterm">
+    <application name="org.wezfurlong.wezterm">
       <decor>no</decor>
     </application>
     <application name="zulip">
