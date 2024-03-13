@@ -60,3 +60,5 @@ mage-girl.png
 masked-peace-sign.png
 monster-puppets.png
 grainy-downer.png
+elegant-blue-white.jpeg
+slanted-swag.jpg

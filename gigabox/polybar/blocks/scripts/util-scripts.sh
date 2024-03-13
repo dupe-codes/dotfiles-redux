@@ -2,6 +2,7 @@
 calculator=" Use calculator"
 cheatsheets="󰎞 View cheatsheets"
 note=" Take a quick note"
+task=" Add a task to the quest log"
 gpt=" Message ChatGPT"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
@@ -19,6 +20,7 @@ laptop_mode=" Turn on laptop mode"
 options="$calculator\n"\
 "$cheatsheets\n"\
 "$note\n"\
+"$task\n"\
 "$gpt\n"\
 "$clipboard\n"\
 "$websites\n"\
@@ -52,6 +54,9 @@ case $chosen in
         ;;
     $note)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/quick-note.sh
+        ;;
+    $task)
+        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/task.sh
         ;;
     $gpt)
         ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/gpt-convo.sh
