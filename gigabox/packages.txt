@@ -87,18 +87,15 @@ emacs-nativecomp
 kitty
 wezterm
 
-# Calendar utility
-orage@yay
-
 # Clipboard manager
 parcellite
 xclip
 
 # Docs & images
-viewnior
 ristretto
 gimp
 inkscape
+sioyek@yay
 zathura
 zathura-pdf-mupdf
 zotero@yay

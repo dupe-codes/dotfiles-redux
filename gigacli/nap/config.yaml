@@ -1,4 +1,4 @@
-home: ~/.nap
+home: ~/datastore/code
 default_language: go
 theme: catppuccin-macchiato
 
