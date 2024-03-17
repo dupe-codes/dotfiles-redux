@@ -99,6 +99,8 @@ local plugins = {
             require("dupe.configs.glance")
         end,
     },
+
+    -- Harpoon 
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -107,6 +109,14 @@ local plugins = {
             require("dupe.configs.harpoon2")
         end,
     },
+    {
+        "letieu/harpoon-lualine",
+        dependencies = {
+            { "ThePrimeagen/harpoon", branch = "harpoon2", }
+        },
+    },
+    -- End Harpoon
+
     {
         "mbbill/undotree",
         config = function()

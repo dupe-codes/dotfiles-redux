@@ -19,6 +19,7 @@
   "glance.nvim": { "branch": "master", "commit": "8ed5cf3b3b1231ea696d88c9efd977027429d869" },
   "glow.nvim": { "branch": "main", "commit": "238070a686c1da3bccccf1079700eb4b5e19aea4" },
   "harpoon": { "branch": "harpoon2", "commit": "a38be6e0dd4c6db66997deab71fc4453ace97f9c" },
+  "harpoon-lualine": { "branch": "master", "commit": "4e08b6a41430e2a7be562bcc132d281a299bbfd8" },
   "haskell-tools.nvim": { "branch": "master", "commit": "92e097c6832405fb64e4c44a7ce8bebe7836cae6" },
   "iceberg.vim": { "branch": "master", "commit": "e01ac08c2202e7544531f4d806f6893539da6471" },
   "inc-rename.nvim": { "branch": "main", "commit": "6f9b5f9cb237e12935144cdc535322b8c93c1b25" },

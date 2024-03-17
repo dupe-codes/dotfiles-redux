@@ -61,7 +61,12 @@ require('lualine').setup {
             color = { fg = colors.white, bg = colors.grey },
             separator = { left = "", right = "" },
             path = 4,
-          }
+          },
+          {
+            "harpoon2",
+            --color = { fg = colors.white, bg = colors.grey },
+            --separator = { left = "|", right = "" },
+          },
         },
         lualine_x = {},
         lualine_y = { "filetype", "progress" },
