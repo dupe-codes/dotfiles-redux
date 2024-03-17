@@ -1,0 +1,27 @@
+local harpoon = require("harpoon")
+local notify = require("notify")
+
+harpoon:setup({
+    settings = {
+        save_on_toggle = true
+    }
+})
+
+vim.keymap.set("n", "<leader>a", function()
+    harpoon:list():append()
+    notify("📌 Added harpoon mark to current file")
+end)
+
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+vim.keymap.set("n", "<localleader>1", function() harpoon:list():select(1) end)
+vim.keymap.set("n", "<localleader>2", function() harpoon:list():select(2) end)
+vim.keymap.set("n", "<localleader>3", function() harpoon:list():select(3) end)
+vim.keymap.set("n", "<localleader>4", function() harpoon:list():select(4) end)
+vim.keymap.set("n", "<localleader>5", function() harpoon:list():select(5) end)
+vim.keymap.set("n", "<localleader>6", function() harpoon:list():select(6) end)
+
+
+-- Toggle previous & next buffers stored within Harpoon list
+vim.keymap.set("n", "<C-j>", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<C-k>", function() harpoon:list():next() end)
