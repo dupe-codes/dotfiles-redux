@@ -32,3 +32,7 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 
 -- Keymap to replace in file text at current cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- open links
+-- nnoremap gx <CMD>execute '!xdg-open ' .. shellescape(expand('<cfile>'), v:true)<CR>
+vim.keymap.set('n', 'gx', [[:execute '!xdg-open' .. shellescape(expand('<cfile>'), v:true)<CR>]])
