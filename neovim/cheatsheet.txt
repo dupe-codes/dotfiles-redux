@@ -52,6 +52,7 @@ open harpoon list | <C-e>
 open harpooned file X | <localleader>1 to <localleader>6
 toggle back/forth through harpoon list | <leader><leader>h, <leader><leader>l
 go back and forth to/from last buffer | <leader>b
+open link in browser | gx
 
 ## nvim-tree
 add file or directory | (in tree) a
