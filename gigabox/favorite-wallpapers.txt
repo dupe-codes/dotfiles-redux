@@ -62,3 +62,5 @@ monster-puppets.png
 grainy-downer.png
 elegant-blue-white.jpeg
 slanted-swag.jpg
+bunny-cruising.png
+delivery-service.png

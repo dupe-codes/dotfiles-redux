@@ -1,8 +1,5 @@
 -- Thanks to @tjdevries:
 -- https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/lua/tj/lsp/codelens.lua
---
--- TODO: This isn't work since the switch away from a mason isntalled ocaml lsp to one
---       install in opam switches
 
 local M = {}
 
