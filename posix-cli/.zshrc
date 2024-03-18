@@ -71,7 +71,7 @@ giga() {
     if tmux list-sessions | grep -q "gigacli:"; then
         tmux attach-session -t gigacli
     else
-        windows=("code" "terminal" "timer" "music")
+        windows=("code" "terminal 1" "terminal 2" "timer" "music")
         echo "Creating giga tmux session ..."
 
         tmux new-session -s gigacli -d -n "${windows[1]}"
