@@ -8,6 +8,8 @@ def my_fn(x: int) -> int:
     x : int
         Description of x.
     """
+    if x == 0:
+        raise ValueError("x cannot be 0")
     return x
 
 def my_function(x: int, y : str, z: float) -> float:
@@ -32,4 +34,3 @@ def my_other_fun() -> None:
     Function description
     """
     pass
-

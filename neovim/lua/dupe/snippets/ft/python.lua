@@ -26,12 +26,8 @@ local function get_parameters()
 
   if current_node then
     local params = {}
-    print("current node:", current_node:type())
-
     for child in current_node:iter_children() do
       if child:type() == "parameters" then
-        print("parameters")
-
         for param in child:iter_children() do
           if param:type() == "typed_parameter" or param:type() == "default_parameter" then
             local name, type
@@ -79,12 +75,18 @@ local parameters_node = d(2, function()
 end, {})
 
 -- snippet for numpy style function docstring
+-- see https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
 -- TODO:
 --    1. add support for return type
 --    2. add support for exceptions
 --    3. add support for examples
 --    4. remove awkward newlines at end of parameter-less functions
 --    5. automatically add indentation if needed
+--    6. support defaults on parameters
+--    7. support *args and **kwargs
+--    8. suppoort yields
+--    9. support class attributes
+--    10. make sure "self" is not included in methods
 ls.add_snippets("python", {
     s(
       "fdstr", -- function docstring
@@ -105,3 +107,7 @@ ls.add_snippets("python", {
       )
     )
 })
+
+-- TODO: add snippet for class docstring
+-- TODO: add snippet for module docstring
+-- TODO: add snippet for module variable docstring
