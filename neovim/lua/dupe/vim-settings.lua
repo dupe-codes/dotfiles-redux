@@ -62,6 +62,7 @@ vim.cmd("set shiftwidth=2 smarttab") -- width for autoindents
 vim.cmd("set softtabstop=2")         -- see multiple spaces as tabstops so <BS> does the right thing
 vim.cmd("set scrolloff=8")           -- keep 8 lines above and below the cursor
 vim.cmd("set cmdheight=0")           -- hide command line
+vim.cmd("set showtabline=0")
 vim.cmd("syntax on")
 
 -- highlight current line
