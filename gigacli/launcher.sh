@@ -175,7 +175,7 @@ for tool in "${tool_order[@]}"; do
     prompt_list+="$line"
 done
 
-selected_tool=$(echo -e "$prompt_list" | gum filter --height 20)
+selected_tool=$(echo -e "$prompt_list" | gum filter --height 25)
 tool=$(echo "$selected_tool" | cut -d ' ' -f 1)
 
 if [ -z "$tool" ]; then
