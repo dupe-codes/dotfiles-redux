@@ -185,6 +185,9 @@ local plugins = {
     },
     {
         "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+        }
     },
     {
         "theHamsta/nvim-dap-virtual-text",
@@ -223,6 +226,7 @@ local plugins = {
         },
         opts = {
             ensure_installed = {
+                "black",
                 "codelldb",
                 "debugpy",
                 "jdtls",
