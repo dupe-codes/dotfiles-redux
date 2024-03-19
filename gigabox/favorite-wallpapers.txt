@@ -64,3 +64,7 @@ elegant-blue-white.jpeg
 slanted-swag.jpg
 bunny-cruising.png
 delivery-service.png
+cower.png
+dragon-strike.png
+snow-eagle-showdown.png
+drooling-dragon.png
