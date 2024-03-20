@@ -23,17 +23,21 @@ local keymap = {
             "Search TODOs & notes"
         },
         i = {
-          ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
-          'Search files including hidden/ignored'
+            ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
+            'Search files including hidden/ignored'
         },
         c = {
-          '<cmd>Telescope neoclip<CR>',
-          'Search clipboard history'
+            '<cmd>Telescope neoclip<CR>',
+            'Search clipboard history'
         },
         j = {
-          '<cmd>Telescope jumplist<CR>',
-          'Search jumplist'
+            '<cmd>Telescope jumplist<CR>',
+            'Search jumplist'
         },
+        d = {
+            '<cmd>Telescope command_history<CR>',
+            'Search command history'
+        }
     }
 }
 

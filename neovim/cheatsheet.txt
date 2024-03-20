@@ -17,6 +17,7 @@ search clipboard history | <leader>fc
 search jump list | <leader>fj
 search help tags | <leader>fh
 search files including ignored | <leader>fi
+search command history | <leader>fd
 
 ## todo comments
 see todos in current file | <leader>xt
