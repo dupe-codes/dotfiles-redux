@@ -29,7 +29,11 @@ local keymap = {
         c = {
           '<cmd>Telescope neoclip<CR>',
           'Search clipboard history'
-        }
+        },
+        j = {
+          '<cmd>Telescope jumplist<CR>',
+          'Search jumplist'
+        },
     }
 }
 

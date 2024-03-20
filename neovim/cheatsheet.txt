@@ -10,11 +10,13 @@ replace in file text at current cursor | <leader>s
 go back/forward through cursor locations | ctrl + o/i
 
 ## telescope
-find_files() | <C-p>
-live_grep() | <leader>fs
-buffers | <leader>fb
-help tags | <leader>fh
-clipboard history | <leader>fc
+search files | <C-p>
+fuzzy find in files | <leader>fs
+search buffers | <leader>fb
+search clipboard history | <leader>fc
+search jump list | <leader>fj
+search help tags | <leader>fh
+search files including ignored | <leader>fi
 
 ## todo comments
 see todos in current file | <leader>xt
