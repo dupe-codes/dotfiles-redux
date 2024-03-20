@@ -51,16 +51,6 @@ require('lualine').setup {
         lualine_b = {
           "branch",
           "diff",
-          {
-              function()
-                  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-                      if vim.api.nvim_buf_get_option(buf, 'modified') then
-                          return ''
-                      end
-                  end
-                  return ''
-              end,
-          },
           { "swenv", icon = "" },
         },
         lualine_c = {
@@ -74,12 +64,23 @@ require('lualine').setup {
           },
           {
             "harpoon2",
-            --color = { fg = colors.white, bg = colors.grey },
-            --separator = { left = "|", right = "" },
           },
         },
         lualine_x = {},
-        lualine_y = { "filetype", "progress" },
+        lualine_y = {
+          "filetype",
+          {
+              function()
+                  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                      if vim.api.nvim_buf_get_option(buf, 'modified') then
+                          return ' unsaved'
+                      end
+                  end
+                  return ''
+              end,
+          },
+          "progress",
+        },
         lualine_z = {
           { "location", separator = { right = "" }, left_padding = 2 },
         },
