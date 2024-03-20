@@ -75,12 +75,6 @@ local plugins = {
         end,
     },
     { "jremmen/vim-ripgrep" },
-    --{
-        --"romgrk/barbar.nvim",
-        --config = function()
-            --require("dupe.configs.barbar")
-        --end,
-    --},
     { "preservim/nerdcommenter" },
 
     -- stats tracking
