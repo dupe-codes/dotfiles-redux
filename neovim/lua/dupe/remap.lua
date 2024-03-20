@@ -18,6 +18,9 @@ key_mapper('n', '<leader>l', '<C-w>l')
 -- Clear search with <leader><leader>
 key_mapper('n', '<leader><leader>', ':noh<CR>')
 
+-- Close buffer
+key_mapper('n', '<leader>q', ':bd<CR>')
+
 -- Keymap to go back and forth to/from last buffer
 vim.keymap.set('n', '<leader>b', '<C-^>')
 
