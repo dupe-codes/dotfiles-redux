@@ -68,21 +68,23 @@ search() {
 }
 
 giga() {
-    if tmux list-sessions | grep -q "gigacli:"; then
-        tmux attach-session -t gigacli
+    session_name=${1:-gigacli}
+
+    if tmux list-sessions | grep -q "$session_name:"; then
+        tmux attach-session -t "$session_name"
     else
         windows=("code" "terminal 1" "terminal 2" "timer" "music")
-        echo "Creating giga tmux session ..."
+        echo "Creating $session_name tmux session ..."
 
-        tmux new-session -s gigacli -d -n "${windows[1]}"
+        tmux new-session -s "$session_name" -d -n "${windows[1]}"
         gum spin --spinner dot --title "Creating window '${windows[1]}' ..." -- sleep 0.8
 
         for window in ${windows[@]:1}; do
-            tmux new-window -t gigacli -n "$window"
+            tmux new-window -t "$session_name" -n "$window"
             gum spin --spinner dot --title "Creating window '$window' ..." -- sleep 0.8
         done
 
-        tmux attach-session -t gigacli:1
+        tmux attach-session -t "$session_name":1
     fi
 }
 
