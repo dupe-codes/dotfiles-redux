@@ -33,7 +33,7 @@ PRINTED=0
 
 while IFS= read -r line || [[ -n "$line" ]]; do
     echo "$line" >> "$TEMP_FILE"
-    if [[ "$line" =~ ^###\ goals ]]; then
+    if [[ "$line" == "-- QUEST LOG END --" ]]; then
         IGNORE_SECTION=1
     fi
     if [[ $IGNORE_SECTION -eq 0 && $PRINTED -eq 0 && "$line" =~ ^####\  && "$line" =~ $TYPE && $SECTION_FOUND -eq 0 ]]; then

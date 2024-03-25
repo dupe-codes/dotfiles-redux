@@ -11,3 +11,5 @@ confirm_update() {
 confirm_update "sudo pacman -Syu"
 confirm_update "yay -Syu"
 confirm_update "cargo install-update -a"
+
+# TODO: add pip, npm, and go

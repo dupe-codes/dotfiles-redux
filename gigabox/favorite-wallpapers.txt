@@ -68,3 +68,4 @@ cower.png
 dragon-strike.png
 snow-eagle-showdown.png
 drooling-dragon.png
+moping.jpg
