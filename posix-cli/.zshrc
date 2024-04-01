@@ -73,7 +73,12 @@ giga() {
     if tmux list-sessions | grep -q "$session_name:"; then
         tmux attach-session -t "$session_name"
     else
-        windows=("code" "terminal 1" "terminal 2" "timer" "music")
+        if [ $session_name = "gigacli" ]; then
+            windows=("code" "terminal 1" "terminal 2" "timer" "music")
+        else
+            windows=("code" "terminal 1" "terminal 2")
+        fi
+
         echo "Creating $session_name tmux session ..."
 
         tmux new-session -s "$session_name" -d -n "${windows[1]}"
