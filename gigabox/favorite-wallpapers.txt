@@ -69,3 +69,7 @@ dragon-strike.png
 snow-eagle-showdown.png
 drooling-dragon.png
 moping.jpg
+smug-gal.png
+evangelion-gals.png
+makima-shadow.jpeg
+makima-cold-shoulder.jpeg
