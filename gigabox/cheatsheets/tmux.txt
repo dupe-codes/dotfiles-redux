@@ -18,3 +18,6 @@ tmux attach -t session_name := attach to specific session
 ctrl h/j/k/l := navigate around panes in vim
 prefix [ := Enter copy mode with yank support
 shift + alt + h/l := cycle between previous windows
+prefix e := list & select open sessions
+prefix f := list & select open windows
+prefix :kill-session -t session_name := kill session
