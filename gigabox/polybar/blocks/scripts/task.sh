@@ -4,7 +4,21 @@ QUEST_LOG_DIR="$HOME/datastore"
 QUEST_LOG_FILE="00 - quest log & character stats.md"
 QUEST_LOG_PATH="$QUEST_LOG_DIR/$QUEST_LOG_FILE"
 
-TYPE=$(rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/note-taking.rasi -p "Enter task type:")
+# Extract sections for rofi input
+IGNORE_SECTION=0
+SECTIONS=""
+while IFS= read -r line || [[ -n "$line" ]]; do
+    if [[ "$line" == "-- QUEST LOG END --" ]]; then
+        IGNORE_SECTION=1
+        break
+    fi
+    if [[ $IGNORE_SECTION -eq 0 && "$line" =~ ^####\  ]]; then
+        SECTIONS+="${line:5}\n"
+    fi
+done < "$QUEST_LOG_PATH"
+SECTIONS=$(echo -e "$SECTIONS" | sed '/^\s*$/d')
+
+TYPE=$(echo -e "$SECTIONS" | rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/utilscripts.rasi -p "Enter task type:")
 if [ -z "$TYPE" ]; then
     exit 0
 fi

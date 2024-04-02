@@ -154,3 +154,5 @@ annotate mark under cursor | ma
 list all marks in current buffer | <leader>mb
 list all marks across _all_ buffers | <leader>ma
 
+## others
+scratch buffer | <leader>sc
