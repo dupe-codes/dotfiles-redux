@@ -17,8 +17,8 @@ M.scratch = function()
 
         win = vim.api.nvim_open_win(buf, true, {
             relative='editor', border='rounded', style='minimal',
-            row=0, col=math.ceil(vim.o.columns/2),
-            height=math.ceil(vim.o.lines-3), width=math.ceil(vim.o.columns/2)
+            row=math.ceil(3*(vim.o.lines/4)), col=0,
+            height=math.ceil(vim.o.lines/4) - 4, width=vim.o.columns
         })
     else
         vim.api.nvim_win_hide(win)
