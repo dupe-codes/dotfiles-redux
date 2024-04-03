@@ -62,35 +62,10 @@ alias music='ncmpcpp'
 alias commit='~/scripts/commit.sh'
 alias schedule='~/scripts/schedule.sh'
 alias ls=ll
+alias sesh='~/scripts/tmux-sessionizer.sh'
 
 search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
-}
-
-giga() {
-    session_name=${1:-gigacli}
-
-    if tmux list-sessions | grep -q "$session_name:"; then
-        tmux attach-session -t "$session_name"
-    else
-        if [ $session_name = "gigacli" ]; then
-            windows=("code" "terminal 1" "terminal 2" "timer" "music")
-        else
-            windows=("code" "terminal 1" "terminal 2")
-        fi
-
-        echo "Creating $session_name tmux session ..."
-
-        tmux new-session -s "$session_name" -d -n "${windows[1]}"
-        gum spin --spinner dot --title "Creating window '${windows[1]}' ..." -- sleep 0.8
-
-        for window in ${windows[@]:1}; do
-            tmux new-window -t "$session_name" -n "$window"
-            gum spin --spinner dot --title "Creating window '$window' ..." -- sleep 0.8
-        done
-
-        tmux attach-session -t "$session_name":1
-    fi
 }
 
 # Welcome message :]
