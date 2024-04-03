@@ -15,6 +15,7 @@
 <leader> t := toggle window decorations
 <leader> x := toggle fullscreen
 <leader> d := toggle show desktop
+<leader> shift n := add quick note
 ctrl esc := view last notification
 ctrl return := open notification context
 ctrl shift esc := close last notification

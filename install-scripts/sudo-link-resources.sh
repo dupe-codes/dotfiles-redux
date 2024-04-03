@@ -16,4 +16,4 @@ sudo bash -c 'echo -e "[User]\nIcon=/var/lib/AccountsService/icons/dupe.png" > /
 sudo chmod 644 /var/lib/AccountsService/users/dupe
 
 # Set betterlockscreen image
-betterlockscreen -u $PWD/gigabox/resources/wallpapers/queen.jpg
+betterlockscreen -u $PWD/gigabox/resources/wallpapers/queen_makima.jpg

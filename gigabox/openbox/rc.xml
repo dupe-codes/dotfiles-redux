@@ -430,6 +430,11 @@
         <command>~/.config/polybar/blocks/scripts/util-scripts.sh</command>
       </action>
     </keybind>
+    <keybind key="A-S-n">
+      <action name="Execute">
+        <command>~/.config/polybar/blocks/scripts/quick-note.sh</command>
+      </action>
+    </keybind>
     <keybind key="A-c">
       <action name="Execute">
         <command>~/.config/polybar/blocks/scripts/calculator.sh</command>

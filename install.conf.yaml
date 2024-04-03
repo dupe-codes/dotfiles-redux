@@ -25,9 +25,10 @@
     - command: sh ./install-scripts/posix-cli-setup.sh
       description: Install packages for and configure the posix cli
 
+# TODO: fill out more desired home directories
 - create:
     - ~/screenshots
-    - ~/Music
+    - ~/projects
 
 - link:
     # configs: gigabox

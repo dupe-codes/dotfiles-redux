@@ -1,5 +1,11 @@
 # /bin/bash
 
+# TODO:
+#   1. wrap coherent chunks of code into functions
+#   2. create util script with common helpers (e.g. "log" functin)
+#       to import and use in all setup scripts
+#   3. download obsidian and configure the datastore vault
+
 install_packages_from_file() {
     FILE=$1
     pacman_pkgs=""
@@ -12,12 +18,9 @@ install_packages_from_file() {
             continue
         fi
 
-        # check if line ends with "@yay"
         if [[ $line == *@yay ]]; then
-            # remove @yay and add to yay list
             yay_pkgs+=" ${line%@yay}"
         else
-            # add to pacman list
             pacman_pkgs+=" $line"
         fi
     done <"$FILE"
