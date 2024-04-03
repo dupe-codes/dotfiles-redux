@@ -7,7 +7,7 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$( \
-        printf "base\n$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
+        printf "gigacli\n$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
         | gum filter --placeholder "Choose session..." --height 50 --no-strict \
     )
 fi
@@ -19,7 +19,7 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-if [ $selected_name = "base" ]; then
+if [ $selected_name = "gigacli" ]; then
     windows=("code" "terminal 1" "terminal 2" "timer" "music")
 else
     windows=("code" "terminal 1" "terminal 2")
