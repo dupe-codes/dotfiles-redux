@@ -74,3 +74,10 @@ evangelion-gals.png
 makima-shadow.jpeg
 makima-cold-shoulder.jpeg
 tifa.png
+eva-comic.png
+ink-samurai.png
+blue-ink-town.png
+green-haired-smile.png
+persona-5.png
+akira.png
+eva-classroom.png
