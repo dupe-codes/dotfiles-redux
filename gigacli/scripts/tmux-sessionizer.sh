@@ -20,9 +20,9 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [ $selected_name = "gigacli" ]; then
-    windows=("code" "terminal 1" "terminal 2" "timer" "music")
+    windows=("code" "terminal A" "terminal B" "timer" "music")
 else
-    windows=("code" "terminal 1" "terminal 2")
+    windows=("code" "terminal A" "terminal B")
 fi
 
 
