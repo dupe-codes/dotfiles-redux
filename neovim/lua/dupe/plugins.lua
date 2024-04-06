@@ -94,7 +94,7 @@ local plugins = {
         end,
     },
 
-    -- Harpoon 
+    -- Harpoon
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",

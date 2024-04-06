@@ -66,7 +66,6 @@ vim.cmd("set showtabline=0")
 vim.cmd("syntax on")
 
 -- highlight current line
--- TODO: figure out why this isn't working
 hl(0, "CursorLine", { link = 'PMenu' })
 vim.cmd("set cursorline")
 

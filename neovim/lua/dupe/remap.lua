@@ -25,6 +25,8 @@ key_mapper('n', '<leader>q', ':bd<CR>')
 vim.keymap.set('n', '<leader>b', '<C-^>')
 
 -- Keymap to move visual selection
+-- TODO: doesn't work with repeated key presses on
+-- visual blocks with >= 3 lines. weird. fix it
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 

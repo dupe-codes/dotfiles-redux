@@ -1,3 +1,6 @@
+-- TODO: delete and rename harpoon2.lua once harpoon 2 is
+-- full released
+
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 local notify = require("notify")
