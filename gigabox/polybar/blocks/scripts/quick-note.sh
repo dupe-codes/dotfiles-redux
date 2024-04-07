@@ -3,7 +3,7 @@
 NOTES_DIR="$HOME/datastore/daily notes"
 TODAYS_NOTE="$(date +%F).md"
 NOTE_PATH="$NOTES_DIR/$TODAYS_NOTE"
-SECTION_HEADING="## 📓 Notes"
+SECTION_HEADING="## 📓 notes"
 
 if [ ! -f "$NOTE_PATH" ]; then
     notify-send "Note-taking Error" "Today's daily note does not yet exist."
