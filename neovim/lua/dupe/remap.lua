@@ -20,6 +20,8 @@ key_mapper('n', '<leader><leader>', ':noh<CR>')
 
 -- Close buffer
 key_mapper('n', '<leader>q', ':bd<CR>')
+-- close all other buffers
+key_mapper('n', '<leader>qa', ':%bd|e#<CR>')
 
 -- Keymap to go back and forth to/from last buffer
 vim.keymap.set('n', '<leader>b', '<C-^>')
