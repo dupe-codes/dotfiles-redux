@@ -81,3 +81,10 @@ green-haired-smile.png
 persona-5.png
 akira.png
 eva-classroom.png
+soft-profile.png
+road-trip-pit-stop.png
+futuristic-hold-up.png
+desk-relax.png
+road-trip-pit-stop-warm.png
+motorbike-lean.png
+spyXfamily-bike.png

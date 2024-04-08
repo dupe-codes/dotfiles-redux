@@ -153,6 +153,7 @@ redshift
 geoclue
 cbonsai@yay
 remind
+ascii-rain-git@yay
 
 # Email
 neomutt

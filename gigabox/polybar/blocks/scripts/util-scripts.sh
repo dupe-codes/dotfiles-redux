@@ -16,6 +16,7 @@ toggle_notifications=" Toggle notifications"
 main_monitor_mode=" Turn on main monitor mode"
 two_monitor_mode=" Turn on two monitor mode"
 laptop_mode=" Turn on laptop mode"
+extended_laptop_mode=" Turn on laptop extend mode"
 
 options="$calculator\n"\
 "$cheatsheets\n"\
@@ -34,6 +35,7 @@ options="$calculator\n"\
 "$main_monitor_mode\n"\
 "$two_monitor_mode\n"\
 "$laptop_mode\n"\
+"$extended_laptop_mode\n"\
 "$sync_polybar_colors\n"\
 "$save_polybar_colors\n"\
 "$load_polybar_colors\n"
@@ -96,6 +98,9 @@ case $chosen in
         ;;
     $laptop_mode)
         ~/projects/dotfiles-redux/gigabox/openbox/scripts/laptop-only.sh
+        ;;
+    $extended_laptop_mode)
+        ~/projects/dotfiles-redux/gigabox/openbox/scripts/extended-laptop.sh
         ;;
 esac
 
