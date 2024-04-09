@@ -16,20 +16,20 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	  border:							0px 0px 0px 0px;
-	  border-color:					@ac;
+	  border:							            0px 0px 0px 0px;
+	  border-color:					          @ac;
     border-radius:                  0px;
-	  width:							800px;
+	  width:							            850px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
 }
 
 prompt {
-    enabled: 						    true;
-	  padding: 						    6px 7px 4px 7px;
-	  background-color: 			@bga;
-	  text-color: 					  @fg;
+    enabled: 						            true;
+	  padding: 						            6px 7px 4px 7px;
+	  background-color: 			        @bga;
+	  text-color: 					          @fg;
 }
 
 entry {
@@ -68,9 +68,9 @@ listview {
 
 mainbox {
     background-color:               @al;
-	border:							0px;
+	  border:							0px;
     border-radius:                  0px;
-	border-color:					@ac;
+	  border-color:					@ac;
     children:                       [ inputbar, listview ];
     spacing:                       	6px;
     padding:                        6px;
@@ -103,7 +103,7 @@ element-text {
 element selected {
     background-color:               @se;
     text-color:                     @fga;
-	border:							0px 0px 0px 0px;
+	  border:							0px 0px 0px 0px;
     border-radius:                  0px;
     border-color:                  	@ac;
 }
