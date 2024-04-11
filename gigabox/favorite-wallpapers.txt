@@ -88,3 +88,7 @@ desk-relax.png
 road-trip-pit-stop-warm.png
 motorbike-lean.png
 spyXfamily-bike.png
+power.png
+goku-ride.png
+bulma-ride.png
+morning-vibes-pit-stop.png
