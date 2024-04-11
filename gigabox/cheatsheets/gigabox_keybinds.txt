@@ -15,7 +15,9 @@
 <leader> t := toggle window decorations
 <leader> x := toggle fullscreen
 <leader> d := toggle show desktop
-<leader> shift n := add quick note
+<leader> n := add quick note
+<leader> s := open cheatsheets menu
+<leader> l := add to quest log
 ctrl esc := view last notification
 ctrl return := open notification context
 ctrl shift esc := close last notification
