@@ -1,13 +1,13 @@
 configuration {
-	font:							"BerkeleyMono Nerd Font Mono 16";
+	  font:							              "BerkeleyMono Nerd Font Mono 16";
     show-icons:                     true;
-	  icon-theme: 					"Papirus";
-    display-drun: 					"";
+	  icon-theme: 					          "Papirus";
+    display-drun: 					        "";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
-	  hide-scrollbar: 				true;
-	  sidebar-mode: 					false;
+	  hide-scrollbar: 				        true;
+	  sidebar-mode: 					        false;
 }
 
 @import "colors.rasi"
