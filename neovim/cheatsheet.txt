@@ -53,7 +53,7 @@ bufferclose | <leader>q
 mark file | <leader>a
 open harpoon list | <C-e>
 open harpooned file X | <leader>1 to <leader>6
-toggle back/forth through harpoon list | <leader>h, <leader>l
+toggle back/forth through harpoon list | <localleader>h, <localleader>l
 go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
