@@ -92,3 +92,7 @@ power.png
 goku-ride.png
 bulma-ride.png
 morning-vibes-pit-stop.png
+persona-city-scape.png
+golden-hour.png
+cute-squat.png
+princess-warrior.jpeg

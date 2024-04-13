@@ -29,7 +29,7 @@ fi
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -ds $selected_name -c $selected -n "${windows[0]}"
     for window in "${windows[@]:1}"; do
-        tmux new-window -t "$selected_name" -n "$window"
+        tmux new-window -t "$selected_name" -n "$window" -c "$selected"
     done
     tmux attach-session -t "$selected_name":1
     exit 0
@@ -38,7 +38,7 @@ fi
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new-session -ds $selected_name -c $selected -n "${windows[0]}"
     for window in "${windows[@]:1}"; do
-        tmux new-window -t "$selected_name" -n "$window"
+        tmux new-window -t "$selected_name" -n "$window" -c "$selected"
     done
 fi
 

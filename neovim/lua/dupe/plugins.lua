@@ -358,7 +358,10 @@ local plugins = {
             require("dupe.configs.coqtail")
         end,
     },
-    { "joom/latex-unicoder.vim" },
+    --  TODO: add this back but change keybinds
+    --        also scope to proof assistant files
+    --        and/or latex/typst files
+    -- { "joom/latex-unicoder.vim" },
 
     -- Lean theorem prover
     {
