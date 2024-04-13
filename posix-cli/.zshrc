@@ -63,6 +63,7 @@ alias commit='~/scripts/commit.sh'
 alias schedule='~/scripts/schedule.sh'
 alias ls=ll
 alias sesh='~/scripts/tmux-sessionizer.sh'
+alias open='xdg-open'
 
 search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
