@@ -16,6 +16,7 @@ do
 
     if [[ -f "${path}" || -d "${path}" ]]; then
       /bin/mv "${path}" "$HOME/trash/$dst"
+      echo "Moved ${path} to $HOME/trash/$dst"
     fi
 
   fi

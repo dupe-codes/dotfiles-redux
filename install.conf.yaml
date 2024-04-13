@@ -29,6 +29,7 @@
 - create:
     - ~/screenshots
     - ~/projects
+    - ~/trash
 
 - link:
     # configs: gigabox
