@@ -1,12 +1,6 @@
 local plugins = {
     { "zbirenbaum/copilot.lua", lazy = false, },
     { "nvim-lua/plenary.nvim", },
-    {
-        "nvim-tree/nvim-tree.lua",
-        config = function()
-            require("dupe.configs.nvim-tree")
-        end,
-    },
     { "nvim-tree/nvim-web-devicons", lazy = false },
 
     -- START: LSPs, completions, diagnostics
@@ -134,12 +128,6 @@ local plugins = {
     -- End git plugins
 
     { "zbirenbaum/copilot-cmp" },
-    {
-        "akinsho/toggleterm.nvim",
-        config = function()
-            require("dupe.configs.toggleterm")
-        end,
-    },
     {
         "folke/trouble.nvim",
         config = function()

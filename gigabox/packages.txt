@@ -7,6 +7,7 @@ opam
 unzip
 wget
 jq
+tidy
 docker
 arttime-git@yay
 git-lfs
