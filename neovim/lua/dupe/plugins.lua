@@ -424,9 +424,6 @@ local plugins = {
             'DBUIAddConnection',
             'DBUIFindBuffer',
         },
-        init = function()
-            require('dupe.configs.dadbod-ui')
-        end,
     },
     {
         "stevearc/oil.nvim",
@@ -436,6 +433,16 @@ local plugins = {
             require("dupe.configs.oil")
         end,
     },
+    {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        config = true,
+    },
+    {
+        "rest-nvim/rest.nvim",
+        ft = "http",
+        dependencies = { "luarocks.nvim" },
+    }
 }
 
 require("lazy").setup(plugins)

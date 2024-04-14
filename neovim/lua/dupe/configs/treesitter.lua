@@ -22,6 +22,9 @@ require('nvim-treesitter.configs').setup {
         'markdown',
         'markdown_inline',
         'zig',
+        'xml',
+        'http',
+        'graphql',
     },
     highlight = {
         enable = true,
