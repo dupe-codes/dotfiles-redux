@@ -109,5 +109,6 @@ _h_ decrease width    _l_ increase width
 ;; General Keybinds
 ;; ================
 
+;; TODO: this isn't working? what key to use on gigabox...?
 (setq x-super-keysym 'meta) ; map super to meta key
 

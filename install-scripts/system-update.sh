@@ -11,5 +11,7 @@ confirm_update() {
 confirm_update "sudo pacman -Syu"
 confirm_update "yay -Syu"
 confirm_update "cargo install-update -a"
+confirm_update "doom upgrade"
+confirm_update 'nvim --headless "+Lazy! sync" +qa'
 
-# TODO: add pip, npm, and go
+# TODO: add pip, npm, go
