@@ -71,6 +71,7 @@ require('lualine').setup {
         lualine_x = {},
         lualine_y = {
           "filetype",
+          "rest",
           {
               function()
                   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
