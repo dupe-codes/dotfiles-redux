@@ -379,7 +379,15 @@ local plugins = {
     --},
 
     -- markdown rendering
-    { "ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+    --{ "ellisonleao/glow.nvim", config = true, cmd = "Glow"}
+    {
+        'MeanderingProgrammer/markdown.nvim',
+        name = 'render-markdown',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    },
 
     {
         "xiyaowong/transparent.nvim",
