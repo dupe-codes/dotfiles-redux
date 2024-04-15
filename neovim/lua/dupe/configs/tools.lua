@@ -1,3 +1,8 @@
+-- Settings and configs for plugins I categorize as "tools".
+-- These include:
+--      rest.nvim     for making HTTP requests, a Postman replacement
+--      vim-dadbod    ui and plugin for querying databases
+
 require("rest-nvim").setup(
     {
         result = {

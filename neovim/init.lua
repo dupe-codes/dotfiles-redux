@@ -1,4 +1,4 @@
--- Initialize lazy.vim
+-- initialize lazy.vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,13 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load custom submodules
-
-require("dupe.vim-settings")      -- Add vim settings from custom file
-require("dupe.remap")             -- Add remaps in custom file
-require("dupe.plugins")           -- Add lazy managed plugins
-require("dupe.colorscheme")       -- Add colorscheme setup
+-- load custom submodules
+require("dupe.vim-settings")      -- add vim setting options
+require("dupe.remap")             -- add general remaps
+require("dupe.plugins")           -- add lazy managed plugins
+require("dupe.colorscheme")       -- setup colorscheme (& other color related tweaks)
 require("dupe.lsp")               -- configure LSP, completions, and diagnostics
 require("dupe.configs.racket")    -- config options for racket lang support
-require("dupe.functions.init")    -- custom functions
+require("dupe.functions.init")    -- initialize custom functions
 require("dupe.configs.tools")     -- configuration for plugins grouped under "tools" category

@@ -1,4 +1,4 @@
-## generalcheat
+## general
 open split view pane (horizontal) | <C-w> s
 open split view pane (vertical) | <C-w> v
 move between open panes | <leader>h, <leader>j, <leader>k, <leader>l
@@ -120,8 +120,10 @@ open lsp references | gR
 ## zen-mode
 toggle zen mode | <leader>zen
 
-## databases
-open databases ui | <leader>zo
+## tools
+execute http request under cursor | <leader>zrr
+rereun last http request | <leader>zrl
+open databases ui | <leader>zdo
 
 ## neotest
 run closest test | <leader>tr

@@ -90,3 +90,12 @@ vim.cmd.colorscheme 'tokyonight-night'
 --vim.cmd.colorscheme 'mosel'
 --vim.cmd.colorscheme 'nord'
 
+--#region color corrections
+-- various tweaks that can't be applied elsewhere for ~reasons~
+
+-- something (a plugin?) is setting these to an unsatisfying orange. override here
+-- since this config is evaluated _after_ plugins are loaded
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
+vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
+
+--#endregion
