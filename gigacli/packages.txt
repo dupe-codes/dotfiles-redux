@@ -21,6 +21,9 @@ timew
 sqlite
 man-db
 
+# dev packages
+gleam@yay
+
 bat@cargo
 coreutils@cargo
 du-dust@cargo
