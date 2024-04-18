@@ -72,7 +72,7 @@ load_saved_config() {
     cp "$selected_config_file" "$CURRENT_COLORS_FILE"
 
     if [ -f "$CURRENT_COLORS_FILE" ]; then
-        notify-send "Loaded the colors config from '${config_name}'"
+        notify-send "Loaded the colors config from '${selection}'"
     else
         notify-send "Failed to load the colors config."
     fi
