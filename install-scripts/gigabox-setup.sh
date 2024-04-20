@@ -2,7 +2,7 @@
 
 # TODO:
 #   1. wrap coherent chunks of code into functions
-#   2. create util script with common helpers (e.g. "log" functin)
+#   2. create util script with common helpers (e.g. "log" function)
 #       to import and use in all setup scripts
 #   3. download obsidian and configure the datastore vault
 

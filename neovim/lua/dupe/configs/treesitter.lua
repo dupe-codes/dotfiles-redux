@@ -26,6 +26,7 @@ require('nvim-treesitter.configs').setup {
         'http',
         'graphql',
         'gleam',
+        'nix',
     },
     highlight = {
         enable = true,

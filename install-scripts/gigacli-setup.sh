@@ -83,3 +83,5 @@ echo 'Setting up atuin...'
 mkdir -p ~/.local/share/atuin/
 atuin init nu > ~/.local/share/atuin/init.nu
 
+echo 'Installing nix..'
+sh <(curl -L https://nixos.org/nix/install) --daemon

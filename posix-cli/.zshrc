@@ -49,7 +49,7 @@ alias ll='exa -l -g --icons --git'
 alias llt='exa -1 --icons --tree --git-ignore'
 alias gitui='gitui -t macchiato.ron'
 alias bonsai='cbonsai -L 42 --screensaver'
-alias read='nom'
+alias rss='nom'
 alias weather='wthrr -u f,mph -f d,w'
 alias hpie='/usr/bin/http'
 alias tools='~/launcher.sh'
@@ -65,6 +65,7 @@ alias ls=ll
 alias sesh='~/scripts/tmux-sessionizer.sh'
 alias open='xdg-open'
 alias trash="~/scripts/trash.sh"
+alias ocaml-env="opam switch && eval $(opam env)"
 
 search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
