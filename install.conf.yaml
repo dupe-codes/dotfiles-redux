@@ -10,19 +10,19 @@
         stderr: true
 
 - shell:
-    - command: sh ./install-scripts/gigabox-setup.sh
+    - command: sh ./scripts/install/gigabox-setup.sh
       description: Install packages for and configure gigabox linux desktop
 
-    - command: sh ./install-scripts/download-resources.sh
+    - command: sh ./scripts/install/download-resources.sh
       description: Download all resource files (fonts, icons, wallpapers, etc.)
 
-    - command: sh ./install-scripts/sudo-link-resources.sh
+    - command: sh ./scripts/install/sudo-link-resources.sh
       description: Link resources that require sudo powers
 
-    - command: sh ./install-scripts/gigacli-setup.sh
+    - command: sh ./scripts/install/gigacli-setup.sh
       description: Install packages for and configure gigacli
 
-    - command: sh ./install-scripts/posix-cli-setup.sh
+    - command: sh ./scripts/install/posix-cli-setup.sh
       description: Install packages for and configure the posix cli
 
 # TODO: fill out more desired home directories

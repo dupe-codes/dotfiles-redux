@@ -79,6 +79,7 @@ mpd
 mpc
 ncmpcpp
 spotify-tui@yay
+cava@yay
 
 # Text editors
 neovim

@@ -1,4 +1,4 @@
-source ./logging.sh
+source ./utils/logging.sh
 
 print_ok "This is a success message"
 print_warning "This is a warning message"
