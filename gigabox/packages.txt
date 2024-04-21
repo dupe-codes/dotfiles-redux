@@ -103,8 +103,9 @@ zathura
 zathura-pdf-mupdf
 zotero@yay
 
-# Power manager
+# Power manager & battery utils
 xfce4-power-manager
+battop@yay
 
 # Task manager
 xfce4-taskmanager
