@@ -33,7 +33,7 @@ load_wallpaper=" Load favorite wallpaper"
 options="$save_wallpaper\n\
 $load_wallpaper\n"
 
-dir="~/.config/polybar/blocks/scripts/rofi"
+dir="$HOME/scripts/gigabox/rofi"
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
 chosen="$(echo -e "$options" | $rofi_command -i -p "Run" -dmenu -selected-row 0)"
 

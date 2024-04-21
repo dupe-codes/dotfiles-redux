@@ -40,7 +40,8 @@ options="$calculator\n"\
 "$save_polybar_colors\n"\
 "$load_polybar_colors\n"
 
-dir="~/.config/polybar/blocks/scripts/rofi"
+dir="$HOME/scripts/gigabox/rofi"
+
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
 chosen="$(echo -e "$options" | $rofi_command -i -p "Run" -dmenu -selected-row 0)"
 
@@ -49,58 +50,58 @@ chosen="$(echo -e "$options" | $rofi_command -i -p "Run" -dmenu -selected-row 0)
 #       Or, symlink scripts somewhere predictable
 case $chosen in
     $calculator)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/calculator.sh
+        $HOME/scripts/gigabox/calculator.sh
         ;;
     $cheatsheets)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/cheatsheets.sh
+        $HOME/scripts/gigabox/cheatsheets.sh
         ;;
     $note)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/quick-note.sh
+        $HOME/scripts/gigabox/quick-note.sh
         ;;
     $task)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/task.sh
+        $HOME/scripts/gigabox/task.sh
         ;;
     $gpt)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/gpt-convo.sh
+        $HOME/scripts/gigabox/gpt-convo.sh
         ;;
     $clipboard)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/clipboard.sh
+        $HOME/scripts/gigabox/clipboard.sh
         ;;
     $websites)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/websites.sh
+        $HOME/scripts/gigabox/websites.sh
         ;;
     $colors)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/color-tools/chooser.sh
+        $HOME/scripts/gigabox/color-tools/chooser.sh
         ;;
     $wallpapers)
-        ~/projects/dotfiles-redux/gigabox/polybar/blocks/scripts/wallpapers.sh
+        $HOME/scripts/gigabox/wallpapers.sh
         ;;
     $toggle_safe_eyes)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh
+        $HOME/scripts/gigabox/toggle-safeeyes.sh
         ;;
     $snooze_safe_eyes)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-safeeyes.sh --snooze
+        $HOME/scripts/gigabox/toggle-safeeyes.sh --snooze
         ;;
     $toggle_redshift)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh
+        $HOME/scripts/gigabox/toggle-redshift.sh
         ;;
     $snooze_redshift)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-redshift.sh --snooze
+        $HOME/scripts/gigabox/toggle-redshift.sh --snooze
         ;;
     $toggle_notifications)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/toggle-dunst.sh
+        $HOME/scripts/gigabox/toggle-dunst.sh
         ;;
     $main_monitor_mode)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/main-only.sh
+        $HOME/scripts/gigabox/main-only.sh
         ;;
     $two_monitor_mode)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/two-monitors.sh
+        $HOME/scripts/gigabox/two-monitors.sh
         ;;
     $laptop_mode)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/laptop-only.sh
+        $HOME/scripts/gigabox/laptop-only.sh
         ;;
     $extended_laptop_mode)
-        ~/projects/dotfiles-redux/gigabox/openbox/scripts/extended-laptop.sh
+        $HOME/scripts/gigabox/extended-laptop.sh
         ;;
 esac
 

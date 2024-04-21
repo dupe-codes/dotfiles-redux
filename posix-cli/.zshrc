@@ -56,15 +56,15 @@ alias tools='~/launcher.sh'
 alias t='~/launcher.sh'
 alias c='clear'
 alias s='search'
-alias timer='~/scripts/timer.sh'
+alias timer='~/scripts/gigacli/timer.sh'
 alias emacs='emacs -nw'
 alias music='ncmpcpp'
-alias commit='~/scripts/commit.sh'
-alias schedule='~/scripts/schedule.sh'
+alias commit='~/scripts/gigacli/commit.sh'
+alias schedule='~/scripts/gigacli/schedule.sh'
 alias ls=ll
-alias sesh='~/scripts/tmux-sessionizer.sh'
+alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
 alias open='xdg-open'
-alias trash="~/scripts/trash.sh"
+alias trash="~/scripts/gigacli/trash.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 
 search() {

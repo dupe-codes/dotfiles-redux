@@ -17,7 +17,7 @@ SITES=(
     [" HuggingFace Papers"]="https://huggingface.co/papers"
 )
 
-dir="~/.config/polybar/blocks/scripts/rofi"
+dir="$HOME/scripts/gigabox/rofi"
 site_keys=$(printf '%s\n' "${!SITES[@]}")
 selected_site=$(echo -e "$site_keys" | rofi -theme $dir/utilscripts.rasi -i -dmenu -p "Choose a site:")
 

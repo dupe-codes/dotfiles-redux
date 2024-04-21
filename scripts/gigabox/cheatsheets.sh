@@ -21,7 +21,7 @@ CHEATSHEETS_DIR="$HOME/projects/dotfiles-redux/gigabox/cheatsheets"
 DESCRIPTIONS_SECTION="\[descriptions\]"
 LINE_BREAK_THRESHOLD=70
 
-dir="~/.config/polybar/blocks/scripts/rofi"
+dir="$HOME/scripts/gigabox/rofi"
 rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
 sheet_name=$(ls "$CHEATSHEETS_DIR" | $rofi_command -dmenu -p "Select a cheatsheet:")
 

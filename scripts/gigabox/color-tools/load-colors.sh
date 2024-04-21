@@ -52,7 +52,7 @@ load_saved_config() {
         fi
     done
 
-    dir="~/.config/polybar/blocks/scripts/rofi"
+    dir="$HOME/scripts/gigabox/rofi"
     rofi_command="rofi -no-config -theme $dir/file-preview.rasi"
     selection=$(echo -e "$rofi_list" | $rofi_command -dmenu -i -p "Select color config" -theme-str "$rofi_override")
 

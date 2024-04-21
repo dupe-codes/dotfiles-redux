@@ -18,17 +18,17 @@ while IFS= read -r line || [[ -n "$line" ]]; do
 done < "$QUEST_LOG_PATH"
 SECTIONS=$(echo -e "$SECTIONS" | sed '/^\s*$/d')
 
-TYPE=$(echo -e "$SECTIONS" | rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/utilscripts.rasi -p "Enter task type:")
+TYPE=$(echo -e "$SECTIONS" | rofi -dmenu -theme $HOME/scripts/gigabox/rofi/utilscripts.rasi -p "Enter task type:")
 if [ -z "$TYPE" ]; then
     exit 0
 fi
 
-TAG=$(rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/note-taking.rasi -p "Enter tag:")
+TAG=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter tag:")
 if [ -z "$TAG" ]; then
     exit 0
 fi
 
-TASK=$(rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/note-taking.rasi -p "Enter task:")
+TASK=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter task:")
 if [ -z "$TASK" ]; then
     exit 0
 fi

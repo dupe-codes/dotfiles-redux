@@ -407,47 +407,47 @@
 
     <keybind key="A-Tab">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/open-windows.sh</command>
+        <command>~/scripts/gigabox/open-windows.sh</command>
       </action>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/clipboard.sh</command>
+        <command>~/scripts/gigabox/clipboard.sh</command>
       </action>
     </keybind>
     <keybind key="A-space">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/launcher.sh</command>
+        <command>~/scripts/gigabox/launcher.sh</command>
       </action>
     </keybind>
     <keybind key="A-Escape">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/powermenu.sh</command>
+        <command>~/scripts/gigabox/powermenu.sh</command>
       </action>
     </keybind>
     <keybind key="A-S-space">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/util-scripts.sh</command>
+        <command>~/scripts/gigabox/util-scripts.sh</command>
       </action>
     </keybind>
     <keybind key="A-n">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/quick-note.sh</command>
+        <command>~/scripts/gigabox/quick-note.sh</command>
       </action>
     </keybind>
     <keybind key="A-s">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/cheatsheets.sh</command>
+        <command>~/scripts/gigabox/cheatsheets.sh</command>
       </action>
     </keybind>
     <keybind key="A-c">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/calculator.sh</command>
+        <command>~/scripts/gigabox/calculator.sh</command>
       </action>
     </keybind>
     <keybind key="A-l">
       <action name="Execute">
-        <command>~/.config/polybar/blocks/scripts/task.sh</command>
+        <command>~/scripts/gigabox/task.sh</command>
       </action>
     </keybind>
 

@@ -6,7 +6,7 @@ CURRENT_COLORS_FILE="$HOME/.config/polybar/blocks/colors.ini"
 mkdir -p "$SAVED_COLORS_DIR"
 
 get_config_name() {
-    rofi -dmenu -theme ~/.config/polybar/blocks/scripts/rofi/note-taking.rasi -p "Save current colors as: "
+    rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Save current colors as: "
 }
 
 save_current_config() {

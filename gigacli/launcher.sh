@@ -77,11 +77,11 @@ declare -A aliases=(
 )
 
 commit_command() {
-    $HOME/scripts/commit.sh
+    $HOME/scripts/gigacli/commit.sh
 }
 
 schedule_command() {
-    $HOME/scripts/schedule.sh
+    $HOME/scripts/gigacli/schedule.sh
 }
 
 search_command() {
@@ -122,7 +122,7 @@ log_task() {
 
 timer_command() {
     local tags=$1
-    ~/scripts/timer.sh $tags
+    ~/scripts/gigacli/timer.sh $tags
 }
 
 break_command() {

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILE="$HOME/.config/polybar/blocks/scripts/rofi/colors.rasi"
+FILE="$HOME/scripts/gigabox/rofi/colors.rasi"
 
 # random accent color
 COLORS=('#ee99a0' '#f5a97f' '#f4dbd6' '#f0c6c6' '#f5bde6' '#c6a0f6' '#ed8796' \
@@ -18,4 +18,4 @@ rofi -no-config \
 		 -automatic-save-to-history \
 		 -calc-command "echo -n '{result}' | xclip -selection clipboard" \
 		 -hint-welcome " > Ctrl + return to save to clipboard" \
-     -theme ~/.config/polybar/blocks/scripts/rofi/calc.rasi
+     -theme $HOME/scripts/gigabox/rofi/calc.rasi

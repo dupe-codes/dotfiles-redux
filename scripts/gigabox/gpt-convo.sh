@@ -97,7 +97,7 @@ save_conversation() {
     | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
 }
 
-dir="~/.config/polybar/blocks/scripts/rofi"
+dir="$HOME/scripts/gigabox/rofi"
 
 while true; do
     USER_QUERY=$(format_conversation | rofi -theme $dir/chatgpt.rasi -dmenu -p "󰍦 Message ChatGPT")

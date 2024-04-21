@@ -6,4 +6,4 @@ get_current_wallpaper() {
 }
 
 WALLPAPER_PATH=$(get_current_wallpaper)
-bash ~/.config/polybar/blocks/scripts/color-tools/pywal.sh "$WALLPAPER_PATH"
+bash $HOME/scripts/gigabox/color-tools/pywal.sh "$WALLPAPER_PATH"
