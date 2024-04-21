@@ -77,31 +77,31 @@ case $chosen in
         $HOME/scripts/gigabox/wallpapers.sh
         ;;
     $toggle_safe_eyes)
-        $HOME/scripts/gigabox/toggle-safeeyes.sh
+        $HOME/.config/openbox/scripts/toggle-safeeyes.sh
         ;;
     $snooze_safe_eyes)
-        $HOME/scripts/gigabox/toggle-safeeyes.sh --snooze
+        $HOME/.config/openbox/scripts/toggle-safeeyes.sh --snooze
         ;;
     $toggle_redshift)
-        $HOME/scripts/gigabox/toggle-redshift.sh
+        $HOME/.config/openbox/scripts/toggle-redshift.sh
         ;;
     $snooze_redshift)
-        $HOME/scripts/gigabox/toggle-redshift.sh --snooze
+        $HOME/.config/openbox/scripts/toggle-redshift.sh --snooze
         ;;
     $toggle_notifications)
-        $HOME/scripts/gigabox/toggle-dunst.sh
+        $HOME/.config/openbox/scripts/toggle-dunst.sh
         ;;
     $main_monitor_mode)
-        $HOME/scripts/gigabox/main-only.sh
+        $HOME/.config/openbox/scripts/main-only.sh
         ;;
     $two_monitor_mode)
-        $HOME/scripts/gigabox/two-monitors.sh
+        $HOME/.config/openbox/scripts/two-monitors.sh
         ;;
     $laptop_mode)
-        $HOME/scripts/gigabox/laptop-only.sh
+        $HOME/.config/openbox/scripts/laptop-only.sh
         ;;
     $extended_laptop_mode)
-        $HOME/scripts/gigabox/extended-laptop.sh
+        $HOME/.config/openbox/scripts/extended-laptop.sh
         ;;
 esac
 
