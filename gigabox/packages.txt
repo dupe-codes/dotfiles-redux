@@ -9,6 +9,7 @@ wget
 jq
 tidy
 docker
+docker-compose
 arttime-git@yay
 git-lfs
 
