@@ -30,6 +30,7 @@
     - ~/screenshots
     - ~/projects
     - ~/trash
+    - ~/logs
 
 - link:
     # configs: gigabox
@@ -65,7 +66,7 @@
     ~/nu-welcome.txt:             gigacli/nu-welcome.txt
     ~/.gitconfig:                 gigacli/.gitconfig
     ~/launcher.sh:                gigacli/launcher.sh
-    ~/scripts:                    gigacli/scripts
+    ~/scripts:                    scripts
 
     # config: posix-shell
     ~/.wezterm.lua:               posix-cli/.wezterm.lua

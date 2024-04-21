@@ -66,4 +66,3 @@ sudo systemctl enable clamav-daemon.service
 sudo systemctl enable logid.service
 sudo systemctl enable atd
 systemctl --user enable pulseaudio
-
