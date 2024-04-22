@@ -20,4 +20,5 @@ require("dupe.colorscheme")       -- setup colorscheme (& other color related tw
 require("dupe.lsp")               -- configure LSP, completions, and diagnostics
 require("dupe.configs.racket")    -- config options for racket lang support
 require("dupe.functions.init")    -- initialize custom functions
+require("dupe.snippets.init")     -- initialize custom snippets
 require("dupe.configs.tools")     -- configuration for plugins grouped under "tools" category
