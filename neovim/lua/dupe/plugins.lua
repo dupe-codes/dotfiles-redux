@@ -63,7 +63,10 @@ local plugins = {
     { "nvim-lua/popup.nvim" }, -- TODO: needed?
     {
         "nvim-lua/telescope.nvim",
-        dependencies = { "nvim-telescope/telescope-ui-select.nvim" },
+        dependencies = {
+            "nvim-telescope/telescope-ui-select.nvim",
+            "nvim-telescope/telescope-frecency.nvim",
+        },
         config = function()
             require("dupe.configs.telescope")
         end,

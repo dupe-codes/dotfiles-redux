@@ -37,6 +37,10 @@ local keymap = {
         d = {
             '<cmd>Telescope command_history<CR>',
             'Search command history'
+        },
+        r = {
+            '<cmd>Telescope frecency workspace=CWD<CR>',
+            'Search files by frecency'
         }
     }
 }
@@ -77,4 +81,6 @@ require("telescope").setup {
     }
   }
 }
+
 require("telescope").load_extension("ui-select")
+require("telescope").load_extension("frecency")
