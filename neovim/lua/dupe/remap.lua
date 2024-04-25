@@ -15,6 +15,13 @@ key_mapper('n', '<leader>j', '<C-w>j')
 key_mapper('n', '<leader>k', '<C-w>k')
 key_mapper('n', '<leader>l', '<C-w>l')
 
+-- Resize windows with <localleader>hjkl
+-- hold to resize faster
+key_mapper('n', '<localleader>h', ':vertical resize +8<CR>')
+key_mapper('n', '<localleader>j', ':resize +8<CR>')
+key_mapper('n', '<localleader>k', ':resize -8<CR>')
+key_mapper('n', '<localleader>l', ':vertical resize -8<CR>')
+
 -- Clear search with <leader><leader>
 key_mapper('n', '<leader><leader>', ':noh<CR>')
 

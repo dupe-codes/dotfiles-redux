@@ -2,6 +2,7 @@
 open split view pane (horizontal) | <C-w> s
 open split view pane (vertical) | <C-w> v
 move between open panes | <leader>h, <leader>j, <leader>k, <leader>l
+resize open panes | <localleader>hjkl
 close all open panes | <C-w> o
 clear search buffer | <leader><leader>
 move visual selection | 'v', 'J', 'v', 'K'
@@ -53,7 +54,7 @@ bufferclose | <leader>q
 mark file | <leader>a
 open harpoon list | <C-e>
 open harpooned file X | <leader>1 to <leader>6
-toggle back/forth through harpoon list | <localleader>h, <localleader>l
+toggle back/forth through harpoon list | <leader>, <localleader>.
 go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
