@@ -84,6 +84,7 @@ glance implementations | gi
 ## commenter
 comment | <leader>cc
 uncomment | <leader>cu
+comment pretty block | <leader>cs
 toggle comment | <leader>c<space>
 
 ## terminal
