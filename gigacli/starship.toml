@@ -1,7 +1,7 @@
 # Get editor completions based on the config schema
 "$schema"   = 'https://starship.rs/config-schema.json'
 
-format      = """$conda$python$username$directory$git_branch$git_status$cmd_duration
+format      = """$python$conda$ocaml$username$directory$git_branch$git_status$cmd_duration
 [](bold yellow) """
 
 add_newline = true
@@ -18,8 +18,11 @@ disabled = false
 show_always = true
 
 [conda]
-format = '\[$symbol$environment\] '
+format = '[\[$symbol$environment\]](bold yellow) '
 ignore_base = false
+
+[ocaml]
+format = '[$symbol($version )]($style)'
 
 [cmd_duration]
 min_time = 1000
