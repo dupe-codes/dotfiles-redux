@@ -62,16 +62,13 @@
     ~/.config/gitui:              gigacli/gitui
     ~/.config/bottom:             gigacli/bottom
     ~/.config/nom:                gigacli/nom
-    ~/nu-welcome.txt:             gigacli/nu-welcome.txt
     ~/.gitconfig:                 gigacli/.gitconfig
     ~/launcher.sh:                gigacli/launcher.sh
+    ~/.wezterm.lua:               gigacli/.wezterm.lua
+    ~/.zshrc:                     gigacli/.zshrc
+    ~/.condarc:                   gigacli/.condarc
+    ~/posix-welcome.txt:          gigacli/posix-welcome.txt
     ~/scripts:                    scripts
-
-    # config: posix-shell
-    ~/.wezterm.lua:               posix-cli/.wezterm.lua
-    ~/.zshrc:                     posix-cli/.zshrc
-    ~/.condarc:                   posix-cli/.condarc
-    ~/posix-welcome.txt:          posix-cli/posix-welcome.txt
 
     # resources
     ~/.icons:                     gigabox/resources/icons
