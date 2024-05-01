@@ -102,3 +102,10 @@ va11-halla-chill.png
 perfect-blue-submerged.png
 ichigo.png
 cute-squat-blue.png
+nervous.png
+fashion-show.png
+beanie-heart.png
+train-crossing.png
+jacket-minimalist.png
+purple-elegance.png
+sass.png

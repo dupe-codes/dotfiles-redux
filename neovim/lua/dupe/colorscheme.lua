@@ -33,6 +33,11 @@ require('tokyonight').setup({
 })
 
 -- FAVORITES:
+
+--vim.cmd.colorscheme 'eldritch'
+--vim.cmd.colorscheme 'spaceduck'
+vim.cmd.colorscheme 'tokyonight-night'
+
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
 --vim.cmd.colorscheme 'oxocarbon'
@@ -44,9 +49,7 @@ require('tokyonight').setup({
 --vim.cmd.colorscheme 'duskfox'
 --vim.cmd.colorscheme 'carbonfox'
 --vim.cmd.colorscheme 'nightfox'
-vim.cmd.colorscheme 'tokyonight-night'
 --vim.cmd.colorscheme 'solarized-osaka'
-
 
 ----------------------------------------------
 -- TODO: These need adjustments

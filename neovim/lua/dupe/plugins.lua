@@ -59,7 +59,7 @@ local plugins = {
             require("dupe.configs.treesitter")
         end
     },
-    { "sheerun/vim-polyglot" }, -- TODO: needed?
+    { "sheerun/vim-polyglot" },
     { "nvim-lua/popup.nvim" }, -- TODO: needed?
     {
         "nvim-lua/telescope.nvim",
@@ -260,6 +260,12 @@ local plugins = {
         lazy = false,
         priority = 1000,
         opts = {},
+    },
+    { "pineapplegiant/spaceduck" , lazy = false, priority = 1000 },
+    {
+        "eldritch-theme/eldritch.nvim",
+        lazy = false,
+        priority = 1000,
     },
 
     -- Zig support

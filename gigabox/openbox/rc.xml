@@ -388,6 +388,11 @@
         <to>5</to>
       </action>
     </keybind>
+    <keybind key="A-S-`">
+      <action name="Execute">
+        <command>~/.config/openbox/scripts/monitor-swap.sh</command>
+      </action>
+    </keybind>
 
     <!-- Basic window control and menus. -->
     <keybind key="A-q">
