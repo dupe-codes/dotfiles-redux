@@ -44,17 +44,14 @@ actions.toggle_hidden | g.
 actions.toggle_trash | g\
 
 ## buffer
-buffer goto | <leader>1 through to <leader>8
-buffernext | <leader>.
-bufferprevious | <leader>,
-buffercloseallbutcurrent | <leader>aq
-bufferclose | <leader>q
+buffer close all but current | <localleader>q
+buffer close current | <leader>q
 
 ## harpoon/navigation
 mark file | <leader>a
 open harpoon list | <C-e>
 open harpooned file X | <leader>1 to <leader>6
-toggle back/forth through harpoon list | <leader>, <localleader>.
+toggle back/forth through harpoon list | <leader>, <leader>.
 go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
