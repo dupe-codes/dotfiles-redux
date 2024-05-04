@@ -28,6 +28,12 @@ if [ -z "$TAG" ]; then
     exit 0
 fi
 
+# prompt for y/n on whether to add task to the queue
+ENQUEUE=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enqueue task? (y/n)")
+if [ "$ENQUEUE" == "y" ]; then
+    TAG="$TAG #queue"
+fi
+
 TASK=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter task:")
 if [ -z "$TASK" ]; then
     exit 0
