@@ -455,6 +455,13 @@
         <command>~/scripts/gigabox/task.sh</command>
       </action>
     </keybind>
+    <keybind key = "A-S-l">
+      <action name="Execute">
+        <command>
+          kitty tmux new-session -s quest-log '~/scripts/gigabox/show-quests.sh'
+        </command>
+      </action>
+    </keybind>
 
     <!-- Cycle through windows -->
     <keybind key="A-C-q">
