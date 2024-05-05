@@ -5,9 +5,13 @@ QUEST_LOG_FILE="00 - quest log & character stats.md"
 QUEST_LOG_PATH="$QUEST_LOG_DIR/$QUEST_LOG_FILE"
 
 # Extract sections for rofi input
-IGNORE_SECTION=0
+IGNORE_SECTION=1
 SECTIONS=""
 while IFS= read -r line || [[ -n "$line" ]]; do
+    if [[ "$line" == "-- QUEST LOG BEGIN --" ]]; then
+        IGNORE_SECTION=0
+        continue
+    fi
     if [[ "$line" == "-- QUEST LOG END --" ]]; then
         IGNORE_SECTION=1
         break

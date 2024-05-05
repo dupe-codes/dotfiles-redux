@@ -65,6 +65,7 @@ alias ls=ll
 alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
 alias open='xdg-open'
 alias trash="~/scripts/gigacli/trash.sh"
+alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 
 search() {
