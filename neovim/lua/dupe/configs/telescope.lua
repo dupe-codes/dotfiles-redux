@@ -78,6 +78,9 @@ require("telescope").setup {
       require("telescope.themes").get_dropdown {
         dropdown_configs
       }
+    },
+    ["frecency"] = {
+      db_safe_mode = false,
     }
   }
 }
