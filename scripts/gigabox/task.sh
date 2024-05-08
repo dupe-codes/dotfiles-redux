@@ -33,7 +33,13 @@ if [ -z "$TAG" ]; then
 fi
 
 # prompt for y/n on whether to add task to the queue
-ENQUEUE=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enqueue task? (y/n)")
+# skip if type is "today", "tomorrow", or "this week"
+if [[ "$TYPE" == "today" || "$TYPE" == "tomorrow" || "$TYPE" == "this week" ]]; then
+    ENQUEUE="n"
+else
+    ENQUEUE=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enqueue task? (y/n)")
+fi
+
 if [ "$ENQUEUE" == "y" ]; then
     TAG="$TAG #queue"
 fi

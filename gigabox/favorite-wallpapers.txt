@@ -109,3 +109,5 @@ train-crossing.png
 jacket-minimalist.png
 purple-elegance.png
 sass.png
+vaporwave-portrait.png
+asuka-profile.png
