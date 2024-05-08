@@ -1,7 +1,7 @@
 #!/bin/bash
 
 QUEST_LOG_DIR="$HOME/datastore"
-QUEST_LOG_FILE="00 - quest log & character stats.md"
+QUEST_LOG_FILE="00 - quest log.md"
 QUEST_LOG_PATH="$QUEST_LOG_DIR/$QUEST_LOG_FILE"
 
 # Extract sections for rofi input

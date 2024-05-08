@@ -462,6 +462,13 @@
         </command>
       </action>
     </keybind>
+    <keybind key = "A-S-h">
+      <action name="Execute">
+        <command>
+          kitty tmux new-session -s stats '~/scripts/gigabox/show-stats.sh'
+        </command>
+      </action>
+    </keybind>
 
     <!-- Cycle through windows -->
     <keybind key="A-C-q">
