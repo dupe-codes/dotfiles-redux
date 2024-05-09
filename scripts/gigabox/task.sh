@@ -32,16 +32,18 @@ if [ -z "$TAG" ]; then
     exit 0
 fi
 
-# prompt for y/n on whether to add task to the queue
-# skip if type is "today", "tomorrow", or "this week"
-if [[ "$TYPE" == "today" || "$TYPE" == "tomorrow" || "$TYPE" == "this week" ]]; then
-    ENQUEUE="n"
+if [[ "$TYPE" == "today" ]]; then
+    TAG="$TAG #today"
+elif [[ "$TYPE" == "tomorrow" ]]; then
+    TAG="$TAG #tomorrow"
+elif [[ "$TYPE" == "this week" ]]; then
+    TAG="$TAG #later"
 else
+    # if not a prioritized section, determine if task should be enqueued
     ENQUEUE=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enqueue task? (y/n)")
-fi
-
-if [ "$ENQUEUE" == "y" ]; then
-    TAG="$TAG #queue"
+    if [ "$ENQUEUE" == "y" ]; then
+        TAG="$TAG #queue"
+    fi
 fi
 
 TASK=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter task:")
