@@ -1,0 +1,14 @@
+-- TODO: Custom dashboard configuration
+--  - persona 5 joker ascii (take your time)
+--  - new file
+--  - open oil file explorer
+--  - Telescope old files (most recent)
+--  - Telescropt frecency (more frequent)
+--  - restore session - implement after neovim session persistence
+--  - open notes - open data store
+--  - (maybe) favorite notes
+--  - quest log
+--  - today's daily note
+--  - (maybe) favorite notes
+--  - quest log
+--  - today's daily note

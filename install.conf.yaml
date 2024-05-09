@@ -47,6 +47,7 @@
     ~/.config/ncmpcpp:            gigabox/ncmpcpp
     ~/.config/mpd:                gigabox/mpd
     ~/.config/remind:             gigabox/remind
+    ~/.config/zathura:            gigabox/zathura
     ~/.scripts/reminders.sh:      gigabox/openbox/scripts/reminders.sh
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox
