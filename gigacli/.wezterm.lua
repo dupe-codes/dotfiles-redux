@@ -8,7 +8,7 @@ end
 
 config.font = wezterm.font_with_fallback {
   'Fantasque Sans Mono',
-  'CozetteHiDpi',
+  'CozetteHiDpi',             -- NOTE: cozette includes icons, picked up on fallback
   'Comic Mono',
   'CommitMono-dupe',
   'Miracode',

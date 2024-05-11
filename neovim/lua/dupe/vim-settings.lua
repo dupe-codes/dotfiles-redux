@@ -7,6 +7,7 @@ vim.cmd("sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo lineh
 vim.cmd("sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=")
 vim.cmd("set signcolumn=yes")
 
+
 local hl = vim.api.nvim_set_hl
 hl(0, "DiagnosticError", { fg = "#db4b4b", bg = clear })
 hl(0, "DiagnosticSignError", { fg = "#db4b4b", bg = clear })
@@ -39,12 +40,6 @@ vim.api.nvim_create_autocmd({"InsertEnter", "InsertLeave", "BufEnter", "BufWrite
     group = "OverLengthGroup",
     callback = apply_highlight,
 })
-
-
---vim.cmd("au InsertEnter * 2match OverLength /\\%89v.\\+/")
---vim.cmd("au InsertLeave * 2match OverLength /\\%89v.\\+/")
---vim.cmd("au BufEnter * 2match OverLength /\\%89v.\\+/")
---vim.cmd("au BufWritePre * 2match OverLength /\\%89v.\\+/")
 
 -- Save last cursor position on exit
 local lastplace = vim.api.nvim_create_augroup("LastPlace", {})
