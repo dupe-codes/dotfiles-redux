@@ -11,13 +11,11 @@ local header = read_file_contents(file_path)
 if not header then
   header = { "" }
 end
-local version = vim.version()
 table.insert(header, "")
 table.insert(header, "❯❯❯  take your time  ❮❮❮")
 table.insert(header, "")
 table.insert(header, "")
 
--- daily notes in "~/datastore/daily notes/YYYY-MM-DD.md"
 local todays_note = os.getenv("HOME") .. "/datastore/daily notes/" .. os.date("%Y-%m-%d") .. ".md"
 local quest_log = os.getenv("HOME") .. "/datastore/00 - quest log.md"
 
@@ -34,7 +32,6 @@ local center = {
     action = 'ene'
   },
   {
-    -- folder icon
     icon = ' ',
     icon_hl = 'Title',
     desc = 'File explorer',
@@ -91,7 +88,6 @@ local center = {
     action = 'Oil --float ~/datastore'
   },
   {
-    -- open the quest log
     icon = ' ',
     icon_hl = 'Title',
     desc = 'Quest log',
@@ -103,7 +99,6 @@ local center = {
     action = 'e ' .. quest_log
   },
   {
-    -- open today's note
     icon = ' ',
     icon_hl = 'Title',
     desc = 'Today\'s note',

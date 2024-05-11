@@ -1,7 +1,7 @@
 ## general
 open split view pane (horizontal) | <C-w> s
 open split view pane (vertical) | <C-w> v
-move between open panes | <leader>h, <leader>j, <leader>k, <leader>l
+move between open panes | <leader>hjkl
 resize open panes | <localleader>hjkl
 close all open panes | <C-w> o
 clear search buffer | <leader><leader>
