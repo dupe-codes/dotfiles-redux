@@ -1,14 +1,132 @@
--- TODO: Custom dashboard configuration
---  - persona 5 joker ascii (take your time)
---  - new file
---  - open oil file explorer
---  - Telescope old files (most recent)
---  - Telescropt frecency (more frequent)
---  - restore session - implement after neovim session persistence
---  - open notes - open data store
---  - (maybe) favorite notes
---  - quest log
---  - today's daily note
---  - (maybe) favorite notes
---  - quest log
---  - today's daily note
+-- Custom dashboard configuration
+--  TODO:
+--    - restore session - implement after neovim session persistence
+--    - (maybe) bookmarked notes/files
+
+local read_file_contents = require("dupe.util").read_file_contents
+
+local header_file = "take-your-time.txt"
+local file_path = os.getenv("HOME") .. "/ascii-art/" .. header_file
+local header = read_file_contents(file_path)
+if not header then
+  header = { "" }
+end
+local version = vim.version()
+table.insert(header, "")
+table.insert(header, "❯❯❯  take your time  ❮❮❮")
+table.insert(header, "")
+table.insert(header, "")
+
+-- daily notes in "~/datastore/daily notes/YYYY-MM-DD.md"
+local todays_note = os.getenv("HOME") .. "/datastore/daily notes/" .. os.date("%Y-%m-%d") .. ".md"
+local quest_log = os.getenv("HOME") .. "/datastore/00 - quest log.md"
+
+local center = {
+  {
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'New file',
+    desc_hl = 'String',
+    key = 'n',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'ene'
+  },
+  {
+    -- folder icon
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'File explorer',
+    desc_hl = 'String',
+    key = 'e',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'Oil'
+  },
+-- TODO: add with session persistence
+  --{
+    --icon = ' ',
+    --icon_hl = 'Title',
+    --desc = 'Restore session',
+    --desc_hl = 'String',
+    --key = 's',
+    --keymap = '',
+    --key_hl = 'Number',
+    --key_format = ' %s',
+    --action = 'lua require("persistence").load({ last = true})'
+  --},
+  {
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Recent files',
+    desc_hl = 'String',
+    key = 'r',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'Telescope oldfiles'
+  },
+  {
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Frecent files',
+    desc_hl = 'String',
+    key = 'f',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'Telescope frecency'
+  },
+  {
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Open notes',
+    desc_hl = 'String',
+    key = 'i',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'Oil --float ~/datastore'
+  },
+  {
+    -- open the quest log
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Quest log',
+    desc_hl = 'String',
+    key = 'l',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'e ' .. quest_log
+  },
+  {
+    -- open today's note
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Today\'s note',
+    desc_hl = 'String',
+    key = 't',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'e ' .. todays_note
+  },
+}
+
+require('dashboard').setup({
+  theme = 'doom',
+  config = {
+    header = header,
+    center = center,
+    footer = function()
+      return {
+        "",
+        "─── "..os.date("%a, %d / %m / %Y").." ───"
+      }
+    end
+  },
+})
+

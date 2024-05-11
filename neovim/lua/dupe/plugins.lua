@@ -77,12 +77,22 @@ local plugins = {
     -- stats tracking
     { "wakatime/vim-wakatime", lazy = false },
 
+    -- Splash screen dashboard
+    --{
+        --"mhinz/vim-startify",
+        --config = function()
+            --require("dupe.configs.startify")
+        --end,
+    --},
     {
-        "mhinz/vim-startify",
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
         config = function()
-            require("dupe.configs.startify")
+            require("dupe.configs.dashboard")
         end,
+        dependencies = { {'nvim-tree/nvim-web-devicons'}}
     },
+
     { "nvim-treesitter/nvim-treesitter-context" },
     {
         "dnlhc/glance.nvim",

@@ -25,10 +25,26 @@ vim.cmd("au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\\s
 
 -- Highlight text beyond 80 chars
 hl(0, "OverLength", { link = 'DiffDelete' })
-vim.cmd("au InsertEnter * 2match OverLength /\\%89v.\\+/")
-vim.cmd("au InsertLeave * 2match OverLength /\\%89v.\\+/")
-vim.cmd("au BufEnter * 2match OverLength /\\%89v.\\+/")
-vim.cmd("au BufWritePre * 2match OverLength /\\%89v.\\+/")
+local function apply_highlight()
+    vim.schedule(function()
+        if vim.bo.filetype ~= 'dashboard' then
+            vim.cmd("2match OverLength /\\%89v.\\+/")
+        else
+            vim.cmd("2match none")
+        end
+    end)
+end
+vim.api.nvim_create_augroup("OverLengthGroup", { clear = true })
+vim.api.nvim_create_autocmd({"InsertEnter", "InsertLeave", "BufEnter", "BufWritePre", "BufReadPost", "BufNewFile"}, {
+    group = "OverLengthGroup",
+    callback = apply_highlight,
+})
+
+
+--vim.cmd("au InsertEnter * 2match OverLength /\\%89v.\\+/")
+--vim.cmd("au InsertLeave * 2match OverLength /\\%89v.\\+/")
+--vim.cmd("au BufEnter * 2match OverLength /\\%89v.\\+/")
+--vim.cmd("au BufWritePre * 2match OverLength /\\%89v.\\+/")
 
 -- Save last cursor position on exit
 local lastplace = vim.api.nvim_create_augroup("LastPlace", {})

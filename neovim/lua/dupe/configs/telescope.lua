@@ -44,10 +44,6 @@ local keymap = {
             '<cmd>Telescope frecency workspace=CWD<CR>',
             'Search files by frecency'
         },
-        l = {
-          ':lua TOGGLE_TELESCOPE_SETUP()<CR>',
-          'Toggle telescope layout'
-        }
     }
 }
 
@@ -76,10 +72,6 @@ local dropdown_configs = {
   },
 }
 
-local h_percentage = 0.85
-local w_percentage = 0.85
-local w_limit = 80
-
 local standard_setup = {
   borderchars = {
     --           N    E    S    W   NW   NE   SE   SW
@@ -93,50 +85,6 @@ local standard_setup = {
     vertical = {
       mirror = true,
       prompt_position = 'top',
-      width = function(_, cols, _)
-        return math.min( math.floor( w_percentage * cols ), w_limit )
-      end,
-      height = function(_, _, rows)
-        return math.floor( rows * h_percentage )
-      end,
-      preview_cutoff = 10,
-      preview_height = 0.4,
-    },
-  },
-}
-
-local fullscreen_setup = {
-  borderchars = {
-    --           N    E    S    W   NW   NE   SE   SW
-    prompt =  { ' ', ' ', '─', ' ', ' ', ' ', ' ', ' ' },
-    results = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-    preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-  },
-  preview = { hide_on_startup = false },
-  layout_strategy = 'flex', -- HORIZONTAL, VERTICAL, FLEX
-  layout_config = {
-    flex = { flip_columns = 100 },
-    horizontal = {
-      mirror = false,
-      prompt_position = 'top',
-      width = function(_, cols, _)
-        return cols
-      end,
-      height = function(_, _, rows)
-        return rows
-      end,
-      preview_cutoff = 10,
-      preview_width = 0.5,
-    },
-    vertical = {
-      mirror = true,
-      prompt_position = 'top',
-      width = function(_, cols, _)
-        return cols
-      end,
-      height = function(_, _, rows)
-        return rows
-      end,
       preview_cutoff = 10,
       preview_height = 0.4,
     },
@@ -177,18 +125,6 @@ local function get_configuration(setup)
       }
     }
   }
-end
-
-TELESCOPE_FULLSCREEN = false
-function TOGGLE_TELESCOPE_SETUP()
-  TELESCOPE_FULLSCREEN = not TELESCOPE_FULLSCREEN
-  if TELESCOPE_FULLSCREEN then
-    require("telescope").setup(get_configuration(fullscreen_setup))
-    vim.notify("Telescope in fullscreen mode", nil, { title = "Telescope" })
-  else
-    require("telescope").setup(get_configuration(standard_setup))
-    vim.notify("Telescope in standard mode", nil, { title = "Telescope" })
-  end
 end
 
 require("telescope").setup(get_configuration(standard_setup))
