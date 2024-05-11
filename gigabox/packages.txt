@@ -125,6 +125,8 @@ noto-fonts-emoji
 catppuccin-macchiato-cursors@yay
 font-manager
 gucharmap
+cozette-otb@yay
+ttf-comic-mono-git@yay
 
 # Bluetooth & peripherals
 bluez

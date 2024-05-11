@@ -7,7 +7,14 @@ if wezterm.config_builder then
 end
 
 config.leader = { key = 'a', mods = 'SUPER', timeout_milliseconds = 1000 }
-config.font = wezterm.font_with_fallback { 'MonoLisa Custom', 'Noto Sans Symbols' }
+config.font = wezterm.font_with_fallback {
+  'Comic Mono',
+  'Fantasque Sans Mono',
+  'CozetteHiDpi',
+  'Miracode',
+  'MonoLisa Custom',
+  'Noto Sans Symbols'
+}
 config.color_scheme = 'Tokyo Night'
 config.window_background_opacity = 0.95
 config.default_cursor_style = 'BlinkingUnderline'
