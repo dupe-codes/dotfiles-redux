@@ -20,6 +20,7 @@ cloc
 timew
 sqlite
 man-db
+ascii-image-converter@yay
 
 # dev packages
 gleam@yay

@@ -10,14 +10,27 @@
 #   2. Initialization commands for specific project directories, e.g. configuring
 #      opam switches for OCaml projects
 
+saved_options=("gigacli" "$HOME/datastore")
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
+    saved_options_string=$(printf "%s\n" "${saved_options[@]}")
     selected=$( \
-        printf "gigacli\n$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
+        printf "%s\n%s" "$saved_options_string" "$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
         | gum filter --placeholder "Choose session..." --height 50 --no-strict \
     )
 fi
+
+
+#if [[ $# -eq 1 ]]; then
+    #selected=$1
+#else
+    #selected=$( \
+        #printf "gigacli\n$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
+        #| gum filter --placeholder "Choose session..." --height 50 --no-strict \
+    #)
+#fi
 
 if [[ -z $selected ]]; then
     exit 0
