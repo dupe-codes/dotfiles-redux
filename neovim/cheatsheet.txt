@@ -4,11 +4,17 @@ open split view pane (vertical) | <C-w> v
 move between open panes | <leader>hjkl
 resize open panes | <localleader>hjkl
 close all open panes | <C-w> o
-clear search buffer | <leader><leader>
+clear search buffer | <leader><leader>c
 move visual selection | 'v', 'J', 'v', 'K'
 yank into system clipboard | <leader>y, 'v', <leader>y, <leader>Y
 replace in file text at current cursor | <leader>s
 go back/forward through cursor locations | ctrl + o/i
+
+## snippets
+expand current item or jump to next   | <C-k>
+jump to last placeholder              | <C-j>
+choose from list of placeholder opts  | <C-l>
+reload snippets                       | <leader><leader>s
 
 ## telescope
 search files | <C-p>

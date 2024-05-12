@@ -1,1 +1,44 @@
-require("dupe.snippets.ft.python")
+-- luasnip configuration
+local ls = require("luasnip")
+local types = require("luasnip.util.types")
+
+ls.config.set_config {
+  history = true,                             -- remember last snippet
+  updateevents = "TextChanged,TextChangedI",  -- update dynamic snips as you type
+  enable_autosnippets = true,
+
+  ext_opts = {
+    [types.choiceNode] = {
+      active = {
+        virt_text = {{"<-", "Error"}},
+      },
+    },
+  },
+}
+
+-- TODO: trim snippet configs in lsp.lua config
+--       all snippet configs live here
+
+vim.keymap.set({ "i", "s" }, "<C-k>", function() -- jump forward in snippet
+  if ls.expand_or_jumpable() then
+    return ls.expand_or_jump()
+  end
+end, { silent = true })
+
+vim.keymap.set({ "i", "s" }, "<C-j>", function() -- jump back in snippet
+  if ls.jumpable(-1) then
+    return ls.jump(-1)
+  end
+end, { silent = true })
+
+vim.keymap.set("i", "<C-l>", function()         -- select within list of options
+  if ls.choice_active() then
+    return ls.change_choice(1)
+  end
+end)
+
+-- load all snippets
+-- the luasnip loader will utomatically reload snippets when files
+-- in this dir are added or changed
+local snippets_dir = vim.fn.stdpath("config") .. "/lua/dupe/snippets/ft"
+require("luasnip.loaders.from_lua").load({ paths = { snippets_dir } })

@@ -6,14 +6,17 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+-- TODO: cozette includes icons, picked up on fallback
+--       explore how you feel with them, and (maybe) remap
+--       the todo-comments icon for NOTE
 config.font = wezterm.font_with_fallback {
   'Fantasque Sans Mono',
-  'CozetteHiDpi',             -- NOTE: cozette includes icons, picked up on fallback
   'Comic Mono',
   'CommitMono-dupe',
   'Miracode',
   'MonoLisa Custom',
-  'Noto Sans Symbols'
+  'CozetteHiDpi',
+  'Noto Sans Symbols',
 }
 config.color_scheme = 'Tokyo Night'
 

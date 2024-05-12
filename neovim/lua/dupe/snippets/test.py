@@ -12,7 +12,8 @@ def my_fn(x: int) -> int:
         raise ValueError("x cannot be 0")
     return x
 
-def my_function(x: int, y : str, z: float) -> float:
+
+def my_function(x: int, y: str, z: float) -> float:
     """Function summary
 
     Function description
@@ -27,6 +28,7 @@ def my_function(x: int, y : str, z: float) -> float:
         Description of z.
     """
     return x + z
+
 
 def my_other_fun() -> None:
     """Function summary

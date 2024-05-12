@@ -55,7 +55,7 @@ local function get_parameters()
   return nil
 end
 
--- Dynamic node for the parameters section
+-- Dynamic node for a function's parameters section
 local parameters_node = d(2, function()
   local params = get_parameters()
   if params and #params > 0 then
@@ -74,40 +74,41 @@ local parameters_node = d(2, function()
   end
 end, {})
 
--- snippet for numpy style function docstring
--- see https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
--- TODO:
---    1. add support for return type
---    2. add support for exceptions
---    3. add support for examples
---    4. remove awkward newlines at end of parameter-less functions
---    5. automatically add indentation if needed
---    6. support defaults on parameters
---    7. support *args and **kwargs
---    8. suppoort yields
---    9. support class attributes
---    10. make sure "self" is not included in methods
-ls.add_snippets("python", {
-    s(
-      "fdstr", -- function docstring
-      fmta(
-        [[
-        """<summary>
+return {
+  -- snippet for numpy style function docstring
+  -- see https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
+  -- TODO:
+  --    1. add support for return type
+  --    2. add support for exceptions
+  --    3. add support for examples
+  --    4. remove awkward newlines at end of parameter-less functions
+  --    5. automatically add indentation if needed
+  --    6. support defaults on parameters
+  --    7. support *args and **kwargs
+  --    8. suppoort yields
+  --    9. support class attributes
+  --    10. make sure "self" is not included in methods
+  s(
+    "fdstr", -- function docstring
+    fmta(
+      [[
+      """<summary>
 
-        <description>
+      <description>
 
-        <parameters>
-        """
-        ]],
-        {
-          summary = i(1, "Function summary"),
-          description = i(2, "Function description"),
-          parameters = parameters_node,
-        }
-      )
+      <parameters>
+      """
+      ]],
+      {
+        summary = i(1, "Function summary"),
+        description = i(2, "Function description"),
+        parameters = parameters_node,
+      }
     )
-})
+  ),
 
--- TODO: add snippet for class docstring
--- TODO: add snippet for module docstring
--- TODO: add snippet for module variable docstring
+  -- TODO: add snippet for class docstring
+  -- TODO: add snippet for module docstring
+  -- TODO: add snippet for module variable docstring
+
+}
