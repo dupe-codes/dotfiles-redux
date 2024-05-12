@@ -16,6 +16,7 @@
   "dressing.nvim": { "branch": "master", "commit": "18e5beb3845f085b6a33c24112b37988f3f93c06" },
   "eldritch.nvim": { "branch": "master", "commit": "dee72af67a089f7a4a7bbc64f7de06ae826362fd" },
   "everforest-nvim": { "branch": "main", "commit": "5e0e32a569fb464911342f0d421721cc1c94cf25" },
+  "gitpad.nvim": { "branch": "main", "commit": "109f94ecfff3f333f1a38a53c54d4b0068c0fa61" },
   "gitsigns.nvim": { "branch": "main", "commit": "d96ef3bbff0bdbc3916a220f5c74a04c4db033f2" },
   "glance.nvim": { "branch": "master", "commit": "51059bcf21016387b6233c89eed220cf47fca752" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },

@@ -473,7 +473,15 @@ local plugins = {
         "rest-nvim/rest.nvim",
         ft = "http",
         dependencies = { "luarocks.nvim" },
-    }
+    },
+
+    -- project note taking
+    {
+        'yujinyuz/gitpad.nvim',
+        config = function()
+            require("dupe.configs.gitpad")
+        end
+    },
 }
 
 require("lazy").setup(plugins)

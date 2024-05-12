@@ -62,13 +62,6 @@ go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
 
-## nvim-tree
-add file or directory | (in tree) a
-delete file or directory | (in tree) d
-rename a file or directory | (in tree) <C-r>
-nvimtreefindfile | <leader>nf
-nvimtreetoggle | <leader>nt
-
 ## lsp
 type definition | <leader>D
 code actions | <leader>ca
@@ -162,5 +155,6 @@ annotate mark under cursor | ma
 list all marks in current buffer | <leader>mb
 list all marks across _all_ buffers | <leader>ma
 
-## others
-scratch buffer | <leader>sc
+## notes
+open project notes | <leader>np
+open file note     | <leader>nf

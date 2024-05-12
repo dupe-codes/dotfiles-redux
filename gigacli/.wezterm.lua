@@ -11,6 +11,7 @@ end
 --       the todo-comments icon for NOTE
 config.font = wezterm.font_with_fallback {
   'Fantasque Sans Mono',
+  'Rec Mono Duotone',
   'Comic Mono',
   'CommitMono-dupe',
   'Miracode',
