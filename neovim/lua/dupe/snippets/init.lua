@@ -19,19 +19,22 @@ ls.config.set_config {
 -- TODO: trim snippet configs in lsp.lua config
 --       all snippet configs live here
 
-vim.keymap.set({ "i", "s" }, "<C-k>", function() -- jump forward in snippet
+-- jump forward in snippet
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
   if ls.expand_or_jumpable() then
     return ls.expand_or_jump()
   end
 end, { silent = true })
 
-vim.keymap.set({ "i", "s" }, "<C-j>", function() -- jump back in snippet
+-- jump back in snippet
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
   if ls.jumpable(-1) then
     return ls.jump(-1)
   end
 end, { silent = true })
 
-vim.keymap.set("i", "<C-l>", function()         -- select within list of options
+-- select within list of options
+vim.keymap.set("i", "<C-l>", function()
   if ls.choice_active() then
     return ls.change_choice(1)
   end

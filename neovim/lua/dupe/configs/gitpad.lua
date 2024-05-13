@@ -39,6 +39,5 @@ vim.keymap.set('n', '<leader>np', function() project_note() end)
 vim.keymap.set('n', '<leader>nf', function() file_note() end)
 
 require('gitpad').setup {
-    -- set dir to $HOME/datastore/coding notes/
     dir = os.getenv('HOME') .. '/datastore/coding notes/',
 }

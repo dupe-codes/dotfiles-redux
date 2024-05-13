@@ -111,3 +111,13 @@ purple-elegance.png
 sass.png
 vaporwave-portrait.png
 asuka-profile.png
+pool-lounge.png
+retro-astronaut.png
+big-stretch.png
+soaring-birds.png
+pixel-smoke-break.png
+dogfight.png
+edelgard-comfy.jpeg
+buster-sword.jpg
+phone-cup.png
+spirited-away-run.png

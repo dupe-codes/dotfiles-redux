@@ -55,7 +55,7 @@ local center = {
     --action = 'lua require("persistence").load({ last = true})'
   --},
   {
-    icon = ' ',
+    icon = ' ',
     icon_hl = 'Title',
     desc = 'Recent files',
     desc_hl = 'String',
@@ -88,7 +88,9 @@ local center = {
     action = 'Oil --float ~/datastore'
   },
   {
-    icon = ' ',
+    -- sword icon
+    -- magic wand icon
+    icon = ' ',
     icon_hl = 'Title',
     desc = 'Quest log',
     desc_hl = 'String',
