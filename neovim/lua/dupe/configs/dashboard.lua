@@ -2,6 +2,8 @@
 --  TODO:
 --    - restore session - implement after neovim session persistence
 --    - (maybe) bookmarked notes/files
+--        - select from configured list using vim.ui.select (telescope
+--          backed)
 
 local read_file_contents = require("dupe.util").read_file_contents
 
@@ -88,9 +90,7 @@ local center = {
     action = 'Oil --float ~/datastore'
   },
   {
-    -- sword icon
-    -- magic wand icon
-    icon = ' ',
+    icon = '🗡',
     icon_hl = 'Title',
     desc = 'Quest log',
     desc_hl = 'String',

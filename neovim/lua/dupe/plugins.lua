@@ -236,11 +236,11 @@ local plugins = {
                 "rust-analyzer",
                 "zls",
                 "clangd",
+                "stylua",
             },
         },
         config = function(_, opts)
             require("mason").setup(opts)
-
              -- custom cmd to install listed mason binaries
              -- credit to NvChad :]
             vim.api.nvim_create_user_command("MasonInstallAll", function()

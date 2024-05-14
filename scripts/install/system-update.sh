@@ -12,6 +12,10 @@ confirm_update "sudo pacman -Syu"
 confirm_update "yay -Syu"
 confirm_update "cargo install-update -a"
 confirm_update "doom upgrade"
+
+# TODO: for neovim updates, how to surface success/failure?
 confirm_update 'nvim --headless "+Lazy! sync" +qa'
 
 # TODO: add pip, npm, go
+# TODO: add nvim mason installed packages update
+#       maybe just: nvim --headless "+MasonUpdate!" +qa

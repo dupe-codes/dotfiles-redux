@@ -144,6 +144,21 @@ lspconfig.lua_ls.setup {
     },
 }
 
+-- TODO: autoformat on save for lua
+--       actually, use this for _all_ languages so
+--       autoformatting is configured by one means
+--       to replace:
+--          ocaml format (above)
+--          python black format (none-ls)
+--
+--[[
+   [require("conform").setup {
+   [    formatters_by_ft = {
+   [        lua = { "stylua" },
+   [    },
+   [}
+   ]]
+
 lspconfig.clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,
