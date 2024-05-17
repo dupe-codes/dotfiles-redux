@@ -275,11 +275,19 @@ local plugins = {
         priority = 1000,
         opts = {},
     },
-    { "pineapplegiant/spaceduck" , lazy = false, priority = 1000 },
+    { "pineapplegiant/spaceduck", lazy = false, priority = 1000 },
     {
         "eldritch-theme/eldritch.nvim",
         lazy = false,
         priority = 1000,
+    },
+    { "markvincze/panda-vim", lazy = false },
+    { "decaycs/decay.nvim", name = "decay", lazy = false },
+    {
+        "dgox16/oldworld.nvim",
+        lazy = false,
+        priority = 1000,
+        config = true,
     },
 
     -- Zig support

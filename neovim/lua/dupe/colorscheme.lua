@@ -37,6 +37,22 @@ require('tokyonight').setup({
 --vim.cmd.colorscheme 'eldritch'
 --vim.cmd.colorscheme 'spaceduck'
 vim.cmd.colorscheme 'tokyonight-night'
+--vim.cmd.colorscheme 'panda'
+--require('dupe.colors.tokyo-panda')
+
+--require('decay').setup({
+  --style = 'default',
+  --italics = {
+  --code = true,
+    --comments = true
+  --},
+--})
+
+-- TODO: i like oldworld, but it needs a few tweaks:
+--  1. cursorline color is too dark
+--  2. extra whitespace highlight doesn't work
+--  3. line > 80 char highlight doesn't work
+--vim.cmd.colorscheme 'oldworld'
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"

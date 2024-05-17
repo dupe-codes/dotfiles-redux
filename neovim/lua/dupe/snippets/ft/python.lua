@@ -56,23 +56,25 @@ local function get_parameters()
 end
 
 -- Dynamic node for a function's parameters section
-local parameters_node = d(2, function()
-  local params = get_parameters()
-  if params and #params > 0 then
-    local param_nodes = {}
-    for _, param in ipairs(params) do
-      table.insert(param_nodes, t({"", param.name .. " : " .. param.type}))
-      table.insert(param_nodes, t({"", "    Description of " .. param.name .. "."}))
+local parameters_node = function(position)
+  return d(position, function()
+    local params = get_parameters()
+    if params and #params > 0 then
+      local param_nodes = {}
+      for idx, param in ipairs(params) do
+        table.insert(param_nodes, t({"", param.name .. " : " .. param.type, ""}))
+        table.insert(param_nodes, i(idx, "    Description of " .. param.name .. "."))
+      end
+      return sn(nil, {
+        t("Parameters"),
+        t({"", "----------"}),
+        sn(nil, param_nodes),
+      })
+    else
+      return sn(nil, {})
     end
-    return sn(nil, {
-      t("Parameters"),
-      t({"", "----------"}),
-      sn(nil, param_nodes),
-    })
-  else
-    return sn(nil, {})
-  end
-end, {})
+  end, {})
+end
 
 return {
   -- snippet for numpy style function docstring
@@ -85,7 +87,7 @@ return {
   --    5. automatically add indentation if needed
   --    6. support defaults on parameters
   --    7. support *args and **kwargs
-  --    8. suppoort yields
+  --    8. support yields
   --    9. support class attributes
   --    10. make sure "self" is not included in methods
   s(
@@ -102,7 +104,7 @@ return {
       {
         summary = i(1, "Function summary"),
         description = i(2, "Function description"),
-        parameters = parameters_node,
+        parameters = parameters_node(3),
       }
     )
   ),
