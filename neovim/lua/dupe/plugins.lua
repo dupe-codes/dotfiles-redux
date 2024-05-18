@@ -446,24 +446,6 @@ local plugins = {
         ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
     },
 
-    -- DB tooling
-    {
-        'kristijanhusak/vim-dadbod-ui',
-        dependencies = {
-            { 'tpope/vim-dadbod', lazy = true },
-            {
-                'kristijanhusak/vim-dadbod-completion',
-                ft = { 'sql', 'mysql', 'plsql' },
-                lazy = true
-            },
-        },
-        cmd = {
-            'DBUI',
-            'DBUIToggle',
-            'DBUIAddConnection',
-            'DBUIFindBuffer',
-        },
-    },
     {
         "stevearc/oil.nvim",
         -- Optional dependencies
@@ -476,11 +458,6 @@ local plugins = {
         "vhyrro/luarocks.nvim",
         priority = 1000,
         config = true,
-    },
-    {
-        "rest-nvim/rest.nvim",
-        ft = "http",
-        dependencies = { "luarocks.nvim" },
     },
 
     -- project note taking
