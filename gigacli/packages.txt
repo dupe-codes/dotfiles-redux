@@ -45,6 +45,7 @@ wakatime@pip
 pgcli@pip
 onsen@pip
 smassh@pip
+harlequin@pip
 
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go

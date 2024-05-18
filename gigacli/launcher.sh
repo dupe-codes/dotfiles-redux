@@ -28,6 +28,7 @@ tools=(
     ["dust"]=" check disk space:"
     ["gitui"]=" open git interface:"
     ["bat"]="󰊪 read file:r:filename"
+    ["harlequin"]=" open database client:"
 )
 
 # NOTE: Alias tools do not currently support background args
@@ -52,6 +53,7 @@ declare -a tool_order=(
     "onsen"
     "rain"
     "ranger"
+    "harlequin"
     "cbonsai"
     "btm"
     "nap"

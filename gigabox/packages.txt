@@ -7,6 +7,7 @@ opam
 unzip
 wget
 jq
+jo
 tidy
 docker
 docker-compose

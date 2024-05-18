@@ -12,10 +12,10 @@ end
 config.font = wezterm.font_with_fallback {
   'Fantasque Sans Mono',
   'Rec Mono Duotone',
-  'Comic Mono',
   'CommitMono-dupe',
-  'Miracode',
+  'Comic Mono',
   'MonoLisa Custom',
+  'BerkeleyMono Nerd Font Mono',
   --'CozetteHiDpi',
   'Noto Sans Symbols',
 }

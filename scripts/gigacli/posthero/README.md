@@ -1,0 +1,26 @@
+# PostHero
+
+a command line utility for interacting with REST apis
+
+written in lua
+
+## tools
+
+- httpie for launching requests
+- jo for formatting input data
+- jq for parsing output json data
+- tidy for parsing output html data
+
+## ideas/plans
+
+- read available endpoints from a config file
+    - either in cwd or specified as flag
+    - e.g. endpoints.posthero.yml
+    - can pre-populate headers and inputs
+- simple TUI for selecting available endpoints and configuring
+  requests
+
+## inspo
+
+- [reddit thread](https://www.reddit.com/r/commandline/comments/ev0ukt/comment/ffysbng/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+- https://github.com/whiteinge/dotfiles/blob/master/bin/c
