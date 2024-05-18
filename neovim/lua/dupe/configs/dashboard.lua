@@ -1,9 +1,7 @@
 -- Custom dashboard configuration
 --  TODO:
---    - restore session - implement after neovim session persistence
---    - (maybe) bookmarked notes/files
---        - select from configured list using vim.ui.select (telescope
---          backed)
+--    - bookmarked notes/files
+--        - select from configured list using vim.ui.select
 
 local read_file_contents = require("dupe.util").read_file_contents
 
@@ -56,7 +54,6 @@ local center = {
     action = 'lua require("dupe.configs.sessions").load_session()'
   },
   {
-    -- file icon
     icon = ' ',
     icon_hl = 'Title',
     desc = 'Start session',

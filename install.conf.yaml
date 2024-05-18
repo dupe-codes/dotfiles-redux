@@ -63,6 +63,7 @@
     ~/.config/gitui:              gigacli/gitui
     ~/.config/bottom:             gigacli/bottom
     ~/.config/nom:                gigacli/nom
+    ~/.config/harlequin:          gigacli/harlequin
     ~/.gitconfig:                 gigacli/.gitconfig
     ~/launcher.sh:                gigacli/launcher.sh
     ~/.wezterm.lua:               gigacli/.wezterm.lua
