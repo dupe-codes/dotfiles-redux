@@ -72,7 +72,19 @@ require('lualine').setup {
         lualine_x = {},
         lualine_y = {
           "filetype",
-          "rest",
+          -- show name of current session if in one
+          {
+              function()
+                local session = vim.v.this_session
+                -- strip session path to just name of file
+                local session_name = string.match(session, "([^/]+).session$")
+                return "sesh: " .. session_name
+              end,
+
+              cond = function()
+                return vim.fn.ObsessionStatus() ~= ""
+              end,
+          },
           {
               function()
                   for _, buf in ipairs(vim.api.nvim_list_bufs()) do

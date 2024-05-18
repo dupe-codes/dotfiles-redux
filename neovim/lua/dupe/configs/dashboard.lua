@@ -44,18 +44,30 @@ local center = {
     key_format = ' %s',
     action = 'Oil'
   },
--- TODO: add with session persistence
-  --{
-    --icon = ' ',
-    --icon_hl = 'Title',
-    --desc = 'Restore session',
-    --desc_hl = 'String',
-    --key = 's',
-    --keymap = '',
-    --key_hl = 'Number',
-    --key_format = ' %s',
-    --action = 'lua require("persistence").load({ last = true})'
-  --},
+  {
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Load session',
+    desc_hl = 'String',
+    key = 'l',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'lua require("dupe.configs.sessions").load_session()'
+  },
+  {
+    -- file icon
+    icon = ' ',
+    icon_hl = 'Title',
+    desc = 'Start session',
+    desc_hl = 'String',
+    key = 's',
+    keymap = '',
+    key_hl = 'Number',
+    key_format = ' %s',
+    action = 'lua require("dupe.configs.sessions").start_session()'
+  },
+
   {
     icon = ' ',
     icon_hl = 'Title',
@@ -83,7 +95,7 @@ local center = {
     icon_hl = 'Title',
     desc = 'Open notes',
     desc_hl = 'String',
-    key = 'i',
+    key = 'o',
     keymap = '',
     key_hl = 'Number',
     key_format = ' %s',
@@ -94,7 +106,7 @@ local center = {
     icon_hl = 'Title',
     desc = 'Quest log',
     desc_hl = 'String',
-    key = 'l',
+    key = 'q',
     keymap = '',
     key_hl = 'Number',
     key_format = ' %s',

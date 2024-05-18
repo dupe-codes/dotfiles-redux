@@ -467,6 +467,14 @@ local plugins = {
             require("dupe.configs.gitpad")
         end
     },
+
+    -- sessions
+    {
+        "tpope/vim-obsession",
+        config = function()
+            require("dupe.configs.sessions")
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
