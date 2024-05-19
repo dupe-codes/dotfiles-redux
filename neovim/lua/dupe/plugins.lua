@@ -1,6 +1,6 @@
 local plugins = {
-    { "zbirenbaum/copilot.lua", lazy = false, },
-    { "nvim-lua/plenary.nvim", },
+    { "zbirenbaum/copilot.lua", lazy = false },
+    { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons", lazy = false },
 
     -- START: LSPs, completions, diagnostics
@@ -21,14 +21,14 @@ local plugins = {
     -- configure linting with null-ls
     {
         "nvimtools/none-ls.nvim",
-        ft = {"python"},
+        ft = { "python" },
         config = function()
-            require("dupe.configs.none-ls")
+            require "dupe.configs.none-ls"
         end,
     },
 
     -- autoformatting
-    { 'stevearc/conform.nvim' },
+    { "stevearc/conform.nvim" },
 
     -- code actions with lightbulb and menu
     {
@@ -36,24 +36,24 @@ local plugins = {
         lazy = false,
         dependencies = { "antoinemadec/FixCursorHold.nvim" },
         config = function()
-            require("dupe.configs.lightbulb")
+            require "dupe.configs.lightbulb"
         end,
     },
-     --END: LSPs, completions, diagnostics
+    --END: LSPs, completions, diagnostics
 
     { "antoinemadec/FixCursorHold.nvim", lazy = false },
     {
         "nvim-lualine/lualine.nvim",
         config = function()
-            require("dupe.configs.lualine")
-        end
+            require "dupe.configs.lualine"
+        end,
     },
     { "folke/neodev.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         config = function()
-            require("dupe.configs.indent-blankline")
+            require "dupe.configs.indent-blankline"
         end,
         lazy = false,
     },
@@ -61,8 +61,8 @@ local plugins = {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            require("dupe.configs.treesitter")
-        end
+            require "dupe.configs.treesitter"
+        end,
     },
     { "sheerun/vim-polyglot" },
     { "nvim-lua/popup.nvim" }, -- TODO: needed?
@@ -73,7 +73,7 @@ local plugins = {
             "nvim-telescope/telescope-frecency.nvim",
         },
         config = function()
-            require("dupe.configs.telescope")
+            require "dupe.configs.telescope"
         end,
     },
     { "jremmen/vim-ripgrep" },
@@ -86,25 +86,25 @@ local plugins = {
     -- TODO: remove vim-startify (+ its config) once you've
     -- used dashboard.nvim for a while and feel happy
     --{
-        --"mhinz/vim-startify",
-        --config = function()
-            --require("dupe.configs.startify")
-        --end,
+    --"mhinz/vim-startify",
+    --config = function()
+    --require("dupe.configs.startify")
+    --end,
     --},
     {
-        'nvimdev/dashboard-nvim',
-        event = 'VimEnter',
+        "nvimdev/dashboard-nvim",
+        event = "VimEnter",
         config = function()
-            require("dupe.configs.dashboard")
+            require "dupe.configs.dashboard"
         end,
-        dependencies = { {'nvim-tree/nvim-web-devicons'}}
+        dependencies = { { "nvim-tree/nvim-web-devicons" } },
     },
 
     { "nvim-treesitter/nvim-treesitter-context" },
     {
         "dnlhc/glance.nvim",
         config = function()
-            require("dupe.configs.glance")
+            require "dupe.configs.glance"
         end,
     },
 
@@ -114,13 +114,13 @@ local plugins = {
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            require("dupe.configs.harpoon2")
+            require "dupe.configs.harpoon2"
         end,
     },
     {
         "letieu/harpoon-lualine",
         dependencies = {
-            { "ThePrimeagen/harpoon", branch = "harpoon2", }
+            { "ThePrimeagen/harpoon", branch = "harpoon2" },
         },
     },
     -- End Harpoon
@@ -128,7 +128,7 @@ local plugins = {
     {
         "mbbill/undotree",
         config = function()
-            require("dupe.configs.undotree")
+            require "dupe.configs.undotree"
         end,
     },
 
@@ -136,13 +136,13 @@ local plugins = {
     {
         "tpope/vim-fugitive",
         config = function()
-            require("dupe.configs.git")
+            require "dupe.configs.git"
         end,
     },
     {
         "lewis6991/gitsigns.nvim",
         config = function()
-            require("dupe.configs.gitsigns")
+            require "dupe.configs.gitsigns"
         end,
     },
     -- End git plugins
@@ -151,13 +151,13 @@ local plugins = {
     {
         "folke/trouble.nvim",
         config = function()
-            require("dupe.configs.trouble")
+            require "dupe.configs.trouble"
         end,
     },
     {
         "folke/todo-comments.nvim",
         config = function()
-            require("dupe.configs.todo-comments")
+            require "dupe.configs.todo-comments"
         end,
     },
     {
@@ -165,7 +165,7 @@ local plugins = {
         dependencies = { "folke/twilight.nvim" },
         event = "VeryLazy",
         config = function()
-            require("dupe.configs.zen-mode")
+            require "dupe.configs.zen-mode"
         end,
     },
     { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
@@ -182,14 +182,14 @@ local plugins = {
             "folke/which-key.nvim",
         },
         config = function()
-            require("dupe.configs.debugger")
+            require "dupe.configs.debugger"
         end,
     },
     {
         "rcarriga/nvim-dap-ui",
         dependencies = {
             "nvim-neotest/nvim-nio",
-        }
+        },
     },
     {
         "theHamsta/nvim-dap-virtual-text",
@@ -208,11 +208,11 @@ local plugins = {
         dependencies = {
             "nvim-lua/telescope.nvim",
             "nvim-lua/popup.nvim",
-            "nvim-lua/plenary.nvim"
+            "nvim-lua/plenary.nvim",
         },
         config = function()
-            require("dupe.configs.cheatsheet")
-        end
+            require "dupe.configs.cheatsheet"
+        end,
     },
 
     -- Package dependency management
@@ -244,24 +244,24 @@ local plugins = {
         },
         config = function(_, opts)
             require("mason").setup(opts)
-             -- custom cmd to install listed mason binaries
-             -- credit to NvChad :]
+            -- custom cmd to install listed mason binaries
+            -- credit to NvChad :]
             vim.api.nvim_create_user_command("MasonInstallAll", function()
                 vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
             end, {})
             vim.g.mason_binaries_list = opts.ensure_installed
-        end
+        end,
     },
 
     -- Color schemes
     { "cocopon/iceberg.vim" },
     {
         "neanias/everforest-nvim",
-        branch = "main"
+        branch = "main",
     },
     {
         "folke/tokyonight.nvim",
-        branch = "main"
+        branch = "main",
     },
     { "rebelot/kanagawa.nvim" },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -298,7 +298,7 @@ local plugins = {
         "ziglang/zig.vim",
         ft = { "zig" },
         config = function()
-            require("dupe.configs.zig")
+            require "dupe.configs.zig"
         end,
     },
 
@@ -307,29 +307,29 @@ local plugins = {
         "christoomey/vim-tmux-navigator",
         lazy = false,
         config = function()
-            require("dupe.configs.tmux-navigator")
+            require "dupe.configs.tmux-navigator"
         end,
     },
 
     {
         "smjonas/inc-rename.nvim",
         config = function()
-            require("dupe.configs.inc-rename")
+            require "dupe.configs.inc-rename"
         end,
     },
 
     {
         "simrat39/rust-tools.nvim",
-        ft = {"rust"},
+        ft = { "rust" },
         config = function()
-            require('dupe.configs.rust-tools')
+            require "dupe.configs.rust-tools"
         end,
     },
 
     -- Unit test runner support
     {
         "nvim-neotest/neotest",
-        ft = { "python", "rust", }, -- NOTE: add other langs as needed
+        ft = { "python", "rust" }, -- NOTE: add other langs as needed
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
@@ -340,7 +340,7 @@ local plugins = {
             "rouge8/neotest-rust",
         },
         config = function()
-            require("dupe.configs.neotest")
+            require "dupe.configs.neotest"
         end,
     },
 
@@ -348,20 +348,20 @@ local plugins = {
     {
         "rcarriga/nvim-notify",
         config = function()
-            require("dupe.configs.notify")
+            require "dupe.configs.notify"
         end,
     },
     {
         "stevearc/dressing.nvim",
         config = function()
-            require("dupe.configs.dressing")
+            require "dupe.configs.dressing"
         end,
     },
     {
         "AckslD/swenv.nvim",
         ft = { "python" },
         config = function()
-            require("dupe.configs.swenv")
+            require "dupe.configs.swenv"
         end,
     },
 
@@ -369,7 +369,7 @@ local plugins = {
     {
         "simrat39/symbols-outline.nvim",
         config = function()
-            require("dupe.configs.symbols-outline")
+            require "dupe.configs.symbols-outline"
         end,
     },
 
@@ -377,7 +377,7 @@ local plugins = {
     {
         "whonore/Coqtail",
         config = function()
-            require("dupe.configs.coqtail")
+            require "dupe.configs.coqtail"
         end,
     },
     --  TODO: add this back but change keybinds
@@ -387,39 +387,39 @@ local plugins = {
 
     -- Lean theorem prover
     {
-        'Julian/lean.nvim',
-        event = { 'BufReadPre *.lean', 'BufNewFile *.lean' },
+        "Julian/lean.nvim",
+        event = { "BufReadPre *.lean", "BufNewFile *.lean" },
         dependencies = {
-            'neovim/nvim-lspconfig',
-            'nvim-lua/plenary.nvim',
-        }
+            "neovim/nvim-lspconfig",
+            "nvim-lua/plenary.nvim",
+        },
     },
 
     -- better marks support
     {
-        'chentoast/marks.nvim',
+        "chentoast/marks.nvim",
         config = function()
-            require("dupe.configs.marks")
+            require "dupe.configs.marks"
         end,
     },
 
     -- vim motions training
     --{
-       --"m4xshen/hardtime.nvim",
-       --dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-       --config = function()
-           --require("dupe.configs.hardtime")
-       --end,
+    --"m4xshen/hardtime.nvim",
+    --dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    --config = function()
+    --require("dupe.configs.hardtime")
+    --end,
     --},
 
     -- markdown rendering
     --{ "ellisonleao/glow.nvim", config = true, cmd = "Glow"}
     {
-        'MeanderingProgrammer/markdown.nvim',
-        name = 'render-markdown',
-        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        "MeanderingProgrammer/markdown.nvim",
+        name = "render-markdown",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
         config = function()
-            require('render-markdown').setup({})
+            require("render-markdown").setup {}
         end,
     },
 
@@ -427,7 +427,7 @@ local plugins = {
         "xiyaowong/transparent.nvim",
         lazy = false,
         config = function()
-            require('dupe.configs.transparent')
+            require "dupe.configs.transparent"
         end,
     },
 
@@ -445,8 +445,8 @@ local plugins = {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
-        version = '^2', -- Recommended
-        ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
+        version = "^2", -- Recommended
+        ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
     },
 
     {
@@ -454,7 +454,7 @@ local plugins = {
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            require("dupe.configs.oil")
+            require "dupe.configs.oil"
         end,
     },
     {
@@ -465,17 +465,17 @@ local plugins = {
 
     -- project note taking
     {
-        'yujinyuz/gitpad.nvim',
+        "yujinyuz/gitpad.nvim",
         config = function()
-            require("dupe.configs.gitpad")
-        end
+            require "dupe.configs.gitpad"
+        end,
     },
 
     -- sessions
     {
         "tpope/vim-obsession",
         config = function()
-            require("dupe.configs.sessions")
+            require "dupe.configs.sessions"
         end,
     },
 }

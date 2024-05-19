@@ -37,7 +37,7 @@ end
 
 local end_session = function()
     local session = vim.v.this_session
-    if not session then
+    if not session or session == "" then
         vim.notify "no session to end"
         return
     end
