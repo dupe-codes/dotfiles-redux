@@ -22,16 +22,6 @@ else
     )
 fi
 
-
-#if [[ $# -eq 1 ]]; then
-    #selected=$1
-#else
-    #selected=$( \
-        #printf "gigacli\n$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" \
-        #| gum filter --placeholder "Choose session..." --height 50 --no-strict \
-    #)
-#fi
-
 if [[ -z $selected ]]; then
     exit 0
 fi

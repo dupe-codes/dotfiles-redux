@@ -20,9 +20,8 @@ cloc
 timew
 sqlite
 man-db
+shellcheck
 ascii-image-converter@yay
-
-# dev packages
 gleam@yay
 
 bat@cargo
@@ -37,6 +36,7 @@ bottom@cargo
 carapace@cargo
 wthrr@cargo
 cargo-update@cargo
+stylua@cargo
 
 yewtube@pip
 chatblade@pip

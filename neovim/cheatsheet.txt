@@ -163,3 +163,8 @@ open file note     | <leader>nf
 show treesitter tree                | :InspectTree
 open live query editor              | :EditQuery
 show highlight groups under cursor  | :Inspect
+
+## sessions
+start a new session   | <leader>zs
+load a session        | <leader>zl
+end current session   | <leader>zd

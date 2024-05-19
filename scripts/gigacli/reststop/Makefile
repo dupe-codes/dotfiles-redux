@@ -1,11 +1,16 @@
 .PHONY: install
 install: ## Install a lua dependency to the local project, usage: make install package=package-name
+	# TODO: also add the package to the .rockspec file
 	luarocks install --tree lua_modules $(package)
 
 .PHONY: run
-run: ## Run the posthero tool
-	@echo "Running the application..."
-	@source $(CURDIR)/.env && ./src/posthero.lua
+run: ## Run the reststop tool
+	# TODO: pass args to the reststop tool
+	@source $(CURDIR)/.env && ./src/reststop.lua
+
+.PHONY: format
+format: ## Format lua source files
+	@stylua -v src/
 
 .PHONY: help
 help: ## Show this help

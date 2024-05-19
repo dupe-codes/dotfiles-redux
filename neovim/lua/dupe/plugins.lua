@@ -228,6 +228,7 @@ local plugins = {
         },
         opts = {
             ensure_installed = {
+                "bash-language-server",
                 "black",
                 "codelldb",
                 "debugpy",
@@ -237,6 +238,7 @@ local plugins = {
                 "pyright",
                 "ruff",
                 "rust-analyzer",
+                "shellcheck",
                 "zls",
                 "clangd",
                 "stylua",

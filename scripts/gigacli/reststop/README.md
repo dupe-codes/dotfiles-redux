@@ -1,4 +1,4 @@
-# PostHero
+# RestStop
 
 a command line utility for interacting with REST apis
 
@@ -15,8 +15,9 @@ written in lua
 
 - read available endpoints from a config file
     - either in cwd or specified as flag
-    - e.g. endpoints.posthero.yml
+    - e.g. endpoints.rs.yml (rs := RestStop)
     - can pre-populate headers and inputs
+- and/or read endpoints from open-api spec
 - simple TUI for selecting available endpoints and configuring
   requests
 - store history of commands and executions in a sqlite db, location configured
