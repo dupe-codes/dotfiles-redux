@@ -27,6 +27,9 @@ local plugins = {
         end,
     },
 
+    -- autoformatting
+    { 'stevearc/conform.nvim' },
+
     -- code actions with lightbulb and menu
     {
         "kosayoda/nvim-lightbulb",

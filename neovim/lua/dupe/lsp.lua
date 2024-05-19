@@ -144,20 +144,6 @@ lspconfig.lua_ls.setup {
     },
 }
 
--- TODO: autoformat on save for lua
---       actually, use this for _all_ languages so
---       autoformatting is configured by one means
---       to replace:
---          ocaml format (above)
---          python black format (none-ls)
---
---[[
-   [require("conform").setup {
-   [    formatters_by_ft = {
-   [        lua = { "stylua" },
-   [    },
-   [}
-   ]]
 
 lspconfig.clangd.setup {
     on_attach = on_attach,
@@ -256,6 +242,27 @@ cmp.setup {
         end
     },
 }
+
+-- setup autoformatting on save
+
+-- TODO: autoformat on save for _all_ languages so
+--       autoformatting is configured by one means
+--       to replace:
+--          ocaml format (above)
+--          python black format (none-ls)
+require("conform").setup {
+    formatters_by_ft = {
+        lua = { "stylua" },
+    },
+}
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
 
 -- Setup keymaps for capabilities not handled by glance
 key_mapper('n', '<leader>cd', ':lua vim.lsp.buf.hover()<CR>')

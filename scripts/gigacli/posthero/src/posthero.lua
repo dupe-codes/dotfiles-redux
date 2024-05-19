@@ -6,11 +6,11 @@ local output = {
     hero = {
         name = "Superman",
         age = 100,
-   },
-   villain = {
-      name = "Lex Luthor",
-      age = 50,
-   },
+    },
+    villain = {
+        name = "Lex Luthor",
+        age = 50,
+    },
 }
 
 print(inspect(output))
