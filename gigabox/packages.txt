@@ -3,6 +3,8 @@ nodejs
 npm
 go
 racket
+lua
+luarocks
 opam
 unzip
 wget

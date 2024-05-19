@@ -2,4 +2,4 @@ default_profile = "default"
 
 [profiles.default]
 adapter = "sqlite"
-theme   = "material"
+theme   = "paraiso-dark"
