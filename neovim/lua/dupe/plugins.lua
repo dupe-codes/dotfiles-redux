@@ -239,6 +239,7 @@ local plugins = {
                 "ruff",
                 "rust-analyzer",
                 "shellcheck",
+                "shfmt",
                 "zls",
                 "clangd",
                 "stylua",
