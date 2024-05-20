@@ -1,0 +1,6 @@
+# TODO: figure out if i can configure multiple devices
+device_name = "Keychron Keychron K12"
+
+[[remap]]
+input = ["KEY_CAPSLOCK"]
+output = ["KEY_LEFTCTRL"]

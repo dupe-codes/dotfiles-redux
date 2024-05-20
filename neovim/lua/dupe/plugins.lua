@@ -224,6 +224,7 @@ local plugins = {
             "MasonInstallAll",
             "MasonUninstall",
             "MasonUninstallAll",
+            "MasonUpdate",
             "MasonLog",
         },
         opts = {

@@ -138,6 +138,7 @@ blueman
 pulseaudio-bluetooth
 blueberry
 logiops@yay
+evremap@yay
 
 # Network
 networkmanager
