@@ -1,11 +1,12 @@
+# TODO: also add the package to the .rockspec file
 .PHONY: install
 install: ## Install a lua dependency to the local project, usage: make install package=package-name
-	# TODO: also add the package to the .rockspec file
 	luarocks install --tree lua_modules $(package)
 
+
+# TODO: pass args to the reststop tool
 .PHONY: run
 run: ## Run the reststop tool
-	# TODO: pass args to the reststop tool
 	@source $(CURDIR)/.env && ./src/reststop.lua
 
 .PHONY: format

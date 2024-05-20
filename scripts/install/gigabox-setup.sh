@@ -1,4 +1,4 @@
-# /bin/bash
+#! /bin/bash
 
 # TODO:
 #   1. wrap coherent chunks of code into functions
@@ -67,6 +67,7 @@ sudo systemctl enable atd
 systemctl --user enable pulseaudio
 
 # TODO: setup evremap for key remapping
+#				do the following for each of {keychron keyboard, laptop, etc.}
 #       copy evremap.service to /usr/lib/systemd/system/
 #       copy mapping config to /etc/evremap.toml
 #       then run sudo systemctl enable evremap.service

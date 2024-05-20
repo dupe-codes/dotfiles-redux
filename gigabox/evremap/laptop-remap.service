@@ -1,6 +1,6 @@
 [Service]
 WorkingDirectory=/
-ExecStart=bash -c "/usr/bin/evremap remap /etc/evremap.toml -d 0"
+ExecStart=bash -c "/usr/bin/evremap remap /etc/laptop.toml -d 0"
 Restart=always
 
 [Install]
