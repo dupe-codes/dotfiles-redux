@@ -11,6 +11,7 @@ dependencies = {
     "lua ~> 5.4",
     "inspect >= 3.1",
     "ltui = 2.7",
+    "ldoc = 1.5.0-1",
 }
 build = {
     type = "builtin",

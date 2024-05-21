@@ -3,7 +3,6 @@
 install: ## Install a lua dependency to the local project, usage: make install package=package-name
 	luarocks install --tree lua_modules $(package)
 
-
 # TODO: pass args to the reststop tool
 .PHONY: run
 run: ## Run the reststop tool
@@ -12,6 +11,10 @@ run: ## Run the reststop tool
 .PHONY: format
 format: ## Format lua source files
 	@stylua -v src/
+
+.PHONY: docs
+docs: ## Generate documentation
+	@ldoc src/
 
 .PHONY: help
 help: ## Show this help
