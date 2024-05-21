@@ -82,15 +82,6 @@ local plugins = {
     -- stats tracking
     { "wakatime/vim-wakatime", lazy = false },
 
-    -- Splash screen dashboard
-    -- TODO: remove vim-startify (+ its config) once you've
-    -- used dashboard.nvim for a while and feel happy
-    --{
-    --"mhinz/vim-startify",
-    --config = function()
-    --require("dupe.configs.startify")
-    --end,
-    --},
     {
         "nvimdev/dashboard-nvim",
         event = "VimEnter",
