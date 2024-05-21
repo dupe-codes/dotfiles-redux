@@ -26,7 +26,7 @@ local load_session = function()
         name_to_session[name] = session
     end
 
-    vim.ui.select(session_list, {}, function(selected)
+    vim.ui.select(session_list, { prompt = "Select session" }, function(selected)
         -- source selected session
         if selected then
             vim.cmd("source " .. name_to_session[selected])
