@@ -14,7 +14,7 @@ format: ## Format lua source files
 
 .PHONY: docs
 docs: ## Generate documentation
-	@ldoc src/
+	@./lua_modules/bin/ldoc src/
 
 .PHONY: help
 help: ## Show this help
