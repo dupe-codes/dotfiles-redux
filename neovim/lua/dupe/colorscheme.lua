@@ -1,51 +1,53 @@
 local function mod_hl(hl_name, opts)
-  local is_ok, hl_def = pcall(vim.api.nvim_get_hl_by_name, hl_name, true)
-  if is_ok then
-    for k,v in pairs(opts) do hl_def[k] = v end
-    vim.api.nvim_set_hl(0, hl_name, hl_def)
-  end
+    local is_ok, hl_def = pcall(vim.api.nvim_get_hl_by_name, hl_name, true)
+    if is_ok then
+        for k, v in pairs(opts) do
+            hl_def[k] = v
+        end
+        vim.api.nvim_set_hl(0, hl_name, hl_def)
+    end
 end
 
-vim.cmd('au ColorScheme * hi clear SignColumn')
+vim.cmd "au ColorScheme * hi clear SignColumn"
 --vim.cmd('au ColorScheme * hi Normal ctermbg=none guibg=none')
 
-require('rose-pine').setup({
+require("rose-pine").setup {
     variant = "moon",
     disable_italics = true,
-})
+}
 
-require('catppuccin').setup({
+require("catppuccin").setup {
     no_italic = true,
     integrations = {
         notify = true,
         harpoon = true,
         neotest = true,
     },
-})
+}
 
-require('tokyonight').setup({
+require("tokyonight").setup {
     styles = {
-      comments  = { italic = true },
-      functions = { italic = true },
-      variables = { italic = false },
-      keywords  = { italic = true },
-  },
-})
+        comments = { italic = true },
+        functions = { italic = true },
+        variables = { italic = false },
+        keywords = { italic = true },
+    },
+}
 
 -- FAVORITES:
 
 --vim.cmd.colorscheme 'eldritch'
 --vim.cmd.colorscheme 'spaceduck'
-vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme "tokyonight-night"
 --vim.cmd.colorscheme 'panda'
 --require('dupe.colors.tokyo-panda')
 
 --require('decay').setup({
-  --style = 'default',
-  --italics = {
-  --code = true,
-    --comments = true
-  --},
+--style = 'default',
+--italics = {
+--code = true,
+--comments = true
+--},
 --})
 
 -- TODO: i like oldworld, but it needs a few tweaks:
@@ -81,19 +83,19 @@ vim.cmd.colorscheme 'tokyonight-night'
 
 --vim.cmd.colorscheme "night-owl"
 --local italics_overrides = {
-  --"Comment", "Constant", "Boolean",
-  --"Function", "Statement", "Include",
-  --"@class.constructor", "@type", "type.toml",
-  --"tomlTable", "@keyword.if.vim", "@keyword.return.vim",
-  --"@keyword.function.lua", "@keyword.function.vim",
-  --"@keyword.function.return", "@keyword.function.abort",
-  --"@namespace.vim", "@conditional.lua", "@variable.builtin.vim",
-  --"@variable.object", "@object.property", "@object.key",
-  --"@text.emphasis", "@tag.attribute", "@function.builtin.lua",
-  --"NvimTreeWindowPicker",
+--"Comment", "Constant", "Boolean",
+--"Function", "Statement", "Include",
+--"@class.constructor", "@type", "type.toml",
+--"tomlTable", "@keyword.if.vim", "@keyword.return.vim",
+--"@keyword.function.lua", "@keyword.function.vim",
+--"@keyword.function.return", "@keyword.function.abort",
+--"@namespace.vim", "@conditional.lua", "@variable.builtin.vim",
+--"@variable.object", "@object.property", "@object.key",
+--"@text.emphasis", "@tag.attribute", "@function.builtin.lua",
+--"NvimTreeWindowPicker",
 --}
 --for _,group in ipairs(italics_overrides) do
-  --mod_hl(group, { italic=false, })
+--mod_hl(group, { italic=false, })
 --end
 
 --mod_hl("BufferCurrentMod", { fg = "LightGreen" })
@@ -116,5 +118,6 @@ vim.cmd.colorscheme 'tokyonight-night'
 -- since this config is evaluated _after_ plugins are loaded
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Type" })
 
 --#endregion

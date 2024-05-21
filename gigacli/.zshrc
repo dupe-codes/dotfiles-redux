@@ -69,6 +69,10 @@ alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 
+remap() {
+    sudo systemctl restart "$1-remap.service"
+}
+
 search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
 }
