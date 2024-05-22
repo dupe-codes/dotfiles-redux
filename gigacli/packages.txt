@@ -21,6 +21,7 @@ timew
 sqlite
 man-db
 shellcheck
+github-cli
 ascii-image-converter@yay
 gleam@yay
 
@@ -49,5 +50,3 @@ harlequin@pip
 
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go
-
-@githubnext/github-copilot-cli@npm
