@@ -158,6 +158,8 @@ list all marks across _all_ buffers | <leader>ma
 ## notes
 open project notes | <leader>np
 open file note     | <leader>nf
+explore data store | <leader>nd
+open today's note  | <leader>nt
 
 ## treesitter
 show treesitter tree                | :InspectTree
