@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 declare -A tools
 declare -A background_args
@@ -26,7 +26,8 @@ tools=(
     ["wthrr"]="󰖐 check weather:"
     ["glow"]=" open markdown reader:"
     ["dust"]=" check disk space:"
-    ["gitui"]=" open git interface:"
+    ["gitui"]=" open git(ui) interface:"
+    ["lazygit"]=" open (lazy)git interface:"
     ["bat"]="󰊪 read file:r:filename"
     ["harlequin"]=" open database client:"
 )
@@ -100,11 +101,11 @@ task_command() {
     tag=$(gum filter --placeholder "Choose a tag..." --no-strict "${tags_list[@]}")
     duration=$(gum filter --placeholder "Choose a duration..." --no-strict "${durations[@]}")
 
-    timew start $tag; \
-        termdown $duration; \
-        timew stop; \
-        notify-send "󰁫 Timer" "Completed task: $tags"; \
-        paplay ~/sounds/positive-notification.wav &
+    timew start $tag
+    termdown $duration
+    timew stop
+    notify-send "󰁫 Timer" "Completed task: $tags"
+    paplay ~/sounds/positive-notification.wav &
 }
 
 log_task() {
@@ -135,16 +136,16 @@ break_command() {
     else
         local duration="15m"
     fi
-    termdown $duration && \
-        notify-send "󰁫 Timer" "Break is over"; \
-        paplay ~/sounds/positive-notification.wav &
+    termdown $duration &&
+        notify-send "󰁫 Timer" "Break is over"
+    paplay ~/sounds/positive-notification.wav &
 }
 
 prompt_args() {
     local args_list="$1"
     local tool="$2"
     local args=()
-    IFS=',' read -ra args_descriptor <<< "$args_list"
+    IFS=',' read -ra args_descriptor <<<"$args_list"
 
     for descriptor in "${args_descriptor[@]}"; do
         local prefix=${descriptor:0:2}
@@ -165,21 +166,21 @@ prompt_args() {
 max_length=0
 for tool in "${!tools[@]}"; do
     current_length=${#tool}
-    if (( current_length > max_length )); then
+    if ((current_length > max_length)); then
         max_length=$current_length
     fi
 done
 
 prompt_list=""
 for tool in "${tool_order[@]}"; do
-    IFS=':' read -r description args <<< "${tools[$tool]}"
+    IFS=':' read -r description args <<<"${tools[$tool]}"
 
-   # Calculate the padding needed for alignment
+    # Calculate the padding needed for alignment
     current_length=${#tool}
     let padding=$max_length-$current_length
     pad=$(printf "%${padding}s")
 
-    line="$tool$pad      $description\n"  # Additional spaces for clearer separation
+    line="$tool$pad      $description\n" # Additional spaces for clearer separation
     prompt_list+="$line"
 done
 
@@ -208,4 +209,3 @@ else
         $tool $*
     fi
 fi
-

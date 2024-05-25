@@ -127,3 +127,4 @@ dbz-swag.jpg
 relaxed-stretch.jpg
 ripper-doc.jpg
 hover-bike.jpg
+misato-smoking.png

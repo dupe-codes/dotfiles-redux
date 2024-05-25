@@ -33,3 +33,4 @@ written in lua
 - https://leafo.net/guides/customizing-the-luarocks-tree.html
 - https://martin-fieber.de/blog/lua-project-setup-with-luarocks/
 - https://github.com/tboox/ltui
+- https://github.com/mpeterv/argparse

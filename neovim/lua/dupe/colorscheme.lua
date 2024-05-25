@@ -39,8 +39,8 @@ require("tokyonight").setup {
 --vim.cmd.colorscheme 'eldritch'
 --vim.cmd.colorscheme 'spaceduck'
 vim.cmd.colorscheme "tokyonight-night"
---vim.cmd.colorscheme 'panda'
---require('dupe.colors.tokyo-panda')
+--vim.cmd.colorscheme "panda"
+--require "dupe.colors.tokyo-panda"
 
 --require('decay').setup({
 --style = 'default',

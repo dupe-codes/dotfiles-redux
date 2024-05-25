@@ -47,7 +47,6 @@ alias gpt='chatblade -c 3.5 -s'
 alias pomodoro='arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"'
 alias ll='exa -l -g --icons --git'
 alias llt='exa -1 --icons --tree --git-ignore'
-alias gitui='gitui -t macchiato.ron'
 alias bonsai='cbonsai -L 42 --screensaver'
 alias rss='nom'
 alias weather='wthrr -u f,mph -f d,w'
@@ -68,6 +67,11 @@ alias trash="~/scripts/gigacli/trash.sh"
 alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
+alias lzd="lazydocker"
+
+# TODO: decide between gitui and lazygit
+alias lzg="lazygit"
+alias gitui='gitui -t macchiato.ron'
 
 remap() {
     sudo systemctl restart "$1-remap.service"

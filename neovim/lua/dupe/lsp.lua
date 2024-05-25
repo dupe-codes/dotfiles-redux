@@ -249,11 +249,18 @@ cmp.setup {
 --       to replace:
 --          ocaml format (above)
 --          python black format (none-ls)
-require("conform").setup {
+
+local conform = require "conform"
+conform.setup {
     formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shfmt" },
     },
+}
+
+-- set shfmt indentation to 4 spaces
+conform.formatters.shfmt = {
+    prepend_args = { "-i", "4" },
 }
 
 vim.api.nvim_create_autocmd("BufWritePre", {

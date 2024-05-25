@@ -1,3 +1,7 @@
+.PHONY: shfmt
+shfmt: ## Run shfmt on scripts dir
+	shfmt -i 4 -w scripts/**/*.sh
+
 .PHONY: shellcheck
 shellcheck: ## Run shellcheck on scripts dir
 	shellcheck scripts/**/*.sh
