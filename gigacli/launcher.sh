@@ -28,6 +28,7 @@ tools=(
     ["dust"]=" check disk space:"
     ["gitui"]=" open git(ui) interface:"
     ["lazygit"]=" open (lazy)git interface:"
+    ["lazydocker"]=" open lazydocker interface:"
     ["bat"]="󰊪 read file:r:filename"
     ["harlequin"]=" open database client:"
 )
@@ -64,6 +65,8 @@ declare -a tool_order=(
     "glow"
     "dust"
     "gitui"
+    "lazygit"
+    "lazydocker"
     "bat"
 )
 
@@ -184,7 +187,7 @@ for tool in "${tool_order[@]}"; do
     prompt_list+="$line"
 done
 
-selected_tool=$(echo -e "$prompt_list" | gum filter --height 25)
+selected_tool=$(echo -e "$prompt_list" | gum filter --height 30)
 tool=$(echo "$selected_tool" | cut -d ' ' -f 1)
 
 if [ -z "$tool" ]; then
