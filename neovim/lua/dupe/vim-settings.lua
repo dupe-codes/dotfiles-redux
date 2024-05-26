@@ -76,5 +76,16 @@ vim.cmd "set showtabline=0"
 vim.cmd "syntax on"
 vim.cmd "set cursorline"
 
+-- configure cursor as blinking block and vertical line
+vim.cmd(
+    "set guicursor="
+        .. "n-v-c:block,"
+        .. "i-ci-ve:ver25,"
+        .. "r-cr:hor20,"
+        .. "o:hor50,"
+        .. "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,"
+        .. "sm:block-blinkwait175-blinkoff150-blinkon175"
+)
+
 -- Setup path to include mason installed packages
 vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. ":" .. vim.env.PATH

@@ -11,7 +11,8 @@ vim.diagnostic.config {
     severity_sort = true,
 }
 
--- codelens configuration
+-- codelens and inlay-hints configurations
+-- TODO: figure out how to get neovim builtin capabilities working for this
 local augroup_codelens = vim.api.nvim_create_augroup("custom-lsp-codelens", { clear = true })
 vim.api.nvim_set_hl(0, "VirtNonText", { link = "Type" })
 
@@ -24,7 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(_)
         local filetype = vim.api.nvim_buf_get_option(0, "filetype")
         if filetype == "ocaml" then
-            -- Display type information
+            -- display type information
             vim.api.nvim_clear_autocmds { group = augroup_codelens, buffer = 0 }
             vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "CursorHold" }, {
                 group = augroup_codelens,

@@ -6,7 +6,7 @@
 #       to the file
 declare -A SITES
 SITES=(
-    [" Old Reader: RSS Feeds"]="https://theoldreader.com"
+    [" TLDraw"]="https://tldraw.com"
     ["󱚌 Google Scholar"]="https://scholar.google.com"
     ["󰌢 Arxiv"]="https://arxiv.org"
     ["󰚩 ChatGPT"]="https://chat.openai.com"
@@ -27,4 +27,3 @@ if [ -z "$selected_site" ]; then
 fi
 
 vivaldi-stable --new-window "${SITES[$selected_site]}"
-
