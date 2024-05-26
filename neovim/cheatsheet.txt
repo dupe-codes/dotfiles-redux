@@ -25,6 +25,8 @@ search jump list | <leader>fj
 search help tags | <leader>fh
 search files including ignored | <leader>fi
 search command history | <leader>fd
+find in cwd | <leader>fw
+frecency search | <leader>fr
 
 ## todo comments
 see todos in current file | <leader>xt

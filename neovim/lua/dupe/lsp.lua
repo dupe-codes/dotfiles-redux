@@ -23,7 +23,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     desc = "on_attach",
     callback = function(_)
         local filetype = vim.api.nvim_buf_get_option(0, "filetype")
-
         if filetype == "ocaml" then
             -- Display type information
             vim.api.nvim_clear_autocmds { group = augroup_codelens, buffer = 0 }
@@ -33,14 +32,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 buffer = 0,
             })
             key_mapper("n", "<leader>ot", ':lua require("dupe.codelens").toggle_virtlines()<CR>')
-
-            -- format on save
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                buffer = 0,
-                callback = function()
-                    vim.lsp.buf.format()
-                end,
-            })
         end
     end,
 })
@@ -244,17 +235,13 @@ cmp.setup {
 
 -- setup autoformatting on save
 
--- TODO: autoformat on save for _all_ languages so
---       autoformatting is configured by one means
---       to replace:
---          ocaml format (above)
---          python black format (none-ls)
-
 local conform = require "conform"
 conform.setup {
     formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shfmt" },
+        ocaml = { "ocamlformat" },
+        python = { "black" },
     },
 }
 

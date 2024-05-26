@@ -35,7 +35,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 export RANGER_LOAD_DEFAULT_RC=false
 
-eval "$(github-copilot-cli alias -- "$0")"
 source $HOME/secrets.sh
 
 eval "$(starship init zsh)"
@@ -81,6 +80,10 @@ search() {
   fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' | xargs nvim
 }
 
+# sourcegraph functionality
+alias sg-launch="~/scripts/gigacli/launch_sg_docker.sh"
+alias sg="open http://localhost:7080"
+
 # Welcome message :]
 echo -e "$(cat $HOME/posix-welcome.txt)"
 
@@ -98,3 +101,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+eval "$(gh copilot alias -- zsh)"
