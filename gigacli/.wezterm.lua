@@ -31,11 +31,4 @@ config.default_prog = { "/usr/bin/zsh" }
 config.audible_bell = "Disabled"
 config.warn_about_missing_glyphs = false
 
--- forces cursor to take on background color;
--- this doesn't fix the "blink shows black background" issue (see
--- https://github.com/wez/wezterm/issues/3886) outside of neovim,
--- but in it, it does AND makes the cursor take on the highlight
--- color of the current text, which is kinda cool
-config.force_reverse_video_cursor = true
-
 return config
