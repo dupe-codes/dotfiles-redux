@@ -1,18 +1,19 @@
-local harpoon = require("harpoon")
-local notify = require("notify")
+local harpoon = require "harpoon"
 
-harpoon:setup({
+harpoon:setup {
     settings = {
-        save_on_toggle = true
-    }
-})
+        save_on_toggle = true,
+    },
+}
 
 vim.keymap.set("n", "<leader>a", function()
     harpoon:list():append()
-    notify("📌 Added harpoon mark to current file")
+    vim.notify "📌 Added harpoon mark to current file"
 end)
 
-vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<C-e>", function()
+    harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
 
 -- TODO: use this better way to set <leader>1..x as jump to file keys
 --[[
@@ -23,13 +24,29 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
    [end
    ]]
 
-vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
-vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
-vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
-vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
-vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end)
-vim.keymap.set("n", "<leader>6", function() harpoon:list():select(6) end)
+vim.keymap.set("n", "<leader>1", function()
+    harpoon:list():select(1)
+end)
+vim.keymap.set("n", "<leader>2", function()
+    harpoon:list():select(2)
+end)
+vim.keymap.set("n", "<leader>3", function()
+    harpoon:list():select(3)
+end)
+vim.keymap.set("n", "<leader>4", function()
+    harpoon:list():select(4)
+end)
+vim.keymap.set("n", "<leader>5", function()
+    harpoon:list():select(5)
+end)
+vim.keymap.set("n", "<leader>6", function()
+    harpoon:list():select(6)
+end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<leader>,", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<leader>.", function() harpoon:list():next() end)
+vim.keymap.set("n", "<leader>,", function()
+    harpoon:list():prev()
+end)
+vim.keymap.set("n", "<leader>.", function()
+    harpoon:list():next()
+end)

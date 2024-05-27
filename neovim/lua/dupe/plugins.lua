@@ -65,7 +65,7 @@ local plugins = {
         end,
     },
     { "sheerun/vim-polyglot" },
-    { "nvim-lua/popup.nvim" }, -- TODO: needed?
+    { "nvim-lua/popup.nvim" },
     {
         "nvim-lua/telescope.nvim",
         dependencies = {
@@ -341,13 +341,15 @@ local plugins = {
 
     -- notifications
     {
-        "rcarriga/nvim-notify",
+        "j-hui/fidget.nvim",
+        lazy = false,
         config = function()
-            require "dupe.configs.notify"
+            require "dupe.configs.fidget"
         end,
     },
     {
         "stevearc/dressing.nvim",
+        lazy = false,
         config = function()
             require "dupe.configs.dressing"
         end,

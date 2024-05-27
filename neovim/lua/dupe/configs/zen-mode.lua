@@ -1,12 +1,10 @@
-
-require("zen-mode").setup({
+require("zen-mode").setup {
     plugins = {
-        tmux = { enabled = true, },
+        tmux = { enabled = true },
     },
-    on_open = function (_)
-        require('notify')("💻 Breathe in, code out...")
-    end
-})
+    on_open = function(_)
+        vim.notify "💻 Breathe in, code out..."
+    end,
+}
 
-vim.keymap.set('n', '<leader>zen', '<cmd>:ZenMode<cr>')
-
+vim.keymap.set("n", "<leader>zen", "<cmd>:ZenMode<cr>")

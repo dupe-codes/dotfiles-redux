@@ -3,15 +3,16 @@ local whichkey = require "which-key"
 local session_dir = vim.fn.stdpath "data" .. "/sessions/"
 
 local start_session = function()
-    local session_name = vim.fn.input "session name: "
-    if session_name ~= "" then
-        -- make session directory if not exists
-        if vim.fn.isdirectory(session_dir) == 0 then
-            vim.fn.mkdir(session_dir, "p")
+    vim.ui.input({ prompt = "session name: " }, function(session_name)
+        if session_name ~= nil and session_name ~= "" then
+            -- make session directory if not exists
+            if vim.fn.isdirectory(session_dir) == 0 then
+                vim.fn.mkdir(session_dir, "p")
+            end
+            vim.cmd("Obsess " .. session_dir .. session_name .. ".session")
+            vim.notify("session " .. session_name .. " started")
         end
-        vim.cmd("Obsess " .. session_dir .. session_name .. ".session")
-        vim.notify("session " .. session_name .. " started")
-    end
+    end)
 end
 
 local load_session = function()

@@ -1,13 +1,12 @@
 -- TODO: delete and rename harpoon2.lua once harpoon 2 is
 -- full released
 
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-local notify = require("notify")
+local mark = require "harpoon.mark"
+local ui = require "harpoon.ui"
 
 vim.keymap.set("n", "<leader>a", function()
     mark.add_file()
-    notify("📌 Added harpoon mark to current file")
+    vim.notify "📌 Added harpoon mark to current file"
 end)
 
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
@@ -29,5 +28,5 @@ vim.keymap.set("n", "<C-4>", function()
 end)
 
 -- Style harpoon menu
-vim.api.nvim_set_hl(0, 'HarpoonWindow', { link = 'NormalFloat' })
-vim.api.nvim_set_hl(0, 'HarpoonBorder', { link = 'FloatBorder' })
+vim.api.nvim_set_hl(0, "HarpoonWindow", { link = "NormalFloat" })
+vim.api.nvim_set_hl(0, "HarpoonBorder", { link = "FloatBorder" })
