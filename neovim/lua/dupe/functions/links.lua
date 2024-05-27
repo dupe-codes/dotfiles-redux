@@ -15,15 +15,42 @@ local gx_extended_fn = function(fallback)
     end
 end
 
--- TODO: implement to open current file:line in github
---[[
-   [local open_current_file_in_github = function()
-   [    local repo = vim.fn.expand "%:h"
-   [    local file = vim.fn.expand "%:t"
-   [    local line = vim.fn.line "."
-   [end
-   ]]
+-- open_current_file_in_github
+--
+-- opens current file + line number in github on the current branch
+local open_current_file_in_github = function()
+    local line_number = vim.fn.line "."
+    local file_path = vim.fn.expand "%:p"
+    local remote_repo = vim.fn.system("git remote get-url origin"):gsub("\n", "")
+
+    -- check if repo contains fatal: not a git repository
+    if remote_repo:find "fatal: not a git repository" then
+        vim.notify "Not in a git repository"
+        return
+    end
+
+    local branch = vim.fn.system("git branch --show-current"):gsub("\n", "")
+
+    local account, repo = remote_repo:match "^git@github.com:([^/]+)/([^%.]+).git$"
+    local escaped_repo = repo:gsub("%-", "%%-")
+    local relative_path = file_path:match(".*/" .. escaped_repo .. "/(.+)")
+
+    local url = "https://github.com/"
+        .. account
+        .. "/"
+        .. repo
+        .. "/blob/"
+        .. branch
+        .. "/"
+        .. relative_path
+        .. "#L"
+        .. line_number
+
+    vim.notify("Opening " .. url .. " in browser")
+    vim.ui.open(url)
+end
 
 return {
     gx_extended_fn = gx_extended_fn,
+    open_current_file_in_github = open_current_file_in_github,
 }

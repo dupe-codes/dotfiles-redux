@@ -63,6 +63,7 @@ toggle back/forth through harpoon list | <leader>, <leader>.
 go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 open "repo-name" in github | gx
+open current line in github | <leader>/
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
 
 ## lsp
