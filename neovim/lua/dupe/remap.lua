@@ -46,23 +46,3 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- Keymap to replace in file text at current cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
--- open links
--- nnoremap gx <CMD>execute '!xdg-open ' .. shellescape(expand('<cfile>'), v:true)<CR>
---vim.keymap.set("n", "gx", [[:execute '!xdg-open' .. shellescape(expand('<cfile>'), v:true)<CR>]])
-
-local function gx_extended_fn(fallback)
-    return function()
-        local word = vim.fn.expand("<cWORD>"):match "[\"']([%a_%.%-]+/[%a_%.%-]+)[\"']"
-        if word then
-            vim.ui.open("https://github.com/" .. word)
-        elseif fallback then
-            fallback()
-        end
-    end
-end
-
--- save original gx to use as fallback
-local old_gx = vim.fn.maparg("gx", "n", nil, true)
-
-vim.keymap.set("n", "gx", gx_extended_fn(old_gx.callback), { desc = old_gx.desc })
