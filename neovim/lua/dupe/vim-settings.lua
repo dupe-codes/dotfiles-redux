@@ -77,6 +77,7 @@ vim.cmd "syntax on"
 vim.cmd "set cursorline"
 
 -- configure cursor as blinking block and vertical line
+-- TODO: the blinking sometimes lags; debug it
 vim.cmd(
     "set guicursor="
         .. "n-v-c:block,"
