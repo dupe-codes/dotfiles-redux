@@ -9,6 +9,7 @@ move visual selection | 'v', 'J', 'v', 'K'
 yank into system clipboard | <leader>y, 'v', <leader>y, <leader>Y
 replace in file text at current cursor | <leader>s
 go back/forward through cursor locations | ctrl + o/i
+source current file | :luafile %
 
 ## snippets
 expand current item or jump to next   | <C-k>
