@@ -17,7 +17,6 @@ prepend_path_if_not_exists() {
 prepend_path_if_not_exists "/usr/local/bin"
 prepend_path_if_not_exists "$HOME/.local/bin"
 prepend_path_if_not_exists "$HOME/.cargo/bin"
-prepend_path_if_not_exists "$HOME/Library/Application Support/carapace/bin"
 prepend_path_if_not_exists "$HOME/go/bin"
 prepend_path_if_not_exists "$HOME/.opam/default/bin"
 prepend_path_if_not_exists "$HOME/.elan/bin"

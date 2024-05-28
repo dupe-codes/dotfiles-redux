@@ -4,7 +4,7 @@ Here lies an exploration of more configurable CLI setup
 
 ## Tools
 
-1. kitty        - terminal emulator
+1. wezterm      - terminal emulator
 2. nushell      - shell
 3. starship     - customized prompt
 4. tmux         - terminal multiplexing
@@ -13,25 +13,20 @@ Here lies an exploration of more configurable CLI setup
 7. dust         - visual disk usage
 8. mprocs       - concurrent process runner
 9. ripgrep      - bettr grep
-10. gitui       - git TUI
+10. lazygit     - git TUI
 11. fzf         - fuzzy finder
 12. ranger      - file navigator
 13. btm         - tui activity monitor
-14. carapace    - better terminal completions
-15. fd          - better find
-16. nap         - TUI snippets manager
-17. arttime     - ascii art + pomodoro
-18. git-delta   - better git diffs
-19. httpie      - HTTP client
-20. htop        - process viewer
-21. glow        - tui markdown reader
-22. wthrr       - terminal weather client
-23. nom         - tui RSS feed
+14. fd          - better find
+15. nap         - TUI snippets manager
+18. arttime     - ascii art + pomodoro
+19. git-delta   - better git diffs
+20. httpie      - HTTP client
+21. htop        - process viewer
+22. glow        - tui markdown reader
+23. wthrr       - terminal weather client
+24. nom         - tui RSS feed
 
-
-**blocked**:
-1. fig      - AI prompt completions
-    - Nushell is currently [unsupported](https://github.com/withfig/fig/issues/879)
 
 **fun applications**:
 1. ncspot   - music player

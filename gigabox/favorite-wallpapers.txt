@@ -128,3 +128,5 @@ relaxed-stretch.jpg
 ripper-doc.jpg
 hover-bike.jpg
 misato-smoking.png
+flight-mecha.jpg
+relaxed-stick-up.jpg

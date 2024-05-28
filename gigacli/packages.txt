@@ -36,10 +36,10 @@ ncspot@cargo
 porsmo@cargo
 ripgrep@cargo
 bottom@cargo
-carapace@cargo
 wthrr@cargo
 cargo-update@cargo
 stylua@cargo
+mprocs@cargo
 
 yewtube@pip
 chatblade@pip
