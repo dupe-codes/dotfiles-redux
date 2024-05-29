@@ -36,9 +36,9 @@ require("tokyonight").setup {
 
 -- FAVORITES:
 
---vim.cmd.colorscheme 'eldritch'
---vim.cmd.colorscheme 'spaceduck'
-vim.cmd.colorscheme "tokyonight-night"
+vim.cmd.colorscheme "eldritch"
+--vim.cmd.colorscheme "spaceduck"
+--vim.cmd.colorscheme "tokyonight-night"
 --vim.cmd.colorscheme "panda"
 --require "dupe.colors.tokyo-panda"
 
