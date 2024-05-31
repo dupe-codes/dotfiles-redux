@@ -10,11 +10,12 @@ end
 --       explore how you feel with them, and (maybe) remap
 --       the todo-comments icon for NOTE
 config.font = wezterm.font_with_fallback {
+    "MonoLisa Fancy",
+    "MonoLisa Custom",
     "Fantasque Sans Mono",
     "Rec Mono Duotone",
     "CommitMono-dupe",
     "Comic Mono",
-    "MonoLisa Custom",
     "BerkeleyMono Nerd Font Mono",
     --'CozetteHiDpi',
     "Noto Sans Symbols",

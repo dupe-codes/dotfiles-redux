@@ -36,10 +36,11 @@ require("tokyonight").setup {
 
 -- FAVORITES:
 
-vim.cmd.colorscheme "eldritch"
+--vim.cmd.colorscheme "eldritch"
 --vim.cmd.colorscheme "spaceduck"
 --vim.cmd.colorscheme "tokyonight-night"
 --vim.cmd.colorscheme "panda"
+--vim.cmd.colorscheme "rose-pine"
 --require "dupe.colors.tokyo-panda"
 
 --require('decay').setup({
@@ -54,20 +55,19 @@ vim.cmd.colorscheme "eldritch"
 --  1. cursorline color is too dark
 --  2. extra whitespace highlight doesn't work
 --  3. line > 80 char highlight doesn't work
---vim.cmd.colorscheme 'oldworld'
+--vim.cmd.colorscheme "oldworld"
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
 --vim.cmd.colorscheme 'oxocarbon'
 --vim.cmd.colorscheme 'zenburned'
 --vim.cmd.colorscheme 'tokyobones'
---vim.cmd.colorscheme 'zenwritten'
---vim.cmd.colorscheme 'rosebones'
---vim.cmd.colorscheme 'rose-pine'
+--vim.cmd.colorscheme "zenwritten"
+--vim.cmd.colorscheme "rosebones"
 --vim.cmd.colorscheme 'duskfox'
 --vim.cmd.colorscheme 'carbonfox'
 --vim.cmd.colorscheme 'nightfox'
---vim.cmd.colorscheme 'solarized-osaka'
+--vim.cmd.colorscheme "solarized-osaka"
 
 ----------------------------------------------
 -- TODO: These need adjustments
@@ -76,30 +76,48 @@ vim.cmd.colorscheme "eldritch"
 -- remove bg from icons
 -- adjust color on lsp windows
 
---vim.cmd.colorscheme 'oh-lucy-evening'
+--vim.cmd.colorscheme "oh-lucy-evening"
 -- change color of barbar background
 -- lsp windows need big adjustments (e.g. borders)
 -- visual selection colors need to change
 
---vim.cmd.colorscheme "night-owl"
---local italics_overrides = {
---"Comment", "Constant", "Boolean",
---"Function", "Statement", "Include",
---"@class.constructor", "@type", "type.toml",
---"tomlTable", "@keyword.if.vim", "@keyword.return.vim",
---"@keyword.function.lua", "@keyword.function.vim",
---"@keyword.function.return", "@keyword.function.abort",
---"@namespace.vim", "@conditional.lua", "@variable.builtin.vim",
---"@variable.object", "@object.property", "@object.key",
---"@text.emphasis", "@tag.attribute", "@function.builtin.lua",
---"NvimTreeWindowPicker",
---}
---for _,group in ipairs(italics_overrides) do
---mod_hl(group, { italic=false, })
---end
+vim.cmd.colorscheme "night-owl"
 
---mod_hl("BufferCurrentMod", { fg = "LightGreen" })
---mod_hl("BufferInactiveMod", { fg = "LightGreen" })
+-- NOTE: optionally remove italics for night-owl colorscheme
+--[[
+   [local italics_overrides = {
+   [    "Comment",
+   [    "Constant",
+   [    "Boolean",
+   [    "Function",
+   [    "Statement",
+   [    "Include",
+   [    "@class.constructor",
+   [    "@type",
+   [    "type.toml",
+   [    "tomlTable",
+   [    "@keyword.if.vim",
+   [    "@keyword.return.vim",
+   [    "@keyword.function.lua",
+   [    "@keyword.function.vim",
+   [    "@keyword.function.return",
+   [    "@keyword.function.abort",
+   [    "@namespace.vim",
+   [    "@conditional.lua",
+   [    "@variable.builtin.vim",
+   [    "@variable.object",
+   [    "@object.property",
+   [    "@object.key",
+   [    "@text.emphasis",
+   [    "@tag.attribute",
+   [    "@function.builtin.lua",
+   [    "NvimTreeWindowPicker",
+   [}
+   [
+   [for _, group in ipairs(italics_overrides) do
+   [    mod_hl(group, { italic = false })
+   [end
+   ]]
 
 ---------------------------------------------
 
