@@ -26,6 +26,7 @@ ascii-image-converter@yay
 gleam@yay
 lazydocker@yay
 lazygit
+helix
 
 bat@cargo
 coreutils@cargo
