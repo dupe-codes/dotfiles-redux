@@ -1,3 +1,11 @@
+.PHONY: run
+run: ## Run the project
+	@zig build run
+
+.PHONY: test
+test: ## Run project tests
+	@zig build test --summary all
+
 .PHONY: docs
 docs: ## Generate documentation
 	@echo "Generating documentation"

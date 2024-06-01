@@ -1,0 +1,3 @@
+# overall configuration options for the easel application
+
+config_dir: "~/projects/dotfiles-redux/scripts/gigacli/easel/config"

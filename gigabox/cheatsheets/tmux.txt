@@ -14,6 +14,7 @@ ctrl h/j/k/l := navigate around panes (also in vim)
 tmux new -s session_name := create new session
 prefix s := list sessions
 prefix w := preview open sessions
+prefix k := kill session
 tmux attach := attach to most recent session
 tmux attach -t session_name := attach to specific session
 prefix [ := Enter copy mode with yank support

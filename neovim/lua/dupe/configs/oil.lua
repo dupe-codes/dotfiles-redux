@@ -1,13 +1,17 @@
-require("oil").setup({})
+require("oil").setup {
+    view_options = {
+        show_hidden = true,
+    },
+}
 
 local keymap = {
     f = {
         "<CMD>Oil<CR>",
-        "Open file system buffer (oil)"
-    }
+        "open file system buffer (oil)",
+    },
 }
 
-local whichkey = require("which-key")
+local whichkey = require "which-key"
 whichkey.register(keymap, {
     mode = "n",
     prefix = "<leader>f",
@@ -16,5 +20,3 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-
-

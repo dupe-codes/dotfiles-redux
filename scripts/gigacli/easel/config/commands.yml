@@ -1,0 +1,10 @@
+# list of user commands and their arguments
+
+commands:
+
+  - cmd: jrnl
+    icon: 󱓧
+    description: write a journal entry
+    args:
+      - name: entry
+        required: false

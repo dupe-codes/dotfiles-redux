@@ -4,6 +4,8 @@
 *.pyc
 __pycache__
 zig-cache
+zig-out
+
 
 # Relics from installs
 resources/

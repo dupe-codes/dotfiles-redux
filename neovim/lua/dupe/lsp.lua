@@ -243,6 +243,7 @@ conform.setup {
         sh = { "shfmt" },
         ocaml = { "ocamlformat" },
         python = { "black" },
+        zig = { "zigfmt" },
     },
 }
 
