@@ -5,11 +5,11 @@ require("trouble").setup {}
 local keymap = {
     x = {
         name = "trouble diagnostics",
-        x = {
-            "<cmd>Trouble diagnostics toggle<cr>",
-            "open diagnostics",
-        },
         X = {
+            "<cmd>Trouble diagnostics toggle<cr>",
+            "open diagnostics for workspace",
+        },
+        x = {
             "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
             "open diagnostics for buffer",
         },

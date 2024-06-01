@@ -189,8 +189,8 @@ cmp.setup {
     },
     mapping = cmp.mapping.preset.insert {
         ["<C-e>"] = cmp.mapping.abort(),
-        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-Space>"] = cmp.mapping.complete {},
+        ["<C-d>"] = cmp.mapping.scroll_docs(5),
+        ["<C-u>"] = cmp.mapping.scroll_docs(-5),
         ["<CR>"] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
             select = false,
@@ -259,7 +259,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
 })
 
--- Setup keymaps for capabilities not handled by glance
+-- setup keymaps for capabilities not handled by glance
 key_mapper("n", "<leader>cd", ":lua vim.lsp.buf.hover()<CR>")
 key_mapper("n", "<C-s>", ":lua vim.lsp.buf.signature_help()<CR>")
 key_mapper("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")

@@ -15,7 +15,6 @@ source current file | :luafile %
 expand current item or jump to next   | <C-k>
 jump to last placeholder              | <C-j>
 choose from list of placeholder opts  | <C-l>
-reload snippets                       | <leader><leader>s
 
 ## telescope
 search files | <C-p>
@@ -68,15 +67,18 @@ open current line in github | <leader>/
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
 
 ## lsp
-type definition | <leader>D
 code actions | <leader>ca
 rename | <leader>rn
 open docs on current cursor | K
+open hover docs | <leader>cd
+open signature help | <C-s>
 open manual entry at cursor | <leader>cd, repeated
-open floating diagnostics | <Leader>e
+open floating diagnostics | <leader>e
 move forward/back in completions | <C-f> <C-b>
+move forward/back in completion docs | <C-d> <C-u>
 abort completions | <C-e>
-accept completion | <Tab>
+accept completion | <Enter>
+accept snippet | <C-k>
 glance definitions | gd
 glance references | gr
 glance type_definitions | gt
@@ -113,8 +115,8 @@ visual diff of file under cursor | dv
 close hover variables window | <C-w>q
 
 ## trouble
-open workspace diagnostics | <leader>xx
-open buffer diagnostics | <leader>xX
+open workspace diagnostics | <leader>xX
+open buffer diagnostics | <leader>xx
 open LSP defs, refs, etc. | <leader>xl
 open location list | <leader>xL
 open quickfix list  | <leader>xq
