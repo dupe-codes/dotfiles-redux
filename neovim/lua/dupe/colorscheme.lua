@@ -52,9 +52,10 @@ require("tokyonight").setup {
 --})
 
 -- TODO: i like oldworld, but it needs a few tweaks:
---  1. cursorline color is too dark (maybe)
---  2. get rid of transparent background behind some window titles
+--  1. get rid of transparent background behind some window titles
+--  2. patch TelescopeTitle so it is visible
 vim.cmd.colorscheme "oldworld"
+vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
