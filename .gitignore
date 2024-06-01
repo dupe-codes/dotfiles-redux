@@ -3,6 +3,7 @@
 .mypy_cache
 *.pyc
 __pycache__
+zig-cache
 
 # Relics from installs
 resources/

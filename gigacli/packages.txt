@@ -27,6 +27,7 @@ gleam@yay
 lazydocker@yay
 lazygit
 helix
+zig
 
 bat@cargo
 coreutils@cargo

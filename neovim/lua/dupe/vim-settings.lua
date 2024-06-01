@@ -18,13 +18,13 @@ hl(0, "DiagnosticSignWarn", { fg = "#e0af68", bg = clear })
 vim.cmd "set hidden"
 
 -- Highlight extra whitespace in all buffers but terminal windows
-hl(0, "ExtraWhitespace", { link = "DiffDelete" })
+hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
 vim.cmd "au InsertEnter * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+\\%#\\@<!$/ | endif"
 vim.cmd "au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+$/ | endif"
 --vim.cmd("au BufWinLeave * call clearmatches()")
 
 -- Highlight text beyond 80 chars
-hl(0, "OverLength", { link = "DiffDelete" })
+hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
 local function apply_highlight()
     vim.schedule(function()
         if vim.bo.filetype ~= "dashboard" then

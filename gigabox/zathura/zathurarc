@@ -1,14 +1,10 @@
-# Open document in fit-width mode by default
 set adjust-open "best-fit"
+set pages-per-row 2
 
-# One page per row by default
-set pages-per-row 1
-
-#stop at page boundries
+# stop at page boundries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 set scroll-step 100
-
 
 set default-bg                  "rgba(26, 27, 38, 0.8)"
 set default-fg                  "#a9b1d6"
@@ -45,4 +41,4 @@ set recolor-keephue             "false"
 
 map i recolor
 
-set font "BerkeleyMono Nerd Font Mono 14"
+set font "MonoLisa Fancy 14"

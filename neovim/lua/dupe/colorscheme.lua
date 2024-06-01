@@ -52,10 +52,9 @@ require("tokyonight").setup {
 --})
 
 -- TODO: i like oldworld, but it needs a few tweaks:
---  1. cursorline color is too dark
---  2. extra whitespace highlight doesn't work
---  3. line > 80 char highlight doesn't work
---vim.cmd.colorscheme "oldworld"
+--  1. cursorline color is too dark (maybe)
+--  2. get rid of transparent background behind some window titles
+vim.cmd.colorscheme "oldworld"
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
@@ -81,11 +80,7 @@ require("tokyonight").setup {
 -- lsp windows need big adjustments (e.g. borders)
 -- visual selection colors need to change
 
-vim.cmd.colorscheme "night-owl"
--- whitespace & overline highlights are way too bright with
--- night-owl
-vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
-vim.api.nvim_set_hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
+--vim.cmd.colorscheme "night-owl"
 
 -- NOTE: optionally remove italics for night-owl colorscheme
 --[[
