@@ -1,8 +1,8 @@
 local keymap = {
-    ["?"] = { "<cmd> :Cheatsheet <CR>", "Open cheatsheet" },
+    ["?"] = { "<cmd> :Cheatsheet <CR>", "cheatsheet" },
 }
 
-local whichkey = require("which-key")
+local whichkey = require "which-key"
 whichkey.register(keymap, {
     mode = "n",
     prefix = "<leader>",
@@ -11,4 +11,3 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-

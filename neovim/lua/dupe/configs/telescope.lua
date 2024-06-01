@@ -10,7 +10,7 @@ local utils = require "telescope.utils"
 
 local keymap = {
     f = {
-        name = "Find & files",
+        name = "find, grep, & files",
         s = {
             ':lua require"telescope.builtin".live_grep()<CR>',
             "Fuzzy search",

@@ -1,8 +1,8 @@
-local whichkey = require("which-key")
+local whichkey = require "which-key"
 
 local keymap = {
     g = {
-        name = "Git",
+        name = "git",
         s = { "<cmd>:Git<CR>", "Git status" },
         h = { "<cmd>diffget //2<CR>", "Accept left git diff" },
         l = { "<cmd>diffget //3<CR>", "Accept right git diff" },
@@ -13,7 +13,7 @@ local keymap = {
         r = { "<cmd>Telescope git_branches<CR>", "Search git branches" },
         m = { "<cmd>Telescope git_commits<CR>", "Search git commits" },
         d = { "<cmd> lua require('dupe.configs.git-utils').diffWith() <CR>", "Diff with" },
-    }
+    },
 }
 
 whichkey.register(keymap, {
@@ -24,4 +24,3 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-

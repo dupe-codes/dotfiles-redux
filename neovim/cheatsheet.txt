@@ -113,12 +113,11 @@ visual diff of file under cursor | dv
 close hover variables window | <C-w>q
 
 ## trouble
-open trouble | <leader>xx
-open workspace diagnostics | <leader>xw
-open document diagnostics | <leader>xd
-open loclist | <leader>xl
-open quickfix | <leader>xq
-open lsp references | gR
+open workspace diagnostics | <leader>xx
+open buffer diagnostics | <leader>xX
+open LSP defs, refs, etc. | <leader>xl
+open location list | <leader>xL
+open quickfix list  | <leader>xq
 
 ## zen-mode
 toggle zen mode | <leader>zen

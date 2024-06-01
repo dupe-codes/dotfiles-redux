@@ -1,16 +1,16 @@
-vim.cmd("let g:coqtail_nomap = 1")
+vim.cmd "let g:coqtail_nomap = 1"
 -- Force .v files to be recognized as coq files
-vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=coq")
+vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
 
-local whichkey = require("which-key")
+local whichkey = require "which-key"
 
 -- TODO: This doesn't seem to work for symbolic notation like ++
 local getcurword = function()
     -- Add '.' to definition of a keyword
-    local old_keywd = vim.api.nvim_get_option('iskeyword')
-    vim.api.nvim_buf_set_option(0, 'iskeyword', old_keywd .. ',' .. '.')
+    local old_keywd = vim.api.nvim_get_option "iskeyword"
+    vim.api.nvim_buf_set_option(0, "iskeyword", old_keywd .. "," .. ".")
 
-    local cword = vim.fn.expand('<cword>')
+    local cword = vim.fn.expand "<cword>"
 
     -- Strip trailing '.'s
     local dotidx = string.find(cword, "[.]+$")
@@ -19,7 +19,7 @@ local getcurword = function()
     end
 
     -- Reset iskeyword
-    vim.api.nvim_buf_set_option(0, 'iskeyword', old_keywd)
+    vim.api.nvim_buf_set_option(0, "iskeyword", old_keywd)
 
     return cword
 end
@@ -32,7 +32,7 @@ end
 
 local keymap = {
     p = {
-        name = "Proofs (Coq)",
+        name = "proofs (coq)",
         s = { "<cmd>CoqStart<CR>", "Start coq" },
         q = { "<cmd>CoqStop<CR>", "Quit coq" },
         i = { "<cmd>CoqInterrupt<CR>", "Interrupt coq" },
@@ -52,7 +52,7 @@ local keymap = {
             s = { ":lua execute_command_with_word('Coq Search %s')<CR>", "Search for theorems about <arg>" },
         },
         r = { "<cmd>CoqRestorePanels<CR>", "Restore coq panels" },
-    }
+    },
 }
 
 whichkey.register(keymap, {
@@ -63,4 +63,3 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-

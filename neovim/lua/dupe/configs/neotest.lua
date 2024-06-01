@@ -1,38 +1,38 @@
-require("neotest").setup({
+require("neotest").setup {
     adapters = {
-        require("neotest-python")({
+        require "neotest-python" {
             dap = { justMyCode = false },
-        }),
-        require("neotest-vim-test")({
+        },
+        require "neotest-vim-test" {
             ignore_file_types = { "python", "vim", "lua" },
-        }),
-        require("neotest-rust"),
+        },
+        require "neotest-rust",
     },
-})
+}
 
 local keymap = {
     t = {
-        name = "Tests",
+        name = "tests",
         r = {
             "<cmd>lua require('neotest').run.run()<CR>",
-            "Run nearest test"
+            "Run nearest test",
         },
         a = {
             "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
-            "Run all tests"
+            "Run all tests",
         },
         s = {
             "<cmd>lua require('neotest').summary.toggle()<CR>",
-            "Toggle test summary"
+            "Toggle test summary",
         },
         d = {
             "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
-            "Run nearest test with debugger"
+            "Run nearest test with debugger",
         },
-    }
+    },
 }
 
-local whichkey = require("which-key")
+local whichkey = require "which-key"
 whichkey.register(keymap, {
     mode = "n",
     prefix = "<leader>",
@@ -41,4 +41,3 @@ whichkey.register(keymap, {
     noremap = true,
     nowait = false,
 })
-

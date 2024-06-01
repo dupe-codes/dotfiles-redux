@@ -1,22 +1,38 @@
-require('trouble').setup({
-    mode = "document_diagnostics"
-})
+local whichkey = require "which-key"
 
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-  {silent = true, noremap = true}
-)
+require("trouble").setup {}
+
+local keymap = {
+    x = {
+        name = "trouble diagnostics",
+        x = {
+            "<cmd>Trouble diagnostics toggle<cr>",
+            "open diagnostics",
+        },
+        X = {
+            "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+            "open diagnostics for buffer",
+        },
+        l = {
+            "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+            "open LSP definitions / references / ...",
+        },
+        L = {
+            "<cmd>Trouble loclist toggle<cr>",
+            "open location list",
+        },
+        q = {
+            "<cmd>Trouble qflist toggle<cr>",
+            "open quickfix list",
+        },
+    },
+}
+
+whichkey.register(keymap, {
+    mode = "n",
+    prefix = "<leader>",
+    buffer = nil,
+    silent = true,
+    noremap = true,
+    nowait = false,
+})
