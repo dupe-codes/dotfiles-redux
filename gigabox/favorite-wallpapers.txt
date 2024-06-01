@@ -130,3 +130,7 @@ hover-bike.jpg
 misato-smoking.png
 flight-mecha.jpg
 relaxed-stick-up.jpg
+subway-strap.jpg
+pistol-discharge.jpg
+strong-ellie.jpg
+wistful-glance.jpg
