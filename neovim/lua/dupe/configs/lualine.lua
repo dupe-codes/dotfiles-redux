@@ -52,6 +52,7 @@ require("lualine").setup {
         lualine_b = {
             "branch",
             "diff",
+            "diagnostics",
             { "swenv", icon = "" },
         },
         lualine_c = {
