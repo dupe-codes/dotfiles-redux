@@ -287,6 +287,11 @@ local plugins = {
         priority = 1000,
         config = true,
     },
+    {
+        "LZDQ/umbra.nvim",
+        lazy = false,
+        priority = 1000,
+    },
 
     -- Zig support
     {

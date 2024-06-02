@@ -51,6 +51,15 @@ require("tokyonight").setup {
 --},
 --})
 
+--[[
+   [local umbra = require "umbra"
+   [umbra.setup {
+   [    style = "bloodmoon",
+   [    transparent = true,
+   [}
+   [umbra.load()
+   ]]
+
 -- TODO: i like oldworld, but it needs a few tweaks:
 --  1. get rid of transparent background behind some window titles
 --  2. patch TelescopeTitle so it is visible
@@ -132,10 +141,13 @@ vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
 --#region color corrections
 -- various tweaks that can't be applied elsewhere for ~reasons~
 
--- something (a plugin?) is setting these to an unsatisfying orange. override here
+-- something (a plugin?) is setting these to an unsatisfying colors. override here
 -- since this config is evaluated _after_ plugins are loaded
+--
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
 vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Type" })
+vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
+vim.api.nvim_set_hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
 
 --#endregion

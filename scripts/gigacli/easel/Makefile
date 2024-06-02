@@ -6,6 +6,11 @@ run: ## Run the project
 test: ## Run project tests
 	@zig build test --summary all
 
+.PHONY: format
+format: ## Format the project
+	@zig fmt src/
+	@echo "Project formatted"
+
 .PHONY: docs
 docs: ## Generate documentation
 	@echo "Generating documentation"

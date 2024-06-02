@@ -18,24 +18,29 @@ hl(0, "DiagnosticSignWarn", { fg = "#e0af68", bg = clear })
 vim.cmd "set hidden"
 
 -- Highlight extra whitespace in all buffers but terminal windows
-hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
 vim.cmd "au InsertEnter * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+\\%#\\@<!$/ | endif"
 vim.cmd "au InsertLeave * if &buftype != 'terminal' | match ExtraWhitespace /\\s\\+$/ | endif"
 --vim.cmd("au BufWinLeave * call clearmatches()")
 
--- Highlight text beyond 80 chars
-hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
+-- Highlight text beyond 100 chars
 local function apply_highlight()
     vim.schedule(function()
         if vim.bo.filetype ~= "dashboard" then
-            vim.cmd "2match OverLength /\\%89v.\\+/"
+            vim.cmd "2match OverLength /\\%101v.\\+/"
         else
             vim.cmd "2match none"
         end
     end)
 end
 vim.api.nvim_create_augroup("OverLengthGroup", { clear = true })
-vim.api.nvim_create_autocmd({ "InsertEnter", "InsertLeave", "BufEnter", "BufWritePre", "BufReadPost", "BufNewFile" }, {
+vim.api.nvim_create_autocmd({
+    "InsertEnter",
+    "InsertLeave",
+    "BufEnter",
+    "BufWritePre",
+    "BufReadPost",
+    "BufNewFile",
+}, {
     group = "OverLengthGroup",
     callback = apply_highlight,
 })
