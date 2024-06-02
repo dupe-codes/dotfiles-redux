@@ -20,6 +20,7 @@ config.font = wezterm.font_with_fallback {
     --'CozetteHiDpi',
     "Noto Sans Symbols",
 }
+
 config.color_scheme = "Tokyo Night"
 
 config.leader = { key = "a", mods = "SUPER", timeout_milliseconds = 1000 }

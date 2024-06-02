@@ -6,9 +6,9 @@ picom -b
 dunst &
 xfce4-power-manager &
 1password --silent &
-safeeyes &
 greenclip daemon &
 dropbox &
+safeeyes &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then

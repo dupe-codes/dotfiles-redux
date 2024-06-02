@@ -480,6 +480,14 @@ local plugins = {
             require "dupe.configs.sessions"
         end,
     },
+
+    -- show virtline counts of search matches
+    {
+        "kevinhwang91/nvim-hlslens",
+        config = function()
+            require "dupe.configs.hlslens"
+        end,
+    },
 }
 
 require("lazy").setup(plugins)

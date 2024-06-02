@@ -63,8 +63,24 @@ require("tokyonight").setup {
 -- TODO: i like oldworld, but it needs a few tweaks:
 --  1. get rid of transparent background behind some window titles
 --  2. patch TelescopeTitle so it is visible
+--  3. color on indent blank line guides
 vim.cmd.colorscheme "oldworld"
 vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
+require("ibl").setup {
+    exclude = {
+        filetypes = { "dashboard" },
+    },
+    indent = {
+        highlight = {
+            "Comment",
+        },
+    },
+    scope = {
+        highlight = {
+            "Special",
+        },
+    },
+}
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
@@ -146,7 +162,7 @@ vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
 --
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
-vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Type" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
 vim.api.nvim_set_hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
 

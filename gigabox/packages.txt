@@ -158,7 +158,7 @@ obsidian
 clamtk
 github-desktop-bin@yay
 intellij-idea-community-edition
-safeeyes@yay
+safeeyes-git@yay
 redshift
 geoclue
 cbonsai@yay
