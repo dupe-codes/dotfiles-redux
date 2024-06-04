@@ -64,6 +64,7 @@ require("tokyonight").setup {
 --  1. get rid of transparent background behind some window titles
 --  2. patch TelescopeTitle so it is visible
 --  3. color on indent blank line guides
+--  4. cursorline is too dark with dark bgs; lighten it
 vim.cmd.colorscheme "oldworld"
 vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
 require("ibl").setup {

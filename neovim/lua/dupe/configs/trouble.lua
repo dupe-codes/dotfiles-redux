@@ -14,7 +14,7 @@ local keymap = {
             "open diagnostics for buffer",
         },
         l = {
-            "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+            "<cmd>Trouble lsp toggle focus=false win.position=bottom<cr>",
             "open LSP definitions / references / ...",
         },
         L = {
