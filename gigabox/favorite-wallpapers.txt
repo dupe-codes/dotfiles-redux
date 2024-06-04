@@ -134,3 +134,6 @@ subway-strap.jpg
 wistful-glance.jpg
 bang-bang.jpg
 ellie-strong.jpg
+camera-sketch.png
+red-doll.png
+zero-2.png

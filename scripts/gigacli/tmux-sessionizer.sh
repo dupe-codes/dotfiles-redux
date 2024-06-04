@@ -17,8 +17,7 @@ if [[ $# -eq 1 ]]; then
 else
     saved_options_string=$(printf "%s\n" "${saved_options[@]}")
     selected=$(
-        printf "%s\n%s" "$saved_options_string" "$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" |
-            gum filter --placeholder "Choose session..." --height 50 --no-strict
+        printf "%s\n%s" "$saved_options_string" "$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" | fzf
     )
 fi
 
