@@ -4,7 +4,7 @@ favorites_file="$HOME/projects/dotfiles-redux/gigabox/favorite-wallpapers.txt"
 wallpapers_dir="$HOME/projects/dotfiles-redux/gigabox/resources/wallpapers"
 cache_dir="${HOME}/.cache/$(whoami)/wallpaper-previews"
 
-if [ ! -d "${cache_dir}" ] ; then
+if [ ! -d "${cache_dir}" ]; then
     mkdir -p "${cache_dir}"
 fi
 
@@ -38,44 +38,44 @@ rofi_command="rofi -no-config -theme $dir/utilscripts.rasi"
 chosen="$(echo -e "$options" | $rofi_command -i -p "Run" -dmenu -selected-row 0)"
 
 case $chosen in
-    $save_wallpaper)
-        WALLPAPER_PATH=$(get_current_wallpaper)
-        WALLPAPER_NAME=$(basename "$WALLPAPER_PATH")
-        touch "$favorites_file"
-        if grep -Fxq "$WALLPAPER_NAME" "$favorites_file"; then
-            notify-send "Wallpaper" "$WALLPAPER_NAME is already a favorite."
-        else
-            echo "$WALLPAPER_NAME" >> "$favorites_file"
-            notify-send "Wallpaper" "$WALLPAPER_NAME saved as favorite."
-        fi
-        ;;
-    $load_wallpaper)
+$save_wallpaper)
+    WALLPAPER_PATH=$(get_current_wallpaper)
+    WALLPAPER_NAME=$(basename "$WALLPAPER_PATH")
+    touch "$favorites_file"
+    if grep -Fxq "$WALLPAPER_NAME" "$favorites_file"; then
+        notify-send "Wallpaper" "$WALLPAPER_NAME is already a favorite."
+    else
+        echo "$WALLPAPER_NAME" >>"$favorites_file"
+        notify-send "Wallpaper" "$WALLPAPER_NAME saved as favorite."
+    fi
+    ;;
+$load_wallpaper)
 
-        monitor_res=$(xdpyinfo | awk '/dimensions/{print $2}' | cut -d 'x' -f1)
-        monitor_scale=$(xdpyinfo | awk '/resolution/{print $2}' | cut -d 'x' -f1)
-        monitor_res=$(( monitor_res * 17 / monitor_scale ))
-        rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
+    monitor_res=$(xdpyinfo | awk '/dimensions/{print $2}' | cut -d 'x' -f1)
+    monitor_scale=$(xdpyinfo | awk '/resolution/{print $2}' | cut -d 'x' -f1)
+    monitor_res=$((monitor_res * 17 / monitor_scale))
+    rofi_override="element-icon{size:${monitor_res}px;border-radius:0px;}"
 
-        if [ -f "$favorites_file" ]; then
-            mapfile -t favorites < "$favorites_file"
-            create_wallpaper_previews "${favorites[@]}"
+    if [ -f "$favorites_file" ]; then
+        mapfile -t favorites <"$favorites_file"
+        create_wallpaper_previews "${favorites[@]}"
 
-            # generate list for Rofi with icons
-            rofi_list=""
-            for favorite in "${favorites[@]}"; do
-                if [ -f "${cache_dir}/${favorite}" ]; then
-                    rofi_list+="${favorite}\x00icon\x1f${cache_dir}/${favorite}\n"
-                fi
-            done
-
-            rofi_command="rofi -no-config -theme $dir/file-preview.rasi"
-            selection=$(echo -e "$rofi_list" | $rofi_command -dmenu -i -p "Select wallpaper" -theme-str "$rofi_override")
-            if [ -n "$selection" ]; then
-                nitrogen --set-zoom-fill --save "$wallpapers_dir/$selection"
-                notify-send "Wallpaper" "$selection loaded."
+        # generate list for Rofi with icons
+        rofi_list=""
+        for favorite in "${favorites[@]}"; do
+            if [ -f "${cache_dir}/${favorite}" ]; then
+                rofi_list+="${favorite}\x00icon\x1f${cache_dir}/${favorite}\n"
             fi
-        else
-            notify-send "Wallpaper" "No favorite wallpapers found."
+        done
+
+        rofi_command="rofi -no-config -theme $dir/file-preview.rasi"
+        selection=$(echo -e "$rofi_list" | $rofi_command -dmenu -i -p "Select wallpaper" -theme-str "$rofi_override")
+        if [ -n "$selection" ]; then
+            nitrogen --set-zoom-fill --save "$wallpapers_dir/$selection"
+            notify-send "Wallpaper" "$selection loaded."
         fi
-        ;;
+    else
+        notify-send "Wallpaper" "No favorite wallpapers found."
+    fi
+    ;;
 esac

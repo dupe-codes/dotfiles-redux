@@ -10,7 +10,7 @@ print_warning() {
     echo -e "${YELLOW_COLOR} ⚠ [WARN]  ${1:-} ${DEFAULT}"
 }
 
- print_info() {
+print_info() {
     BLUE_COLOR="\033[0;34m"
     DEFAULT="\033[0m"
     echo -e "${BLUE_COLOR}  [INFO]  ${1:-} ${DEFAULT}"

@@ -38,46 +38,46 @@ main_menu() {
     gum style "python env manager"
     local choice=$(gum choose "create" "list" "activate" "remove" "exit")
     case $choice in
-        create)
-            create_env
-            ;;
-        list)
-            list_envs
-            ;;
-        activate)
-            activate_env
-            ;;
-        remove)
-            remove_env
-            ;;
-        exit)
-            exit 0
-            ;;
-        *)
-            echo "invalid option"
-            exit 1
-            ;;
+    create)
+        create_env
+        ;;
+    list)
+        list_envs
+        ;;
+    activate)
+        activate_env
+        ;;
+    remove)
+        remove_env
+        ;;
+    exit)
+        exit 0
+        ;;
+    *)
+        echo "invalid option"
+        exit 1
+        ;;
     esac
 }
 
 if [ "$#" -gt 0 ]; then
     case $1 in
-        create)
-            create_env
-            ;;
-        list)
-            list_envs
-            ;;
-        activate)
-            activate_env
-            ;;
-        remove)
-            remove_env
-            ;;
-        *)
-            echo "invalid command. available commands are: create, list, activate, remove"
-            exit 1
-            ;;
+    create)
+        create_env
+        ;;
+    list)
+        list_envs
+        ;;
+    activate)
+        activate_env
+        ;;
+    remove)
+        remove_env
+        ;;
+    *)
+        echo "invalid command. available commands are: create, list, activate, remove"
+        exit 1
+        ;;
     esac
     exit 0
 else

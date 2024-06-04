@@ -7,32 +7,32 @@
 #   3. download obsidian and configure the datastore vault
 
 install_packages_from_file() {
-	FILE=$1
-	pacman_pkgs=""
-	yay_pkgs=""
+    FILE=$1
+    pacman_pkgs=""
+    yay_pkgs=""
 
-	while IFS= read -r line; do
-		# skip comments
-		if [[ $line == \#* ]]; then
-			continue
-		fi
+    while IFS= read -r line; do
+        # skip comments
+        if [[ $line == \#* ]]; then
+            continue
+        fi
 
-		if [[ $line == *@yay ]]; then
-			yay_pkgs+=" ${line%@yay}"
-		else
-			pacman_pkgs+=" $line"
-		fi
-	done <"$FILE"
+        if [[ $line == *@yay ]]; then
+            yay_pkgs+=" ${line%@yay}"
+        else
+            pacman_pkgs+=" $line"
+        fi
+    done <"$FILE"
 
-	if [ -n "$pacman_pkgs" ]; then
-		echo "Installing packages with pacman..."
-		sudo pacman -S $pacman_pkgs
-	fi
+    if [ -n "$pacman_pkgs" ]; then
+        echo "Installing packages with pacman..."
+        sudo pacman -S $pacman_pkgs
+    fi
 
-	if [ -n "$yay_pkgs" ]; then
-		echo "Installing packages with yay..."
-		yay -S $yay_pkgs
-	fi
+    if [ -n "$yay_pkgs" ]; then
+        echo "Installing packages with yay..."
+        yay -S $yay_pkgs
+    fi
 }
 
 echo "Setting up the GIGABOX...\n\n"

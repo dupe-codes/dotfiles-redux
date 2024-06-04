@@ -8,8 +8,7 @@ install_packages_from_file() {
     go_pkgs=""
     npm_pkgs=""
 
-    while IFS= read -r line
-    do
+    while IFS= read -r line; do
         # skip comments
         if [[ $line == \#* ]]; then
             continue
@@ -81,7 +80,7 @@ $HOME/.emacs.d/bin/doom install
 
 echo 'Setting up atuin...'
 mkdir -p ~/.local/share/atuin/
-atuin init nu > ~/.local/share/atuin/init.nu
+atuin init nu >~/.local/share/atuin/init.nu
 
 echo 'Installing nix..'
 sh <(curl -L https://nixos.org/nix/install) --daemon

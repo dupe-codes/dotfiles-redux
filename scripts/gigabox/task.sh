@@ -19,7 +19,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     if [[ $IGNORE_SECTION -eq 0 && "$line" =~ ^####\  ]]; then
         SECTIONS+="${line:5}\n"
     fi
-done < "$QUEST_LOG_PATH"
+done <"$QUEST_LOG_PATH"
 SECTIONS=$(echo -e "$SECTIONS" | sed '/^\s*$/d')
 
 TYPE=$(echo -e "$SECTIONS" | rofi -dmenu -theme $HOME/scripts/gigabox/rofi/utilscripts.rasi -p "Enter task type:")
@@ -64,18 +64,18 @@ IGNORE_SECTION=0
 PRINTED=0
 
 while IFS= read -r line || [[ -n "$line" ]]; do
-    echo "$line" >> "$TEMP_FILE"
+    echo "$line" >>"$TEMP_FILE"
     if [[ "$line" == "-- QUEST LOG END --" ]]; then
         IGNORE_SECTION=1
     fi
     if [[ $IGNORE_SECTION -eq 0 && $PRINTED -eq 0 && "$line" =~ ^####\  && "$line" =~ $TYPE && $SECTION_FOUND -eq 0 ]]; then
         SECTION_FOUND=1
     elif [[ $SECTION_FOUND -eq 1 && "$line" == "" ]]; then
-        echo "$FORMATTED_TASK" >> "$TEMP_FILE"
+        echo "$FORMATTED_TASK" >>"$TEMP_FILE"
         SECTION_FOUND=0
         PRINTED=1
     fi
-done < "$QUEST_LOG_PATH"
+done <"$QUEST_LOG_PATH"
 
 mv "$TEMP_FILE" "$QUEST_LOG_PATH"
 

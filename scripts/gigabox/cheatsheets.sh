@@ -36,7 +36,7 @@ if [ ! -f "$selected_cheatsheet_file" ]; then
     exit 1
 fi
 
-IFS=$'\n' read -d '' -r -a lines < $selected_cheatsheet_file
+IFS=$'\n' read -d '' -r -a lines <$selected_cheatsheet_file
 
 # Parse out each key and any associated longer descriptions
 # Also compute the max length across all keys, for formatting
@@ -53,7 +53,7 @@ for line in "${lines[@]}"; do
     if [ "$is_description_section" = false ]; then
         key=$(echo $line | awk -F ':=' '{print $1}')
         length=${#key}
-        if (( length > max_length )); then
+        if ((length > max_length)); then
             max_length=$length
         fi
         keybinds+=("$line")
@@ -69,7 +69,6 @@ for line in "${keybinds[@]}"; do
     padded_description=$(printf "%-${max_length}s" "$short_description")
     formatted+="$padded_description => $keybind\n"
 done
-
 
 rofi_command="rofi -no-config -theme $dir/keybinds.rasi"
 selected_keybind=$(echo -e "$formatted" | $rofi_command -dmenu -p "$sheet_name")

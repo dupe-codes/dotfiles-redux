@@ -5,7 +5,7 @@ API_URL="https://api.openai.com/v1/chat/completions"
 
 CONVO_FILE="/tmp/gpt_convo.txt"
 if [ ! -f "$CONVO_FILE" ]; then
-    echo '[]' > "$CONVO_FILE"
+    echo '[]' >"$CONVO_FILE"
 fi
 
 # Define associative array of available roles for GPT to take on
@@ -40,15 +40,15 @@ machine learning."
 send_query() {
     local messages=$(cat "$CONVO_FILE")
     local data=$(jq -n \
-                    --argjson messages "$messages" \
-                    '{"model": "gpt-4", "messages": $messages}')
+        --argjson messages "$messages" \
+        '{"model": "gpt-4", "messages": $messages}')
 
     local response=$(curl -s -X POST "$API_URL" \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer $OPENAI_API_KEY" \
         -d "$data")
 
-    if echo "$response" | jq -e '.error' > /dev/null; then
+    if echo "$response" | jq -e '.error' >/dev/null; then
         local error_message=$(echo "$response" | jq -r '.error.message')
         echo "Error from GPT (/clear convo): $error_message"f
         return 1
@@ -73,8 +73,8 @@ format_conversation() {
 
     break_long_line "$ROLE_HEADER"
 
-    jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" \
-    | awk '{
+    jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" |
+        awk '{
         line=$0;
         max_length=100; # Adjust this value as needed
         while(length(line) > max_length) {
@@ -82,9 +82,9 @@ format_conversation() {
             line=substr(line, max_length + 1);
         }
         print line;
-    }' \
-    | sed 's/USER:/\n-----------------------\nYou:/g' \
-    | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
+    }' |
+        sed 's/USER:/\n-----------------------\nYou:/g' |
+        sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
 }
 
 save_conversation() {
@@ -92,9 +92,9 @@ save_conversation() {
     ROLE_HEADER="Current role prompt: $CURRENT_PROMPT"
     echo "$ROLE_HEADER"
 
-    jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" \
-    | sed 's/USER:/\n-----------------------\nYou:/g' \
-    | sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
+    jq -r '.[] | select(.role != "system") | "\(.role | ascii_upcase): \(.content)"' "$CONVO_FILE" |
+        sed 's/USER:/\n-----------------------\nYou:/g' |
+        sed 's/ASSISTANT:/\n-----------------------\nGPT:/g'
 }
 
 dir="$HOME/scripts/gigabox/rofi"
@@ -104,7 +104,7 @@ while true; do
     [ $? -ne 0 ] && break
 
     if [ "$USER_QUERY" == "\clear" ]; then
-        echo '[]' > "$CONVO_FILE"
+        echo '[]' >"$CONVO_FILE"
         continue
     fi
 
@@ -112,7 +112,7 @@ while true; do
         TIMESTAMP=$(date +"%Y-%m-%d-%H-%M-%S")
         UUID=$(uuidgen)
         SAVE_FILE="$HOME/datastore/chatgpt/convo-${TIMESTAMP}-${UUID}.txt"
-        save_conversation > "$SAVE_FILE"
+        save_conversation >"$SAVE_FILE"
         notify-send "ChatGPT" "Conversation saved to $SAVE_FILE"
         continue
     fi
@@ -121,8 +121,8 @@ while true; do
         ROLE_SELECTION="${BASH_REMATCH[1]}"
         if [[ -n "${roles[$ROLE_SELECTION]}" ]]; then
             jq --arg role_msg "system: ${roles[$ROLE_SELECTION]}" \
-               '. = [{"role": "system", "content": $role_msg}] + .' \
-               "$CONVO_FILE" > temp && mv temp "$CONVO_FILE"
+                '. = [{"role": "system", "content": $role_msg}] + .' \
+                "$CONVO_FILE" >temp && mv temp "$CONVO_FILE"
 
             notify-send "GPT Convo" "Role changed to $ROLE_SELECTION"
         else
@@ -133,7 +133,7 @@ while true; do
 
     jq --arg query "$USER_QUERY" \
         '. += [{"role": "user", "content": $query}]' \
-        "$CONVO_FILE" > temp && mv temp "$CONVO_FILE"
+        "$CONVO_FILE" >temp && mv temp "$CONVO_FILE"
     zenity \
         --progress \
         --title="Loading" \
@@ -144,5 +144,5 @@ while true; do
     kill $!
     jq --arg response "$GPT_RESPONSE" \
         '. += [{"role": "assistant", "content": $response}]' \
-        "$CONVO_FILE" > temp && mv temp "$CONVO_FILE"
+        "$CONVO_FILE" >temp && mv temp "$CONVO_FILE"
 done

@@ -29,9 +29,9 @@ if grep -q "$SECTION_HEADING" "$NOTE_PATH"; then
             print $0 "\n" text "\n";
             next; # Skip further processing of this line
         }
-    }' "$NOTE_PATH" > "$NOTE_PATH.tmp" && mv "$NOTE_PATH.tmp" "$NOTE_PATH"
+    }' "$NOTE_PATH" >"$NOTE_PATH.tmp" && mv "$NOTE_PATH.tmp" "$NOTE_PATH"
 else
-    echo -e "\n$SECTION_HEADING\n\n- $INPUT_TEXT" >> "$NOTE_PATH"
+    echo -e "\n$SECTION_HEADING\n\n- $INPUT_TEXT" >>"$NOTE_PATH"
 fi
 
 notify-send "Note-taking" "Note added to $TODAYS_NOTE"
