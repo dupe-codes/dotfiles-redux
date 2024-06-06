@@ -22,6 +22,8 @@ tools=(
     ["btm"]="󰕮 check activity monitor:"
     ["nap"]=" open snippets manager:"
     ["nom"]=" open rss feed reader:"
+    # typing practice tui with keyboard icon
+    ["smassh"]="󰟀 practice typing:"
     ["yt"]="󰗃 launch youtube client:"
     ["wthrr"]="󰖐 check weather:"
     ["glow"]=" open markdown reader:"
@@ -60,6 +62,7 @@ declare -a tool_order=(
     "btm"
     "nap"
     "nom"
+    "smassh"
     "yt"
     "wthrr"
     "glow"

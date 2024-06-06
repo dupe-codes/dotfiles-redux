@@ -1,3 +1,6 @@
+-- TODO: fix keybinds to yank selected icon/command/result
+require("cheatsheet").setup {}
+
 local keymap = {
     ["?"] = { "<cmd> :Cheatsheet <CR>", "cheatsheet" },
 }
