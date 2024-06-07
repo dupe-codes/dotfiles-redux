@@ -112,6 +112,7 @@ require("tokyonight").setup {
 -- lsp windows need big adjustments (e.g. borders)
 -- visual selection colors need to change
 
+-- TODO: adjust cursorline color
 --vim.cmd.colorscheme "night-owl"
 
 -- NOTE: optionally remove italics for night-owl colorscheme
