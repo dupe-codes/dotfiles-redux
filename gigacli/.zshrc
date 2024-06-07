@@ -23,6 +23,7 @@ prepend_path_if_not_exists "$HOME/.elan/bin"
 prepend_path_if_not_exists "$HOME/.config/emacs/bin"
 prepend_path_if_not_exists "$HOME/.ghcup/bin"
 prepend_path_if_not_exists "$HOME/.cabal/bin"
+prepend_path_if_not_exists "$HOME/.luarocks/bin"
 export PATH
 
 export EDITOR="nvim"

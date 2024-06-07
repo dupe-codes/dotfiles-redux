@@ -8,6 +8,10 @@ install: ## Install a lua dependency to the local project, usage: make install p
 run: ## Run the reststop tool
 	@source $(CURDIR)/.env && ./src/reststop.lua
 
+.PHONY: lint
+lint: ## Lint lua source files
+	@luacheck src/
+
 .PHONY: format
 format: ## Format lua source files
 	@stylua -v src/

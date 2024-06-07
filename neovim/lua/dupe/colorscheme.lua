@@ -65,34 +65,31 @@ require("tokyonight").setup {
 --  2. patch TelescopeTitle so it is visible
 --  3. color on indent blank line guides
 --  4. cursorline is too dark with dark bgs; lighten it
-vim.cmd.colorscheme "oldworld"
-vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
-require("ibl").setup {
-    exclude = {
-        filetypes = { "dashboard" },
-    },
-    indent = {
-        highlight = {
-            "Comment",
-        },
-    },
-    scope = {
-        highlight = {
-            "Special",
-        },
-    },
-}
+--vim.cmd.colorscheme "oldworld"
+--vim.api.nvim_set_hl(0, "TelescopeTitle", { link = "Character" })
+--require("ibl").setup {
+--exclude = {
+--filetypes = { "dashboard" },
+--},
+--indent = {
+--highlight = {
+--"Comment",
+--},
+--},
+--scope = {
+--highlight = {
+--"Special",
+--},
+--},
+--}
 
 --vim.cmd.colorscheme 'kanagawa'
 --vim.cmd.colorscheme "catppuccin"
---vim.cmd.colorscheme 'oxocarbon'
+--vim.cmd.colorscheme "oxocarbon"
 --vim.cmd.colorscheme 'zenburned'
---vim.cmd.colorscheme 'tokyobones'
+--vim.cmd.colorscheme "tokyobones"
 --vim.cmd.colorscheme "zenwritten"
 --vim.cmd.colorscheme "rosebones"
---vim.cmd.colorscheme 'duskfox'
---vim.cmd.colorscheme 'carbonfox'
---vim.cmd.colorscheme 'nightfox'
 --vim.cmd.colorscheme "solarized-osaka"
 
 ----------------------------------------------
@@ -145,12 +142,26 @@ require("ibl").setup {
    [end
    ]]
 
+require("nightfox").setup {
+    options = {
+        styles = {
+            comments = "italic",
+            functions = "italic",
+            types = "italic",
+        },
+    },
+}
+
+vim.cmd.colorscheme "nightfox"
+--vim.cmd.colorscheme "duskfox"
+--vim.cmd.colorscheme "carbonfox"
+
 ---------------------------------------------
 
 -- OTHERS:
 --vim.cmd.colorscheme 'everforest'
 --vim.cmd.colorscheme 'gruvbox'
---vim.cmd.colorscheme 'everblush'
+--vim.cmd.colorscheme "everblush"
 --vim.cmd.colorscheme 'iceberg'
 --vim.cmd.colorscheme 'mosel'
 --vim.cmd.colorscheme 'nord'
