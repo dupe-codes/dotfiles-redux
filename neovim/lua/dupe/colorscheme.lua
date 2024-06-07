@@ -2,7 +2,7 @@
 -- favorites and list them in dupe.functions.colors.
 --
 -- dupe.functions.colors holds all data and utils for setting
--- colorscheme; color tweaks and set up live in this file
+-- colorscheme; setup lives in this file
 
 local colors = require "dupe.functions.colors"
 
@@ -182,6 +182,7 @@ colors.load_colorscheme()
 -- something (a plugin?) is setting these to an unsatisfying colors. override here
 -- since this config is evaluated _after_ plugins are loaded
 --
+-- TODO: move this to dupe.functions.colors and reinvoke on colorscheme switch
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
 vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Keyword" })
