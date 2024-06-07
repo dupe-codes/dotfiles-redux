@@ -1,3 +1,11 @@
+-- TODO: clean up this file. trim colorschemes down to
+-- favorites and list them in dupe.functions.colors.
+--
+-- dupe.functions.colors holds all data and utils for setting
+-- colorscheme; color tweaks and set up live in this file
+
+local colors = require "dupe.functions.colors"
+
 local function mod_hl(hl_name, opts)
     local is_ok, hl_def = pcall(vim.api.nvim_get_hl_by_name, hl_name, true)
     if is_ok then
@@ -152,7 +160,7 @@ require("nightfox").setup {
     },
 }
 
-vim.cmd.colorscheme "nightfox"
+--vim.cmd.colorscheme "nightfox"
 --vim.cmd.colorscheme "duskfox"
 --vim.cmd.colorscheme "carbonfox"
 
@@ -165,6 +173,8 @@ vim.cmd.colorscheme "nightfox"
 --vim.cmd.colorscheme 'iceberg'
 --vim.cmd.colorscheme 'mosel'
 --vim.cmd.colorscheme 'nord'
+
+colors.load_colorscheme()
 
 --#region color corrections
 -- various tweaks that can't be applied elsewhere for ~reasons~

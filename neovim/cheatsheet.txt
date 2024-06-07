@@ -10,6 +10,7 @@ yank into system clipboard | <leader>y, 'v', <leader>y, <leader>Y
 replace in file text at current cursor | <leader>s
 go back/forward through cursor locations | ctrl + o/i
 source current file | :luafile %
+switch color scheme | <leader>color
 
 ## snippets
 expand current item or jump to next   | <C-k>
@@ -90,9 +91,6 @@ uncomment | <leader>cu
 comment pretty block | <leader>cs
 toggle comment | <leader>c<space>
 
-## terminal
-toggle terminal | <C-t>
-
 ## undotree
 open undotree and focus it | <leader>u
 
@@ -124,10 +122,6 @@ open quickfix list  | <leader>xq
 ## zen-mode
 toggle zen mode | <leader>zen
 
-## tools
-execute http request under cursor | <leader>zrr
-rereun last http request | <leader>zrl
-open databases ui | <leader>zdo
 
 ## neotest
 run closest test | <leader>tr
