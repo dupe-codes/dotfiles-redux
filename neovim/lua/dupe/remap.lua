@@ -23,7 +23,7 @@ key_mapper("n", "<localleader>k", ":resize -8<CR>")
 key_mapper("n", "<localleader>l", ":vertical resize -8<CR>")
 
 -- Clear search with <leader><leader>c
-key_mapper("n", "<leader><leader>c", ":noh<CR>")
+key_mapper("n", "<leader>/", ":noh<CR>")
 
 -- Close buffer
 key_mapper("n", "<leader>q", ":bd<CR>")

@@ -4,7 +4,7 @@ open split view pane (vertical) | <C-w> v
 move between open panes | <leader>hjkl
 resize open panes | <localleader>hjkl
 close all open panes | <C-w> o
-clear search buffer | <leader><leader>c
+clear search buffer | <leader>/
 move visual selection | 'v', 'J', 'v', 'K'
 yank into system clipboard | <leader>y, 'v', <leader>y, <leader>Y
 replace in file text at current cursor | <leader>s
@@ -64,7 +64,7 @@ toggle back/forth through harpoon list | <leader>, <leader>.
 go back and forth to/from last buffer | <leader>b
 open link in browser | gx
 open "repo-name" in github | gx
-open current line in github | <leader>/
+open current line in github | <localleader>o
 navigate tmux panes | <C-h>, <C-j>, <C-k>, <C-l>
 
 ## lsp

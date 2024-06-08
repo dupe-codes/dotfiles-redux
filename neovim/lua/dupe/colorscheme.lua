@@ -143,12 +143,6 @@ colors.load_colorscheme()
 --#region color corrections
 -- various tweaks that can't be applied elsewhere for ~reasons~
 
--- something (a plugin?) is setting these to an unsatisfying colors. override here
--- since this config is evaluated _after_ plugins are loaded
---
--- TODO: move this to dupe.functions.colors and reinvoke on colorscheme switch
-vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
-vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
 vim.api.nvim_set_hl(0, "CursorLineNr", { link = "Keyword" })
 vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
 vim.api.nvim_set_hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })

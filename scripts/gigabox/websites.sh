@@ -7,6 +7,7 @@
 declare -A SITES
 SITES=(
     [" TLDraw"]="https://tldraw.com"
+    [" graphite"]="https://app.graphite.dev"
     ["󱚌 Google Scholar"]="https://scholar.google.com"
     ["󰌢 Arxiv"]="https://arxiv.org"
     ["󰚩 ChatGPT"]="https://chat.openai.com"
