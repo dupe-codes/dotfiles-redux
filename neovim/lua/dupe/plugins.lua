@@ -249,7 +249,6 @@ local plugins = {
     },
 
     -- Color schemes
-    { "cocopon/iceberg.vim" },
     {
         "neanias/everforest-nvim",
         branch = "main",
@@ -267,12 +266,6 @@ local plugins = {
     { "Yazeed1s/oh-lucy.nvim" },
     { "oxfist/night-owl.nvim" },
     { "EdenEast/nightfox.nvim" },
-    {
-        "craftzdog/solarized-osaka.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
     { "pineapplegiant/spaceduck", lazy = false, priority = 1000 },
     {
         "eldritch-theme/eldritch.nvim",
@@ -288,9 +281,14 @@ local plugins = {
         config = true,
     },
     {
-        "LZDQ/umbra.nvim",
-        lazy = false,
-        priority = 1000,
+        "AlexvZyl/nordic.nvim",
+    },
+    {
+        "embark-theme/vim",
+        name = "embark",
+    },
+    {
+        "b0o/lavi.nvim",
     },
 
     -- Zig support

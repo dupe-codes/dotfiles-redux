@@ -3,12 +3,16 @@
 local M = {}
 
 local FAVORITE_COLORSCHEMES = {
+    "tokyonight-moon",
     "tokyonight-night",
+    "nordic",
     "tokyobones",
     "nightfox",
     "carbonfox",
     "duskfox",
     "night-owl",
+    "embark",
+    "lavi",
 }
 
 local SAVED_COLORSCHEME_FILE = vim.fn.stdpath "data" .. "/colorscheme.txt"

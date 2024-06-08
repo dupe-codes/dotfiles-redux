@@ -3,21 +3,14 @@
 --
 -- dupe.functions.colors holds all data and utils for setting
 -- colorscheme; setup lives in this file
+--
+-- misc TODOs:
+-- 1. add italics to embark
+-- 2. add italics to lavi
 
 local colors = require "dupe.functions.colors"
 
-local function mod_hl(hl_name, opts)
-    local is_ok, hl_def = pcall(vim.api.nvim_get_hl_by_name, hl_name, true)
-    if is_ok then
-        for k, v in pairs(opts) do
-            hl_def[k] = v
-        end
-        vim.api.nvim_set_hl(0, hl_name, hl_def)
-    end
-end
-
 vim.cmd "au ColorScheme * hi clear SignColumn"
---vim.cmd('au ColorScheme * hi Normal ctermbg=none guibg=none')
 
 require("rose-pine").setup {
     variant = "moon",
@@ -59,15 +52,6 @@ require("tokyonight").setup {
 --},
 --})
 
---[[
-   [local umbra = require "umbra"
-   [umbra.setup {
-   [    style = "bloodmoon",
-   [    transparent = true,
-   [}
-   [umbra.load()
-   ]]
-
 -- TODO: i like oldworld, but it needs a few tweaks:
 --  1. get rid of transparent background behind some window titles
 --  2. patch TelescopeTitle so it is visible
@@ -90,15 +74,6 @@ require("tokyonight").setup {
 --},
 --},
 --}
-
---vim.cmd.colorscheme 'kanagawa'
---vim.cmd.colorscheme "catppuccin"
---vim.cmd.colorscheme "oxocarbon"
---vim.cmd.colorscheme 'zenburned'
---vim.cmd.colorscheme "tokyobones"
---vim.cmd.colorscheme "zenwritten"
---vim.cmd.colorscheme "rosebones"
---vim.cmd.colorscheme "solarized-osaka"
 
 ----------------------------------------------
 -- TODO: These need adjustments
@@ -161,19 +136,7 @@ require("nightfox").setup {
     },
 }
 
---vim.cmd.colorscheme "nightfox"
---vim.cmd.colorscheme "duskfox"
---vim.cmd.colorscheme "carbonfox"
-
 ---------------------------------------------
-
--- OTHERS:
---vim.cmd.colorscheme 'everforest'
---vim.cmd.colorscheme 'gruvbox'
---vim.cmd.colorscheme "everblush"
---vim.cmd.colorscheme 'iceberg'
---vim.cmd.colorscheme 'mosel'
---vim.cmd.colorscheme 'nord'
 
 colors.load_colorscheme()
 
