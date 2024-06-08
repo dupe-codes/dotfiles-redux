@@ -28,6 +28,7 @@ lazydocker@yay
 lazygit
 helix
 zig
+slides@yay
 
 bat@cargo
 coreutils@cargo
