@@ -289,6 +289,7 @@ local plugins = {
     },
     {
         "b0o/lavi.nvim",
+        dependencies = { "rktjmp/lush.nvim" },
     },
 
     -- Zig support
