@@ -55,3 +55,5 @@ harlequin@pip
 github.com/maaslalani/nap@main@go
 github.com/guyfedwards/nom/cmd/nom@latest@go
 mvdan.cc/sh/v3/cmd/shfmt@latest@go
+
+@withgraphite/graphite-cli@stable@npm

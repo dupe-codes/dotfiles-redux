@@ -22,7 +22,6 @@ tools=(
     ["btm"]="󰕮 check activity monitor:"
     ["nap"]=" open snippets manager:"
     ["nom"]=" open rss feed reader:"
-    # typing practice tui with keyboard icon
     ["smassh"]="󰟀 practice typing:"
     ["yt"]="󰗃 launch youtube client:"
     ["wthrr"]="󰖐 check weather:"
