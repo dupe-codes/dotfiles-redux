@@ -3,13 +3,27 @@ local whichkey = require "which-key"
 local session_dir = vim.fn.stdpath "data" .. "/sessions/"
 
 local start_session = function()
-    vim.ui.input({ prompt = "session name: " }, function(session_name)
+    -- get name of the current git repo; if we're in one, use its name
+    -- as the default session name
+    local repo_name = vim.fn.system("git rev-parse --show-toplevel"):gsub("\n", "")
+    local not_in_git_repo = repo_name:find "fatal: not a git repository"
+    local default_name = not_in_git_repo and "" or vim.fn.fnamemodify(repo_name, ":t")
+
+    vim.ui.input({ prompt = "session name: ", default = default_name }, function(session_name)
         if session_name ~= nil and session_name ~= "" then
-            -- make session directory if not exists
+            -- make sure session directory exists
             if vim.fn.isdirectory(session_dir) == 0 then
                 vim.fn.mkdir(session_dir, "p")
             end
-            vim.cmd("Obsess " .. session_dir .. session_name .. ".session")
+
+            -- avoid overwriting existing session
+            local session_file = session_dir .. session_name .. ".session"
+            if vim.fn.filereadable(session_file) == 1 then
+                vim.notify("session " .. session_name .. " already exists")
+                return
+            end
+
+            vim.cmd("Obsess " .. session_file)
             vim.notify("session " .. session_name .. " started")
         end
     end)
