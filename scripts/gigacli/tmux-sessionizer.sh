@@ -11,13 +11,16 @@
 #      opam switches for ocaml projects
 
 saved_options=("gigacli" "$HOME/datastore")
+fzf_command="fzf --tmux center --reverse"
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
     saved_options_string=$(printf "%s\n" "${saved_options[@]}")
     selected=$(
-        printf "%s\n%s" "$saved_options_string" "$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" | fzf
+        printf "%s\n%s" "$saved_options_string" \
+            "$(find ~/projects -mindepth 1 -maxdepth 1 -type d)" |
+            $fzf_command
     )
 fi
 
