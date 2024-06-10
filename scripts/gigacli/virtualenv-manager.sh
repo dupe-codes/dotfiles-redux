@@ -23,13 +23,13 @@ list_envs() {
 }
 
 activate_env() {
-    local name=$(gum choose $(ls "$ENV_DIR"))
+    local name=$(ls "$ENV_DIR" | fzf --tmux center --reverse)
     echo "source \"$ENV_DIR/$name/bin/activate\"" | pbcopy
     echo "activation command copied into clipboard"
 }
 
 remove_env() {
-    local name=$(gum choose $(ls "$ENV_DIR"))
+    local name=$(ls "$ENV_DIR" | fzf --tmux center --reverse)
     rm -rf "$ENV_DIR/$name"
     echo "removed environment $name"
 }
