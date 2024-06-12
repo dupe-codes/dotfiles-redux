@@ -29,6 +29,7 @@
 - create:
     - ~/screenshots
     - ~/projects
+    - ~/gamedev
     - ~/trash
     - ~/logs
 

@@ -15,6 +15,7 @@ docker
 docker-compose
 arttime-git@yay
 git-lfs
+godot
 
 # Account management
 accountsservice

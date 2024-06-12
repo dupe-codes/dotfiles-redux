@@ -224,7 +224,6 @@ local plugins = {
                 "black",
                 "codelldb",
                 "debugpy",
-                "jdtls",
                 "lua-language-server",
                 "mypy",
                 "pyright",
@@ -235,6 +234,11 @@ local plugins = {
                 "zls",
                 "clangd",
                 "stylua",
+
+                -- TODO: the version installed by mason is out of date and broken; re-enable
+                --       here once latest gdtoolkit is available
+                --       see https://github.com/Scony/godot-gdscript-toolkit/pull/259#issuecomment-2161503658
+                -- "gdtoolkit",
             },
         },
         config = function(_, opts)

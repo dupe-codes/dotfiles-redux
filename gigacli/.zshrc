@@ -67,6 +67,7 @@ alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 alias lzd="lazydocker"
+alias gamevim="nvim --listen /tmp/godot.pipe"
 
 # TODO: decide between gitui and lazygit
 alias lzg="lazygit"

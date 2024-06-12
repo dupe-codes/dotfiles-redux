@@ -80,8 +80,6 @@ capabilities.textDocument.codeLens = { dynamicRegistration = false }
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local servers = {
-    -- NOTE: jdtls isn't working, getting an exit code 1 on attach
-    "jdtls",
     "pyright",
     "rust_analyzer",
     "zls",
@@ -140,6 +138,16 @@ lspconfig.clangd.setup {
 require("lean").setup {
     lsp = { on_attach = on_attach },
     mappings = true,
+}
+
+-- godot game engine
+
+-- recognize .gd files
+vim.cmd "autocmd BufNewFile,BufRead *.gd set filetype=gdscript"
+
+lspconfig.gdscript.setup {
+    on_attach = on_attach,
+    filetypes = { "gd", "gdscript", "gdscript3" },
 }
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -244,6 +252,7 @@ conform.setup {
         ocaml = { "ocamlformat" },
         python = { "black" },
         zig = { "zigfmt" },
+        gdscript = { "gdformat" },
     },
 }
 
