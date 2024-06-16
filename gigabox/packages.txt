@@ -29,6 +29,17 @@ psmisc
 xdotool
 xorg-xcursorgen
 
+# Graphics drivers
+vulkan-intel
+vulkan-tools
+lib32-vulkan-intel
+vulkan-icd-loader
+mesa
+mesa-utils
+
+# wayland is needed for vulkan
+wayland
+
 # Display manager
 lightdm
 web-greeter@yay

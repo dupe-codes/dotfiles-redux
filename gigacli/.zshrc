@@ -85,7 +85,7 @@ search() (
             nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
   fzf < /dev/null \
-      --disabled --ansi --multi \
+      --disabled --ansi --multi --reverse \
       --bind "start:$RELOAD" --bind "change:$RELOAD" \
       --bind "enter:become:$OPENER" \
       --bind "ctrl-o:execute:$OPENER" \
