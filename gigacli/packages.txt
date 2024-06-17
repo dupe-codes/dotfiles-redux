@@ -29,6 +29,7 @@ lazygit
 helix
 zig
 slides@yay
+yt-dlp
 
 bat@cargo
 coreutils@cargo

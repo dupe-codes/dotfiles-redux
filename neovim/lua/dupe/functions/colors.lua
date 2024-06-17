@@ -37,6 +37,15 @@ local embark_adjustments = {
     end,
 }
 
+local nordic_adjustments = {
+    after = function()
+        -- override cursorline color and treesitter context
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "CursorLineFold" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "CursorLineFold" })
+        vim.api.nvim_set_hl(0, "Visual", { link = "DiffAdd" })
+    end,
+}
+
 local no_adjustments = {}
 
 -- FAVORITE_COLORSCHEMES serves two purposes:
@@ -52,7 +61,7 @@ local no_adjustments = {}
 local FAVORITE_COLORSCHEMES = {
     ["tokyonight-moon"] = tokyo_night_adjustments,
     ["tokyonight-night"] = tokyo_night_adjustments,
-    ["nordic"] = no_adjustments,
+    ["nordic"] = nordic_adjustments,
     ["tokyobones"] = no_adjustments,
     ["nightfox"] = no_adjustments,
     ["carbonfox"] = no_adjustments,
@@ -107,6 +116,10 @@ M.switch_colorscheme = function()
             apply_after(selected)
         end
     end)
+end
+
+M.get_current_colorscheme = function()
+    return vim.fn.system("cat " .. SAVED_COLORSCHEME_FILE):gsub("\n", "")
 end
 
 return M
