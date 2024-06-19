@@ -57,6 +57,10 @@ local keymap = {
             "<cmd>Telescope frecency workspace=CWD<CR>",
             "Search files by frecency",
         },
+        y = {
+            ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>',
+            "Search LSP s(y)mbols",
+        },
     },
 }
 

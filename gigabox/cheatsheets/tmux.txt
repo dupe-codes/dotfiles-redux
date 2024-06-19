@@ -22,6 +22,7 @@ prefix b := toggle between current + previous windows
 prefix e := list & select open sessions
 prefix f := list & select open windows
 prefix t := toggle status bar
+prefix l := switch to last session
 prefix :kill-session -t session_name := kill session
 prefix ctrl+s := save tmux state
 prefix ctrl+r := load saved tmux state
