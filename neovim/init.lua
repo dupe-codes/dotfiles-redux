@@ -16,9 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 require "dupe.vim-settings" -- add vim setting options
 require "dupe.remap" -- add general remaps
 require "dupe.plugins" -- add lazy managed plugins
-require "dupe.colorscheme" -- setup colorscheme (& other color related tweaks)
 require "dupe.lsp" -- configure LSP, completions, and diagnostics
 require "dupe.configs.racket" -- config options for racket lang support
 require "dupe.functions.init" -- initialize custom functions
 require "dupe.snippets.init" -- initialize custom snippets
 require "dupe.datastore" -- interactions with my obsidian 'datastore'
+require "dupe.colorscheme" -- setup colorscheme (& other color related tweaks)

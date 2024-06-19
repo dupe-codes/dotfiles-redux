@@ -254,6 +254,9 @@ local plugins = {
 
     -- Color schemes
     {
+        "sho-87/kanagawa-paper.nvim",
+    },
+    {
         "neanias/everforest-nvim",
         branch = "main",
     },

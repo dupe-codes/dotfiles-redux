@@ -47,7 +47,11 @@ require("nightfox").setup {
     },
 }
 
-colors.load_colorscheme()
+require("kanagawa-paper").setup {
+    commentStyle = { italic = true },
+    functionStyle = { italic = true },
+    typeStyle = { italic = true },
+}
 
 --#region color corrections
 -- various tweaks that can't be applied elsewhere for ~reasons~
@@ -57,3 +61,8 @@ vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "DiagnosticUnderlineHint" })
 vim.api.nvim_set_hl(0, "OverLength", { link = "DiagnosticUnderlineHint" })
 
 --#endregion
+
+-- need to clear default colorscheme before loading custom
+-- see https://github.com/neovim/neovim/issues/26378
+vim.cmd "hi clear"
+colors.load_colorscheme()

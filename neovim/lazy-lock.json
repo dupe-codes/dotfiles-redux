@@ -28,6 +28,7 @@
   "haskell-tools.nvim": { "branch": "master", "commit": "92e097c6832405fb64e4c44a7ce8bebe7836cae6" },
   "inc-rename.nvim": { "branch": "main", "commit": "7c6125b1ee476b56708a6518a37b2a3357f57bfc" },
   "indent-blankline.nvim": { "branch": "master", "commit": "d98f537c3492e87b6dc6c2e3f66ac517528f406f" },
+  "kanagawa-paper.nvim": { "branch": "master", "commit": "20bc8689cde66977078ac172396775b7945ee966" },
   "kanagawa.nvim": { "branch": "master", "commit": "08ed29989834f5f2606cb1ef9d5b24c5ea7b8fa5" },
   "lavi.nvim": { "branch": "main", "commit": "4995ed6f07b191bc62302c268bc2344d7c7a9349" },
   "lazy.nvim": { "branch": "main", "commit": "ad30030b6abca7dac5a493c58b4d183b3fe93202" },
