@@ -97,7 +97,15 @@ local apply_after = function(colorscheme)
     end
 end
 
+local clear = function()
+    -- need to clear default colorscheme before loading custom
+    -- see https://github.com/neovim/neovim/issues/26378
+    vim.cmd "hi clear"
+end
+
 M.load_colorscheme = function()
+    clear()
+
     local colorscheme = ""
     if vim.fn.filereadable(SAVED_COLORSCHEME_FILE) == 1 then
         colorscheme = vim.fn.system("cat " .. SAVED_COLORSCHEME_FILE):gsub("\n", "")
@@ -120,6 +128,7 @@ M.switch_colorscheme = function()
 
     vim.ui.select(colorschemes, { prompt = "Select colorscheme" }, function(selected)
         if selected then
+            clear()
             apply_before(selected)
             vim.cmd("colorscheme " .. selected)
             vim.fn.system("echo " .. selected .. " > " .. SAVED_COLORSCHEME_FILE)

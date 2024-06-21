@@ -53,9 +53,6 @@ require("kanagawa-paper").setup {
     typeStyle = { italic = true },
 }
 
--- need to clear default colorscheme before loading custom
--- see https://github.com/neovim/neovim/issues/26378
-vim.cmd "hi clear"
 colors.load_colorscheme()
 
 --#region color corrections
