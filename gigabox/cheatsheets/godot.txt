@@ -1,4 +1,12 @@
-ctrl+a := add node to scene
-F2 := rename node
-F6 := run project
-F5 := run scene
+ctrl+a          := add node to scene
+ctrl+shift+a    := instantiate child scene
+ctrl+n          := new scene
+ctrl+s          := save scene
+ctrl+d          := duplicate node
+ctrl+[1/2/3/4]  := create split views
+shift+d         := (animation) start playback
+s               := (animation) stop playback
+y               := in move mode, toggle grid snap
+F2              := rename node
+F6              := run project
+F5              := run scene

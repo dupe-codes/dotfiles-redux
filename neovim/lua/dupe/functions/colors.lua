@@ -61,6 +61,11 @@ local carbonfox_adjustments = {
 
 local no_adjustments = {}
 
+-- applies any resets necessary after loading a colorscheme
+local apply_resets = function()
+    require("dupe.configs.glance").reset()
+end
+
 -- FAVORITE_COLORSCHEMES serves two purposes:
 -- 1. It provides a list of favorite color schemes that can be selected from, as
 --    keys in the table
@@ -124,6 +129,7 @@ M.load_colorscheme = function()
     vim.notify("loading colorscheme: " .. colorscheme)
     vim.cmd("colorscheme " .. colorscheme)
     apply_after(colorscheme)
+    apply_resets()
 end
 
 M.switch_colorscheme = function()
@@ -141,6 +147,7 @@ M.switch_colorscheme = function()
             apply_after(selected)
         end
     end)
+    apply_resets()
 end
 
 M.get_current_colorscheme = function()
