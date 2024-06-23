@@ -67,11 +67,16 @@ alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 alias lzd="lazydocker"
+alias lzg="lazygit"
 alias gamevim="nvim --listen /tmp/godot.pipe"
 
-# TODO: decide between gitui and lazygit
-alias lzg="lazygit"
-alias gitui='gitui -t macchiato.ron'
+# git aliases
+alias gp='git push'
+alias gpl='git pull'
+alias gc='git commit'
+alias gs='git status'
+alias gch='git checkout'
+
 
 remap() {
     sudo systemctl restart "$1-remap.service"
