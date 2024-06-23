@@ -46,7 +46,6 @@ stylua@cargo
 mprocs@cargo
 
 yewtube@pip
-chatblade@pip
 termdown@pip
 wakatime@pip
 pgcli@pip
