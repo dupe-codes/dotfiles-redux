@@ -1,0 +1,4 @@
+ctrl+a := add node to scene
+F2 := rename node
+F6 := run project
+F5 := run scene

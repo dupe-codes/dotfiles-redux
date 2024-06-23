@@ -140,3 +140,4 @@ zero-2.png
 blue-rainbow-rei.png
 modern-warrior.jpg
 action-bike.png
+5-pt-walk.png

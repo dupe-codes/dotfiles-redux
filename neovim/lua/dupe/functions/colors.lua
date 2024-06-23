@@ -53,6 +53,12 @@ local night_owl_adjustments = {
     end,
 }
 
+local carbonfox_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "CursorLine" })
+    end,
+}
+
 local no_adjustments = {}
 
 -- FAVORITE_COLORSCHEMES serves two purposes:
@@ -71,7 +77,7 @@ local FAVORITE_COLORSCHEMES = {
     ["nordic"] = nordic_adjustments,
     ["tokyobones"] = no_adjustments,
     ["nightfox"] = no_adjustments,
-    ["carbonfox"] = no_adjustments,
+    ["carbonfox"] = carbonfox_adjustments,
     ["duskfox"] = no_adjustments,
     ["night-owl"] = night_owl_adjustments,
     ["embark"] = embark_adjustments,
