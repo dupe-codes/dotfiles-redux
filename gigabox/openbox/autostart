@@ -2,13 +2,15 @@
 . "${HOME}/.gigabox"
 xrdb "${HOME}/.Xresources"
 
+
 picom -b
 dunst &
 xfce4-power-manager &
 1password --silent &
 greenclip daemon &
 dropbox &
-safeeyes &
+
+sh ~/.scripts/launch-safeeyes.sh &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then
