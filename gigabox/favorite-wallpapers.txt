@@ -141,3 +141,6 @@ blue-rainbow-rei.png
 modern-warrior.jpg
 action-bike.png
 5-pt-walk.png
+five-point-study-room.png
+fever.png
+butterfly-peel.png

@@ -145,9 +145,9 @@ M.switch_colorscheme = function()
             vim.cmd("colorscheme " .. selected)
             vim.fn.system("echo " .. selected .. " > " .. SAVED_COLORSCHEME_FILE)
             apply_after(selected)
+            apply_resets()
         end
     end)
-    apply_resets()
 end
 
 M.get_current_colorscheme = function()

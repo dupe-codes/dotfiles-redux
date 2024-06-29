@@ -8,6 +8,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle atuinsh/atuin@main
 antigen apply
 
+# setup path
+
 prepend_path_if_not_exists() {
     if [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="$1:$PATH"
@@ -25,6 +27,8 @@ prepend_path_if_not_exists "$HOME/.ghcup/bin"
 prepend_path_if_not_exists "$HOME/.cabal/bin"
 prepend_path_if_not_exists "$HOME/.luarocks/bin"
 export PATH
+
+# setup environment variables and aliases
 
 export EDITOR="nvim"
 export BAT_THEME="tokyonight_night"
@@ -77,6 +81,7 @@ alias gc='git commit'
 alias gs='git status'
 alias gch='git checkout'
 
+# create util functions
 
 remap() {
     sudo systemctl restart "$1-remap.service"
