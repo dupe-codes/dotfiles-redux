@@ -33,6 +33,7 @@ tools=(
     ["lazydocker"]=" open lazydocker interface:"
     ["bat"]="󰊪 read file:r:filename"
     ["harlequin"]=" open database client:"
+    ["list-aliases"]="󰊪 list all aliases:"
 )
 
 # NOTE: Alias tools do not currently support background args
@@ -72,6 +73,7 @@ declare -a tool_order=(
     "lazygit"
     "lazydocker"
     "bat"
+    "list-aliases"
 )
 
 # Support aliases and more complicated tool queries via *_command functions

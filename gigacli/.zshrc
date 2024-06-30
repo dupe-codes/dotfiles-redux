@@ -73,6 +73,7 @@ alias code="nap"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias gamevim="nvim --listen /tmp/godot.pipe"
+alias mc="npm init @motion-canvas@latest"
 
 # git aliases
 alias gp='git push'
@@ -105,6 +106,12 @@ search() (
       --preview-window '~4,+{2}+4/3,<80(down),border-sharp' \
       --query "$*"
 )
+
+list-aliases() {
+    alias | \
+        awk -F'=' '{print $1 " => " substr($0, index($0, $2))}' | \
+        fzf --reverse
+}
 
 # sourcegraph functionality
 alias sg-launch="~/scripts/gigacli/launch_sg_docker.sh"
