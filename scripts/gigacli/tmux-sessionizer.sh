@@ -19,7 +19,7 @@ else
     saved_options_string=$(printf "%s\n" "${saved_options[@]}")
     selected=$(
         printf "%s\n%s" "$saved_options_string" \
-            "$(find ~/projects ~/gamedev ~/animations -mindepth 1 -maxdepth 1 -type d)" |
+            "$(find ~/projects ~/gamedev ~/animations ~/videos -mindepth 1 -maxdepth 1 -type d)" |
             $fzf_command
     )
 fi

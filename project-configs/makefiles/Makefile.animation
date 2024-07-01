@@ -1,0 +1,8 @@
+.PHONY: launch
+launch: ## Launch the motion canvas editor
+	@echo "Launching editor..."
+	@npm start
+
+.PHONY: help
+help: ## Show this help
+	@grep -E '^[a-z.A-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
