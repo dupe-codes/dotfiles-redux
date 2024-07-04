@@ -1,5 +1,8 @@
 # The Gigabox
 
+![Screenshot_2024-07-04-01-45-24_2256x1504](https://github.com/dupe-codes/dotfiles-redux/assets/4758600/fe8addc8-ea71-4909-a480-13d5055b3ef6)
+
+
 ## Setup guide
 
 1. Follow the below instruction guides to intially configure barebones arch linux setup,
