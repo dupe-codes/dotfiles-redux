@@ -34,7 +34,7 @@ fi
 PORT=8123
 DEST_DIR="$HOME/Dropbox/videos"
 
-RESPONSE_PIPE_DIR="$HOME/.local/state/yt-download/"
+RESPONSE_PIPE_DIR="$HOME/.local/state/yt-download"
 if [ ! -d "$RESPONSE_PIPE_DIR" ]; then
     mkdir -p "$RESPONSE_PIPE_DIR"
 fi
