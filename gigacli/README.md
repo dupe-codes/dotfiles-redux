@@ -2,6 +2,9 @@
 
 Here lies an exploration of more configurable CLI setup
 
+![Screenshot_2024-07-04-01-46-27_2256x1504](https://github.com/dupe-codes/dotfiles-redux/assets/4758600/d3a9e0ec-32ad-4000-8941-f3685b076587)
+
+
 ## Tools
 
 1. wezterm      - terminal emulator
