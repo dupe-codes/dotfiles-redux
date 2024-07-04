@@ -5,6 +5,8 @@ set -e
 source "$HOME"/scripts/constants.sh
 source "$HOME"/scripts/utils/logging.sh
 
+# TODO: create a helper function in utils/logging.sh
+#       for creating these log files
 log_timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
 logging_dir="$LOGS_DIR/yt-downloads/"
 log_file="$logging_dir/server-$log_timestamp.txt"

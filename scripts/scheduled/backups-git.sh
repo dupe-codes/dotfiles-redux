@@ -2,11 +2,12 @@
 
 set -e
 
-source $HOME/scripts/constants.sh
-source $HOME/scripts/utils/logging.sh
+source "$HOME"/scripts/constants.sh
+source "$HOME"/scripts/utils/logging.sh
 
 log_timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
-log_file="$LOGS_DIR/git-backups-$log_timestamp.txt"
+logging_dir="$LOGS_DIR/git-backups/"
+log_file="$logging_dir/git-backups-$log_timestamp.txt"
 mkdir -p "$LOGS_DIR"
 
 REPO_PATHS=(
