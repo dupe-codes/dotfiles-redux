@@ -55,6 +55,7 @@ git clone https://github.com/hertg/lightdm-neon.git
 cd lightdm-neon
 make build
 sudo make install
+cd ..
 
 # Enable services
 sudo systemctl enable lightdm.service
@@ -66,8 +67,10 @@ sudo systemctl enable logid.service
 sudo systemctl enable atd
 systemctl --user enable pulseaudio
 
-# TODO: setup evremap for key remapping
-#				do the following for each of {keychron keyboard, laptop, etc.}
-#       copy evremap.service to /usr/lib/systemd/system/
-#       copy mapping config to /etc/evremap.toml
-#       then run sudo systemctl enable evremap.service
+# set up keyboard remappings
+devices=("keychron" "laptop")
+for device in "${devices[@]}"; do
+    sudo cp "gigabox/evremap/$device-remap.service" /usr/lib/systemd/system/
+    sudo cp "gigabox/evremap/$device.toml" "/etc/$device.toml"
+    sudo systemctl enable "$device-remap.service"
+done

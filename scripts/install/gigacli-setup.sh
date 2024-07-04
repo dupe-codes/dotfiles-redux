@@ -1,4 +1,4 @@
-# bin/bash
+#!/usr/bin/env bash
 
 install_packages_from_file() {
     FILE=$1

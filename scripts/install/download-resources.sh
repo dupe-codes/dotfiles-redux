@@ -1,12 +1,10 @@
-# /bin/bash
+#! /bin/bash
 
 # Download resources (wallpapers, fonts, etc.) from dropbox
-# TODO: Include needed fonts and icons:
-# 	Material
-# 	Feather IcoMoon
-# 	Papirus-Dark-Custom
 wget -O $PWD/gigabox/resources.zip 'https://www.dropbox.com/sh/zff0e94426lpj95/AABiFP2pxBtgd-VgQRekbR33a?dl=1'
-unzip $PWD/gigabox/resources.zip -d $PWD/gigabox/resources/
+
+# the resources zip is _big_; unzip will get scared that it is a zip bomb
+UNZIP_DISABLE_ZIPBOMB_DETECTION=TRUE unzip $PWD/gigabox/resources.zip -d $PWD/gigabox/resources/
 rm $PWD/gigabox/resources.zip
 
 cd $PWD/gigabox/resources/fonts/

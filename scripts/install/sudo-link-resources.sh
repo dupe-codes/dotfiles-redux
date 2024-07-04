@@ -1,4 +1,4 @@
-# /bin/bash
+#! /bin/bash
 
 sudo ln -vsf $PWD/gigabox/resources/icons/Papirus-Dark-Custom /usr/share/icons
 sudo ln -vsf $PWD/gigabox/lightdm/lightdm.conf /etc/lightdm/lightdm.conf

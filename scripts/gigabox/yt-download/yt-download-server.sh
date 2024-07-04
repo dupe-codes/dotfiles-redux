@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #
-# Simple bash server listening for requests to download youtube videos
-# with yt-delp
+# Simple bash server exposing youtube video download capabilities
+# via yt-dlp
 #
 # We call this "slurping" the video :)
 #
