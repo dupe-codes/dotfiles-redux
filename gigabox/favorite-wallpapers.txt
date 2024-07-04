@@ -144,3 +144,4 @@ action-bike.png
 five-point-study-room.png
 fever.png
 butterfly-peel.png
+reading-lounge.png

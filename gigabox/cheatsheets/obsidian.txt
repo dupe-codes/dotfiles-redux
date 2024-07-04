@@ -1,0 +1,20 @@
+ctrl + p := open command palette
+ctrl + o := open quick switcher
+ctrl + n := new note
+ctrl + s := save current file
+ctrl + t := new tab
+ctrl + tab := tab switcher
+ctrl + r := reading view
+ctrl + shift + p := toggle pin
+
+ctrl + d := open daily note
+ctrl + shift + d := open yesterday's daily note
+
+ctrl + k := insert markdown link
+
+ctrl + e := open harpoon list
+ctrl + a := harpoon current file
+ctrl + shift + [1-4] := go to harpooned file 1-4
+
+shift + enter := open current file under cursor
+ctrl + w := close current tab

@@ -16,6 +16,7 @@ docker-compose
 arttime-git@yay
 git-lfs
 godot
+netcat
 
 # Account management
 accountsservice
