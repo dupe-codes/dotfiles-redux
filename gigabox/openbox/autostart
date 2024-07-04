@@ -11,6 +11,7 @@ greenclip daemon &
 dropbox &
 
 sh ~/.scripts/launch-safeeyes.sh &
+sh ~/scripts/gigabox/yt-download/yt-download-server.sh &
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then
