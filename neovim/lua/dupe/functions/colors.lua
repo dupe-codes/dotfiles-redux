@@ -40,7 +40,7 @@ local embark_adjustments = {
 local nordic_adjustments = {
     after = function()
         -- override cursorline color and treesitter context
-        vim.api.nvim_set_hl(0, "CursorLine", { link = "DiffAdd" })
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "DiffChange" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "DiffAdd" })
         vim.api.nvim_set_hl(0, "Visual", { link = "DiffAdd" })
     end,

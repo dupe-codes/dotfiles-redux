@@ -1,0 +1,191 @@
+[common.default]
+
+# dev & command line tooling
+nodejs = "latest"
+npm = "latest"
+go = "latest"
+racket = "latest"
+lua = "latest"
+luarocks = "latest"
+opam = "latest"
+unzip = "latest"
+wget = "latest"
+jq = "latest"
+jo = "latest"
+tidy = "latest"
+docker = "latest"
+docker-compose = "latest"
+git-lfs = "latest"
+godot = "latest"
+netcat = "latest"
+
+# account management
+accountsservice = "latest"
+
+# display server & x11 tools
+xorg-server = "latest"
+xorg-xrandr = "latest"
+xorg-xrdb = "latest"
+xlockmore = "latest"
+psmisc = "latest"
+xdotool = "latest"
+xorg-xcursorgen = "latest"
+
+# display manager
+lightdm = "latest"
+
+# window manager
+openbox = "latest"
+picom = "latest"
+
+# GUI toolkit
+perl-gtk3 = "latest"
+
+# panel/taskbar
+polybar = "latest"
+
+# console calculator
+calc = "latest"
+
+# notifications
+dunst = "latest"
+
+# desktop wallpaper
+nitrogen = "latest"
+
+# window switcher/app launcher and util scripts
+rofi = "latest"
+rofi-calc = "latest"
+zenity = "latest"
+
+# File management
+thunar = "latest"
+thunar-archive-plugin = "latest"
+thunar-volman = "latest"
+ffmpegthumbnailer = "latest"
+tumbler = "latest"
+python-gpgme = "latest"
+
+# volume control, audio utils, & music
+pavucontrol = "latest"
+pulseaudio = "latest"
+pulseaudio-alsa = "latest"
+mpd = "latest"
+mpc = "latest"
+ncmpcpp = "latest"
+
+# text editors
+neovim = "latest"
+emacs-nativecomp = "latest"
+
+# terminal emulators
+kitty = "latest"
+wezterm = "latest"
+
+# clipboard manager
+parcellite = "latest"
+xclip = "latest"
+
+# docs & images
+ristretto = "latest"
+gimp = "latest"
+inkscape = "latest"
+zathura = "latest"
+zathura-pdf-mupdf = "latest"
+
+# power manager, battery, backlight utils
+xfce4-power-manager = "latest"
+xfce4-taskmanager = "latest"
+xorg-xbacklight = "latest"
+
+# browser
+vivaldi = "latest"
+
+# fonts, icons, & cursors
+noto-fonts = "latest"
+noto-fonts-emoji = "latest"
+font-manager = "latest"
+gucharmap = "latest"
+
+# bluetooth & peripherals
+bluez = "latest"
+bluez-utils = "latest"
+blueman = "latest"
+pulseaudio-bluetooth = "latest"
+blueberry = "latest"
+
+# network
+networkmanager = "latest"
+network-manager-applet = "latest"
+dmenu = "latest"
+
+# vhats
+discord = "latest"
+
+# applications
+libreoffice-still = "latest"
+obsidian = "latest"
+clamtk = "latest"
+redshift = "latest"
+geoclue = "latest"
+remind = "latest"
+
+# email
+neomutt = "latest"
+
+# scheduling
+at = "latest"
+cronie = "latest"
+
+[common.yay]
+
+arttime-git = "latest"
+web-greeter = "latest"
+safeeyes = "latest"
+obmenu-generator = "latest"
+rofi-greenclip = "latest"
+dropbox = "latest"
+thunar-dropbox = "latest"
+dropbox-cli = "latest"
+pa-applet-git = "latest"
+spotify-tui = "latest"
+cava = "latest"
+networkmanager-dmenu-git = "latest"
+
+# screen lock & system utils
+betterlockscreen = "latest"
+
+sioyek = "latest"
+zotero = "latest"
+catppuccin-macchiato-cursors = "latest"
+cozette-otb = "latest"
+ttf-comic-mono-git = "latest"
+logiops = "latest"
+evremap = "latest"
+cbonsai = "latest"
+ascii-rain-git = "latest"
+zulip-desktop = "latest"
+1password = "latest"
+1password-cli = "latest"
+github-desktop-bin = "latest"
+
+[gigapc.yay]
+# Add any gigapc-specific yay packages here
+
+[gigatop.default]
+
+# graphics drivers
+vulkan-intel = "latest"
+vulkan-tools = "latest"
+lib32-vulkan-intel = "latest"
+vulkan-icd-loader = "latest"
+
+# mesga is pinned due to issues on the latest version
+mesa = "1:24.0.7-3"
+mesa-utils = "latest"
+
+# wayland is needed for Vulkan
+wayland = "latest"
+
+[gigatop.yay]
+battop = "latest"

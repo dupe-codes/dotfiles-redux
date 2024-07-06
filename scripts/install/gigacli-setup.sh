@@ -1,56 +1,79 @@
 #!/usr/bin/env bash
 
-install_packages_from_file() {
-    FILE=$1
+install_packages() {
+    PACKAGES_FILE=$1
+
     pacman_pkgs=""
-    pip_pkgs=""
+    yay_pkgs=""
     cargo_pkgs=""
+    pip_pkgs=""
     go_pkgs=""
     npm_pkgs=""
 
-    while IFS= read -r line; do
-        # skip comments
-        if [[ $line == \#* ]]; then
-            continue
-        fi
+    parse_section() {
+        local section=$1
 
-        # check if line ends with "@pip", "@cargo", "@go" or nothing
-        if [[ $line == *@pip ]]; then
-            pip_pkgs+=" ${line%@pip}"
-        elif [[ $line == *@cargo ]]; then
-            cargo_pkgs+=" ${line%@cargo}"
-        elif [[ $line == *@go ]]; then
-            go_pkgs+=" ${line%@go}"
-        elif [[ $line == *@npm ]]; then
-            npm_pkgs+=" ${line%@npm}"
-        else
-            pacman_pkgs+=" $line"
-        fi
-    done <"$FILE"
+        packages=$(yq eval ".${section} | keys" -o csv "$PACKAGES_FILE" | tr -d '"' | tr ',' ' ')
+
+        for package in $packages; do
+            version=$(yq eval ".${section}.${package}" "$PACKAGES_FILE")
+            if [ "$version" == "latest" ]; then
+                case $section in
+                "default") pacman_pkgs+=" $package" ;;
+                "yay") yay_pkgs+=" $package" ;;
+                "cargo") cargo_pkgs+=" $package" ;;
+                "pip") pip_pkgs+=" $package" ;;
+                "go") go_pkgs+=" $package@latest" ;;
+                "npm") npm_pkgs+=" $package" ;;
+                esac
+            else
+                case $section in
+                "default") pacman_pkgs+=" $package=$version" ;;
+                "yay") yay_pkgs+=" $package=$version" ;;
+                "cargo") cargo_pkgs+=" $package --version $version" ;;
+                "pip") pip_pkgs+=" $package==$version" ;;
+                "go") go_pkgs+=" $package@$version" ;;
+                "npm") npm_pkgs+=" $package@$version" ;;
+                esac
+            fi
+        done
+    }
+
+    parse_section "default"
+    parse_section "yay"
+    parse_section "cargo"
+    parse_section "pip"
+    parse_section "go"
+    parse_section "npm"
 
     if [ -n "$pacman_pkgs" ]; then
         echo "Installing packages with pacman..."
-        sudo pacman -S --noconfirm $pacman_pkgs
+        sudo pacman -S --noconfirm "$pacman_pkgs"
+    fi
+
+    if [ -n "$yay_pkgs" ]; then
+        echo "Installing packages with yay..."
+        yay -S --noconfirm "$yay_pkgs"
     fi
 
     if [ -n "$pip_pkgs" ]; then
         echo "Installing packages with pip..."
-        pip install $pip_pkgs
+        pip install "$pip_pkgs"
     fi
 
     if [ -n "$cargo_pkgs" ]; then
         echo "Installing packages with cargo..."
-        cargo install $cargo_pkgs
+        cargo install "$cargo_pkgs"
     fi
 
     if [ -n "$go_pkgs" ]; then
         echo "Installing packages with go..."
-        go install $go_pkgs
+        go install "$go_pkgs"
     fi
 
     if [ -n "$npm_pkgs" ]; then
         echo "Installing packages with npm..."
-        npm install -g $npm_pkgs
+        npm install -g "$npm_pkgs"
     fi
 }
 
@@ -60,9 +83,9 @@ echo "Setting up THE GIGA CLI"
 source "$HOME/.cargo/env"
 export PATH="$HOME/.local/bin:$PATH"
 
-install_packages_from_file $PWD/gigacli/packages.txt
+install_packages "$PWD"/gigacli/packages.txt
 
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 
 echo 'Installing mambaforge...'
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"

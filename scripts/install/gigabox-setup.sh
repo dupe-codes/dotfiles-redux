@@ -6,33 +6,47 @@
 #       to import and use in all setup scripts
 #   3. download obsidian and configure the datastore vault
 
-install_packages_from_file() {
-    FILE=$1
-    pacman_pkgs=""
-    yay_pkgs=""
+install_packages() {
+    PACKAGES_FILE=$1
 
-    while IFS= read -r line; do
-        # skip comments
-        if [[ $line == \#* ]]; then
-            continue
-        fi
-
-        if [[ $line == *@yay ]]; then
-            yay_pkgs+=" ${line%@yay}"
-        else
-            pacman_pkgs+=" $line"
-        fi
-    done <"$FILE"
-
-    if [ -n "$pacman_pkgs" ]; then
-        echo "Installing packages with pacman..."
-        sudo pacman -S $pacman_pkgs
+    if [ "$SETUP" == "gigapc" ]; then
+        SETUP="gigapc"
+    elif [ "$SETUP" == "gigatop" ]; then
+        SETUP="gigatop"
+    else
+        echo "Error: SETUP environment variable is not set to gigapc or gigatop."
+        return 1
     fi
 
-    if [ -n "$yay_pkgs" ]; then
-        echo "Installing packages with yay..."
-        yay -S $yay_pkgs
-    fi
+    install_section() {
+        local section=$1
+        local manager=$2
+
+        packages=$(yq eval ".${section} | keys" -o csv "$PACKAGES_FILE" | tr -d '"' | tr ',' ' ')
+
+        for package in $packages; do
+            version=$(yq eval ".${section}.${package}" "$PACKAGES_FILE")
+            if [ "$version" == "latest" ]; then
+                if [ "$manager" == "default" ]; then
+                    sudo pacman -S --noconfirm "$package"
+                elif [ "$manager" == "yay" ]; then
+                    yay -S --noconfirm "$package"
+                fi
+            else
+                if [ "$manager" == "default" ]; then
+                    sudo pacman -S --noconfirm "$package"="$version"
+                elif [ "$manager" == "yay" ]; then
+                    yay -S --noconfirm "$package"="$version"
+                fi
+            fi
+        done
+    }
+
+    install_section "common.default" "default"
+    install_section "common.yay" "yay"
+
+    install_section "${SETUP}.default" "default"
+    install_section "${SETUP}.yay" "yay"
 }
 
 echo "Setting up the GIGABOX...\n\n"
@@ -44,7 +58,9 @@ cd yay-bin
 makepkg -si
 cd ..
 
-install_packages_from_file $PWD/gigabox/packages.txt
+# install yq, needed for parsing the package.toml file
+sudo pacman -S yq
+install_packages "$PWD"/gigabox/packages.txt
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
