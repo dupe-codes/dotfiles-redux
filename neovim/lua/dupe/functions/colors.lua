@@ -89,6 +89,7 @@ local FAVORITE_COLORSCHEMES = {
     ["lavi"] = lavi_adjustments,
     ["kanagawa-paper"] = no_adjustments,
     ["kanagawa"] = no_adjustments,
+    ["cyberdream"] = no_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"

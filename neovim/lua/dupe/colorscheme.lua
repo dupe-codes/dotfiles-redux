@@ -53,6 +53,10 @@ require("kanagawa-paper").setup {
     typeStyle = { italic = true },
 }
 
+require("cyberdream").setup {
+    italic_comments = true,
+}
+
 colors.load_colorscheme()
 
 --#region color corrections

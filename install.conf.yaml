@@ -25,8 +25,8 @@
     - command: sh ./scripts/install/posix-cli-setup.sh
       description: Install packages for and configure the posix cli
 
-# TODO: fill out more desired home directories
 - create:
+    - ~/art
     - ~/screenshots
     - ~/projects
     - ~/gamedev

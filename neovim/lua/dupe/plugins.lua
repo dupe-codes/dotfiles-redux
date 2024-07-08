@@ -298,6 +298,11 @@ local plugins = {
         "b0o/lavi.nvim",
         dependencies = { "rktjmp/lush.nvim" },
     },
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1000,
+    },
 
     -- Zig support
     {
