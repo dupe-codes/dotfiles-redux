@@ -54,6 +54,7 @@ require("kanagawa-paper").setup {
 }
 
 require("cyberdream").setup {
+    transparent = true,
     italic_comments = true,
 }
 
