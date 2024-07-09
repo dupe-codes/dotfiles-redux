@@ -82,6 +82,9 @@ alias gc='git commit'
 alias gs='git status'
 alias gch='git checkout'
 
+# project setup aliases
+alias godot_setup='~/scripts/gigacli/projects/godot_setup.sh'
+
 # create util functions
 
 remap() {
@@ -107,6 +110,8 @@ search() (
       --query "$*"
 )
 
+# TODO: dynamically search the $HOME/scripts directory to find tool scripts
+#       and create zsh aliases, except if there is a TOOL_EXCLUDE comment annotation
 list-aliases() {
     alias | \
         awk -F'=' '{print $1 " => " substr($0, index($0, $2))}' | \
