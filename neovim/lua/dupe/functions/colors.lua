@@ -122,7 +122,8 @@ M.load_colorscheme = function()
     if vim.fn.filereadable(SAVED_COLORSCHEME_FILE) == 1 then
         colorscheme = vim.fn.system("cat " .. SAVED_COLORSCHEME_FILE):gsub("\n", "")
     end
-    if colorscheme == "" then
+    if colorscheme == "" or FAVORITE_COLORSCHEMES[colorscheme] == nil then
+        vim.notify "Using default colorscheme..."
         colorscheme = DEFAULT_COLORSCHEME
     end
 
