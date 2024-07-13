@@ -1,28 +1,15 @@
 # Default pre-commit hooks for coding projects
-# TODO:
-# - Add additional language formatters
-#   - Rust
-#   - Scala
-#   - OCaml?
-#   - Zig?
+#
+# These should be confined to operations that transform, manipulate,
+# or otherwise interact with the commit process; code manipulations
+# like linting or formatting are better enforced in a code editor,
+# a makefile, and/or CI workflow
 
 default_stages: [commit] # Needed to avoid duplicate installs on multiple stages
 repos:
-  - repo: https://github.com/psf/black
-    rev: 23.3.0
-    hooks:
-    - id: black
-    - id: black-jupyter
-
-  - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v16.0.3
-    hooks:
-    - id: clang-format
-
   # TODO: Update this to apply on the commit-msg hook, not
   #       prepare-commit-msg
   - repo: https://github.com/dupe-codes/devmoji-precommit
     rev: v1.3.0
     hooks:
     - id: devmoji-precommit
-
