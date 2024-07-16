@@ -193,7 +193,13 @@ local plugins = {
     },
 
     -- Cheatsheets and keybind hints
-    { "folke/which-key.nvim", lazy = false },
+    {
+        "folke/which-key.nvim",
+        lazy = false,
+        config = function()
+            require "dupe.configs.which-key"
+        end,
+    },
     {
         "sudormrfbin/cheatsheet.nvim",
         dependencies = {
