@@ -29,6 +29,7 @@ require("nvim-treesitter.configs").setup {
         "nix",
         "ocaml",
         "gdscript",
+        "make",
     },
     highlight = {
         enable = true,

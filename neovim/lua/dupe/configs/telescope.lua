@@ -1,4 +1,5 @@
 local key_mapper = require("dupe.util").key_mapper
+local make = require "dupe.functions.make"
 
 -- #region Keymappings
 
@@ -60,6 +61,10 @@ local keymap = {
         y = {
             ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>',
             "Search LSP s(y)mbols",
+        },
+        m = {
+            ':lua require"dupe.functions.make".list_targets()<CR>',
+            "List makefile targets",
         },
     },
 }
