@@ -8,6 +8,16 @@ local action_state = require "telescope.actions.state"
 
 local M = {}
 
+local read_file = function(file_name)
+    local file = io.open(file_name, "r")
+    if not file then
+        return nil
+    end
+    local content = file:read "a"
+    file:close()
+    return content
+end
+
 local in_git_repo = function()
     local repo_name = vim.fn.system("git rev-parse --show-toplevel"):gsub("\n", "")
     return not repo_name:find "fatal: not a git repository"
@@ -37,11 +47,10 @@ end
 
 local jump_to_target = function(filepath, line_number)
     vim.cmd("e " .. filepath)
-    vim.api.nvim_win_set_cursor(0, { line_number + 1, 0 })
+    vim.api.nvim_win_set_cursor(0, { line_number, 0 })
 end
 
 local make_telescope_picker = function(makefile_path, targets, opts)
-    -- TODO: show the make target definition in the telescope preview
     opts = opts or {}
     pickers
         .new(targets, {
@@ -53,17 +62,18 @@ local make_telescope_picker = function(makefile_path, targets, opts)
                         value = entry,
                         display = entry.name,
                         ordinal = entry.line_num,
+                        path = makefile_path,
+                        lnum = entry.line_num,
                     }
                 end,
             },
             sorter = conf.generic_sorter(opts),
+            previewer = conf.grep_previewer(opts),
             attach_mappings = function(prompt_bufnr, map)
                 actions.select_default:replace(function()
                     actions.close(prompt_bufnr)
                     local selection = action_state.get_selected_entry().value
                     vim.notify((vim.inspect(selection)))
-
-                    -- jump to selected line
                     jump_to_target(makefile_path, selection.line_num)
                 end)
 
@@ -94,14 +104,11 @@ local get_root_makefile_buffer = function()
     end
 
     local makefile = vim.fn.trim(vim.fn.system "git rev-parse --show-toplevel") .. "/Makefile"
-    vim.notify(makefile)
-    local file = io.open(makefile, "r")
-    if not file then
+    local content = read_file(makefile)
+    if not content then
         vim.notify "list_targets: Makefile not found"
         return -1, nil
     end
-    local content = file:read "a"
-    file:close()
 
     local bufnr = vim.api.nvim_create_buf(false, true)
     local lines = vim.split(content, "\n")
@@ -137,7 +144,7 @@ M.list_targets = function()
     for _, capture in query:iter_captures(root, bufnr) do
         local target = vim.treesitter.get_node_text(capture, bufnr)
         if target ~= ".PHONY" then
-            table.insert(targets, { name = target, line_num = capture:start() })
+            table.insert(targets, { name = target, line_num = capture:start() + 1 })
         end
     end
 
