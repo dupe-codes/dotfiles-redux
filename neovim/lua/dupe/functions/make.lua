@@ -41,6 +41,7 @@ local jump_to_target = function(filepath, line_number)
 end
 
 local make_telescope_picker = function(makefile_path, targets, opts)
+    -- TODO: show the make target definition in the telescope preview
     opts = opts or {}
     pickers
         .new(targets, {
@@ -71,6 +72,10 @@ local make_telescope_picker = function(makefile_path, targets, opts)
                     local selection = action_state.get_selected_entry().value
                     vim.notify("Running target: " .. selection.name)
 
+                    -- TODO: handle make targets that do not immediately end
+                    --       idea - run it async and pipe output to a persistent
+                    --       buffer that can be toggled open. open that buffer
+                    --       at the bottom of screen
                     local cmd = 'make --directory "$(git rev-parse --show-toplevel)" ' .. selection.name
                     local output = vim.fn.system(cmd)
                     display_cmd_output(output)

@@ -145,3 +145,5 @@ five-point-study-room.png
 fever.png
 butterfly-peel.png
 reading-lounge.png
+rifle-ready.png
+twlight-princess.png

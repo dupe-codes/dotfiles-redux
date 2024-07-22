@@ -24,6 +24,7 @@ lazygit = "latest"
 helix = "latest"
 zig = "latest"
 yt-dlp = "latest"
+python-pipx = "latest"
 
 [yay]
 ascii-image-converter = "latest"
@@ -55,6 +56,9 @@ onsen = "latest"
 smassh = "latest"
 harlequin = "latest"
 gdtoolkit = "4.*"
+
+[pipx]
+posting = "latest"
 
 [go]
 github.com/maaslalani/nap = "main"

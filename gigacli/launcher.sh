@@ -33,6 +33,7 @@ tools=(
     ["lazydocker"]=" open lazydocker interface:"
     ["bat"]="󰊪 read file:r:filename"
     ["harlequin"]=" open database client:"
+    ["posting"]="󰖟 open rest API client:"
     ["list-aliases"]="󰊪 list all aliases:"
 )
 
@@ -59,6 +60,7 @@ declare -a tool_order=(
     "rain"
     "ranger"
     "harlequin"
+    "posting"
     "cbonsai"
     "btm"
     "nap"
