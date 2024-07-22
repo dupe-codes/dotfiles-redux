@@ -26,7 +26,9 @@
       description: Install packages for and configure the posix cli
 
 - create:
+    # directories for local projects & assets
     - ~/art
+    - ~/art/references
     - ~/screenshots
     - ~/projects
     - ~/gamedev
@@ -34,6 +36,7 @@
     - ~/videos
     - ~/trash
     - ~/logs
+    - ~/images
 
 - link:
     # configs: gigabox
