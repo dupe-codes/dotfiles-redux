@@ -64,7 +64,7 @@ local keymap = {
         },
         m = {
             ':lua require"dupe.functions.make".list_targets()<CR>',
-            "List makefile targets",
+            "Search makefile targets",
         },
     },
 }

@@ -28,6 +28,7 @@ search files including ignored | <leader>fi
 search command history | <leader>fd
 find in cwd | <leader>fw
 frecency search | <leader>fr
+search make targets | <leader>fm
 
 ## todo comments
 see todos in current file | <leader>xt

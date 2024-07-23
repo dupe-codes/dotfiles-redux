@@ -61,7 +61,7 @@ local make_telescope_picker = function(makefile_path, targets, opts)
                     return {
                         value = entry,
                         display = entry.name,
-                        ordinal = entry.line_num,
+                        ordinal = entry.name,
                         path = makefile_path,
                         lnum = entry.line_num,
                     }
@@ -153,6 +153,12 @@ M.list_targets = function()
     end
 
     make_telescope_picker(makefile_path, targets)
+end
+
+M.show_make_dependency_graph = function()
+    -- TODO: use treesitter to parse out the dependency structure
+    --       of make targets, and render a simple dependency graph (mermaid?)
+    vim.print "Hello!"
 end
 
 return M
