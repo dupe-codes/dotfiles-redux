@@ -11,33 +11,36 @@ require("neotest").setup {
 }
 
 local keymap = {
-    t = {
-        name = "tests",
-        r = {
-            "<cmd>lua require('neotest').run.run()<CR>",
-            "Run nearest test",
-        },
-        a = {
-            "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
-            "Run all tests",
-        },
-        s = {
-            "<cmd>lua require('neotest').summary.toggle()<CR>",
-            "Toggle test summary",
-        },
-        d = {
-            "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
-            "Run nearest test with debugger",
-        },
+    { "<leader>t", group = "tests", nowait = false, remap = false },
+    {
+        "<leader>ta",
+        "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
+        desc = "Run all tests",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>td",
+        "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
+        desc = "Run nearest test with debugger",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>tr",
+        "<cmd>lua require('neotest').run.run()<CR>",
+        desc = "Run nearest test",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>ts",
+        "<cmd>lua require('neotest').summary.toggle()<CR>",
+        desc = "Toggle test summary",
+        nowait = false,
+        remap = false,
     },
 }
 
 local whichkey = require "which-key"
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)

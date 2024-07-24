@@ -12,25 +12,22 @@ require("marks").setup {
 vim.api.nvim_create_autocmd({ "BufRead" }, { command = ":delm a-zA-Z0-9" })
 
 local keymap = {
-    m = {
-        name = "marks",
-        a = {
-            "<cmd> :MarksListAll <CR>",
-            "List all marks in all open buffers",
-        },
-        b = {
-            "<cmd> :MarksListBuf <CR>",
-            "List all marks in current buffer",
-        },
+    { "<leader>m", group = "marks", nowait = false, remap = false },
+    {
+        "<leader>ma",
+        "<cmd> :MarksListAll <CR>",
+        desc = "List all marks in all open buffers",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>mb",
+        "<cmd> :MarksListBuf <CR>",
+        desc = "List all marks in current buffer",
+        nowait = false,
+        remap = false,
     },
 }
 
 local whichkey = require "which-key"
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)

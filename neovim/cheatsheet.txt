@@ -171,3 +171,7 @@ show highlight groups under cursor  | :Inspect
 start a new session   | <leader>zs
 load a session        | <leader>zl
 end current session   | <leader>zd
+
+## which-key
+
+show spelling suggestions | z=

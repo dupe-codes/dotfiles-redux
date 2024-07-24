@@ -2,15 +2,8 @@
 require("cheatsheet").setup {}
 
 local keymap = {
-    ["?"] = { "<cmd> :Cheatsheet <CR>", "cheatsheet" },
+    { "<leader>?", "<cmd> :Cheatsheet <CR>", desc = "cheatsheet", nowait = false, remap = false },
 }
 
 local whichkey = require "which-key"
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)

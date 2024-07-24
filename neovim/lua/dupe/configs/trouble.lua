@@ -3,36 +3,30 @@ local whichkey = require "which-key"
 require("trouble").setup {}
 
 local keymap = {
-    x = {
-        name = "trouble diagnostics",
-        X = {
-            "<cmd>Trouble diagnostics toggle<cr>",
-            "open diagnostics for workspace",
-        },
-        x = {
-            "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-            "open diagnostics for buffer",
-        },
-        l = {
-            "<cmd>Trouble lsp toggle focus=false win.position=bottom<cr>",
-            "open LSP definitions / references / ...",
-        },
-        L = {
-            "<cmd>Trouble loclist toggle<cr>",
-            "open location list",
-        },
-        q = {
-            "<cmd>Trouble qflist toggle<cr>",
-            "open quickfix list",
-        },
+    { "<leader>x", group = "trouble diagnostics", nowait = false, remap = false },
+    { "<leader>xL", "<cmd>Trouble loclist toggle<cr>", desc = "open location list", nowait = false, remap = false },
+    {
+        "<leader>xX",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "open diagnostics for workspace",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>xl",
+        "<cmd>Trouble lsp toggle focus=false win.position=bottom<cr>",
+        desc = "open LSP definitions / references / ...",
+        nowait = false,
+        remap = false,
+    },
+    { "<leader>xq", "<cmd>Trouble qflist toggle<cr>", desc = "open quickfix list", nowait = false, remap = false },
+    {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "open diagnostics for buffer",
+        nowait = false,
+        remap = false,
     },
 }
 
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)

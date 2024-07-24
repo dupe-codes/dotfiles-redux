@@ -65,37 +65,37 @@ local end_session = function()
 end
 
 local keymap = {
-    z = {
-        name = "sessions",
-        s = {
-            function()
-                start_session()
-            end,
-            "start a new session",
-        },
-        e = {
-            function()
-                end_session()
-            end,
-            "end the current session",
-        },
-        l = {
-            function()
-                load_session()
-            end,
-            "load a session",
-        },
+    { "<leader>z", group = "sessions", nowait = false, remap = false },
+    {
+        "<leader>ze",
+        function()
+            start_session()
+        end,
+        desc = "end the current session",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>zl",
+        function()
+            end_session()
+        end,
+        desc = "load a session",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>zs",
+        function()
+            load_session()
+        end,
+        desc = "start a new session",
+        nowait = false,
+        remap = false,
     },
 }
 
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)
 
 return {
     load_session = load_session,

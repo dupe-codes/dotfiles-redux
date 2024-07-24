@@ -10,74 +10,82 @@ local builtin = require "telescope.builtin"
 local utils = require "telescope.utils"
 
 local keymap = {
-    f = {
-        name = "find, grep, & files",
-        s = {
-            ':lua require"telescope.builtin".live_grep()<CR>',
-            "Fuzzy search",
-        },
-        -- search cwd excluding subdirectories
-        w = {
-            function()
-                builtin.find_files {
-                    cwd = utils.buffer_dir(),
-                    find_command = { "fd", "--type", "f", "--max-depth", "1" },
-                }
-            end,
-            "Find files in cwd",
-        },
-        h = {
-            ':lua require"telescope.builtin".help_tags()<CR>',
-            "Search help tags",
-        },
-        b = {
-            ':lua require"telescope.builtin".buffers()<CR>',
-            "Search buffers",
-        },
-        t = {
-            "<cmd>TodoTelescope<CR>",
-            "Search TODOs & notes",
-        },
-        i = {
-            ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
-            "Search files including hidden/ignored",
-        },
-        c = {
-            "<cmd>Telescope neoclip<CR>",
-            "Search clipboard history",
-        },
-        j = {
-            "<cmd>Telescope jumplist<CR>",
-            "Search jumplist",
-        },
-        d = {
-            "<cmd>Telescope command_history<CR>",
-            "Search command history",
-        },
-        r = {
-            "<cmd>Telescope frecency workspace=CWD<CR>",
-            "Search files by frecency",
-        },
-        y = {
-            ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>',
-            "Search LSP s(y)mbols",
-        },
-        m = {
-            ':lua require"dupe.functions.make".list_targets()<CR>',
-            "Search makefile targets",
-        },
+    { "<leader>f", group = "find, grep, & files", nowait = false, remap = false },
+    {
+        "<leader>fb",
+        ':lua require"telescope.builtin".buffers()<CR>',
+        desc = "Search buffers",
+        nowait = false,
+        remap = false,
+    },
+    { "<leader>fc", "<cmd>Telescope neoclip<CR>", desc = "Search clipboard history", nowait = false, remap = false },
+    {
+        "<leader>fd",
+        "<cmd>Telescope command_history<CR>",
+        desc = "Search command history",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>fh",
+        ':lua require"telescope.builtin".help_tags()<CR>',
+        desc = "Search help tags",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>fi",
+        ':lua require"telescope.builtin".find_files({no_ignore=true})<CR>',
+        desc = "Search files including hidden/ignored",
+        nowait = false,
+        remap = false,
+    },
+    { "<leader>fj", "<cmd>Telescope jumplist<CR>", desc = "Search jumplist", nowait = false, remap = false },
+    {
+        "<leader>fm",
+        ':lua require"dupe.functions.make".list_targets()<CR>',
+        desc = "Search makefile targets",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>fr",
+        "<cmd>Telescope frecency workspace=CWD<CR>",
+        desc = "Search files by frecency",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>fs",
+        ':lua require"telescope.builtin".live_grep()<CR>',
+        desc = "Fuzzy search",
+        nowait = false,
+        remap = false,
+    },
+    { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Search TODOs & notes", nowait = false, remap = false },
+    {
+        "<leader>fw",
+        function()
+            builtin.find_files {
+                cwd = utils.buffer_dir(),
+                find_command = { "fd", "--type", "f", "--max-depth", "1" },
+            }
+        end,
+        desc = "Find files in cwd",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>fy",
+        ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>',
+        desc = "Search LSP s(y)mbols",
+        nowait = false,
+        remap = false,
     },
 }
 
 local whichkey = require "which-key"
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)
 
 -- #endregion
 

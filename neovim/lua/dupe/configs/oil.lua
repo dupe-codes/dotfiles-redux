@@ -5,18 +5,8 @@ require("oil").setup {
 }
 
 local keymap = {
-    f = {
-        "<CMD>Oil<CR>",
-        "open file system buffer (oil)",
-    },
+    { "<leader>ff", "<CMD>Oil<CR>", desc = "open file system buffer (oil)", nowait = false, remap = false },
 }
 
 local whichkey = require "which-key"
-whichkey.register(keymap, {
-    mode = "n",
-    prefix = "<leader>f",
-    buffer = nil,
-    silent = true,
-    noremap = true,
-    nowait = false,
-})
+whichkey.add(keymap)

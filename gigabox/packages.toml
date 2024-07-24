@@ -89,12 +89,13 @@ wezterm = "latest"
 parcellite = "latest"
 xclip = "latest"
 
-# docs & images
+# docs, images, art
 ristretto = "latest"
 gimp = "latest"
 inkscape = "latest"
 zathura = "latest"
 zathura-pdf-mupdf = "latest"
+blender = "latest"
 
 # power manager, battery, backlight utils
 xfce4-power-manager = "latest"
