@@ -33,14 +33,12 @@ tools=(
     wthrr "󰖐 check weather:"
     glow " open markdown reader:"
     dust " check disk space:"
-    gitui " open git interface:"
     bat "󰊪 read file:r:filename"
 )
 
 background_args=(
     wthrr "-u f,mph -f d,w"
     cbonsai "-L 42 --screensaver"
-    gitui "-t macchiato.ron"
 )
 
 tool_aliases=(
@@ -73,7 +71,6 @@ tool_order=(
     wthrr
     glow
     dust
-    gitui
     bat
 )
 

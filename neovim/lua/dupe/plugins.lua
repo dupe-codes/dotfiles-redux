@@ -2,6 +2,7 @@ local plugins = {
     { "zbirenbaum/copilot.lua", lazy = false },
     { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons", lazy = false },
+    { "echasnovski/mini.icons", version = false },
 
     -- START: LSPs, completions, diagnostics
     { "onsails/lspkind-nvim" },

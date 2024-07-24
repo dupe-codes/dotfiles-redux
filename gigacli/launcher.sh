@@ -28,7 +28,6 @@ tools=(
     ["wthrr"]="󰖐 check weather:"
     ["glow"]=" open markdown reader:"
     ["dust"]=" check disk space:"
-    ["gitui"]=" open git(ui) interface:"
     ["lazygit"]=" open (lazy)git interface:"
     ["lazydocker"]=" open lazydocker interface:"
     ["bat"]="󰊪 read file:r:filename"
@@ -41,7 +40,6 @@ tools=(
 background_args=(
     ["wthrr"]="-u f,mph -f d,w"
     ["cbonsai"]="-L 42 --screensaver"
-    ["gitui"]="-t macchiato.ron"
 )
 
 declare -a tool_order=(
@@ -71,7 +69,6 @@ declare -a tool_order=(
     "wthrr"
     "glow"
     "dust"
-    "gitui"
     "lazygit"
     "lazydocker"
     "bat"

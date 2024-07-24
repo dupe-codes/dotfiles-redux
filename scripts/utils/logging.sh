@@ -1,3 +1,5 @@
+# TODO: update these to optionally take a log file to write to
+
 print_ok() {
     GREEN_COLOR="\033[0;32m"
     DEFAULT="\033[0m"

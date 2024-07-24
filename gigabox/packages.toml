@@ -20,6 +20,7 @@ docker-compose = "latest"
 git-lfs = "latest"
 godot = "latest"
 netcat = "latest"
+code = "latest"
 
 # account management
 accountsservice = "latest"
@@ -169,7 +170,6 @@ ascii-rain-git = "latest"
 zulip-desktop = "latest"
 1password = "latest"
 1password-cli = "latest"
-github-desktop-bin = "latest"
 
 [gigapc.yay]
 # Add any gigapc-specific yay packages here
