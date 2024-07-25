@@ -69,7 +69,7 @@ local keymap = {
     {
         "<leader>ze",
         function()
-            start_session()
+            end_session()
         end,
         desc = "end the current session",
         nowait = false,
@@ -78,7 +78,7 @@ local keymap = {
     {
         "<leader>zl",
         function()
-            end_session()
+            load_session()
         end,
         desc = "load a session",
         nowait = false,
@@ -87,7 +87,7 @@ local keymap = {
     {
         "<leader>zs",
         function()
-            load_session()
+            start_session()
         end,
         desc = "start a new session",
         nowait = false,
