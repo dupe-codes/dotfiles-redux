@@ -90,3 +90,6 @@ for device in "${devices[@]}"; do
     sudo cp "gigabox/evremap/$device.toml" "/etc/$device.toml"
     sudo systemctl enable "$device-remap.service"
 done
+
+# download zed
+curl -f https://zed.dev/install.sh | sh
