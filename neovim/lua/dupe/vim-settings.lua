@@ -81,6 +81,9 @@ vim.cmd "set showtabline=0"
 vim.cmd "syntax on"
 vim.cmd "set cursorline"
 
+-- Force .v files to be recognized as coq files
+vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
+
 -- configure cursor as blinking block and vertical line
 -- TODO: the blinking sometimes lags; debug it
 vim.cmd(

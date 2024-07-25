@@ -12,7 +12,7 @@ require("marks").setup {
 vim.api.nvim_create_autocmd({ "BufRead" }, { command = ":delm a-zA-Z0-9" })
 
 local keymap = {
-    { "<leader>m", group = "marks", nowait = false, remap = false },
+    { "<leader>m", group = "marks", icon = "󰐾", nowait = false, remap = false },
     {
         "<leader>ma",
         "<cmd> :MarksListAll <CR>",

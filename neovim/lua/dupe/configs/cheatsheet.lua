@@ -2,7 +2,7 @@
 require("cheatsheet").setup {}
 
 local keymap = {
-    { "<leader>?", "<cmd> :Cheatsheet <CR>", desc = "cheatsheet", nowait = false, remap = false },
+    { "<leader>?", "<cmd> :Cheatsheet <CR>", desc = "cheatsheet", icon = "", nowait = false, remap = false },
 }
 
 local whichkey = require "which-key"

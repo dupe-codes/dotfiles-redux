@@ -1,6 +1,4 @@
 vim.cmd "let g:coqtail_nomap = 1"
--- Force .v files to be recognized as coq files
-vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
 
 local whichkey = require "which-key"
 

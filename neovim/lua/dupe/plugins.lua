@@ -396,6 +396,7 @@ local plugins = {
     -- Coq proof assistant
     {
         "whonore/Coqtail",
+        ft = { "coq" },
         config = function()
             require "dupe.configs.coqtail"
         end,
