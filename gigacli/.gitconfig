@@ -11,9 +11,9 @@
 [delta]
     navigate = true
     light = false
-    side-by-side = true
+    # side-by-side = true
     line-numbers = true
-    syntax-theme = Catppuccin-macchiato
+    # syntax-theme = Catppuccin-macchiato
 
 [init]
     defaultBranch = main

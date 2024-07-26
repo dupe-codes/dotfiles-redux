@@ -507,6 +507,19 @@ local plugins = {
             require "dupe.configs.hlslens"
         end,
     },
+
+    -- code actions preview
+    {
+        "rachartier/tiny-code-action.nvim",
+        dependencies = {
+            { "nvim-lua/plenary.nvim" },
+            { "nvim-telescope/telescope.nvim" },
+        },
+        event = "LspAttach",
+        config = function()
+            require "dupe.configs.code-action"
+        end,
+    },
 }
 
 require("lazy").setup(plugins)
