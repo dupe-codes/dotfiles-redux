@@ -54,6 +54,7 @@
     ~/.config/mpd:                gigabox/mpd
     ~/.config/remind:             gigabox/remind
     ~/.config/zathura:            gigabox/zathura
+    ~/.config/dropbox:            gigabox/dropbox
     ~/.scripts/reminders.sh:      gigabox/openbox/scripts/reminders.sh
     ~/.Xresources:                gigabox/.Xresources
     ~/.gigabox:                   gigabox/.gigabox
