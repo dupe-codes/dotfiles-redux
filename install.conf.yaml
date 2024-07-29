@@ -88,3 +88,8 @@
 
     # tools
     ~/devmoji.config.js:          project-configs/devmoji.config.js
+
+- shell:
+  - command: cp gigacli/shell.env ~/shell.env
+    description: Copying shell env vars file
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $HOME/secrets.sh
+source "$HOME"/shell.env
 API_URL="https://api.openai.com/v1/chat/completions"
 
 CONVO_FILE="/tmp/gpt_convo.txt"

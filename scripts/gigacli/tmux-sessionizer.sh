@@ -34,8 +34,10 @@ tmux_running=$(pgrep tmux)
 if [ "$selected_name" = "gigacli" ]; then
     windows=("code" "term 1" "term 2" "timer" "calm" "jams")
 else
-    # TODO: set "ssh" tab based on IS_WORK env var
-    windows=("code" "term 1" "term 2" "ssh")
+    windows=("code" "term 1" "term 2")
+    if [[ "$WORK_MODE" == "true" ]]; then
+        windows+=("ssh")
+    fi
 fi
 
 # criteria and init commands mapping

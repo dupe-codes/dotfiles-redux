@@ -39,7 +39,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 export RANGER_LOAD_DEFAULT_RC=false
 
-source $HOME/secrets.sh
+source $HOME/shell.env
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
