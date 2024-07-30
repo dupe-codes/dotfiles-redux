@@ -38,6 +38,10 @@
     - ~/logs
     - ~/images
 
+    # it's sometimes useful to have a place to
+    # temporarily stash stuff :)
+    - ~/tmp
+
 - link:
     # configs: gigabox
     ~/.config/dunst:              gigabox/dunst
