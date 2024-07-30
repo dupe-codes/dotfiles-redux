@@ -1,7 +1,0 @@
-indent_type         = "Spaces"
-indent_width        = 4
-no_call_parentheses = true
-column_width        = 80
-
-[sort_requires]
-enabled = true
