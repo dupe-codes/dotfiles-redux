@@ -73,7 +73,6 @@ local make_telescope_picker = function(makefile_path, targets, opts)
                 actions.select_default:replace(function()
                     actions.close(prompt_bufnr)
                     local selection = action_state.get_selected_entry().value
-                    vim.notify((vim.inspect(selection)))
                     jump_to_target(makefile_path, selection.line_num)
                 end)
 
