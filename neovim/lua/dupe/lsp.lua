@@ -160,6 +160,27 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- NOTE: omnisharp works with godot as long as you've compiled
+--       your godot project _at least once_
+lspconfig.omnisharp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = {
+        "omnisharp",
+        "--languageserver",
+        "--hostPID",
+        tostring(vim.fn.getpid()),
+    },
+    settings = {
+        RoslynExtensionsOptions = {
+            enableDecompilationSupport = false,
+            enableImportCompletion = true,
+            enableAnalyzersSupport = true,
+        },
+    },
+    root_dir = lspconfig.util.root_pattern "*.sln",
+}
+
 -- nvim-cmp setup for snippets
 
 local cmp = require "cmp"
@@ -255,6 +276,7 @@ conform.setup {
         python = { "black" },
         zig = { "zigfmt" },
         gdscript = { "gdformat" },
+        cs = { "csharpier" },
     },
 }
 

@@ -21,6 +21,10 @@ git-lfs = "latest"
 godot = "latest"
 netcat = "latest"
 
+# C# development (godot)
+dotnet-sdk = "latest"
+aspnet-runtime = "latest"
+
 # account management
 accountsservice = "latest"
 
@@ -155,6 +159,11 @@ spotify-tui = "latest"
 cava = "latest"
 networkmanager-dmenu-git = "latest"
 
+# godot-mono is needed for c# support
+# TODO: maybe remove this after learning godot; my plan
+#       is to use gdscript + c++
+godot-mono = "latest"
+
 # screen lock & system utils
 betterlockscreen = "latest"
 
@@ -182,8 +191,7 @@ vulkan-tools = "latest"
 lib32-vulkan-intel = "latest"
 vulkan-icd-loader = "latest"
 
-# mesga is pinned due to issues on the latest version
-mesa = "1:24.0.7-3"
+mesa = "latest"
 mesa-utils = "latest"
 
 # wayland is needed for Vulkan

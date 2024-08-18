@@ -148,3 +148,4 @@ reading-lounge.png
 rifle-ready.png
 twlight-princess.png
 spirited-away-samurai.png
+knight-matrix.png

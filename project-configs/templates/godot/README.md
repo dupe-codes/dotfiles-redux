@@ -1,3 +1,1 @@
-## TODOs
-
-- set up git lfs for asset files
+# This is an amazing godot game

@@ -3,6 +3,7 @@ require("nvim-treesitter.configs").setup {
         "bash",
         "c",
         "cpp",
+        "c_sharp",
         "css",
         "go",
         "html",
