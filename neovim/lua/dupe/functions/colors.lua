@@ -16,6 +16,9 @@ local tokyo_night_adjustments = {
         -- these default to unsatisfying colors
         vim.api.nvim_set_hl(0, "TelescopePromptBorder", { link = "TelescopeBorder" })
         vim.api.nvim_set_hl(0, "TelescopePromptTitle", { link = "TelescopeTitle" })
+
+        -- better divide between panes
+        vim.cmd.hi "WinSeparator guifg=#000000"
     end,
 }
 
