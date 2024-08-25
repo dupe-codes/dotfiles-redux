@@ -67,7 +67,8 @@ function handle_GET_url {
 
     notify-send "yt-download-server" "Downloading video at: $url"
 
-    yt-dlp "$url" -f 'bv*[height=1080]+ba' \
+    # download with best available resolution
+    yt-dlp "$url" -f 'bv*[height<=1080]+ba/bestvideo[height<=1080]+bestaudio/best' \
         --no-playlist \
         --write-subs \
         -P "$DEST_DIR" |

@@ -72,13 +72,14 @@ ffmpegthumbnailer = "latest"
 tumbler = "latest"
 python-gpgme = "latest"
 
-# volume control, audio utils, & music
+# audio, music, videos
 pavucontrol = "latest"
 pulseaudio = "latest"
 pulseaudio-alsa = "latest"
 mpd = "latest"
 mpc = "latest"
 ncmpcpp = "latest"
+mpv = "latest"
 
 # text editors
 neovim = "latest"
