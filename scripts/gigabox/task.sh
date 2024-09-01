@@ -27,31 +27,12 @@ if [ -z "$TYPE" ]; then
     exit 0
 fi
 
-TAG=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter tag:")
-if [ -z "$TAG" ]; then
-    exit 0
-fi
-
-if [[ "$TYPE" == "today" ]]; then
-    TAG="$TAG #today"
-elif [[ "$TYPE" == "tomorrow" ]]; then
-    TAG="$TAG #tomorrow"
-elif [[ "$TYPE" == "this week" ]]; then
-    TAG="$TAG #later"
-else
-    # if not a prioritized section, determine if task should be enqueued
-    ENQUEUE=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enqueue task? (y/n)")
-    if [ "$ENQUEUE" == "y" ]; then
-        TAG="$TAG #queue"
-    fi
-fi
-
 TASK=$(rofi -dmenu -theme $HOME/scripts/gigabox/rofi/note-taking.rasi -p "Enter task:")
 if [ -z "$TASK" ]; then
     exit 0
 fi
 
-FORMATTED_TASK="- [ ] #$TAG $TASK"
+FORMATTED_TASK="- [ ] $TASK"
 
 if [ ! -f "$QUEST_LOG_PATH" ]; then
     notify-send "Quest Log does not exist. Creating file."
@@ -79,4 +60,4 @@ done <"$QUEST_LOG_PATH"
 
 mv "$TEMP_FILE" "$QUEST_LOG_PATH"
 
-notify-send "Quest Log" "Task added under $TYPE with tag $TAG"
+notify-send "Quest Log" "Task added under $TYPE"
