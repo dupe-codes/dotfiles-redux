@@ -84,6 +84,7 @@ alias gch='git checkout'
 
 # project setup aliases
 alias godot_setup='~/scripts/gigacli/projects/godot_setup.sh'
+alias lua_setup='~/scripts/gigacli/projects/lua_setup.sh'
 
 # create util functions
 
