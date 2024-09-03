@@ -1,6 +1,6 @@
 # TODO: also add the package to the .rockspec file
 .PHONY: add
-add: ## Add a lua dependency to the local project, usage: make install package=package-name
+add: ## Add a lua dependency to the local project, usage: make add package=package-name
 	luarocks install --tree lua_modules $(package)
 
 .PHONY: install
@@ -9,7 +9,7 @@ install: ## Install project dependencies
 
 .PHONY: run
 run: ## Run the <project_name> application
-	@source $(CURDIR)/.env && ./src/<project_name>.lua
+	@source $(CURDIR)/project.env && ./src/<project_name>.lua
 
 .PHONY: lint
 lint: ## Lint lua source files

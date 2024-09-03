@@ -24,6 +24,19 @@ luarocks init --lua-versions "5.4"
 sed -i "s/<project_name>/$project_name_formatted/g" Makefile project.env src/main.lua
 mv src/main.lua src/"$project_name_formatted".lua
 
+# append lua environment setup
+project_env_file="project.env"
+if [ -f "$project_env_file" ]; then
+    cat >>"$project_env_file" <<EOL
+
+export LUA_INIT="@src/setup.lua"
+export PATH=\$PATH:./lua_modules/bin
+EOL
+else
+    echo "Error: project.env file not found!"
+    exit 1
+fi
+
 # update rockspec with default dependencies
 dependencies=(
     "inspect >= 3.1"

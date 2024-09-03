@@ -25,6 +25,7 @@ helix = "latest"
 zig = "latest"
 yt-dlp = "latest"
 python-pipx = "latest"
+pandoc-cli = "latest"
 
 [yay]
 ascii-image-converter = "latest"
