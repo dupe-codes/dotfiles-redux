@@ -42,6 +42,7 @@ dependencies=(
     "inspect >= 3.1"
     "ltui = 2.7"
     "ldoc = 1.5.0-1"
+    "debugger = scm-1"
 )
 
 rockspec_file="$project_name_formatted-dev-1.rockspec"

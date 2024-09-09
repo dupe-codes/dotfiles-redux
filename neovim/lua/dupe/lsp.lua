@@ -188,15 +188,6 @@ local luasnip = require "luasnip"
 
 luasnip.config.setup {}
 
--- TODO: roll without copilot for a while; it holds you back
---      if things go well, remove the plugins
--- Configure copilot as a completions source
---require("copilot").setup {
---suggestion = { enabled = false },
---panel = { enabled = false },
---}
---require("copilot_cmp").setup()
-
 local lspkind = require "lspkind"
 lspkind.init {
     symbol_map = {
