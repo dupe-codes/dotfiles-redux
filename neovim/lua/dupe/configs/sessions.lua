@@ -64,6 +64,12 @@ local end_session = function()
     vim.notify("session " .. session_name .. " ended")
 end
 
+local delete_session = function()
+    -- TODO: display list of available sessions, delete the selected
+    --       one
+    --       refactor code above to display list of sessions with telescope
+end
+
 local keymap = {
     { "<leader>z", group = "sessions", nowait = false, remap = false },
     {

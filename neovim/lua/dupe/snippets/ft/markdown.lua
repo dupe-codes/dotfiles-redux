@@ -1,0 +1,2 @@
+-- IDEAS:
+--  snippet to quickly create an unordered list: C-k to insert next element

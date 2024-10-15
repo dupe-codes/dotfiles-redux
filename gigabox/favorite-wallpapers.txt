@@ -149,3 +149,10 @@ rifle-ready.png
 twlight-princess.png
 spirited-away-samurai.png
 knight-matrix.png
+ff7-box-art.png
+grainy-portrait.png
+computer-engineers.jpeg
+rei-retro.jpeg
+pixel-cruise.png
+spiral-girl.png
+solar-system.png

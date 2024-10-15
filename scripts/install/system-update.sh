@@ -6,8 +6,9 @@ source "$HOME"/scripts/constants.sh
 source "$HOME"/scripts/utils/logging.sh
 
 log_timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
-logging_dir="$LOGS_DIR/system-updates/"
+logging_dir="$LOGS_DIR/system-updates"
 log_file="$logging_dir/system-update-$log_timestamp.log"
+mkdir -p "$logging_dir"
 
 confirm_update() {
     print_info "Updating $1..." | tee -a "$log_file"
@@ -18,11 +19,11 @@ confirm_update() {
     fi
 }
 
-EXCLUDED_PACKAGES=("mesa")
-PACKAGE_IGNORE=""
-if [ ${#EXCLUDED_PACKAGES[@]} -ne 0 ]; then
-    PACKAGE_IGNORE="--ignore ${EXCLUDED_PACKAGES[*]}"
-fi
+#EXCLUDED_PACKAGES=("mesa")
+#PACKAGE_IGNORE=""
+#if [ ${#EXCLUDED_PACKAGES[@]} -ne 0 ]; then
+#PACKAGE_IGNORE="--ignore ${EXCLUDED_PACKAGES[*]}"
+#fi
 
 confirm_update "pacman" "sudo pacman -Syu $PACKAGE_IGNORE"
 confirm_update "yay" "yay -Syu $PACKAGE_IGNORE"
