@@ -156,3 +156,8 @@ rei-retro.jpeg
 pixel-cruise.png
 spiral-girl.png
 solar-system.png
+pokemon-crew.jpeg
+gaming-console.png
+sunset-view.png
+samurai-chick-battle.png
+takemi-swag.png

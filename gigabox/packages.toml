@@ -159,6 +159,8 @@ pa-applet-git = "latest"
 spotify-tui = "latest"
 cava = "latest"
 networkmanager-dmenu-git = "latest"
+ticktick = "latest"
+notion-app-election = "latest"
 
 # godot-mono is needed for c# support
 # TODO: maybe remove this after learning godot; my plan
