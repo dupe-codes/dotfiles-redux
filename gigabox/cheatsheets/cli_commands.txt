@@ -1,0 +1,1 @@
+convert pdf to img := pdftoppm -jpeg -r 300 mypdf.pdf images/pg

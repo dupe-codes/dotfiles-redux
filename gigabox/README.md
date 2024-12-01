@@ -44,3 +44,10 @@ Section "InputClass"
     Option "TappingButtonMap" "lrm"
 EndSection
 ```
+
+### Applications missing in rofi dmenu
+
+Rofi dmenu displays `.desktop` file entries found in any directories of the XDG_DATA_DIRS environment variable.
+
+Files with `TryExec` fields will be excluded, though. To display these, copy their entry into `$HOME/.local/share/applications`
+and remove the `TryExec` field.
