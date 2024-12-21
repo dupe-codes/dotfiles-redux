@@ -44,6 +44,8 @@ fi
 # NOTE: for now, all commands must have two criteria to OR check on,
 #       the existence of a target dir or target file, and one command to
 #       execute when critera is met
+# TODO: replace this with the sessionizer hyrdation scripts idea from
+#       https://github.com/ThePrimeagen/tmux-sessionizer/blob/master/tmux-sessionizer
 declare -A init_commands
 init_commands[ocaml]="$selected/_opam;$selected/.opam-switch;opam switch && eval \$(opam env)"
 

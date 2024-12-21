@@ -114,4 +114,8 @@ return {
     -- TODO: add snippet for class docstring
     -- TODO: add snippet for module docstring
     -- TODO: add snippet for module variable docstring
+
+    -- TODO: add snippet to quickly make useful __repr__
+    --       e.g., detect fields "id", "name", and auto generate:
+    --              return f"(id={self.id}, name={self.name})"
 }

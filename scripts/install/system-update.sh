@@ -37,3 +37,9 @@ confirm_update "neovim" 'nvim --headless "+Lazy! sync" +qa'
 # TODO: add pip, npm, go
 # TODO: add nvim mason installed packages update
 #       maybe just: nvim --headless "+MasonUpdate!" +qa
+
+echo "Disk usage:"
+HEADER=$(df -h | head -n 1)
+DISK_USAGE=$(df -h | grep "/dev/nvme0n1p2")
+echo "$HEADER"
+echo "$DISK_USAGE"
