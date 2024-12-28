@@ -451,6 +451,11 @@
         <command>~/scripts/gigabox/quick-note.sh</command>
       </action>
     </keybind>
+    <keybind key="A-m">
+      <action name="Execute">
+        <command>~/scripts/gigabox/quick-note.sh</command>
+      </action>
+    </keybind>
     <keybind key="A-s">
       <action name="Execute">
         <command>~/scripts/gigabox/cheatsheets.sh</command>

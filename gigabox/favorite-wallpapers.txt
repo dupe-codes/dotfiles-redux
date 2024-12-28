@@ -162,3 +162,5 @@ sunset-view.png
 samurai-chick-battle.png
 takemi-swag.png
 lock-and-key.png
+8-bit-swag.png
+messaged-me.png

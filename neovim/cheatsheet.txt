@@ -176,5 +176,9 @@ load a session        | <leader>zl
 end current session   | <leader>zd
 
 ## which-key
-
 show spelling suggestions | z=
+
+## makefiles
+search project makefile | <leader>fm
+run selected target     | <C-r>
+

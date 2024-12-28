@@ -16,6 +16,7 @@
 <leader> x := toggle fullscreen
 <leader> d := toggle show desktop
 <leader> n := add quick note
+<leader> m := add quick thought
 <leader> s := open cheatsheets menu
 <leader> l := add to quest log
 <leader> shift l := view the quest log
