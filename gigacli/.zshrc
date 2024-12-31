@@ -44,9 +44,7 @@ source $HOME/shell.env
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-alias code-i='code-insiders'
 alias r='ranger'
-alias gpt='chatblade -c 3.5 -s'
 alias pomodoro='arttime --nolearn -t "Get things done bruv" -a desktop -g "25m;30m;55m;1h;1h25m;1h30m;1h55m;2h25m;loop2"'
 alias ll='exa -l -g --icons --git'
 alias llt='exa -1 --icons --tree --git-ignore'
@@ -78,6 +76,7 @@ alias mc="npm init @motion-canvas@latest"
 # git aliases
 alias gp='git push'
 alias gpl='git pull'
+alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
 alias gch='git checkout'
@@ -140,5 +139,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-eval "$(gh copilot alias -- zsh)"

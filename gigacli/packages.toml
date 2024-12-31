@@ -56,6 +56,7 @@ onsen = "latest"
 smassh = "latest"
 harlequin = "latest"
 gdtoolkit = "4.*"
+litecli   = "latest"
 
 [pipx]
 posting = "latest"

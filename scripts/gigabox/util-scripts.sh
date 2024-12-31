@@ -2,7 +2,7 @@
 calculator=" Use calculator"
 cheatsheets="󰎞 View cheatsheets"
 note=" Take a quick note"
-task=" Add a task to the quest log"
+task=" Add a todo"
 gpt=" Message ChatGPT"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
@@ -35,10 +35,7 @@ $toggle_notifications\n""\
 $main_monitor_mode\n""\
 $two_monitor_mode\n""\
 $laptop_mode\n""\
-$extended_laptop_mode\n""\
-$sync_polybar_colors\n""\
-$save_polybar_colors\n""\
-$load_polybar_colors\n"
+$extended_laptop_mode\n"
 
 dir="$HOME/scripts/gigabox/rofi"
 
@@ -59,7 +56,7 @@ $note)
     $HOME/scripts/gigabox/quick-note.sh
     ;;
 $task)
-    $HOME/scripts/gigabox/task.sh
+    $HOME/scripts/gigabox/todo.sh
     ;;
 $gpt)
     $HOME/scripts/gigabox/gpt-convo.sh

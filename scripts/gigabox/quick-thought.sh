@@ -10,7 +10,7 @@ if [ ! -f "$NOTE_PATH" ]; then
     exit 1
 fi
 
-INPUT_TEXT=$(rofi -dmenu -theme "$HOME"/scripts/gigabox/rofi/note-taking.rasi -p "Enter note text:")
+INPUT_TEXT=$(rofi -dmenu -theme "$HOME"/scripts/gigabox/rofi/note-taking.rasi -p "Your thought?")
 if [ -z "$INPUT_TEXT" ]; then
     exit 0
 fi

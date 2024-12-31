@@ -16,11 +16,13 @@ SITES=(
     ["󰗃 YouTube"]="https://www.youtube.com"
     [" imissmycafe"]="https://imissmycafe.com"
     [" HuggingFace Papers"]="https://huggingface.co/papers"
+    [" Notion Calendar"]="https://calendar.notion.so/"
+    [" wheeldecide"]="https://wheeldecide.com"
 )
 
 dir="$HOME/scripts/gigabox/rofi"
 site_keys=$(printf '%s\n' "${!SITES[@]}")
-selected_site=$(echo -e "$site_keys" | rofi -theme $dir/utilscripts.rasi -i -dmenu -p "Choose a site:")
+selected_site=$(echo -e "$site_keys" | rofi -theme "$dir"/utilscripts.rasi -i -dmenu -p "Choose a site:")
 
 if [ -z "$selected_site" ]; then
     echo "No selection made. Exiting."
