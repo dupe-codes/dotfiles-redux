@@ -65,6 +65,7 @@ alias ls=ll
 alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
 alias open='xdg-open'
 alias trash="~/scripts/gigacli/trash.sh"
+alias tail-logs="$HOME/scripts/gigacli/tail-logs.sh"
 alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
@@ -72,6 +73,7 @@ alias lzd="lazydocker"
 alias lzg="lazygit"
 alias gamevim="nvim --listen /tmp/godot.pipe"
 alias mc="npm init @motion-canvas@latest"
+alias anki='QT_XCB_GL_INTEGRATION=none anki'
 
 # git aliases
 alias gp='git push'
