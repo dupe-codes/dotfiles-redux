@@ -52,21 +52,12 @@ alias bonsai='cbonsai -L 42 --screensaver'
 alias rss='nom'
 alias weather='wthrr -u f,mph -f d,w'
 alias hpie='/usr/bin/http'
-alias tools='~/launcher.sh'
-alias t='~/launcher.sh'
 alias c='clear'
 alias s='search'
-alias timer='~/scripts/gigacli/timer.sh'
 alias emacs='emacs -nw'
 alias music='ncmpcpp'
-alias commit='~/scripts/gigacli/commit.sh'
-alias schedule='~/scripts/gigacli/schedule.sh'
 alias ls=ll
-alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
 alias open='xdg-open'
-alias trash="~/scripts/gigacli/trash.sh"
-alias tail-logs="$HOME/scripts/gigacli/tail-logs.sh"
-alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 alias lzd="lazydocker"
@@ -74,6 +65,18 @@ alias lzg="lazygit"
 alias gamevim="nvim --listen /tmp/godot.pipe"
 alias mc="npm init @motion-canvas@latest"
 alias anki='QT_XCB_GL_INTEGRATION=none anki'
+
+# aliases for giga scripts
+# TODO: automatically generate this with a ALIAS_name annotation in the scripts
+alias tools='~/launcher.sh'
+alias t='~/launcher.sh'
+alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
+alias trash="~/scripts/gigacli/trash.sh"
+alias tail-logs="$HOME/scripts/gigacli/tail-logs.sh"
+alias quests="$HOME/scripts/gigabox/show-quests.sh"
+alias commit='~/scripts/gigacli/commit.sh'
+alias schedule='~/scripts/gigacli/schedule.sh'
+alias timer='~/scripts/gigacli/timer.sh'
 
 # git aliases
 alias gp='git push'

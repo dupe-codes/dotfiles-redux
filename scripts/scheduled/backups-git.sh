@@ -14,6 +14,8 @@ REPO_PATHS=(
     "$HOME/datastore"
 )
 
+# TODO: update to also show log output in stdout
+
 backup_repo() {
     local repo_path="$1"
     print_info "Backing up repository at $repo_path" >>"$log_file"

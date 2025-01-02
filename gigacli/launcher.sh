@@ -34,6 +34,7 @@ tools=(
     ["harlequin"]=" open database client:"
     ["posting"]="󰖟 open rest API client:"
     ["list-aliases"]="󰊪 list all aliases:"
+    ["randomizer"]=" make a random selection:"
 )
 
 # NOTE: Alias tools do not currently support background args
@@ -73,6 +74,7 @@ declare -a tool_order=(
     "lazydocker"
     "bat"
     "list-aliases"
+    "randomizer"
 )
 
 # Support aliases and more complicated tool queries via *_command functions
@@ -207,7 +209,7 @@ for tool in "${tool_order[@]}"; do
     prompt_list+="$line"
 done
 
-selected_tool=$(echo -e "$prompt_list" | gum filter --height 30)
+selected_tool=$(echo -e "$prompt_list" | gum filter --height 35)
 tool=$(echo "$selected_tool" | cut -d ' ' -f 1)
 
 if [ -z "$tool" ]; then

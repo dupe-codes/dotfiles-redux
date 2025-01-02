@@ -18,3 +18,5 @@ ctrl + shift + [1-4] := go to harpooned file 1-4
 
 shift + enter := open current file under cursor
 ctrl + w := close current tab
+
+ctrl + shift + o := omnisearch

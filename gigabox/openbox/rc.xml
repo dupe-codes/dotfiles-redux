@@ -446,6 +446,11 @@
         <command>~/scripts/gigabox/util-scripts.sh</command>
       </action>
     </keybind>
+    <keybind key="A-w">
+      <action name="Execute">
+        <command>~/scripts/gigabox/websites.sh</command>
+      </action>
+    </keybind>
     <keybind key="A-n">
       <action name="Execute">
         <command>~/scripts/gigabox/quick-note.sh</command>
