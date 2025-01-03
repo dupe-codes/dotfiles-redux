@@ -68,12 +68,12 @@ M.randomize = function()
         return
     end
 
-    print "Available files:"
+    print "Available files:\n"
     for i, file in ipairs(files) do
         print(i .. ". " .. file)
     end
 
-    io.write "Select a file by number: "
+    io.write "\nSelect a file by number: "
     local choice = tonumber(io.read())
     if not choice or choice < 1 or choice > #files then
         print "Invalid choice."
@@ -89,6 +89,7 @@ M.randomize = function()
         return
     end
 
+    print ""
     math.randomseed(os.time())
     local final_choice = random_select(lines)
     animate_selection(lines, final_choice)

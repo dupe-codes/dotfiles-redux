@@ -14,18 +14,16 @@ REPO_PATHS=(
     "$HOME/datastore"
 )
 
-# TODO: update to also show log output in stdout
-
 backup_repo() {
     local repo_path="$1"
-    print_info "Backing up repository at $repo_path" >>"$log_file"
+    print_info "Backing up repository at $repo_path" | tee -a "$log_file"
     cd "$repo_path" || exit
 
-    git add --all >>"$log_file" 2>&1
+    git add --all 2>&1 | tee -a "$log_file"
     local timestamp=$(date "+%Y-%m-%d %H:%M:%S")
-    git commit -m "chore(backups): $timestamp" >>"$log_file" 2>&1
-    git push origin main >>"$log_file" 2>&1
-    print_ok "Backup successful for $repo_path" >>"$log_file"
+    git commit -m "chore(backups): $timestamp" 2>&1 | tee -a "$log_file"
+    git push origin main 2>&1 | tee -a "$log_file"
+    print_ok "Backup successful for $repo_path" | tee -a "$log_file"
 }
 
 for repo_path in "${REPO_PATHS[@]}"; do

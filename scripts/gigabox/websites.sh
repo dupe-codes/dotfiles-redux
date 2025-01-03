@@ -18,6 +18,7 @@ SITES=(
     [" HuggingFace Papers"]="https://huggingface.co/papers"
     [" Notion Calendar"]="https://calendar.notion.so/"
     [" wheeldecide"]="https://wheeldecide.com"
+    [" Dropbox"]="https://www.dropbox.com/home"
 )
 
 dir="$HOME/scripts/gigabox/rofi"

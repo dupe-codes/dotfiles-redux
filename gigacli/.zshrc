@@ -77,6 +77,7 @@ alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias commit='~/scripts/gigacli/commit.sh'
 alias schedule='~/scripts/gigacli/schedule.sh'
 alias timer='~/scripts/gigacli/timer.sh'
+alias git-backup="$HOME/scripts/scheduled/backups-git.sh"
 
 # git aliases
 alias gp='git push'

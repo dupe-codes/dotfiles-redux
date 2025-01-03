@@ -45,6 +45,7 @@ dependencies=(
     "debugger = scm-1"
 )
 
+# TODO: also add an install directive
 rockspec_file="$project_name_formatted-dev-1.rockspec"
 if [ -f "$rockspec_file" ]; then
     for dependency in "${dependencies[@]}"; do

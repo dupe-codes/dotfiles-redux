@@ -42,4 +42,5 @@ if [ -z "$LATEST_FILE" ]; then
 fi
 
 print_info "Tailing the latest log file: $LATEST_FILE"
+echo -e "_________________________\n"
 tail -f "$LATEST_FILE"
