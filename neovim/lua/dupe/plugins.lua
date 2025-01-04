@@ -532,10 +532,6 @@ local plugins = {
     -- ide-like breadcrumbs
     {
         "Bekaboo/dropbar.nvim",
-        dependencies = {
-            "nvim-telescope/telescope-fzf-native.nvim",
-            build = "make",
-        },
         config = function()
             require "dupe.configs.dropbar"
         end,
