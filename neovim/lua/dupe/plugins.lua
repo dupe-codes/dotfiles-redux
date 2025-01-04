@@ -263,6 +263,12 @@ local plugins = {
 
     -- Color schemes
     {
+        "zootedb0t/citruszest.nvim",
+    },
+    {
+        "sam4llis/nvim-tundra",
+    },
+    {
         "sho-87/kanagawa-paper.nvim",
     },
     {
@@ -520,6 +526,18 @@ local plugins = {
         event = "LspAttach",
         config = function()
             require "dupe.configs.code-action"
+        end,
+    },
+
+    -- ide-like breadcrumbs
+    {
+        "Bekaboo/dropbar.nvim",
+        dependencies = {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make",
+        },
+        config = function()
+            require "dupe.configs.dropbar"
         end,
     },
 }

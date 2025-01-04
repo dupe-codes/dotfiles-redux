@@ -93,6 +93,7 @@ local FAVORITE_COLORSCHEMES = {
     ["kanagawa-paper"] = no_adjustments,
     ["kanagawa"] = no_adjustments,
     ["cyberdream"] = no_adjustments,
+    ["tundra"] = no_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"

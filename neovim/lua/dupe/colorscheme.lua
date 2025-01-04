@@ -58,6 +58,32 @@ require("cyberdream").setup {
     italic_comments = true,
 }
 
+require("nvim-tundra").setup {
+    dim_inactive_windows = {
+        enabled = false,
+    },
+    sidebars = {
+        enabled = true,
+    },
+    syntax = {
+        booleans = { bold = true, italic = true },
+        comments = { bold = true, italic = true },
+        constants = { bold = true },
+        numbers = { bold = true },
+        operators = { bold = true },
+        types = { italic = true },
+    },
+    plugins = {
+        lsp = true,
+        treesitter = true,
+        telescope = true,
+        cmp = true,
+        context = true,
+    },
+}
+
+vim.g.tundra_biome = "arctic"
+
 colors.load_colorscheme()
 
 --#region color corrections
