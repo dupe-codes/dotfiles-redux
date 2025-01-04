@@ -85,6 +85,8 @@ local servers = {
     "zls",
     "racket_langserver",
     "gleam",
+    "ts_ls",
+    "eslint",
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -268,6 +270,10 @@ conform.setup {
         zig = { "zigfmt" },
         gdscript = { "gdformat" },
         cs = { "csharpier" },
+        javascript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescript = { "prettierd" },
+        typescriptreact = { "prettierd" },
     },
 }
 

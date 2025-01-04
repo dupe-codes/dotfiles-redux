@@ -241,6 +241,9 @@ local plugins = {
                 "omnisharp",
                 "csharpier",
                 "stylua",
+                "typescript-language-server",
+                "eslint-lsp",
+                "prettierd",
                 -- TODO: the version installed by mason is out of date and broken; re-enable
                 --       here once latest gdtoolkit is available
                 --       see https://github.com/Scony/godot-gdscript-toolkit/pull/259#issuecomment-2161503658
