@@ -123,6 +123,36 @@ table.insert(dap.configurations.python, {
     args = { "runserver", "0.0.0.0:8000", "--noreload" },
 })
 
+-- Javascript & Typescript configuration
+-- TODO: configure for debugging client side JS by connecting to chrome browser
+
+local vscode_js_debugger_path = vim.fn.resolve(vim.fn.stdpath "data" .. "/lazy/vscode-js-debug")
+require("dap-vscode-js").setup {
+    debugger_path = vscode_js_debugger_path,
+    adapters = { "pwa-node" },
+}
+
+for _, language in ipairs { "typescript", "javascript", "typescriptreact", "javascriptreact" } do
+    dap.configurations[language] = {
+        {
+            type = "pwa-node",
+            request = "launch",
+            name = "Launch file",
+            program = "${file}",
+            cwd = "${workspaceFolder}",
+            sourceMaps = true,
+        },
+        {
+            type = "pwa-node",
+            request = "attach",
+            name = "Attach",
+            processId = require("dap.utils").pick_process,
+            cwd = "${workspaceFolder}",
+            sourceMaps = true,
+        },
+    }
+end
+
 -- Rust adapter
 -- DAP settings from https://github.com/simrat39/rust-tools.nvim#a-better-debugging-experience
 -- config: https://github.com/simrat39/rust-tools.nvim/blob/master/lua/rust-tools/dap.lua

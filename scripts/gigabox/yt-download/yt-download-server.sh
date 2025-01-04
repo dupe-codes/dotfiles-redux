@@ -11,7 +11,7 @@
 # (function() {
 #    var url = window.location.href;
 #    var xhr = new XMLHttpRequest();
-#    xhr.open("GET", "http://localhost:8123?url=" + encodeURIComponent(url), true);
+#    xhr.open("GET", "http://localhost:1337?url=" + encodeURIComponent(url), true);
 #    xhr.send();
 # })();
 #
@@ -31,7 +31,7 @@ if [ ! -d "$logging_dir" ]; then
     mkdir -p "$logging_dir"
 fi
 
-PORT=8123
+PORT=1337
 DEST_DIR="$HOME/Dropbox/videos"
 
 RESPONSE_PIPE_DIR="$HOME/.local/state/yt-download"

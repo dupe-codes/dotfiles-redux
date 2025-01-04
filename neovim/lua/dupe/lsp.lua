@@ -66,7 +66,7 @@ vim.diagnostic.config {
 }
 
 function _G.open_floating_diagnostics()
-    local bufnr, winnr = vim.diagnostic.open_float(0, { scope = "line" })
+    local _, winnr = vim.diagnostic.open_float(0, { scope = "line" })
     if winnr then
         vim.api.nvim_set_current_win(winnr)
     end
@@ -190,13 +190,6 @@ local luasnip = require "luasnip"
 
 luasnip.config.setup {}
 
-local lspkind = require "lspkind"
-lspkind.init {
-    symbol_map = {
-        Copilot = "",
-    },
-}
-
 local window_config = {
     winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:Visual",
 }
@@ -216,7 +209,7 @@ cmp.setup {
         ["<C-d>"] = cmp.mapping.scroll_docs(5),
         ["<C-u>"] = cmp.mapping.scroll_docs(-5),
         ["<CR>"] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
+            behavior = cmp.ConfirmBehavior.Insert,
             select = false,
         },
         ["<C-f>"] = cmp.mapping(function(fallback)
