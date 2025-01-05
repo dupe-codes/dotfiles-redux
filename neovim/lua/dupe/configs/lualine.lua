@@ -66,8 +66,8 @@ require("lualine").setup {
             },
             {
                 "harpoon2",
-                indicators = { "1", "2", "3", "4", "5", "6" },
-                active_indicators = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]" },
+                indicators = { "1", "2", "3", "4", "5", "6", "7", "8" },
+                active_indicators = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]", "[8]" },
             },
         },
         lualine_x = {},
