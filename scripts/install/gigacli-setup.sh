@@ -9,6 +9,7 @@ install_packages() {
     pip_pkgs=""
     go_pkgs=""
     npm_pkgs=""
+    uv_pkgs=""
 
     parse_section() {
         local section=$1
@@ -25,6 +26,7 @@ install_packages() {
                 "pip") pip_pkgs+=" $package" ;;
                 "go") go_pkgs+=" $package@latest" ;;
                 "npm") npm_pkgs+=" $package" ;;
+                "uv") uv_pkgs+=" $package" ;;
                 esac
             else
                 case $section in
@@ -34,6 +36,7 @@ install_packages() {
                 "pip") pip_pkgs+=" $package==$version" ;;
                 "go") go_pkgs+=" $package@$version" ;;
                 "npm") npm_pkgs+=" $package@$version" ;;
+                "uv") uv_pkgs+=" $package@$version" ;;
                 esac
             fi
         done
@@ -75,6 +78,12 @@ install_packages() {
         echo "Installing packages with npm..."
         npm install -g "$npm_pkgs"
     fi
+
+    if [ -n "$uv_pkgs" ]; then
+        echo "Installing packages with uv..."
+        uv tool install --python 3.12 "$uv_pkgs"
+    fi
+
 }
 
 # Setup script for THE GIGA CLI
@@ -82,6 +91,9 @@ echo "Setting up THE GIGA CLI"
 
 source "$HOME/.cargo/env"
 export PATH="$HOME/.local/bin:$PATH"
+
+# install uv for python packages
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
 install_packages "$PWD"/gigacli/packages.txt
 

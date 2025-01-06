@@ -9,10 +9,14 @@ xfce4-power-manager &
 greenclip daemon &
 dropbox &
 
-# run configuration scripts
+# run configuration scripts & tools
 sh ~/.scripts/launch-safeeyes.sh &
 sh ~/scripts/gigabox/yt-download/yt-download-server.sh &
 lua ~/.scripts/dropbox-config.lua
+
+if ! docker run -d -p 9876:4000 giga-server:latest; then
+  echo "Docker run failed, but continuing..."
+fi
 
 # Start geolocation service + redshift
 if ! pgrep -x agent > /dev/null; then

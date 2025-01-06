@@ -58,7 +58,7 @@ harlequin = "latest"
 gdtoolkit = "4.*"
 litecli   = "latest"
 
-[pipx]
+[uv]
 posting = "latest"
 
 [go]

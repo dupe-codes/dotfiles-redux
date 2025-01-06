@@ -1,0 +1,1 @@
+-- TODO: snippet to add targets with .PHONY

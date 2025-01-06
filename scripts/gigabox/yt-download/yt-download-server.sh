@@ -14,7 +14,9 @@
 #    xhr.open("GET", "http://localhost:1337?url=" + encodeURIComponent(url), true);
 #    xhr.send();
 # })();
-#
+
+# TODO: Docker containerize this; i want all local tools to be run through docker
+#       also, consider moving this functionality to the giga-server
 
 set -e
 
