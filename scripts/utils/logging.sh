@@ -1,4 +1,5 @@
 # TODO: update these to optionally take a log file to write to
+#       also consider switch to using gum log utility
 
 print_ok() {
     GREEN_COLOR="\033[0;32m"

@@ -3,7 +3,6 @@ calculator=" Use calculator"
 cheatsheets="󰎞 View cheatsheets"
 note=" Take a quick note"
 task=" Add a todo"
-gpt=" Message ChatGPT"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
 colors=" Change polybar colors"
@@ -22,7 +21,6 @@ options="$calculator\n""\
 $cheatsheets\n""\
 $note\n""\
 $task\n""\
-$gpt\n""\
 $clipboard\n""\
 $websites\n""\
 $colors\n""\
@@ -57,9 +55,6 @@ $note)
     ;;
 $task)
     $HOME/scripts/gigabox/todo.sh
-    ;;
-$gpt)
-    $HOME/scripts/gigabox/gpt-convo.sh
     ;;
 $clipboard)
     $HOME/scripts/gigabox/clipboard.sh

@@ -20,6 +20,7 @@ SITES=(
     [" Notion Calendar"]="https://calendar.notion.so/"
     [" wheeldecide"]="https://wheeldecide.com"
     [" Dropbox"]="https://www.dropbox.com/home"
+    [" FFI"]="https://www.formfromimagination.com/products/form-from-imagination"
 )
 
 dir="$HOME/scripts/gigabox/rofi"
