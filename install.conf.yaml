@@ -38,6 +38,10 @@
     - ~/logs
     - ~/images
 
+    # giga-server directories
+    - ~/.local/share/giga/drawings
+    - ~/logs/giga-server
+
     # it's sometimes useful to have a place to
     # temporarily stash stuff :)
     - ~/tmp
@@ -92,6 +96,7 @@
 
     # tools
     ~/devmoji.config.js:          project-configs/devmoji.config.js
+    ~/containers:                 gigabox/openbox/containers
 
 - shell:
   - command: cp gigacli/shell.env ~/shell.env

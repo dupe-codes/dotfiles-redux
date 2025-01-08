@@ -14,8 +14,8 @@ sh ~/.scripts/launch-safeeyes.sh &
 sh ~/scripts/gigabox/yt-download/yt-download-server.sh &
 lua ~/.scripts/dropbox-config.lua
 
-if ! docker run -d -p 9876:4000 giga-server:latest; then
-  echo "Docker run failed, but continuing..."
+if ! docker compose -f ~/containers/giga-server.yml up -d; then
+  echo "Docker compose failed, but continuing..."
 fi
 
 # Start geolocation service + redshift
@@ -46,4 +46,3 @@ sleep 2s && nitrogen --restore &
 bash ~/.config/polybar/blocks/launch.sh
 
 xset r rate $KEYBOARD_REPEAT_DELAY $KEYBOARD_REPEAT_RATE &
-

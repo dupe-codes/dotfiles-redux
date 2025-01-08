@@ -21,6 +21,7 @@ SITES=(
     [" wheeldecide"]="https://wheeldecide.com"
     [" Dropbox"]="https://www.dropbox.com/home"
     [" FFI"]="https://www.formfromimagination.com/products/form-from-imagination"
+    [" Google"]="https://www.google.com"
 )
 
 dir="$HOME/scripts/gigabox/rofi"

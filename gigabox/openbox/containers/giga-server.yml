@@ -1,0 +1,8 @@
+services:
+  giga-server:
+    image: giga-server:latest
+    ports:
+      - "9876:4000"
+    volumes:
+      - "${HOME}/.local/share/giga/drawings:/deploy/drawings"
+      - "${HOME}/logs/giga-server:/deploy/logs"
