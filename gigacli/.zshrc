@@ -68,6 +68,8 @@ alias anki='QT_XCB_GL_INTEGRATION=none anki'
 
 # aliases for giga scripts
 # TODO: automatically generate this with a ALIAS_name annotation in the scripts
+#       OR, replace a lot of these with properly adding a "bin" subfolder to scripts
+#       and adding it to PATH. Then symlink tool names to the scripts to run
 alias tools='~/launcher.sh'
 alias t='~/launcher.sh'
 alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
