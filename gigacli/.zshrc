@@ -71,6 +71,7 @@ alias anki='QT_XCB_GL_INTEGRATION=none anki'
 alias tools='~/launcher.sh'
 alias t='~/launcher.sh'
 alias sesh='~/scripts/gigacli/tmux-sessionizer.sh'
+alias sesh-tabbed="~/scripts/gigacli/tmux-sessionizer.sh; exit"
 alias trash="~/scripts/gigacli/trash.sh"
 alias tail-logs="$HOME/scripts/gigacli/tail-logs.sh"
 alias quests="$HOME/scripts/gigabox/show-quests.sh"
