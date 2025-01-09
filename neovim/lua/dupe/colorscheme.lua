@@ -66,11 +66,11 @@ require("nvim-tundra").setup {
         enabled = true,
     },
     syntax = {
-        booleans = { bold = true, italic = true },
-        comments = { bold = true, italic = true },
-        constants = { bold = true },
-        numbers = { bold = true },
-        operators = { bold = true },
+        booleans = { bold = false, italic = true },
+        comments = { bold = false, italic = true },
+        constants = { bold = false },
+        numbers = { bold = false },
+        operators = { bold = false },
         types = { italic = true },
     },
     plugins = {
@@ -82,7 +82,7 @@ require("nvim-tundra").setup {
     },
 }
 
-vim.g.tundra_biome = "arctic"
+vim.g.tundra_biome = "jungle"
 
 colors.load_colorscheme()
 

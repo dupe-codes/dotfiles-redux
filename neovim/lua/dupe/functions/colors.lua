@@ -62,6 +62,19 @@ local carbonfox_adjustments = {
     end,
 }
 
+local tundra_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+    end,
+}
+
+local tokyo_bones_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+    end,
+}
+
 local no_adjustments = {}
 
 -- applies any resets necessary after loading a colorscheme
@@ -83,7 +96,7 @@ local FAVORITE_COLORSCHEMES = {
     ["tokyonight-moon"] = tokyo_night_adjustments,
     ["tokyonight-night"] = tokyo_night_adjustments,
     ["nordic"] = nordic_adjustments,
-    ["tokyobones"] = no_adjustments,
+    ["tokyobones"] = tokyo_bones_adjustments,
     ["nightfox"] = no_adjustments,
     ["carbonfox"] = carbonfox_adjustments,
     ["duskfox"] = no_adjustments,
@@ -93,7 +106,8 @@ local FAVORITE_COLORSCHEMES = {
     ["kanagawa-paper"] = no_adjustments,
     ["kanagawa"] = no_adjustments,
     ["cyberdream"] = no_adjustments,
-    ["tundra"] = no_adjustments,
+    ["tundra"] = tundra_adjustments,
+    ["monet"] = no_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"
