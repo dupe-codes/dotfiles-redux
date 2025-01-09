@@ -35,6 +35,8 @@ tools=(
     ["posting"]="󰖟 open rest API client:"
     ["list-aliases"]="󰊪 list all aliases:"
     ["randomizer"]=" make a random selection:"
+    ["fzf-make"]=" view & run make targets:"
+    ["csvlens"]=" view csv files:r:file"
 )
 
 # NOTE: Alias tools do not currently support background args
@@ -75,6 +77,8 @@ declare -a tool_order=(
     "bat"
     "list-aliases"
     "randomizer"
+    "fzf-make"
+    "csvlens"
 )
 
 # Support aliases and more complicated tool queries via *_command functions

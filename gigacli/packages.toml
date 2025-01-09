@@ -46,6 +46,8 @@ wthrr = "latest"
 cargo-update = "latest"
 stylua = "latest"
 mprocs = "latest"
+fzf-make = "latest"
+csvlens = "latest"
 
 [pip]
 yewtube = "latest"

@@ -62,6 +62,8 @@ alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 alias lzd="lazydocker"
 alias lzg="lazygit"
+alias makes="fzf-make"
+alias csv="csvlens"
 alias gamevim="nvim --listen /tmp/godot.pipe"
 alias mc="npm init @motion-canvas@latest"
 alias anki='QT_XCB_GL_INTEGRATION=none anki'
