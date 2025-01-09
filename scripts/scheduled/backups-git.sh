@@ -16,13 +16,14 @@ REPO_PATHS=(
 
 backup_repo() {
     local repo_path="$1"
-    print_info "Backing up repository at $repo_path" | tee -a "$log_file"
+    print_info "Backing up repository at $repo_path\n" | tee -a "$log_file"
     cd "$repo_path" || exit
 
     git add --all 2>&1 | tee -a "$log_file"
     local timestamp=$(date "+%Y-%m-%d %H:%M:%S")
     git commit -m "chore(backups): $timestamp" 2>&1 | tee -a "$log_file"
     git push origin main 2>&1 | tee -a "$log_file"
+    echo ""
     print_ok "Backup successful for $repo_path" | tee -a "$log_file"
 }
 
