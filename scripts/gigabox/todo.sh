@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TODO_FILE="$HOME/datastore/-1 - todo.md"
-SECTION_HEADING="# inbox"
+SECTION_HEADING="## inbox"
 
 if [ ! -f "$TODO_FILE" ]; then
     notify-send "TODO Error" \

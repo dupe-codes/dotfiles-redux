@@ -1,3 +1,4 @@
 ctrl+shift+t := run tmux-sessionizer in new tmux window
 ctrl+shift+s := run tmux-sessionizer in current window
+ctrl+shift+b := back to last directory
 ctrl+shift+l := open terminal command palette
