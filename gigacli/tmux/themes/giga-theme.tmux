@@ -1,30 +1,40 @@
+# adapted from: https://github.com/olimorris
+
 set -g @plugin 'tmux-plugins/tmux-cpu'           # Display CPU performance
 set -g @plugin 'tmux-plugins/tmux-battery'       # Battery status in tmux
 set -g @plugin 'MunifTanjim/tmux-mode-indicator' # Display current tmux mode
 
-# credit: https://github.com/olimorris
+#color_bg="#2e323b"
+#color_green="#98c379"
+#color_red="#e06c75"
+#color_blue="#61afef"
+#color_purple="#c678dd"
+#color_gray="#5c6370"
+#color_buffer="#939aa3"
 
-color_bg="#2e323b"
-color_fg="#282c34"
-color_green="#98c379"
-color_yellow="#e5c07b"
-color_red="#e06c75"
-color_blue="#61afef"
-color_cyan="#56b6c2"
-color_purple="#c678dd"
-color_gray="#5c6370"
-color_buffer="#939aa3"
-color_selection="#3e4452"
+# from tokyo night moon pallete
+color_bg="#222436"     # bg
+color_green="#c3e88d"  # green
+color_red="#ff757f"    # red
+color_blue="#82aaff"   # blue
+color_purple="#fca7ea" # purple
+color_gray="#c8d3f5"   # fg
+color_buffer="#828bb8" # fg_dark
+
+#color_selection="#3e4452"
+#color_fg="#282c34"
+#color_cyan="#56b6c2"
+#color_yellow="#e5c07b"
 
 #################################### PLUGINS ###################################
 
-set -g @mode_indicator_prefix_prompt "WAIT"
+set -g @mode_indicator_prefix_prompt "wait"
 set -g @mode_indicator_prefix_mode_style fg=$color_blue,bold
-set -g @mode_indicator_copy_prompt "COPY"
+set -g @mode_indicator_copy_prompt "copy"
 set -g @mode_indicator_copy_mode_style fg=$color_green,bold
-set -g @mode_indicator_sync_prompt "SYNC"
+set -g @mode_indicator_sync_prompt "sync"
 set -g @mode_indicator_sync_mode_style fg=$color_red,bold
-set -g @mode_indicator_empty_prompt "TMUX"
+set -g @mode_indicator_empty_prompt "tmux"
 set -g @mode_indicator_empty_mode_style fg=$color_purple,bold
 
 # tmux cpu
@@ -54,7 +64,7 @@ set -g status on
 set -g status-justify centre
 set -g status-left-length 90
 set -g status-right-length 90
-set -g status-style "bg=$color_fg"
+set -g status-style "bg=default"
 
 set -g message-style bg=$color_blue,fg=$color_bg
 setw -g window-status-separator "   "
@@ -62,7 +72,7 @@ set-window-option -g mode-style bg=$color_purple,fg=$color_bg
 
 #################################### FORMAT ####################################
 
-set -g status-left "#{tmux_mode_indicator}  #{online_status}  #[fg=$color_gray]%R#{pomodoro_status}"
+set -g status-left "#{tmux_mode_indicator} #[fg=$color_blue,bold]#S #[fg=$color_gray]%R#{pomodoro_status}"
 set -g status-right "#[fg=$color_gray]#{battery_icon_charge}  #{battery_percentage}#{battery_icon_status}#{battery_remain} | CPU:#{cpu_percentage}"
 setw -g window-status-format "#[fg=$color_gray,italics]#I: #[noitalics]#W"
 setw -g window-status-current-format "#[fg=$color_purple,italics]#I: #[fg=$color_buffer,noitalics,bold]#W"
