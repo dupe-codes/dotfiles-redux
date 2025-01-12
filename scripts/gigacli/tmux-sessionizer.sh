@@ -13,13 +13,26 @@
 saved_options=("gigacli" "$HOME/datastore")
 fzf_command="fzf --tmux center --reverse"
 
+if [[ "$WORK_MODE" == "true" ]]; then
+    search_dirs=(
+        ~/projects
+    )
+else
+    search_dirs=(
+        ~/projects
+        ~/gamedev
+        ~/animations
+        ~/videos
+    )
+fi
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
     saved_options_string=$(printf "%s\n" "${saved_options[@]}")
     selected=$(
         printf "%s\n%s" "$saved_options_string" \
-            "$(find ~/projects ~/gamedev ~/animations ~/videos -mindepth 1 -maxdepth 1 -type d)" |
+            "$(find "${search_dirs[@]}" -mindepth 1 -maxdepth 1 -type d)" |
             $fzf_command
     )
 fi
@@ -41,25 +54,27 @@ else
 fi
 
 # criteria and init commands mapping
-# NOTE: for now, all commands must have two criteria to OR check on,
-#       the existence of a target dir or target file, and one command to
-#       execute when critera is met
+#
 # TODO: replace this with the sessionizer hyrdation scripts idea from
 #       https://github.com/ThePrimeagen/tmux-sessionizer/blob/master/tmux-sessionizer
-declare -A init_commands
-init_commands[ocaml]="$selected/_opam;$selected/.opam-switch;opam switch && eval \$(opam env)"
+#
+# disabled until hydration scripts replacement implemented
+if false; then
+    declare -A init_commands
+    init_commands[ocaml]="$selected/_opam;$selected/.opam-switch;opam switch && eval \$(opam env)"
 
-function get_init_commands {
-    for key in "${!init_commands[@]}"; do
-        IFS=';' read -ra ADDR <<<"${init_commands[$key]}"
-        if [[ -d "${ADDR[0]}" ]] || [[ -f "${ADDR[1]}" ]]; then
-            echo "${ADDR[2]}"
-            return
-        fi
-    done
-}
+    function get_init_commands {
+        for key in "${!init_commands[@]}"; do
+            IFS=';' read -ra ADDR <<<"${init_commands[$key]}"
+            if [[ -d "${ADDR[0]}" ]] || [[ -f "${ADDR[1]}" ]]; then
+                echo "${ADDR[2]}"
+                return
+            fi
+        done
+    }
 
-init_command=$(get_init_commands)
+    init_command=$(get_init_commands)
+fi
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -ds "$selected_name" -c "$selected" -n "${windows[0]}"

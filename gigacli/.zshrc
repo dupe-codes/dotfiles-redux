@@ -1,4 +1,12 @@
-export SHELL="/usr/bin/zsh"
+# configure mac os specific settings by checking for
+# Darwin OS tag; similarly, check for Linux tag for gigabox
+# specific configuration
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    export SHELL="/bin/zsh"
+else
+    export SHELL="/usr/bin/zsh"
+fi
 
 # install plugins
 source $HOME/.config/zsh/antigen.zsh
@@ -20,12 +28,20 @@ prepend_path_if_not_exists "/usr/local/bin"
 prepend_path_if_not_exists "$HOME/.local/bin"
 prepend_path_if_not_exists "$HOME/.cargo/bin"
 prepend_path_if_not_exists "$HOME/go/bin"
-prepend_path_if_not_exists "$HOME/.opam/default/bin"
-prepend_path_if_not_exists "$HOME/.elan/bin"
-prepend_path_if_not_exists "$HOME/.config/emacs/bin"
-prepend_path_if_not_exists "$HOME/.ghcup/bin"
-prepend_path_if_not_exists "$HOME/.cabal/bin"
 prepend_path_if_not_exists "$HOME/.luarocks/bin"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    prepend_path_if_not_exists "/opt/homebrew/opt/python/libexec/bin"
+else
+    # gigabox specific tooling
+    prepend_path_if_not_exists "$HOME/.opam/default/bin"
+    prepend_path_if_not_exists "$HOME/.elan/bin"
+    prepend_path_if_not_exists "$HOME/.config/emacs/bin"
+    prepend_path_if_not_exists "$HOME/.ghcup/bin"
+    prepend_path_if_not_exists "$HOME/.cabal/bin"
+fi
+
 export PATH
 
 # setup environment variables and aliases
@@ -54,19 +70,23 @@ alias weather='wthrr -u f,mph -f d,w'
 alias hpie='/usr/bin/http'
 alias c='clear'
 alias s='search'
-alias emacs='emacs -nw'
-alias music='ncmpcpp'
 alias ls=ll
-alias open='xdg-open'
-alias ocaml-env="opam switch && eval $(opam env)"
 alias code="nap"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 alias makes="fzf-make"
 alias csv="csvlens"
-alias gamevim="nvim --listen /tmp/godot.pipe"
-alias mc="npm init @motion-canvas@latest"
-alias anki='QT_XCB_GL_INTEGRATION=none anki'
+
+# gigabox only aliases
+if [[ "$(uname)" == "Linux" ]]; then
+    alias emacs='emacs -nw'
+    alias music='ncmpcpp'
+    alias open='xdg-open'
+    alias ocaml-env="opam switch && eval $(opam env)"
+    alias gamevim="nvim --listen /tmp/godot.pipe"
+    alias mc="npm init @motion-canvas@latest"
+    alias anki='QT_XCB_GL_INTEGRATION=none anki'
+fi
 
 # aliases for giga scripts
 # TODO: automatically generate this with a ALIAS_name annotation in the scripts
@@ -82,7 +102,14 @@ alias quests="$HOME/scripts/gigabox/show-quests.sh"
 alias commit='~/scripts/gigacli/commit.sh'
 alias schedule='~/scripts/gigacli/schedule.sh'
 alias timer='~/scripts/gigacli/timer.sh'
-alias git-backup="$HOME/scripts/scheduled/backups-git.sh"
+
+if [[ "$(uname)" == "Linux" ]]; then
+    alias git-backup="$HOME/scripts/scheduled/backups-git.sh"
+
+    # project setup aliases
+    alias godot_setup='~/scripts/gigacli/projects/godot_setup.sh'
+    alias lua_setup='~/scripts/gigacli/projects/lua_setup.sh'
+fi
 
 # git aliases
 alias gp='git push'
@@ -92,15 +119,14 @@ alias gc='git commit'
 alias gs='git status'
 alias gch='git checkout'
 
-# project setup aliases
-alias godot_setup='~/scripts/gigacli/projects/godot_setup.sh'
-alias lua_setup='~/scripts/gigacli/projects/lua_setup.sh'
 
 # create util functions
 
-remap() {
-    sudo systemctl restart "$1-remap.service"
-}
+if [[ "$(uname)" == "Linux" ]]; then
+    remap() {
+        sudo systemctl restart "$1-remap.service"
+    }
+fi
 
 search() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
@@ -136,17 +162,20 @@ alias sg="open http://localhost:7080"
 # Welcome message :]
 echo -e "$(cat $HOME/posix-welcome.txt)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/dupe/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/dupe/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/dupe/mambaforge/etc/profile.d/conda.sh"
+
+if [[ "$(uname)" == "Linux" ]]; then
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/home/dupe/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="/home/dupe/mambaforge/bin:$PATH"
+        if [ -f "/home/dupe/mambaforge/etc/profile.d/conda.sh" ]; then
+            . "/home/dupe/mambaforge/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/dupe/mambaforge/bin:$PATH"
+        fi
     fi
+    unset __conda_setup
+    # <<< conda initialize <<<
 fi
-unset __conda_setup
-# <<< conda initialize <<<
