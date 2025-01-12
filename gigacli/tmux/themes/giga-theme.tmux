@@ -28,13 +28,13 @@ color_buffer="#828bb8" # fg_dark
 
 #################################### PLUGINS ###################################
 
-set -g @mode_indicator_prefix_prompt "wait"
+set -g @mode_indicator_prefix_prompt "WAIT"
 set -g @mode_indicator_prefix_mode_style fg=$color_blue,bold
-set -g @mode_indicator_copy_prompt "copy"
+set -g @mode_indicator_copy_prompt "COPY"
 set -g @mode_indicator_copy_mode_style fg=$color_green,bold
-set -g @mode_indicator_sync_prompt "sync"
+set -g @mode_indicator_sync_prompt "SYNC"
 set -g @mode_indicator_sync_mode_style fg=$color_red,bold
-set -g @mode_indicator_empty_prompt "tmux"
+set -g @mode_indicator_empty_prompt "TMUX"
 set -g @mode_indicator_empty_mode_style fg=$color_purple,bold
 
 # tmux cpu
