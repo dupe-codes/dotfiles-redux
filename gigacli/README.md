@@ -44,3 +44,6 @@ Here lies an exploration of more configurable CLI setup
 Symlink ~/.local/share/timewarrior to datastore/timetracking to sync time tracking data
 across machines
 
+### bat theme
+
+To make the tokyo night theme accessible to `bat`, run `bat cache --build`
