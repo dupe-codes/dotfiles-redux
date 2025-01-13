@@ -21,6 +21,9 @@ git-lfs = "latest"
 godot = "latest"
 netcat = "latest"
 
+# love game engine
+love = "latest"
+
 # C# development (godot)
 dotnet-sdk = "latest"
 aspnet-runtime = "latest"

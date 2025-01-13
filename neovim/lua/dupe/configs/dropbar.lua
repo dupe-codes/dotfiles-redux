@@ -2,7 +2,7 @@ local api = require "dropbar.api"
 local whichkey = require "which-key"
 
 local keymap = {
-    { "<leader>w", group = "dropbar", nowait = false, remap = false },
+    { "<leader>w", group = "dropbar", icon = "󰠶", nowait = false, remap = false },
     {
         "<leader>w;",
         api.pick,

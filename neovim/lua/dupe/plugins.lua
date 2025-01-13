@@ -543,6 +543,16 @@ local plugins = {
             require "dupe.configs.dropbar"
         end,
     },
+
+    -- love game engine
+    {
+        "S1M0N38/love2d.nvim",
+        ft = { "lua" },
+        cmd = "LoveRun",
+        config = function()
+            require "dupe.configs.love"
+        end,
+    },
 }
 
 require("lazy").setup(plugins)

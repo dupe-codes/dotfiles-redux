@@ -72,7 +72,7 @@ set-window-option -g mode-style bg=$color_purple,fg=$color_bg
 
 #################################### FORMAT ####################################
 
-set -g status-left "#{tmux_mode_indicator} #[fg=$color_blue,bold]#S #[fg=$color_gray]%R#{pomodoro_status}"
-set -g status-right "#[fg=$color_gray]#{battery_icon_charge}  #{battery_percentage}#{battery_icon_status}#{battery_remain} | CPU:#{cpu_percentage}"
+set -g status-left "#{tmux_mode_indicator} #[fg=$color_blue,bold]#S"
+set -g status-right "#[fg=$color_gray]#{battery_icon_charge}  #{battery_percentage}#{battery_icon_status}#{battery_remain} | CPU:#{cpu_percentage} | #[fg=$color_gray]%R"
 setw -g window-status-format "#[fg=$color_gray,italics]#I: #[noitalics]#W"
 setw -g window-status-current-format "#[fg=$color_purple,italics]#I: #[fg=$color_buffer,noitalics,bold]#W"
