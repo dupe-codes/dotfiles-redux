@@ -123,7 +123,6 @@ open quickfix list  | <leader>xq
 ## zen-mode
 toggle zen mode | <leader>zen
 
-
 ## neotest
 run closest test | <leader>tr
 run closest with debugging | <leader>td
@@ -181,4 +180,9 @@ show spelling suggestions | z=
 ## makefiles
 search project makefile | <leader>fm
 run selected target     | <C-r>
+
+## dropbar navigation
+pick symbols in winbar              | <leader>w;
+go to start of current context      | <leader>w[
+select next context                 | <leader>w]
 

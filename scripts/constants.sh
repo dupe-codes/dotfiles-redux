@@ -1,6 +1,7 @@
 # TODO: Make use of these constants in all scripts
 
 export DOTFILES_DIR="$HOME/projects/dotfiles-redux"
+export DATASTORE_DIR="$HOME/datastore"
 
 export GB_SCRIPTS_DIR="$HOME/scripts/gigabox"
 export GCLI_SCRIPTS_DIR="$HOME/scripts/gigacli"

@@ -275,12 +275,32 @@ conform.formatters.shfmt = {
     prepend_args = { "-i", "4" },
 }
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    callback = function(args)
-        require("conform").format { bufnr = args.buf }
-    end,
-})
+-- TODO: experimenting with formatting on a keybind instead of on write
+--       on write was annoying because of latency in applying formatting changes
+local whichkey = require "which-key"
+local keymap = {
+    { "<leader>p", group = "prettify", icon = "", nowait = false, remap = false },
+    {
+        "<leader>pf",
+        function()
+            local buffer = vim.api.nvim_get_current_buf()
+            require("conform").format { bufnr = buffer }
+        end,
+        desc = "format file",
+        nowait = false,
+        remap = false,
+    },
+}
+whichkey.add(keymap)
+
+--[[
+   [vim.api.nvim_create_autocmd("BufWritePre", {
+   [    pattern = "*",
+   [    callback = function(args)
+   [        require("conform").format { bufnr = args.buf }
+   [    end,
+   [})
+   ]]
 
 -- setup keymaps for capabilities not handled by glance
 key_mapper("n", "<leader>cd", ":lua vim.lsp.buf.hover()<CR>")

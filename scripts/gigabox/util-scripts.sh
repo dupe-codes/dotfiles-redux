@@ -1,7 +1,8 @@
 # Configure options
 calculator=" Use calculator"
 cheatsheets="󰎞 View cheatsheets"
-note=" Take a quick note"
+note=" Take a quick daily note"
+notetaker=" Add to favorite note"
 task=" Add a todo"
 clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
@@ -20,6 +21,7 @@ extended_laptop_mode=" Turn on laptop extend mode"
 options="$calculator\n""\
 $cheatsheets\n""\
 $note\n""\
+$notetaker\n""\
 $task\n""\
 $clipboard\n""\
 $websites\n""\
@@ -52,6 +54,9 @@ $cheatsheets)
     ;;
 $note)
     $HOME/scripts/gigabox/quick-note.sh
+    ;;
+$notetaker)
+    $HOME/scripts/gigabox/note-taker.sh
     ;;
 $task)
     $HOME/scripts/gigabox/todo.sh

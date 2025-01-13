@@ -218,6 +218,25 @@ local c_dap_config = {
 }
 dap.configurations.c = { c_dap_config }
 
+-- godot adapter and configuration
+
+dap.adapters.godot = {
+    type = "server",
+    host = "127.0.0.1",
+    port = 6006,
+}
+
+-- see the godot vscode plugin README for more configuration options:
+-- https://github.com/godotengine/godot-vscode-plugin#configurations
+dap.configurations.gdscript = {
+    {
+        type = "godot",
+        request = "launch",
+        name = "Launch scene",
+        project = "${workspaceFolder}",
+    },
+}
+
 --#endregion
 
 --#region
