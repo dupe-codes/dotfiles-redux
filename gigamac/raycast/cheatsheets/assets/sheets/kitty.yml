@@ -1,0 +1,11 @@
+name: kitty terminal
+prefix: ctrl + shift
+keybinds:
+- keys: t
+  action: run tmux-sessionizer in new tmux window
+- keys: s
+  action: run tmux-sessionizer in current window
+- keys: b
+  action: back to last directory
+- keys: l
+  action: open terminal command palette

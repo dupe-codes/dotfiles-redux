@@ -248,7 +248,7 @@ local plugins = {
                 "omnisharp",
                 "csharpier",
                 "stylua",
-                "typescript-language-server",
+                "vtsls",
                 "eslint-lsp",
                 "prettierd",
                 -- TODO: the version installed by mason is out of date and broken; re-enable

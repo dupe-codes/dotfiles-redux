@@ -85,7 +85,7 @@ local servers = {
     "zls",
     "racket_langserver",
     "gleam",
-    "ts_ls",
+    "vtsls",
     "eslint",
 }
 for _, lsp in ipairs(servers) do
