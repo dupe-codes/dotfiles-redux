@@ -9,6 +9,7 @@ const SHEETS_DIR = `${__dirname}/assets/sheets`;
 interface Keybind {
   keys: string;
   action: string;
+  nonprefixed: boolean | null;
 }
 
 interface Cheatsheet {
@@ -42,13 +43,10 @@ function showSheet(sheet: Cheatsheet, searchText: string, setSearchText: (text: 
     >
       {sheet.keybinds
         .filter((keybind) => filterKeybind(keybind, searchText))
-        .map((keybind, idx) => (
-          <List.Item
-            key={idx}
-            title={`${sheet.prefix} + ${keybind.keys}`}
-            accessories={[{ text: `${keybind.action}` }]}
-          />
-        ))}
+        .map((keybind, idx) => {
+          const keyOutput = !keybind.nonprefixed ? `${sheet.prefix} + ${keybind.keys}` : keybind.keys;
+          return <List.Item key={idx} title={keyOutput} accessories={[{ text: `${keybind.action}` }]} />;
+        })}
     </List>
   );
 }

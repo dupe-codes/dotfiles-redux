@@ -1,66 +1,104 @@
 name: tmux
 prefix: ctrl + space
 keybinds:
+
 - keys: c
   action: create new window
+
 - keys: '#window_number'
   action: jump to window
+
 - keys: n/p
   action: cycle through windows
+
 - keys: '&'
   action: close window
+
 - keys: '%'
   action: split panes horizontal
+
 - keys: '"'
   action: split panes vertically
+
 - keys: '}/{'
   action: swap panes
+
 - keys: q
   action: select panes with numbers
+
 - keys: z
   action: zoom into pane
+
 - keys: '!'
   action: turn pane into window
+
 - keys: x
   action: close pane
+
 - keys: h/j/k/l
   action: resize pane
+
 - keys: ctrl h/j/k/l
   action: navigate around panes (also in vim)
+  nonprefixed: true
+
 - keys: tmux new -s session_name
   action: create new session
+  nonprefixed: true
+
 - keys: s
   action: list sessions
+
 - keys: w
   action: preview open sessions
+
 - keys: k
   action: kill session
+
 - keys: tmux attach
   action: attach to most recent session
+  nonprefixed: true
+
 - keys: tmux attach -t session_name
   action: attach to specific session
+  nonprefixed: true
+
 - keys: '['
   action: Enter copy mode with yank support
+
 - keys: b
   action: toggle between current + previous windows
+
 - keys: e
   action: list & select open sessions
+
 - keys: f
   action: list & select open windows
+
 - keys: t
   action: toggle status bar
+
 - keys: l
   action: switch to last session
+
 - keys: :kill-session -t session_name
   action: kill session
+  nonprefixed: true
+
 - keys: ctrl+s
   action: save tmux state
+
 - keys: ctrl+r
   action: load saved tmux state
+
 - keys: o
   action: open selection (copy mode)
+  nonprefixed: true
+
 - keys: ctrl + o
   action: open selection in editor (copy mode)
+  nonprefixed: true
+
 - keys: shift + s
   action: search selection w. google (copy mode)
-
+  nonprefixed: true
