@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TODO_FILE="$HOME/datastore/-1 - todo.md"
+TODO_FILE="$HOME/datastore/TODO.md"
 SECTION_HEADING="## inbox"
 
 if [ ! -f "$TODO_FILE" ]; then
