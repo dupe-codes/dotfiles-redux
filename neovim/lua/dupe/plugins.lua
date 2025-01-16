@@ -537,9 +537,14 @@ local plugins = {
     },
 }
 
--- new giga setup
-table_concat(plugins, require("dupe.lsp").plugins)
-table_concat(plugins, require("dupe.completions").plugins)
-table_concat(plugins, require("dupe.format").plugins)
+local modules = {
+    "dupe.lsp",
+    "dupe.completions",
+    "dupe.format",
+}
+
+for _, module in ipairs(modules) do
+    table_concat(plugins, require(module).plugins)
+end
 
 require("lazy").setup(plugins)

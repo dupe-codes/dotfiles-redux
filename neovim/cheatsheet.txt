@@ -76,7 +76,7 @@ open hover docs | <leader>cd
 open signature help | <C-s>
 open manual entry at cursor | <leader>cd, repeated
 open floating diagnostics | <leader>e
-move forward/back in completions | <C-n> <C-p>
+move forward/back in completions | <C-f> <C-b>
 move forward/back in completion docs | <C-d> <C-u>
 abort completions | <C-e>
 accept completion | <Enter>
