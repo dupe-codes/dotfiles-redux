@@ -1,22 +1,9 @@
+local table_concat = require("dupe.util").table_concat
+
 local plugins = {
     { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons", lazy = false },
     { "echasnovski/mini.icons", version = false },
-
-    -- START: LSPs, completions, diagnostics
-    { "onsails/lspkind-nvim" },
-    { "neovim/nvim-lspconfig" },
-    { "hrsh7th/cmp-nvim-lsp" },
-    { "hrsh7th/cmp-buffer" },
-    { "hrsh7th/cmp-path" },
-    { "hrsh7th/cmp-cmdline" },
-    { "hrsh7th/nvim-cmp" },
-    { "hrsh7th/cmp-vsnip" },
-    { "hrsh7th/vim-vsnip" },
-
-    -- snippets
-    { "L3MON4D3/LuaSnip" },
-    { "saadparwaiz1/cmp_luasnip" },
 
     -- configure linting with null-ls
     {
@@ -27,9 +14,6 @@ local plugins = {
         end,
     },
 
-    -- autoformatting
-    { "stevearc/conform.nvim" },
-
     -- code actions with lightbulb and menu
     {
         "kosayoda/nvim-lightbulb",
@@ -39,7 +23,6 @@ local plugins = {
             require "dupe.configs.lightbulb"
         end,
     },
-    --END: LSPs, completions, diagnostics
 
     { "antoinemadec/FixCursorHold.nvim", lazy = false },
     {
@@ -48,7 +31,6 @@ local plugins = {
             require "dupe.configs.lualine"
         end,
     },
-    { "folke/neodev.nvim" },
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
@@ -554,5 +536,10 @@ local plugins = {
         end,
     },
 }
+
+-- new giga setup
+table_concat(plugins, require("dupe.lsp").plugins)
+table_concat(plugins, require("dupe.completions").plugins)
+table_concat(plugins, require("dupe.format").plugins)
 
 require("lazy").setup(plugins)
