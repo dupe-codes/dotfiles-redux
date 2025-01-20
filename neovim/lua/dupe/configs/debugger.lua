@@ -11,6 +11,7 @@ dapui.setup {
         {
             elements = {
                 "scopes",
+                "breakpoints",
                 "stacks",
                 "watches",
             },
@@ -19,14 +20,14 @@ dapui.setup {
         },
         {
             elements = {
-                "console",
+                "repl",
             },
-            size = 0.2,
+            size = 0.3,
             position = "bottom",
         },
     },
     controls = {
-        enabled = false,
+        enabled = true,
     },
     render = {
         max_value_lines = 3,

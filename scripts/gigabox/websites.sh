@@ -19,7 +19,7 @@ SITES=(
     [" Dropbox"]="https://www.dropbox.com/home"
     [" FFI"]="https://www.formfromimagination.com/products/form-from-imagination"
     [" Google"]="https://www.google.com"
-    ["󰇮 Fastmail"]="https://app.fastmail.com/mail/Inbox"
+    ["󰇮 Fastmail (email)"]="https://app.fastmail.com/mail/Inbox"
     [" Github"]="https://github.com"
     [" gamedev.tv"]="https://www.gamedev.tv/dashboard/"
 )
