@@ -22,7 +22,6 @@ SITES=(
     ["󰇮 Fastmail (email)"]="https://app.fastmail.com/mail/Inbox"
     [" Github"]="https://github.com"
     [" gamedev.tv"]="https://www.gamedev.tv/dashboard/"
-    ["󰈙 devdocs"]="https://devdocs.io"
 )
 
 dir="$HOME/scripts/gigabox/rofi"

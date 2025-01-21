@@ -165,6 +165,3 @@ lock-and-key.png
 8-bit-swag.png
 messaged-me.png
 tokyo-blues-glasses.png
-water-demon.png
-camera-time.png
-gundam-time.png

@@ -8,8 +8,8 @@ clipboard=" View clipboard"
 websites=" Visit bookmarked websites"
 colors=" Change polybar colors"
 wallpapers=" Manage favorite wallpapers"
-toggle_breaktimer=" Toggle breaktimer"
-snooze_breaktimer=" Snooze breaktimer"
+toggle_safe_eyes=" Toggle safe eyes"
+snooze_safe_eyes=" Snooze safe eyes"
 toggle_redshift=" Toggle redshift"
 snooze_redshift=" Snooze redshift"
 toggle_notifications=" Toggle notifications"
@@ -27,8 +27,8 @@ $clipboard\n""\
 $websites\n""\
 $colors\n""\
 $wallpapers\n""\
-$toggle_breaktimer\n""\
-$snooze_breaktimer\n""\
+$toggle_safe_eyes\n""\
+$snooze_safe_eyes\n""\
 $toggle_redshift\n""\
 $snooze_redshift\n""\
 $toggle_notifications\n""\
@@ -73,11 +73,11 @@ $colors)
 $wallpapers)
     $HOME/scripts/gigabox/wallpapers.sh
     ;;
-$toggle_breaktimer)
-    $HOME/.config/openbox/scripts/toggle-breaktimer.sh
+$toggle_safe_eyes)
+    $HOME/.config/openbox/scripts/toggle-safeeyes.sh
     ;;
-$snooze_breaktimer)
-    $HOME/.config/openbox/scripts/toggle-breaktimer.sh --snooze
+$snooze_safe_eyes)
+    $HOME/.config/openbox/scripts/toggle-safeeyes.sh --snooze
     ;;
 $toggle_redshift)
     $HOME/.config/openbox/scripts/toggle-redshift.sh
