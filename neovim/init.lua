@@ -27,3 +27,6 @@ require("dupe.lsp").setup()
 require("dupe.completions").setup()
 require("dupe.diagnostics").setup()
 require("dupe.format").setup()
+
+-- prompt to load session for current project, if one exists
+require("dupe.configs.sessions").load_session_matching_default_name()
