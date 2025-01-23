@@ -76,7 +76,6 @@
     ~/.config/ranger:             gigacli/ranger
     ~/.config/bat:                gigacli/bat
     ~/.config/bottom:             gigacli/bottom
-    ~/.config/nom:                gigacli/nom
     ~/.config/harlequin:          gigacli/harlequin
     ~/.gitconfig:                 gigacli/.gitconfig
     ~/launcher.sh:                gigacli/launcher.sh

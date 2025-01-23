@@ -1,4 +1,5 @@
 # TODO: Make use of these constants in all scripts
+#       Replace DOTFILES_DIR with DOTFILES set in shell.env
 
 export DOTFILES_DIR="$HOME/projects/dotfiles-redux"
 export DATASTORE_DIR="$HOME/datastore"

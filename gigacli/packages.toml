@@ -63,7 +63,6 @@ posting = "latest"
 
 [go]
 github.com/maaslalani/nap = "main"
-github.com/guyfedwards/nom/cmd/nom = "latest"
 mvdan.cc/sh/v3/cmd/shfmt = "latest"
 
 [npm]

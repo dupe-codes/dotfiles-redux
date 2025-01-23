@@ -28,7 +28,6 @@ Here lies an exploration of more configurable CLI setup
 21. htop        - process viewer
 22. glow        - tui markdown reader
 23. wthrr       - terminal weather client
-24. nom         - tui RSS feed
 
 
 **fun applications**:
