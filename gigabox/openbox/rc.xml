@@ -173,56 +173,60 @@
 
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <!-- Brightness control. -->
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-        <command>~/.scripts/change-brightness.sh +</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>~/.scripts/change-brightness.sh -</command>
-      </action>
-    </keybind>
 
-    <!-- Audio-volume control. -->
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>~/.scripts/change-volume.sh +</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>~/.scripts/change-volume.sh -</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>~/.scripts/change-volume.sh 0</command>
-      </action>
-    </keybind>
-
-    <!-- Media control. -->
-    <keybind key="XF86AudioPrev">
-      <action name="Execute">
-        <command>~/.scripts/music-controller.sh prev</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioNext">
-      <action name="Execute">
-        <command>~/.scripts/music-controller.sh next</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioStop">
-      <action name="Execute">
-        <command>~/.scripts/music-controller.sh stop</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioPlay">
-      <action name="Execute">
-        <command>~/.scripts/music-controller.sh toggle</command>
-      </action>
-    </keybind>
+<!--TODO: activate function key controls after creating/fixing scripts-->
+<!--
+   -    [> Brightness control. <]
+   -    <keybind key="XF86MonBrightnessUp">
+   -      <action name="Execute">
+   -        <command>~/.scripts/change-brightness.sh +</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86MonBrightnessDown">
+   -      <action name="Execute">
+   -        <command>~/.scripts/change-brightness.sh -</command>
+   -      </action>
+   -    </keybind>
+   -
+   -    [> Audio-volume control. <]
+   -    <keybind key="XF86AudioRaiseVolume">
+   -      <action name="Execute">
+   -        <command>~/.scripts/change-volume.sh +</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86AudioLowerVolume">
+   -      <action name="Execute">
+   -        <command>~/.scripts/change-volume.sh -</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86AudioMute">
+   -      <action name="Execute">
+   -        <command>~/.scripts/change-volume.sh 0</command>
+   -      </action>
+   -    </keybind>
+   -
+   -    [> Media control. <]
+   -    <keybind key="XF86AudioPrev">
+   -      <action name="Execute">
+   -        <command>~/.scripts/music-controller.sh prev</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86AudioNext">
+   -      <action name="Execute">
+   -        <command>~/.scripts/music-controller.sh next</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86AudioStop">
+   -      <action name="Execute">
+   -        <command>~/.scripts/music-controller.sh stop</command>
+   -      </action>
+   -    </keybind>
+   -    <keybind key="XF86AudioPlay">
+   -      <action name="Execute">
+   -        <command>~/.scripts/music-controller.sh toggle</command>
+   -      </action>
+   -    </keybind>
+   -->
 
     <!-- Move window-focus across visible windows. -->
     <keybind key="A-C-a">

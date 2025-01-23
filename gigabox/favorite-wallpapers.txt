@@ -167,4 +167,5 @@ messaged-me.png
 tokyo-blues-glasses.png
 water-demon.png
 camera-time.png
-gundam-time.png
+gundam-time-centered.png
+earth-defense-fundam.png
