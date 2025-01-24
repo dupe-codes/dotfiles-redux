@@ -403,7 +403,7 @@
         <to>6</to>
       </action>
     </keybind>
-    <keybind key="A-S-n">
+    <keybind key="A-S-m">
       <action name="Execute">
         <command>~/.config/openbox/scripts/monitor-swap.sh</command>
       </action>
@@ -458,6 +458,11 @@
     <keybind key="A-n">
       <action name="Execute">
         <command>~/scripts/gigabox/quick-note.sh</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-n">
+      <action name="Execute">
+        <command>~/scripts/gigabox/note-taker.sh</command>
       </action>
     </keybind>
     <keybind key="A-m">

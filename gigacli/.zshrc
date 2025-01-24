@@ -112,13 +112,13 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 # git aliases
+
 alias gp='git push'
 alias gpl='git pull'
 alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
 alias gch='git checkout'
-
 
 # create util functions
 
@@ -181,6 +181,8 @@ alias sg="open http://localhost:7080"
 # Welcome message :]
 echo -e "$(cat $HOME/posix-welcome.txt)"
 
+# conda stuff
+# TODO: remove!
 
 if [[ "$(uname)" == "Linux" ]]; then
     # >>> conda initialize >>>

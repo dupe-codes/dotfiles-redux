@@ -23,6 +23,7 @@ SITES=(
     [" Github"]="https://github.com"
     [" gamedev.tv"]="https://www.gamedev.tv/dashboard/"
     ["󰈙 devdocs"]="https://devdocs.io"
+    [" Proko"]="https://www.proko.com/classroom/dashboard"
 )
 
 dir="$HOME/scripts/gigabox/rofi"
