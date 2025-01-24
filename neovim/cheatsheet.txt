@@ -130,7 +130,7 @@ run all tests | <leader>ta
 toggle test summary pane | <leader>ts
 
 ## notifications
-open notifications history | <leader>sn
+open notifications history | <leader>fn
 
 ## symbols
 open symbols outline | <leader>oo

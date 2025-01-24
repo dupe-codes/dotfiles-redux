@@ -1,5 +1,3 @@
-local key_mapper = require("dupe.util").key_mapper
-
 require("fidget").setup {
     notification = {
         override_vim_notify = true,
@@ -8,5 +6,3 @@ require("fidget").setup {
         },
     },
 }
-
-key_mapper("n", "<leader>sn", "<CMD>:Fidget history<CR>")

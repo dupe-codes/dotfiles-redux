@@ -67,12 +67,15 @@ local load_session_matching_default_name = function()
     local _, name_to_session = unpack(get_saved_sessions())
 
     if name_to_session[default_name] then
-        vim.ui.input({ prompt = "Session " .. default_name .. " exists. Load it? (y/n)" }, function(input)
-            if input == "y" then
-                vim.cmd("source " .. name_to_session[default_name])
-                vim.notify(default_name .. " session loaded")
+        vim.ui.input(
+            { prompt = "Session " .. default_name .. " exists. Load it? (y/n)", default = "y" },
+            function(input)
+                if input == "y" then
+                    vim.cmd("source " .. name_to_session[default_name])
+                    vim.notify(default_name .. " session loaded")
+                end
             end
-        end)
+        )
     end
 end
 
