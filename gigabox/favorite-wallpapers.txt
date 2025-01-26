@@ -169,3 +169,5 @@ water-demon.png
 camera-time.png
 gundam-time-centered.png
 earth-defense-fundam.png
+helmet-gal.png
+sword-boy.png
