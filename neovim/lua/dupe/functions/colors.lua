@@ -107,7 +107,6 @@ local FAVORITE_COLORSCHEMES = {
     ["kanagawa"] = no_adjustments,
     ["cyberdream"] = no_adjustments,
     ["tundra"] = tundra_adjustments,
-    ["monet"] = no_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"

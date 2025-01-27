@@ -57,6 +57,8 @@ fi
 #
 # TODO: replace this with the sessionizer hyrdation scripts idea from
 #       https://github.com/ThePrimeagen/tmux-sessionizer/blob/master/tmux-sessionizer
+#       scripts will handle (1) creating project specific tab setups and (2) running
+#       project specific setup scripts (e.g., like open switch initialization done below)
 #
 # disabled until hydration scripts replacement implemented
 if false; then

@@ -129,6 +129,27 @@ run closest with debugging | <leader>td
 run all tests | <leader>ta
 toggle test summary pane | <leader>ts
 
+## neotest-summary
+attach | a
+clear marked | M
+clear target | T
+debug | d
+debug marked | D
+expand | <CR>, <2-LeftMouse>
+expand all | e
+help | ?
+jump to | i
+mark | m
+next failed | J
+output | o
+previous failed | K
+run | r
+run marked | R
+short | O
+stop | u
+target | t
+watch | w
+
 ## notifications
 open notifications history | <leader>fn
 

@@ -7,6 +7,10 @@ require("neotest").setup {
             ignore_file_types = { "python", "vim", "lua" },
         },
         require "neotest-rust",
+        require "neotest-vitest",
+    },
+    summary = {
+        open = "botright split | resize 15",
     },
 }
 

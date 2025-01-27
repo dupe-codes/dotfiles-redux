@@ -344,13 +344,15 @@ local plugins = {
     -- Unit test runner support
     {
         "nvim-neotest/neotest",
-        ft = { "python", "rust" }, -- NOTE: add other langs as needed
+        -- NOTE: add other langs as needed
+        ft = { "python", "rust", "typescript", "javascript" },
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
             "antoinemadec/FixCursorHold.nvim",
             "nvim-neotest/neotest-python",
             "nvim-neotest/neotest-vim-test",
+            "marilari88/neotest-vitest",
             "vim-test/vim-test",
             "rouge8/neotest-rust",
         },
