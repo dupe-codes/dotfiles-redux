@@ -178,6 +178,9 @@ list-aliases() {
 alias sg-launch="~/scripts/gigacli/launch_sg_docker.sh"
 alias sg="open http://localhost:7080"
 
+# source any additional machine specific setup
+source $HOME/local.zsh
+
 # Welcome message :]
 echo -e "$(cat $HOME/posix-welcome.txt)"
 
