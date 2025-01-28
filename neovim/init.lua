@@ -1,3 +1,5 @@
+local is_quickfix_mode = require("dupe.util").is_quickfix_mode
+
 -- initialize lazy.vim
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -28,5 +30,9 @@ require("dupe.completions").setup()
 require("dupe.diagnostics").setup()
 require("dupe.format").setup()
 
--- prompt to load session for current project, if one exists
-require("dupe.configs.sessions").load_session_matching_default_name()
+-- prompt to load session for current project, if one exists and
+-- neovim wasn't launched with arguments and/or quickfix selections
+local args = vim.fn.argv()
+if #args == 0 and not is_quickfix_mode() then
+    require("dupe.configs.sessions").load_session_matching_default_name()
+end

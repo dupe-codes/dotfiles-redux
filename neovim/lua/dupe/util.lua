@@ -21,8 +21,21 @@ local table_concat = function(t1, t2)
     end
 end
 
+local is_quickfix_mode = function()
+    local cmd_args = vim.v.argv
+    local is_quickfix_mode = false
+    for _, arg in ipairs(cmd_args) do
+        if arg == "-q" then
+            is_quickfix_mode = true
+            break
+        end
+    end
+    return is_quickfix_mode
+end
+
 return {
     key_mapper = key_mapper,
     read_file_contents = read_file_contents,
     table_concat = table_concat,
+    is_quickfix_mode = is_quickfix_mode,
 }
