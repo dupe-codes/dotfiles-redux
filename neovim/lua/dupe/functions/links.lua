@@ -31,12 +31,15 @@ local open_current_file_in_github = function()
 
     local branch = vim.fn.system("git branch --show-current"):gsub("\n", "")
 
-    -- TODO: also handle URL with github PATs
     local account, repo
     if remote_repo:match "^git@" then
-        account, repo = remote_repo:match "^git@github.com:([^/]+)/([^%.]+).git$"
+        account, repo = remote_repo:match "^git@github.com:([^/]+)/([^%.]+)%.git$"
     elseif remote_repo:match "^https://" then
-        account, repo = remote_repo:match "^https://github.com/([^/]+)/([^%.]+).git$"
+        -- first, try to match on url with a PAT
+        account, repo = remote_repo:match "^https://[^@]+@github.com/([^/]+)/([^%.]+)%.git$"
+        if not account then
+            account, repo = remote_repo:match "^https://github.com/([^/]+)/([^%.]+)%.git$"
+        end
     end
 
     local escaped_repo = repo:gsub("%-", "%%-")
