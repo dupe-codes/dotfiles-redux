@@ -114,7 +114,7 @@ fi
 # git aliases
 
 alias gp='git push'
-alias gpl='git pull'
+alias gpu='git pull'
 alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
