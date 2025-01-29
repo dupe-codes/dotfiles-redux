@@ -10,7 +10,10 @@ end
 local love_path = handle:read("*a"):gsub("%s+", "")
 handle:close()
 
-if love_path == "" then
+local work_mode_var = vim.fn.getenv "WORK_MODE"
+local work_mode = work_mode_var == "1" or work_mode_var == "true"
+
+if love_path == "" and not work_mode then
     vim.notify("LÖVE is not installed or not in PATH.", vim.log.levels.WARN)
     return
 end
