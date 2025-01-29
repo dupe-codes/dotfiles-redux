@@ -25,6 +25,9 @@
     - command: sh ./scripts/install/posix-cli-setup.sh
       description: Install packages for and configure the posix cli
 
+    - command: touch ~/local.zsh
+      description: Create local zsh configuration file
+
 - create:
     # directories for local projects & assets
     - ~/art
