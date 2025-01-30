@@ -18,7 +18,6 @@ end
 
 local function get_all_branches()
     local scripts = vim.fn.system "git branch --format='%(refname:short)'"
-    vim.notify(scripts)
     local res = vim.split(scripts, "\n")
     local output = {}
 

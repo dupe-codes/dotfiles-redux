@@ -1,0 +1,7 @@
+name: gigamac keybinds
+prefix: option
+keybinds:
+- keys: s
+  action: open cheatsheets
+- keys: n
+  action: add to daily obsidian note
