@@ -1,3 +1,29 @@
-require("transparent").setup({
-    exclude_groups = { "CursorLine" },
-})
+require("transparent").setup {
+    exclude_groups = {
+        "CursorLine",
+        "WhichKey",
+        "GlancePreviewNormal",
+        "GlancePreviewMatch",
+        "GlancePreviewCursorLine",
+        "GlancePreviewSignColumn",
+        "GlancePreviewEndOfBuffer",
+        "GlancePreviewLineNr",
+        "GlancePreviewBorderBottom",
+        "GlanceWinBarFilename",
+        "GlanceWinBarFilepath",
+        "GlanceWinBarTitle",
+        "GlanceListNormal",
+        "GlanceListFilename",
+        "GlanceListFilepath",
+        "GlanceListCount",
+        "GlanceListMatch",
+        "GlanceListCursorLine",
+        "GlanceListEndOfBuffer",
+        "GlanceListBorderBottom",
+        "GlanceFoldIcon",
+        "GlanceIndent",
+        "GlanceBorderTop",
+        "TroubleNormal",
+        "TelescopeNormal",
+    },
+}
