@@ -35,6 +35,7 @@ M.setup = function()
             { name = "nvim_lsp" },
             { name = "path" },
             { name = "buffer" },
+            { name = "luasnip" },
         },
         window = {
             completion = cmp.config.window.bordered(window_config),
