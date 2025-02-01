@@ -89,15 +89,19 @@ local apply_resets = function()
 end
 
 -- FAVORITE_COLORSCHEMES serves two purposes:
+--
 -- 1. It provides a list of favorite color schemes that can be selected from, as
 --    keys in the table
 -- 2. It maps colorschemes to adjustments to apply to them when loaded. The format of
 --    adjustments is expected as a table with as follows:
 --    {
---      before = function to apply _before_ loading the colorscheme
---      after = function to apply _after_ loading the colorscheme
+--      before              = function to apply _before_ loading the colorscheme
+--      after               = function to apply _after_ loading the colorscheme
+--      lualine             = function to configure lualine _after_ loading the colorscheme
+--      toggle_transparent  = boolean property controlling whether transparency is toggled off before 
+--                            loading
 --    }
---    either key can be omitted if no adjustment at that stage is needed
+--    any key can be omitted if no adjustment at that stage is needed
 local FAVORITE_COLORSCHEMES = {
     ["tokyonight-moon"] = tokyo_night_adjustments,
     ["tokyonight-night"] = tokyo_night_adjustments,
@@ -164,11 +168,15 @@ M.load_colorscheme = function()
         -- extract theme based on highlight groups
         -- This resolves a nasty race condition on some colorschemes that caused Glance to
         -- _sometimes_ be transparent, and _sometimes_ not... tricky!
+        -- TODO: tokyo-night-moon glance is still transparent... fix, and test others
+        --       also, calling TransparentEnable clears the adjustments for some colorschemes
+        --       but not others... 
+        --       Really, this "fix" seems to only work for the night-owl theme. Not sure why!
         vim.cmd "TransparentDisable"
     end
 
-    apply_before(colorscheme)
     vim.notify("loading colorscheme: " .. colorscheme)
+    apply_before(colorscheme)
     vim.cmd("colorscheme " .. colorscheme)
     apply_after(colorscheme)
     apply_lualine(colorscheme)
