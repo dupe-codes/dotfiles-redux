@@ -106,3 +106,11 @@ require("lualine").setup {
         },
     },
 }
+
+local M = {}
+
+M.apply_default_theme = function()
+    require("lualine").setup { options = { theme = bubbles_theme } }
+end
+
+return M

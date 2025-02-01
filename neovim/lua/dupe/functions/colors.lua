@@ -50,9 +50,15 @@ local nordic_adjustments = {
 }
 
 local night_owl_adjustments = {
+    toggle_transparent = true,
     after = function()
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#021727" })
+        vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#021727" })
+    end,
+    lualine = function()
+        require("lualine").setup { options = { theme = "night-owl" } }
     end,
 }
 
@@ -126,6 +132,15 @@ local apply_after = function(colorscheme)
     end
 end
 
+local apply_lualine = function(colorscheme)
+    local lualine_fn = FAVORITE_COLORSCHEMES[colorscheme].lualine
+    if lualine_fn then
+        lualine_fn()
+    else
+        require("dupe.configs.lualine").apply_default_theme()
+    end
+end
+
 local clear = function()
     -- need to clear default colorscheme before loading custom
     -- see https://github.com/neovim/neovim/issues/26378
@@ -144,11 +159,24 @@ M.load_colorscheme = function()
         colorscheme = DEFAULT_COLORSCHEME
     end
 
+    if FAVORITE_COLORSCHEMES[colorscheme].toggle_transparent then
+        -- Before setting colorscheme, disable transparency so Glance can properly
+        -- extract theme based on highlight groups
+        -- This resolves a nasty race condition on some colorschemes that caused Glance to
+        -- _sometimes_ be transparent, and _sometimes_ not... tricky!
+        vim.cmd "TransparentDisable"
+    end
+
     apply_before(colorscheme)
     vim.notify("loading colorscheme: " .. colorscheme)
     vim.cmd("colorscheme " .. colorscheme)
     apply_after(colorscheme)
+    apply_lualine(colorscheme)
     apply_resets()
+
+    if FAVORITE_COLORSCHEMES[colorscheme].toggle_transparent then
+        vim.cmd "TransparentEnable"
+    end
 end
 
 M.switch_colorscheme = function()
@@ -160,11 +188,21 @@ M.switch_colorscheme = function()
     vim.ui.select(colorschemes, { prompt = "Select colorscheme" }, function(selected)
         if selected then
             clear()
+
+            if FAVORITE_COLORSCHEMES[selected].toggle_transparent then
+                vim.cmd "TransparentDisable"
+            end
+
             apply_before(selected)
             vim.cmd("colorscheme " .. selected)
             vim.fn.system("echo " .. selected .. " > " .. SAVED_COLORSCHEME_FILE)
             apply_after(selected)
+            apply_lualine(selected)
             apply_resets()
+
+            if FAVORITE_COLORSCHEMES[selected].toggle_transparent then
+                vim.cmd "TransparentEnable"
+            end
         end
     end)
 end

@@ -25,5 +25,7 @@ require("transparent").setup {
         "GlanceBorderTop",
         "TroubleNormal",
         "TelescopeNormal",
+        "TelescopeBorder",
+        "TelescopePromptBorder",
     },
 }
