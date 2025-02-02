@@ -48,6 +48,15 @@ require("lualine").setup {
     sections = {
         lualine_a = {
             { "mode", separator = { left = "" }, right_padding = 2 },
+            {
+                function()
+                    local reg = vim.fn.reg_recording()
+                    if reg == "" then
+                        return ""
+                    end
+                    return "=> recording to " .. reg
+                end,
+            },
         },
         lualine_b = {
             "branch",
