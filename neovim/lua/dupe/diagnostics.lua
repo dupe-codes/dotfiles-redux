@@ -10,14 +10,6 @@ function _G.open_floating_diagnostics()
 end
 
 M.setup = function()
-    vim.diagnostic.config {
-        underline = true,
-        virtual_text = false,
-        signs = true,
-        update_in_insert = true,
-        severity_sort = true,
-    }
-
     local _border = "single"
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
         border = _border,
@@ -29,6 +21,11 @@ M.setup = function()
 
     vim.diagnostic.config {
         float = { border = _border },
+        underline = true,
+        virtual_text = false,
+        signs = true,
+        update_in_insert = true,
+        severity_sort = true,
     }
 
     key_mapper("n", "<Leader>e", "<Cmd>lua _G.open_floating_diagnostics()<CR>")

@@ -85,7 +85,6 @@ vim.cmd "set cursorline"
 vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
 
 -- configure cursor as blinking block and vertical line
--- TODO: the blinking sometimes lags; debug it
 vim.cmd(
     "set guicursor="
         .. "n-v-c:block,"

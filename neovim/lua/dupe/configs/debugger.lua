@@ -105,7 +105,7 @@ local install_root_dir = vim.fn.stdpath "data" .. "/mason"
 local debugpy_path = install_root_dir .. "/packages/debugpy/venv/bin/python"
 require("dap-python").setup(debugpy_path)
 
-function find_django_manage_file()
+local function find_django_manage_file()
     -- search for manage.py in current directory and all subdirectories
     local manage_files = vim.fn.globpath(".", "**/manage.py", false, true)
     if manage_files == nil or #manage_files == 0 then
