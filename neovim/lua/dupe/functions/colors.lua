@@ -52,6 +52,7 @@ local nordic_adjustments = {
 local night_owl_adjustments = {
     toggle_transparent = true,
     after = function()
+        -- TODO: night-owl has too much cursive text; tweak it
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#021727" })
@@ -98,7 +99,7 @@ end
 --      before              = function to apply _before_ loading the colorscheme
 --      after               = function to apply _after_ loading the colorscheme
 --      lualine             = function to configure lualine _after_ loading the colorscheme
---      toggle_transparent  = boolean property controlling whether transparency is toggled off before 
+--      toggle_transparent  = boolean property controlling whether transparency is toggled off before
 --                            loading
 --    }
 --    any key can be omitted if no adjustment at that stage is needed
@@ -170,7 +171,7 @@ M.load_colorscheme = function()
         -- _sometimes_ be transparent, and _sometimes_ not... tricky!
         -- TODO: tokyo-night-moon glance is still transparent... fix, and test others
         --       also, calling TransparentEnable clears the adjustments for some colorschemes
-        --       but not others... 
+        --       but not others...
         --       Really, this "fix" seems to only work for the night-owl theme. Not sure why!
         vim.cmd "TransparentDisable"
     end
