@@ -1,7 +1,7 @@
 local whichkey = require "which-key"
 
 local datastore_dir = os.getenv "HOME" .. "/datastore/"
-local quest_log = "05 - quest journal/00 - quest log.md"
+local quest_log = "05 - quest journal/quest log.md"
 
 local get_current_week = function()
     local year = os.date "%Y"

@@ -17,7 +17,7 @@ table.insert(header, "")
 table.insert(header, "")
 
 local todays_note = os.getenv "HOME" .. "/datastore/daily notes/" .. os.date "%Y-%m-%d" .. ".md"
-local quest_log = os.getenv "HOME" .. "/datastore/05 - quest journal/00 - quest log.md"
+local quest_log = os.getenv "HOME" .. "/datastore/05 - quest journal/quest log.md"
 
 local center = {
     {

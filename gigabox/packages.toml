@@ -103,6 +103,7 @@ inkscape = "latest"
 zathura = "latest"
 zathura-pdf-mupdf = "latest"
 blender = "latest"
+krita = "latest"
 
 # power manager, battery, backlight utils
 xfce4-power-manager = "latest"
