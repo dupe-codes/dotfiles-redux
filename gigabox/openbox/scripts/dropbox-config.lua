@@ -4,7 +4,7 @@ local dropbox_dir = os.getenv "HOME" .. "/Dropbox"
 local exclude_file = os.getenv "HOME" .. "/.config/dropbox/excludes.txt"
 
 -- TODO: compare file with current excluded, and _include_
---       any in the latter not in former. that way we cna
+--       any in the latter not in former. that way we can
 --       reactivate sync'ing by editting the config file
 local exclude_from_dropbox = function()
     local file = io.open(exclude_file, "r")

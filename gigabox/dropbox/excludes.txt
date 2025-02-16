@@ -1,3 +1,4 @@
 work-wallpapers
 Art
 Camera Uploads
+images/camera photos/
