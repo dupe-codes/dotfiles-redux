@@ -80,6 +80,7 @@ vim.cmd "set cmdheight=0" -- hide command line
 vim.cmd "set showtabline=0"
 vim.cmd "syntax on"
 vim.cmd "set cursorline"
+vim.cmd "set spell spelllang=en_us" -- set up spell checking
 
 -- Force .v files to be recognized as coq files
 vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
