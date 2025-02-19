@@ -72,6 +72,7 @@ local carbonfox_adjustments = {
 local tundra_adjustments = {
     after = function()
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
     end,
 }
 

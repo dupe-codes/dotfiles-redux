@@ -3,4 +3,5 @@
 
 return {
     -- TODO: snippet for function docstring
+    -- TODO: snippet for class creation and constructor
 }
