@@ -1,3 +1,11 @@
+local function format(str, len)
+    if string.len(str) > len then
+        return string.sub(str, 1, len / 2) .. "…" .. string.sub(str, str:len() - len / 2 + 1, str:len())
+    else
+        return str
+    end
+end
+
 -- stylua: ignore
 local colors = {
   blue   = '#8aadf4',
@@ -59,7 +67,12 @@ require("lualine").setup {
             },
         },
         lualine_b = {
-            "branch",
+            {
+                "branch",
+                fmt = function(str)
+                    return format(str, 22)
+                end,
+            },
             "diff",
             "diagnostics",
             { "swenv", icon = "" },
@@ -71,7 +84,7 @@ require("lualine").setup {
                 icon = "",
                 color = { fg = colors.white, bg = colors.grey },
                 separator = { left = "", right = "" },
-                path = 4,
+                path = 0,
             },
             {
                 "harpoon2",
@@ -91,21 +104,11 @@ require("lualine").setup {
                     end
                     -- strip session path to just name of file
                     local session_name = string.match(session, "([^/]+).session$")
-                    return "sesh: " .. session_name
+                    return " " .. session_name
                 end,
 
                 cond = function()
                     return vim.fn.ObsessionStatus() ~= ""
-                end,
-            },
-            {
-                function()
-                    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-                        if vim.api.nvim_buf_get_option(buf, "modified") then
-                            return " unsaved"
-                        end
-                    end
-                    return ""
                 end,
             },
             "progress",

@@ -82,6 +82,16 @@ vim.cmd "syntax on"
 vim.cmd "set cursorline"
 vim.cmd "set spell spelllang=en_us" -- set up spell checking
 
+-- spellcheck config
+-- save dictionary file in machine local path so day job related terms/words
+-- don't leak in my dotfiles hehe
+vim.cmd "set spell spelllang=en_us"
+
+local dict_dir = vim.fn.stdpath "data" .. "/dictionary"
+local dict_file = dict_dir .. "/giga-dictionary.add"
+vim.fn.mkdir(dict_dir, "p")
+vim.opt.spellfile = dict_file
+
 -- Force .v files to be recognized as coq files
 vim.cmd "autocmd BufNewFile,BufRead *.v set filetype=coq"
 

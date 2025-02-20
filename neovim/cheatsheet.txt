@@ -11,6 +11,7 @@ replace in file text at current cursor | <leader>s
 go back/forward through cursor locations | ctrl + o/i
 source current file | :luafile %
 switch color scheme | <leader>color
+add word under cursor to dictionary | zg
 
 ## snippets
 expand current item or jump to next   | <C-k>
