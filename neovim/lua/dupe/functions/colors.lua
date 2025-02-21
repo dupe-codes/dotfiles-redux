@@ -63,6 +63,14 @@ local night_owl_adjustments = {
     end,
 }
 
+local oldworld_adjustments = {
+    toggle_transparent = true,
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+    end,
+}
+
 local carbonfox_adjustments = {
     after = function()
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "CursorLine" })
@@ -119,6 +127,8 @@ local FAVORITE_COLORSCHEMES = {
     ["kanagawa"] = no_adjustments,
     ["cyberdream"] = no_adjustments,
     ["tundra"] = tundra_adjustments,
+    ["eldritch"] = no_adjustments,
+    ["oldworld"] = oldworld_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"
