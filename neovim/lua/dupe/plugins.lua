@@ -307,6 +307,13 @@ local plugins = {
         lazy = false,
         priority = 1000,
     },
+    {
+        "vague2k/vague.nvim",
+    },
+    {
+        "wtfox/jellybeans.nvim",
+        priority = 1000,
+    },
 
     -- Zig support
     {
@@ -433,13 +440,21 @@ local plugins = {
     --},
 
     -- markdown rendering
+    -- TODO: remove unused plugins
     --{ "ellisonleao/glow.nvim", config = true, cmd = "Glow"}
+    --{
+    --"MeanderingProgrammer/markdown.nvim",
+    --name = "render-markdown",
+    --dependencies = { "nvim-treesitter/nvim-treesitter" },
+    --config = function()
+    --require("render-markdown").setup {}
+    --end,
+    --},
     {
-        "MeanderingProgrammer/markdown.nvim",
-        name = "render-markdown",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        "OXY2DEV/markview.nvim",
+        lazy = false,
         config = function()
-            require("render-markdown").setup {}
+            require("markview").setup {}
         end,
     },
 

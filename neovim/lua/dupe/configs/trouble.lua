@@ -2,6 +2,13 @@ local whichkey = require "which-key"
 
 require("trouble").setup {}
 
+-- auto open trouble when quickfix used
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+  callback = function()
+    vim.cmd([[Trouble qflist open]])
+  end,
+})
+
 local keymap = {
     { "<leader>x", group = "trouble diagnostics", nowait = false, remap = false },
     { "<leader>xL", "<cmd>Trouble loclist toggle<cr>", desc = "open location list", nowait = false, remap = false },

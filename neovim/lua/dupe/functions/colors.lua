@@ -91,6 +91,22 @@ local tokyo_bones_adjustments = {
     end,
 }
 
+-- TODO: right now, linking cursorline to "visual" removes syntax highlighting
+--       on the line; figure out an alternative that keeps it
+local vague_adjustments = {
+    toggle_transparent = true,
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+    end,
+}
+
+local jellybeans_adjustments = {
+    before = function()
+        require("jellybeans").setup {}
+    end,
+}
+
 local no_adjustments = {}
 
 -- applies any resets necessary after loading a colorscheme
@@ -129,6 +145,8 @@ local FAVORITE_COLORSCHEMES = {
     ["tundra"] = tundra_adjustments,
     ["eldritch"] = no_adjustments,
     ["oldworld"] = oldworld_adjustments,
+    ["vague"] = vague_adjustments,
+    ["jellybeans"] = jellybeans_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"
@@ -168,7 +186,7 @@ M.load_colorscheme = function()
 
     local colorscheme = ""
     if vim.fn.filereadable(SAVED_COLORSCHEME_FILE) == 1 then
-        colorscheme = vim.fn.system("cat " .. SAVED_COLORSCHEME_FILE):gsub("\n", "")
+        colorscheme= vim.fn.system("cat " .. SAVED_COLORSCHEME_FILE):gsub("\n", "")
     end
     if colorscheme == "" or FAVORITE_COLORSCHEMES[colorscheme] == nil then
         vim.notify "Using default colorscheme..."
