@@ -171,3 +171,4 @@ gundam-time-centered.png
 earth-defense-fundam.png
 helmet-gal.png
 sword-boy.png
+distant_castle.png
