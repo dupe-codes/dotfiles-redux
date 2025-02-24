@@ -1,4 +1,5 @@
 local is_quickfix_mode = require("dupe.util").is_quickfix_mode
+local enable_transparency = require("dupe.functions.transparency").enable_transparency
 
 -- initialize lazy.vim
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -30,9 +31,7 @@ require("dupe.completions").setup()
 require("dupe.diagnostics").setup()
 require("dupe.format").setup()
 
--- TODO: remove this after fixing color scheme transparency struggles
-vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
-vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+enable_transparency()
 
 -- prompt to load session for current project, if one exists and
 -- neovim wasn't launched with arguments and/or quickfix selections

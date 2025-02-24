@@ -458,14 +458,6 @@ local plugins = {
         end,
     },
 
-    {
-        "xiyaowong/transparent.nvim",
-        lazy = false,
-        config = function()
-            require "dupe.configs.transparent"
-        end,
-    },
-
     -- Yank clipboard
     {
         "AckslD/nvim-neoclip.lua",

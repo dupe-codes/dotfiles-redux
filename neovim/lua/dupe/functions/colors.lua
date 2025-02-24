@@ -9,6 +9,9 @@
 local lush = require "lush"
 local lavi = require "lush_theme.lavi"
 
+local glance_reset = require("dupe.configs.glance").reset
+local enable_transparency = require("dupe.functions.transparency").enable_transparency
+
 local M = {}
 
 local tokyo_night_adjustments = {
@@ -50,7 +53,6 @@ local nordic_adjustments = {
 }
 
 local night_owl_adjustments = {
-    toggle_transparent = true,
     after = function()
         -- TODO: night-owl has too much cursive text; tweak it
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
@@ -64,7 +66,6 @@ local night_owl_adjustments = {
 }
 
 local oldworld_adjustments = {
-    toggle_transparent = true,
     after = function()
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
@@ -94,7 +95,6 @@ local tokyo_bones_adjustments = {
 -- TODO: right now, linking cursorline to "visual" removes syntax highlighting
 --       on the line; figure out an alternative that keeps it
 local vague_adjustments = {
-    toggle_transparent = true,
     after = function()
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
@@ -111,7 +111,8 @@ local no_adjustments = {}
 
 -- applies any resets necessary after loading a colorscheme
 local apply_resets = function()
-    require("dupe.configs.glance").reset()
+    glance_reset()
+    enable_transparency()
 end
 
 -- FAVORITE_COLORSCHEMES serves two purposes:
@@ -124,8 +125,6 @@ end
 --      before              = function to apply _before_ loading the colorscheme
 --      after               = function to apply _after_ loading the colorscheme
 --      lualine             = function to configure lualine _after_ loading the colorscheme
---      toggle_transparent  = boolean property controlling whether transparency is toggled off before
---                            loading
 --    }
 --    any key can be omitted if no adjustment at that stage is needed
 local FAVORITE_COLORSCHEMES = {
@@ -193,28 +192,12 @@ M.load_colorscheme = function()
         colorscheme = DEFAULT_COLORSCHEME
     end
 
-    if FAVORITE_COLORSCHEMES[colorscheme].toggle_transparent then
-        -- Before setting colorscheme, disable transparency so Glance can properly
-        -- extract theme based on highlight groups
-        -- This resolves a nasty race condition on some colorschemes that caused Glance to
-        -- _sometimes_ be transparent, and _sometimes_ not... tricky!
-        -- TODO: tokyo-night-moon glance is still transparent... fix, and test others
-        --       also, calling TransparentEnable clears the adjustments for some colorschemes
-        --       but not others...
-        --       Really, this "fix" seems to only work for the night-owl theme. Not sure why!
-        vim.cmd "TransparentDisable"
-    end
-
     vim.notify("loading colorscheme: " .. colorscheme)
     apply_before(colorscheme)
     vim.cmd("colorscheme " .. colorscheme)
     apply_after(colorscheme)
     apply_lualine(colorscheme)
     apply_resets()
-
-    if FAVORITE_COLORSCHEMES[colorscheme].toggle_transparent then
-        vim.cmd "TransparentEnable"
-    end
 end
 
 M.switch_colorscheme = function()
@@ -226,21 +209,12 @@ M.switch_colorscheme = function()
     vim.ui.select(colorschemes, { prompt = "Select colorscheme" }, function(selected)
         if selected then
             clear()
-
-            if FAVORITE_COLORSCHEMES[selected].toggle_transparent then
-                vim.cmd "TransparentDisable"
-            end
-
             apply_before(selected)
             vim.cmd("colorscheme " .. selected)
             vim.fn.system("echo " .. selected .. " > " .. SAVED_COLORSCHEME_FILE)
             apply_after(selected)
             apply_lualine(selected)
             apply_resets()
-
-            if FAVORITE_COLORSCHEMES[selected].toggle_transparent then
-                vim.cmd "TransparentEnable"
-            end
         end
     end)
 end
