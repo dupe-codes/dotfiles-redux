@@ -65,6 +65,7 @@ local night_owl_adjustments = {
     end,
 }
 
+-- TODO: I don't like the errors/warnings/info highlights here
 local oldworld_adjustments = {
     after = function()
         vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
@@ -92,12 +93,10 @@ local tokyo_bones_adjustments = {
     end,
 }
 
--- TODO: right now, linking cursorline to "visual" removes syntax highlighting
---       on the line; figure out an alternative that keeps it
 local vague_adjustments = {
     after = function()
-        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "#333738" })
     end,
 }
 
