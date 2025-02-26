@@ -1,3 +1,5 @@
+local whichkey = require "which-key"
+
 require("todo-comments").setup {
     highlight = {
         keyword = "bg",
@@ -5,7 +7,13 @@ require("todo-comments").setup {
     },
 }
 
-vim.keymap.set("n", "<leader>xt", function()
-    local command = "TodoTrouble cwd=" .. vim.fn.expand "%"
-    vim.api.nvim_command(command)
-end)
+local keymap = {
+    {
+        "<leader>xt",
+        "<cmd>Trouble todo toggle filter.buf=0<cr>",
+        desc = "open todos for current buffer",
+        nowait = false,
+        remap = false,
+    },
+}
+whichkey.add(keymap)

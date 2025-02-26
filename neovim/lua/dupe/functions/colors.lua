@@ -106,6 +106,15 @@ local jellybeans_adjustments = {
     end,
 }
 
+-- TODO: adjust last line of treesitter context showing all black text
+local kanagawa_paper_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "WinBar", { fg = "#c4b28a" })
+        vim.api.nvim_set_hl(0, "DropBarCurrentContext", { fg = "#c4b28a" })
+    end,
+}
+
 local no_adjustments = {}
 
 -- applies any resets necessary after loading a colorscheme
@@ -137,7 +146,7 @@ local FAVORITE_COLORSCHEMES = {
     ["night-owl"] = night_owl_adjustments,
     ["embark"] = embark_adjustments,
     ["lavi"] = lavi_adjustments,
-    ["kanagawa-paper"] = no_adjustments,
+    ["kanagawa-paper"] = kanagawa_paper_adjustments,
     ["kanagawa"] = no_adjustments,
     ["cyberdream"] = no_adjustments,
     ["tundra"] = tundra_adjustments,
