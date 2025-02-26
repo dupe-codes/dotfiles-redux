@@ -112,6 +112,7 @@ local kanagawa_paper_adjustments = {
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
         vim.api.nvim_set_hl(0, "WinBar", { fg = "#c4b28a" })
         vim.api.nvim_set_hl(0, "DropBarCurrentContext", { fg = "#c4b28a" })
+        vim.api.nvim_set_hl(0, "TreesitterContextBottom", { link = "Visual" })
     end,
 }
 
