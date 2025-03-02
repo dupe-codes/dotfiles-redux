@@ -106,7 +106,6 @@ local jellybeans_adjustments = {
     end,
 }
 
--- TODO: adjust last line of treesitter context showing all black text
 local kanagawa_paper_adjustments = {
     after = function()
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
