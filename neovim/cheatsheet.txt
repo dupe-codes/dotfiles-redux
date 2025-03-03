@@ -208,3 +208,8 @@ pick symbols in winbar              | <leader>w;
 go to start of current context      | <leader>w[
 select next context                 | <leader>w]
 
+## copilot
+accept suggestion       | <M-l>
+next suggestion         | <M-]>
+previous suggestion     | <M-[>
+dismiss suggestions     | <C-]>

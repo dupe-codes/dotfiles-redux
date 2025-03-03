@@ -19,6 +19,19 @@ M.plugins = {
             "saadparwaiz1/cmp_luasnip",
         },
     },
+    {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            local copilot = require "copilot"
+            copilot.setup {
+                suggestion = {
+                    auto_trigger = false,
+                },
+            }
+        end,
+    },
 }
 
 M.setup = function()
@@ -74,6 +87,10 @@ M.setup = function()
             end,
         },
     }
+
+    -- autopairs on functions
+    local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 end
 
 return M

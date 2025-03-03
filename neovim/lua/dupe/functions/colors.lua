@@ -108,9 +108,11 @@ local jellybeans_adjustments = {
 
 local kanagawa_paper_adjustments = {
     after = function()
+        local yellow_fg_color = "#c4b28a"
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
-        vim.api.nvim_set_hl(0, "WinBar", { fg = "#c4b28a" })
-        vim.api.nvim_set_hl(0, "DropBarCurrentContext", { fg = "#c4b28a" })
+        vim.api.nvim_set_hl(0, "WinBar", { fg = yellow_fg_color })
+        vim.api.nvim_set_hl(0, "DropBarCurrentContext", { fg = yellow_fg_color })
+        vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = yellow_fg_color })
         vim.api.nvim_set_hl(0, "TreesitterContextBottom", { link = "Visual" })
     end,
 }

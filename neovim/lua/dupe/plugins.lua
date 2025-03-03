@@ -99,6 +99,12 @@ local plugins = {
     -- End Harpoon
 
     {
+        "windwp/nvim-autopairs",
+        lazy = false,
+        config = true,
+    },
+
+    {
         "mbbill/undotree",
         config = function()
             require "dupe.configs.undotree"
