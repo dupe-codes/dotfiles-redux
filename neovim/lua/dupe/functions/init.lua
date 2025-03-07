@@ -22,3 +22,15 @@ whichkey.add {
         remap = false,
     },
 }
+
+-- neovim note taker
+local notes_path = vim.fn.stdpath "config" .. "/notes.md"
+whichkey.add {
+    {
+        "<leader>nn",
+        ":edit " .. notes_path .. "<CR>",
+        desc = "open neovim notes file",
+        nowait = false,
+        remap = false,
+    },
+}

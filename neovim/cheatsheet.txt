@@ -185,6 +185,7 @@ open today's note  | <leader>nt
 open weekly note   | <leader>nw
 open monthly note  | <leader>nm
 open quest log     | <leader>nq
+open neovim notes  | <leader>nn
 
 ## treesitter
 show treesitter tree                | :InspectTree

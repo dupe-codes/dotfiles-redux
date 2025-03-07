@@ -103,7 +103,7 @@
   "vim-test": { "branch": "master", "commit": "5de3bfff03a36d88608d94dba69266f3a48238f2" },
   "vim-tmux-navigator": { "branch": "master", "commit": "424b5caa154bff34dc258ee53cec5a8e36cf7ea8" },
   "vim-wakatime": { "branch": "master", "commit": "cf51327a9e08935569614d1cb24e779ee9f45519" },
-  "vscode-js-debug": { "branch": "main", "commit": "299d29f2a7b535115305068dfb531a7f37a05e44" },
+  "vscode-js-debug": { "branch": "main", "commit": "a8859b0435a9e8cbfe5a123359827674fa5d9de3" },
   "which-key.nvim": { "branch": "main", "commit": "8ab96b38a2530eacba5be717f52e04601eb59326" },
   "zen-mode.nvim": { "branch": "main", "commit": "863f150ca321b3dd8aa1a2b69b5f411a220e144f" },
   "zenbones.nvim": { "branch": "main", "commit": "3c0b86bb912d41d191d90c019a346f6a1d27f588" },
