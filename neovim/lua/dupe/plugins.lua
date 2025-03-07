@@ -550,6 +550,33 @@ local plugins = {
             require "dupe.configs.love"
         end,
     },
+
+    -- snacks plugins
+    {
+        "folke/snacks.nvim",
+        ---@type snacks.Config
+        opts = {
+            scratch = {
+                enabled = true,
+            },
+        },
+        keys = {
+            {
+                "<leader>-",
+                function()
+                    Snacks.scratch()
+                end,
+                desc = "toggle scratch buffer",
+            },
+            {
+                "<leader>S",
+                function()
+                    Snacks.scratch.select()
+                end,
+                desc = "select scratch buffer",
+            },
+        },
+    },
 }
 
 local modules = {
