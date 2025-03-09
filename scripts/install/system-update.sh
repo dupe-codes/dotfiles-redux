@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# status logs
+# 2025-03-09:
+#   - yay failed to update zotero and python-future
+#   - cargo update entirely failed
+
 set -e
 
 source "$HOME"/scripts/constants.sh
@@ -43,3 +48,4 @@ HEADER=$(df -h | head -n 1)
 DISK_USAGE=$(df -h | grep "/dev/nvme0n1p2")
 echo "$HEADER"
 echo "$DISK_USAGE"
+
