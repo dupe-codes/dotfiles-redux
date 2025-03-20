@@ -1,10 +1,21 @@
 local harpoon = require "harpoon"
+local harpoon_extensions = require "harpoon.extensions"
 
 harpoon:setup {
     settings = {
         save_on_toggle = true,
     },
+    default = {
+        display = function(list_item)
+            local path = list_item.value
+            local parent_dir = path:match "([^/]+)/[^/]+$" or ""
+            local filename = path:match "([^/]+)$" or path
+            return parent_dir .. "/" .. filename
+        end,
+    },
 }
+
+harpoon:extend(harpoon_extensions.builtins.highlight_current_file())
 
 vim.keymap.set("n", "<leader>a", function()
     harpoon:list():append()
