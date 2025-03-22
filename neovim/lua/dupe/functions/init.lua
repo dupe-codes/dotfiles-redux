@@ -34,3 +34,15 @@ whichkey.add {
         remap = false,
     },
 }
+
+-- close buffers and open dashboard
+local open_dash = require("dupe.functions.dashboard").open_dashboard
+whichkey.add {
+    {
+        "<localleader>d",
+        open_dash,
+        desc = "reset to dashboard",
+        nowait = false,
+        remap = false,
+    },
+}

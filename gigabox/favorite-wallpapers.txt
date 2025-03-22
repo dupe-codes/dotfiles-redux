@@ -172,3 +172,9 @@ earth-defense-fundam.png
 helmet-gal.png
 sword-boy.png
 distant_castle.png
+dragon-ball-gun-pose.png
+blending-in.png
+banana-neon-stretch.png
+nerd-gal.png
+void-flair.png
+void-stare.png
