@@ -4,9 +4,9 @@ require("trouble").setup {}
 
 -- auto open trouble when quickfix used
 vim.api.nvim_create_autocmd("QuickFixCmdPost", {
-  callback = function()
-    vim.cmd([[Trouble qflist open]])
-  end,
+    callback = function()
+        vim.cmd [[Trouble qflist open]]
+    end,
 })
 
 local keymap = {
@@ -31,6 +31,13 @@ local keymap = {
         "<leader>xx",
         "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
         desc = "open diagnostics for buffer",
+        nowait = false,
+        remap = false,
+    },
+    {
+        "<leader>xs",
+        "<cmd>Trouble symbols toggle pinned=true win.relative=win win.position=bottom<cr>",
+        desc = "toggle document symbols",
         nowait = false,
         remap = false,
     },

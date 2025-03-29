@@ -120,6 +120,7 @@ open buffer diagnostics | <leader>xx
 open LSP defs, refs, etc. | <leader>xl
 open location list | <leader>xL
 open quickfix list  | <leader>xq
+open document symbols | <leader>xs
 
 ## zen-mode
 toggle zen mode | <leader>zen
@@ -155,7 +156,6 @@ watch | w
 open notifications history | <leader>fn
 
 ## symbols
-open symbols outline | <leader>oo
 ocaml: toggle type hints | <leader>ot
 
 ## marks
