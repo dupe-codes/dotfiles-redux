@@ -127,10 +127,19 @@ table.insert(dap.configurations.python, {
 -- Javascript & Typescript configuration
 -- TODO: configure for debugging client side JS by connecting to chrome browser
 
-local vscode_js_debugger_path = vim.fn.resolve(vim.fn.stdpath "data" .. "/lazy/vscode-js-debug")
-require("dap-vscode-js").setup {
-    debugger_path = vscode_js_debugger_path,
-    adapters = { "pwa-node" },
+local vscode_js_debugger_path = vim.fn.resolve(vim.fn.stdpath "data" .. "/mason/bin/js-debug-adapter")
+
+require("dap").adapters["pwa-node"] = {
+    type = "server",
+    host = "localhost",
+    port = "${port}",
+    executable = {
+        command = "node",
+        args = {
+            vscode_js_debugger_path,
+            "${port}",
+        },
+    },
 }
 
 for _, language in ipairs { "typescript", "javascript", "typescriptreact", "javascriptreact" } do
