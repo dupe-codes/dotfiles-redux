@@ -1,5 +1,9 @@
-local key_mapper = function(mode, key, result)
-    vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
+local key_mapper = function(mode, key, result, desc)
+    local meta = { noremap = true, silent = true }
+    if desc then
+        meta.desc = desc
+    end
+    vim.keymap.set(mode, key, result, meta)
 end
 
 local read_file_contents = function(file_path)

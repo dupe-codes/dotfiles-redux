@@ -22,7 +22,8 @@ M.setup = function()
     vim.diagnostic.config {
         float = { border = _border },
         underline = true,
-        virtual_text = false,
+        virtual_text = true,
+        virtual_lines = true,
         signs = true,
         update_in_insert = true,
         severity_sort = true,
