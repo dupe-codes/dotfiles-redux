@@ -152,6 +152,12 @@ M.setup = function()
     key_mapper("n", "<leader>cd", ":lua vim.lsp.buf.hover()<CR>")
     key_mapper("n", "<C-s>", ":lua vim.lsp.buf.signature_help()<CR>")
     key_mapper("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+
+    -- disable default lsp keymaps
+    vim.keymap.del("n", 'gri')
+    vim.keymap.del("n", 'gra')
+    vim.keymap.del("n", 'grn')
+    vim.keymap.del("n", 'grr')
 end
 
 return M
