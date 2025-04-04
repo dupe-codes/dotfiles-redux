@@ -523,12 +523,12 @@ local plugins = {
     },
 
     -- ide-like breadcrumbs
-    --{
-        --"Bekaboo/dropbar.nvim",
-        --config = function()
-            --require "dupe.configs.dropbar"
-        --end,
-    --},
+    {
+        "Bekaboo/dropbar.nvim",
+        config = function()
+            require "dupe.configs.dropbar"
+        end,
+    },
 
     -- love game engine
     {
