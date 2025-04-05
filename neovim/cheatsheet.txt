@@ -214,3 +214,7 @@ accept suggestion       | <M-l>
 next suggestion         | <M-]>
 previous suggestion     | <M-[>
 dismiss suggestions     | <C-]>
+
+## runner
+run current file        | <localleader>rr
+search run logs         | <localleader>rs

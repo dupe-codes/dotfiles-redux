@@ -46,3 +46,11 @@ whichkey.add {
         remap = false,
     },
 }
+
+-- script runner
+local runner = require "dupe.functions.runner"
+whichkey.add {
+    { "<localleader>r", group = "runner", mode = "n", nowait = false, remap = false },
+    { "<localleader>rr", runner.run_current_file, desc = "run current file", mode = "n" },
+    { "<localleader>rs", runner.search_run_logs, desc = "search run logs", mode = "n" },
+}

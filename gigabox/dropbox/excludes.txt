@@ -2,3 +2,4 @@ work-wallpapers
 Art
 Camera Uploads
 images/camera photos/
+art_assets
