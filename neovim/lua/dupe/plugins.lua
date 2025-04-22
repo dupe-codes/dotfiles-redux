@@ -179,8 +179,8 @@ local plugins = {
         "nvim-telescope/telescope-dap.nvim",
     },
     --{
-        --"microsoft/vscode-js-debug",
-        --build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+    --"microsoft/vscode-js-debug",
+    --build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
     --},
 
     -- Cheatsheets and keybind hints
@@ -254,6 +254,8 @@ local plugins = {
     },
 
     -- Color schemes
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
     {
         "zootedb0t/citruszest.nvim",
     },
