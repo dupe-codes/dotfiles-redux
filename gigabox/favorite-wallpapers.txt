@@ -178,3 +178,4 @@ banana-neon-stretch.png
 nerd-gal.png
 void-flair.png
 void-stare.png
+mosaic-grasp.png
