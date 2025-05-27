@@ -93,6 +93,13 @@ local tokyo_bones_adjustments = {
     end,
 }
 
+local sequoia_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
+    end,
+}
+
 local vague_adjustments = {
     after = function()
         vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" })
@@ -158,6 +165,7 @@ local FAVORITE_COLORSCHEMES = {
     ["oldworld"] = oldworld_adjustments,
     ["vague"] = vague_adjustments,
     ["jellybeans"] = jellybeans_adjustments,
+    ["sequoia-night"] = sequoia_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"
