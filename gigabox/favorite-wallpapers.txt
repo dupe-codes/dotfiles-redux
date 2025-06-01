@@ -179,3 +179,4 @@ nerd-gal.png
 void-flair.png
 void-stare.png
 mosaic-grasp.png
+deconstructed-blue.png

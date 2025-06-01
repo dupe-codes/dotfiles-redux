@@ -313,11 +313,6 @@ local plugins = {
         dependencies = { "rktjmp/lush.nvim" },
     },
     {
-        "scottmckendry/cyberdream.nvim",
-        lazy = false,
-        priority = 1000,
-    },
-    {
         "vague2k/vague.nvim",
     },
     {

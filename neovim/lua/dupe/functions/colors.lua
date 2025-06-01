@@ -157,7 +157,6 @@ local FAVORITE_COLORSCHEMES = {
     ["lavi"] = lavi_adjustments,
     ["kanagawa-paper"] = kanagawa_paper_adjustments,
     ["kanagawa"] = no_adjustments,
-    ["cyberdream"] = no_adjustments,
     ["moonfly"] = no_adjustments,
     ["nightfly"] = no_adjustments,
     ["tundra"] = tundra_adjustments,

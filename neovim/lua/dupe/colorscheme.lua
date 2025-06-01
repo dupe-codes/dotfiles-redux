@@ -53,11 +53,6 @@ require("kanagawa-paper").setup {
     typeStyle = { italic = true },
 }
 
-require("cyberdream").setup {
-    transparent = true,
-    italic_comments = true,
-}
-
 require("nvim-tundra").setup {
     dim_inactive_windows = {
         enabled = false,
