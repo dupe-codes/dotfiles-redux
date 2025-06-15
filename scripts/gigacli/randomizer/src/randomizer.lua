@@ -2,7 +2,7 @@
 
 local lfs = require "lfs"
 
-local CHOICES_DIR = os.getenv "HOME" .. "/datastore/13 - hacking/randomizer"
+local CHOICES_DIR = os.getenv "HOME" .. "/datastore/3 - hacking/randomizer"
 
 local function list_files(dir)
     local files = {}
