@@ -7,6 +7,10 @@ add: ## Add a lua dependency to the local project, usage: make add package=packa
 install: ## Install project dependencies
 	luarocks install --tree lua_modules --deps-only randomizer-dev-1.rockspec
 
+.PHONY: make
+make: ## "make" the tool for full system use
+	luarocks make randomizer-dev-1.rockspec
+
 .PHONY: run
 run: ## Run the randomizer application
 	@source $(CURDIR)/project.env && ./src/randomizer.lua
