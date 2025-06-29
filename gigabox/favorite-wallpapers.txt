@@ -180,3 +180,5 @@ void-flair.png
 void-stare.png
 mosaic-grasp.png
 deconstructed-blue.png
+unit-00.png
+moon-glasses.png

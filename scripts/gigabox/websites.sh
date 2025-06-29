@@ -24,6 +24,7 @@ SITES=(
     [" gamedev.tv"]="https://www.gamedev.tv/dashboard/"
     ["󰈙 devdocs"]="https://devdocs.io"
     [" Proko"]="https://www.proko.com/classroom/dashboard"
+    ["󱢮 codecks"]="https://rorschach.codecks.io"
 )
 
 dir="$HOME/scripts/gigabox/rofi"
