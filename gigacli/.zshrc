@@ -117,8 +117,10 @@ alias gp='git push'
 alias gpl='git pull'
 alias ga='git add'
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gs='git status'
 alias gch='git checkout'
+alias gl='git log'
 
 # create util functions
 
