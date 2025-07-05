@@ -42,6 +42,8 @@ local plugins = {
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
+        lazy = false,
+        dependencies = { "OXY2DEV/markview.nvim" },
         config = function()
             require "dupe.configs.treesitter"
         end,
