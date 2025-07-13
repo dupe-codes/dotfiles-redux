@@ -25,6 +25,7 @@ SITES=(
     ["󰈙 devdocs"]="https://devdocs.io"
     [" Proko"]="https://www.proko.com/classroom/dashboard"
     ["󱢮 codecks"]="https://rorschach.codecks.io"
+    [" kagi search"]="https://kagi.com"
 )
 
 dir="$HOME/scripts/gigabox/rofi"
