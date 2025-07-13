@@ -485,13 +485,6 @@
         <command>~/scripts/gigabox/calculator.sh</command>
       </action>
     </keybind>
-    <keybind key = "A-S-l">
-      <action name="Execute">
-        <command>
-          kitty tmux new-session -s quest-log '~/scripts/gigabox/show-quests.sh'
-        </command>
-      </action>
-    </keybind>
     <keybind key = "A-S-h">
       <action name="Execute">
         <command>

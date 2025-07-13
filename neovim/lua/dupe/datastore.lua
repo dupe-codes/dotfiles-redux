@@ -1,7 +1,8 @@
+-- TODO: add functionality to interact with Obsidian bases
+
 local whichkey = require "which-key"
 
 local datastore_dir = os.getenv "HOME" .. "/datastore/"
-local quest_log = "0 - quest journal/quest log.md"
 
 local get_current_week = function()
     local year = os.date "%Y"
@@ -49,17 +50,6 @@ local keymap = {
             vim.cmd("e " .. monthly_note)
         end,
         desc = "Open this month's note",
-        nowait = false,
-        remap = false,
-    },
-    {
-        "<leader>nq",
-        function()
-            local quest_log_path = datastore_dir .. quest_log
-            vim.notify("Opening quest log: " .. quest_log_path)
-            vim.cmd("e " .. quest_log_path)
-        end,
-        desc = "Open quest log",
         nowait = false,
         remap = false,
     },

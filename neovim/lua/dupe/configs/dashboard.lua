@@ -17,7 +17,6 @@ table.insert(header, "")
 table.insert(header, "")
 
 local todays_note = os.getenv "HOME" .. "/datastore/daily notes/" .. os.date "%Y-%m-%d" .. ".md"
-local quest_log = os.getenv "HOME" .. "/datastore/0 - quest journal/quest log.md"
 
 local center = {
     {
@@ -97,17 +96,6 @@ local center = {
         key_hl = "Number",
         key_format = " %s",
         action = "Oil --float ~/datastore",
-    },
-    {
-        icon = "🗡",
-        icon_hl = "Title",
-        desc = "Quest log",
-        desc_hl = "String",
-        key = "q",
-        keymap = "",
-        key_hl = "Number",
-        key_format = " %s",
-        action = "e " .. quest_log,
     },
     {
         icon = " ",

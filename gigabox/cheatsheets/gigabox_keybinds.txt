@@ -22,7 +22,6 @@
 <leader> s := open cheatsheets menu
 <leader> l := add todo
 <leader> w := open bookmarks
-<leader> shift l := view the quest log
 <leader> shift h := view character stats
 ctrl esc := view last notification
 ctrl return := open notification context
