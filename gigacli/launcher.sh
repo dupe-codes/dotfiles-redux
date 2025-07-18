@@ -10,7 +10,6 @@ tools=(
     ["log-task"]=" log past task:"
     ["timer"]="󱎫 run timer script:r:tags"
     ["break"]=" take a break:r:short/long?"
-    ["schedule"]="󰃭 display today's schedule"
     ["commit"]=" (conventionally) commit changes"
     ["search"]="󰥨 search current dir:"
     ["ncmpcpp"]=" run music player:"
@@ -51,7 +50,6 @@ declare -a tool_order=(
     "task"
     "log-task"
     "break"
-    "schedule"
     "commit"
     "search"
     "ncmpcpp"
@@ -86,17 +84,12 @@ declare -A aliases=(
     ["log-task"]="log_task"
     ["timer"]="timer_command"
     ["break"]="break_command"
-    ["schedule"]="schedule_command"
     ["commit"]="commit_command"
     # add other aliases as needed
 )
 
 commit_command() {
     $HOME/scripts/gigacli/commit.sh
-}
-
-schedule_command() {
-    $HOME/scripts/gigacli/schedule.sh
 }
 
 search_command() {

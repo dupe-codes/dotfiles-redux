@@ -492,13 +492,6 @@
         </command>
       </action>
     </keybind>
-    <keybind key = "A-S-t">
-      <action name="Execute">
-        <command>
-          kitty tmux new-session -s schedule '~/scripts/gigacli/schedule.sh'
-        </command>
-      </action>
-    </keybind>
 
     <!-- Cycle through windows -->
     <keybind key="A-C-q">
