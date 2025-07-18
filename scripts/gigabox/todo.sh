@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Update to match new Obsidian TODOs flow
+
 TODO_FILE="$HOME/datastore/TODO.md"
 SECTION_HEADING="## inbox"
 

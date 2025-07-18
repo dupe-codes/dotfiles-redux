@@ -2,30 +2,32 @@
 
 local lfs = require "lfs"
 
-local CHOICES_DIR = os.getenv "HOME" .. "/datastore/3 - hacking/randomizer"
+local CHOICES_DIR = os.getenv "HOME" .. "/datastore/0 - quest journal/sagas"
+
+local function list_sagas(dir)
+    local sagas = {}
+    for item in lfs.dir(dir) do
+        if item ~= "." and item ~= ".." then
+            local path = dir .. "/" .. item
+            if lfs.attributes(path, "mode") == "directory" then
+                table.insert(sagas, item)
+            end
+        end
+    end
+    return sagas
+end
 
 local function list_files(dir)
     local files = {}
     for file in lfs.dir(dir) do
         if file ~= "." and file ~= ".." then
-            table.insert(files, file)
+            local path = dir .. "/" .. file
+            if lfs.attributes(path, "mode") == "file" then
+                table.insert(files, file)
+            end
         end
     end
     return files
-end
-
-local function read_file(filepath)
-    local lines = {}
-    local file = io.open(filepath, "r")
-    if file then
-        for line in file:lines() do
-            table.insert(lines, line)
-        end
-        file:close()
-    else
-        error("Could not open file: " .. filepath)
-    end
-    return lines
 end
 
 local function random_select(list)
@@ -35,19 +37,19 @@ local function random_select(list)
     return list[math.random(#list)]
 end
 
-local function animate_selection(lines, final_choice)
+local function animate_selection(items, final_choice)
     local max_length = 0
-    for _, line in ipairs(lines) do
-        if #line > max_length then
-            max_length = #line
+    for _, item in ipairs(items) do
+        if #item > max_length then
+            max_length = #item
         end
     end
     max_length = max_length + 5
 
     local delay = 0.1
     for i = 1, 30 do
-        local random_line = random_select(lines)
-        io.write("\r" .. random_line .. string.rep(" ", max_length - #random_line))
+        local random_item = random_select(items)
+        io.write("\r" .. random_item .. string.rep(" ", max_length - #random_item))
         io.flush()
         os.execute("sleep " .. string.format("%.2f", delay))
         delay = delay + 0.02
@@ -59,40 +61,40 @@ local M = {}
 
 M.randomize = function()
     if not lfs.attributes(CHOICES_DIR, "mode") then
-        error("The directory '" .. CHOICES_DIR .. "' does not exist.")
+        error("Directory '" .. CHOICES_DIR .. "' does not exist.")
     end
 
-    local files = list_files(CHOICES_DIR)
-    if #files == 0 then
-        print("No files available in '" .. CHOICES_DIR .. "'.")
+    local sagas = list_sagas(CHOICES_DIR)
+    if #sagas == 0 then
+        print("No sagas found in '" .. CHOICES_DIR .. "'.")
         return
     end
 
-    print "Available files:\n"
-    for i, file in ipairs(files) do
-        print(i .. ". " .. file)
+    print "\nAvailable sagas:\n"
+    for i, saga in ipairs(sagas) do
+        print(i .. ". " .. saga)
     end
 
-    io.write "\nSelect a file by number: "
+    io.write "\nSelect a saga by number: "
     local choice = tonumber(io.read())
-    if not choice or choice < 1 or choice > #files then
+    if not choice or choice < 1 or choice > #sagas then
         print "Invalid choice."
         return
     end
 
-    local selected_file = files[choice]
-    local filepath = CHOICES_DIR .. "/" .. selected_file
-    local lines = read_file(filepath)
+    local selected_saga = sagas[choice]
+    local selected_path = CHOICES_DIR .. "/" .. selected_saga
 
-    if #lines == 0 then
-        print "The file is empty."
+    local files = list_files(selected_path)
+    if #files == 0 then
+        print("No files found in saga '" .. selected_saga .. "'.")
         return
     end
 
     print ""
     math.randomseed(os.time())
-    local final_choice = random_select(lines)
-    animate_selection(lines, final_choice)
+    local final_choice = random_select(files)
+    animate_selection(files, final_choice)
 end
 
 M.randomize()

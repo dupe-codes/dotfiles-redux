@@ -9,7 +9,7 @@ install: ## Install project dependencies
 
 .PHONY: make
 make: ## "make" the tool for full system use
-	luarocks make randomizer-dev-1.rockspec
+	sudo luarocks --tree=$(HOME)/.luarocks make randomizer-dev-1.rockspec
 
 .PHONY: run
 run: ## Run the randomizer application
