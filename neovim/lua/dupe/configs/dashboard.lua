@@ -16,7 +16,7 @@ table.insert(header, "❯❯❯  take your time  ❮❮❮")
 table.insert(header, "")
 table.insert(header, "")
 
-local todays_note = os.getenv "HOME" .. "/datastore/daily notes/" .. os.date "%Y-%m-%d" .. ".md"
+local todays_note = os.getenv "HOME" .. "/datastore/0 - periodics/daily notes/" .. os.date "%Y-%m-%d" .. ".md"
 
 local center = {
     {

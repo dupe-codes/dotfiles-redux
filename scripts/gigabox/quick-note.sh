@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NOTES_DIR="$HOME/datastore/daily notes"
+NOTES_DIR="$HOME/datastore/0 - periodics/daily notes"
 TODAYS_NOTE="$(date +%F).md"
 NOTE_PATH="$NOTES_DIR/$TODAYS_NOTE"
 SECTION_HEADING="## 📓 notes"

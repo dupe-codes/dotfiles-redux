@@ -23,7 +23,7 @@ local keymap = {
     {
         "<leader>nt",
         function()
-            local todays_note = datastore_dir .. "daily notes/" .. os.date "%Y-%m-%d" .. ".md"
+            local todays_note = datastore_dir .. "0 - periodics/daily notes/" .. os.date "%Y-%m-%d" .. ".md"
             vim.notify("Opening today's note: " .. todays_note)
             vim.cmd("e " .. todays_note)
         end,
@@ -34,7 +34,7 @@ local keymap = {
     {
         "<leader>nw",
         function()
-            local weekly_note = datastore_dir .. "weekly notes/" .. get_current_week() .. ".md"
+            local weekly_note = datastore_dir .. "0 - periodics/weekly notes/" .. get_current_week() .. ".md"
             vim.notify("Opening weekly note: " .. weekly_note)
             vim.cmd("e " .. weekly_note)
         end,
@@ -45,7 +45,7 @@ local keymap = {
     {
         "<leader>nm",
         function()
-            local monthly_note = datastore_dir .. "monthly notes/" .. os.date "%B %Y" .. ".md"
+            local monthly_note = datastore_dir .. "0 - periodics/monthly notes/" .. os.date "%B %Y" .. ".md"
             vim.notify("Opening monthly note: " .. monthly_note)
             vim.cmd("e " .. monthly_note)
         end,
