@@ -460,6 +460,11 @@
         <command>~/scripts/gigabox/quick-note.sh</command>
       </action>
     </keybind>
+    <keybind key="A-z">
+      <action name="Execute">
+        <command>~/.local/bin/zet</command>
+      </action>
+    </keybind>
     <keybind key="A-S-n">
       <action name="Execute">
         <command>~/scripts/gigabox/note-taker.sh</command>
@@ -1003,6 +1008,9 @@
       <decor>no</decor>
     </application>
     <application name="zotero">
+      <decor>no</decor>
+    </application>
+    <application name="zet">
       <decor>no</decor>
     </application>
   </applications>

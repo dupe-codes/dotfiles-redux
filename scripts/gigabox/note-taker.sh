@@ -2,7 +2,7 @@
 
 source "$HOME"/scripts/constants.sh
 
-NOTES_FILE="$DATASTORE_DIR/note-taker.yaml"
+NOTES_FILE="$DATASTORE_DIR/configs/note-taker.yaml"
 FILE_SELECT_THEME="$GB_SCRIPTS_DIR/rofi/utilscripts.rasi"
 NOTE_TEXT_THEME="$GB_SCRIPTS_DIR/rofi/note-taking.rasi"
 
