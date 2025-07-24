@@ -18,6 +18,7 @@
 <leader> d := toggle show desktop
 <leader> n := add quick note
 <leader> shift n := add to favorited note
+<leader> z := zet a note
 <leader> m := add quick thought
 <leader> s := open cheatsheets menu
 <leader> l := add todo
