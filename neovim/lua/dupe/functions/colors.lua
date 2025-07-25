@@ -124,6 +124,12 @@ local kanagawa_paper_adjustments = {
     end,
 }
 
+local techbase_adjustments = {
+    after = function()
+        vim.api.nvim_set_hl(0, "CursorLine", { link = "Visual" })
+    end,
+}
+
 local no_adjustments = {}
 
 -- applies any resets necessary after loading a colorscheme
@@ -165,6 +171,7 @@ local FAVORITE_COLORSCHEMES = {
     ["vague"] = vague_adjustments,
     ["jellybeans"] = jellybeans_adjustments,
     ["sequoia-night"] = sequoia_adjustments,
+    ["techbase"] = techbase_adjustments,
 }
 
 local DEFAULT_COLORSCHEME = "tokyonight-moon"
