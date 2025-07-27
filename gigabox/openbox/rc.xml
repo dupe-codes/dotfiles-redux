@@ -475,11 +475,6 @@
         <command>~/scripts/gigabox/quick-thought.sh</command>
       </action>
     </keybind>
-    <keybind key="A-l">
-      <action name="Execute">
-        <command>~/scripts/gigabox/todo.sh</command>
-      </action>
-    </keybind>
     <keybind key="A-s">
       <action name="Execute">
         <command>~/scripts/gigabox/cheatsheets.sh</command>
