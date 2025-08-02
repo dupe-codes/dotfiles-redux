@@ -1,0 +1,13 @@
+middle mouse := rotate view
+shift + middle mouse := translate view
+g := grab and move object, escape/right click to cancel
+r := rotate object, escape/right click to cancel
+s := scale object, escape/right click to cancel
+z/x/y := constrain movement to the chosen axis
+shift + right click := move 3d cursor around
+shift + a := add object
+ctrl + select := remove selections
+shift + d := duplicate object
+shift + z/x/y := EXCLUDE an axis
+tab := enter edit mode
+numpad . := frame selection
