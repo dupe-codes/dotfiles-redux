@@ -184,3 +184,5 @@ unit-00.png
 moon-glasses.png
 tokyo-night-cowboy-bepop.jpg
 relaxed_jacket_girl_tokyo_night_moon.jpg
+the-orange-tree.png
+the-blue-tree.png
