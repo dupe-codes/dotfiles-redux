@@ -33,3 +33,7 @@ gg + f := slide edge conformed to bottom shape
 i := add inset
 ctrl + a := apply transformations (reset to "global")
 wheel or +/- (loop cut) := add more cuts
+p := separate
+f := fill
+alt + f := ngon fill
+ctrl + b := bevel
