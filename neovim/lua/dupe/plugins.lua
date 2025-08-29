@@ -457,7 +457,11 @@ local plugins = {
         "OXY2DEV/markview.nvim",
         lazy = false,
         config = function()
-            require("markview").setup {}
+            require("markview").setup {
+                experimental = {
+                    check_rtp_message = false,
+                },
+            }
         end,
     },
 
