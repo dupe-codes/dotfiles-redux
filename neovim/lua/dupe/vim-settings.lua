@@ -1,6 +1,7 @@
 vim.cmd "highlight LineNr ctermbg=NONE guibg=NONE"
 
 -- Set diagnostics signs
+-- TODO: sign define is deprecated, need to update
 vim.cmd "sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl="
 vim.cmd "sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl="
 vim.cmd "sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl="
