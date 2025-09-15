@@ -83,6 +83,7 @@ mpd = "latest"
 mpc = "latest"
 ncmpcpp = "latest"
 mpv = "latest"
+obs-studio = "latest"
 
 # text editors
 neovim = "latest"
