@@ -51,3 +51,7 @@ vim.keymap.set(
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Find and replace word at current cursor" }
 )
+
+-- For now, unmap register recording - i need to learn how to use it
+-- and in the interim it just gets in my way when i fat finger q
+key_mapper("n", "q", "<nop>")
