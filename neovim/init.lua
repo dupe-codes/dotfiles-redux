@@ -39,3 +39,7 @@ local args = vim.fn.argv()
 if #args == 0 and not is_quickfix_mode() then
     require("dupe.configs.sessions").load_session_matching_default_name()
 end
+
+-- set guaranteed writeable temp dir
+vim.env.TMPDIR = vim.fn.stdpath "cache" .. "/tmp"
+vim.fn.mkdir(vim.env.TMPDIR, "p")
