@@ -485,6 +485,11 @@
         <command>~/scripts/gigabox/calculator.sh</command>
       </action>
     </keybind>
+    <keybind key="A-e">
+      <action name="Execute">
+        <command>rofimoji</command>
+      </action>
+    </keybind>
     <keybind key = "A-S-h">
       <action name="Execute">
         <command>

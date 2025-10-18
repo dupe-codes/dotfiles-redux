@@ -119,6 +119,7 @@ noto-fonts = "latest"
 noto-fonts-emoji = "latest"
 font-manager = "latest"
 gucharmap = "latest"
+rofimoji = "latest"
 
 # bluetooth & peripherals
 bluez = "latest"

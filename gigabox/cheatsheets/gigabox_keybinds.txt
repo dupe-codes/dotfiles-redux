@@ -23,6 +23,7 @@
 <leader> s := open cheatsheets menu
 <leader> l := add todo
 <leader> w := open bookmarks
+<leader> e := open emoji picker
 <leader> shift h := view character stats
 ctrl esc := view last notification
 ctrl return := open notification context

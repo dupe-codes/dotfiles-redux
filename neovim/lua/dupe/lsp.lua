@@ -13,6 +13,7 @@ M.setup = function()
     local augroup_codelens = vim.api.nvim_create_augroup("custom-lsp-codelens", { clear = true })
     vim.api.nvim_set_hl(0, "VirtNonText", { link = "Type" })
 
+    -- TODO: this is deprecated - figure out vim.lsp.config approach instead
     local lspconfig = require "lspconfig"
 
     local lsp_cmds = vim.api.nvim_create_augroup("lsp_cmds", { clear = true })
